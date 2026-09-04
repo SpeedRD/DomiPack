@@ -1,0 +1,17 @@
+{
+  "stillLoadingAt1500ms": true,
+  "afterNav": "https://clientes.domipack.com/NuevaCuenta.aspx",
+  "finalUrl": "https://clientes.domipack.com/Rastreo.aspx",
+  "authed": true,
+  "posts": [
+    {
+      "dt": 26
+    }
+  ],
+  "responses": [
+    {
+      "dt": 102,
+      "status": 302
+    }
+  ]
+}

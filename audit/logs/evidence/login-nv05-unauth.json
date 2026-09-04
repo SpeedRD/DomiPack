@@ -1,0 +1,71 @@
+[
+  {
+    "url": "MiCuenta.aspx",
+    "status": 302,
+    "location": "/Login.aspx",
+    "bodyLength": 128,
+    "bodyHead": "<html><head><title>Object moved</title></head><body> <h2>Object moved to <a href=\"/Login.aspx\">here</a>.</h2> </body></html> ",
+    "looksProtectedContent": false,
+    "isLoginPage200": false,
+    "serverError": null
+  },
+  {
+    "url": "Estado.aspx",
+    "status": 302,
+    "location": "/Login.aspx",
+    "bodyLength": 128,
+    "bodyHead": "<html><head><title>Object moved</title></head><body> <h2>Object moved to <a href=\"/Login.aspx\">here</a>.</h2> </body></html> ",
+    "looksProtectedContent": false,
+    "isLoginPage200": false,
+    "serverError": null
+  },
+  {
+    "url": "Rastreo.aspx",
+    "status": 302,
+    "location": "/Login.aspx",
+    "bodyLength": 128,
+    "bodyHead": "<html><head><title>Object moved</title></head><body> <h2>Object moved to <a href=\"/Login.aspx\">here</a>.</h2> </body></html> ",
+    "looksProtectedContent": false,
+    "isLoginPage200": false,
+    "serverError": null
+  },
+  {
+    "url": "PruebaExportacion.aspx",
+    "status": 302,
+    "location": "/Login.aspx",
+    "bodyLength": 128,
+    "bodyHead": "<html><head><title>Object moved</title></head><body> <h2>Object moved to <a href=\"/Login.aspx\">here</a>.</h2> </body></html> ",
+    "looksProtectedContent": false,
+    "isLoginPage200": false,
+    "serverError": null
+  },
+  {
+    "url": "PreAlerta.aspx",
+    "status": 302,
+    "location": "/Login.aspx",
+    "bodyLength": 128,
+    "bodyHead": "<html><head><title>Object moved</title></head><body> <h2>Object moved to <a href=\"/Login.aspx\">here</a>.</h2> </body></html> ",
+    "looksProtectedContent": false,
+    "isLoginPage200": false,
+    "serverError": null
+  },
+  {
+    "url": "PagoOnline.aspx",
+    "status": 302,
+    "location": "/Login.aspx",
+    "bodyLength": 128,
+    "bodyHead": "<html><head><title>Object moved</title></head><body> <h2>Object moved to <a href=\"/Login.aspx\">here</a>.</h2> </body></html> ",
+    "looksProtectedContent": false,
+    "isLoginPage200": false,
+    "serverError": null
+  },
+  {
+    "url": "dlg/Adjuntos.aspx",
+    "status": 500,
+    "bodyLength": 3490,
+    "bodyHead": "<!DOCTYPE html> <html> <head> <title>Runtime Error</title> <meta name=\"viewport\" content=\"width=device-width\" /> <style> body {font-family:\"Verdana\";font-weight:normal;font-size: .7em;color:black;} p {font-family:\"Verdana\";font-weight:normal;colo",
+    "looksProtectedContent": false,
+    "isLoginPage200": false,
+    "serverError": "Server Error in '/' Application"
+  }
+]

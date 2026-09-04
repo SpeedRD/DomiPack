@@ -1,0 +1,145 @@
+{
+  "btn": {
+    "id": "cpBody_gvDatos_DXCBtn1",
+    "cls": "dxbButton_Office365 dxgvADSB dxbButtonSys",
+    "title": null,
+    "ariaLabel": null,
+    "text": "",
+    "innerHTML": "<img title=\"...\" class=\"dxGridView_gvShowAdaptiveDetailButton_Office365 dx-vam\" src=\"/DXR.axd?r=1_89-4oArn\" alt=\"...\" id=\"cpBody_gvDatos_DXCBtn1Img\">",
+    "href": "javascript:;"
+  },
+  "viewportWidth": 1440,
+  "hiddenColumnsAt1440": [
+    "Servicio",
+    "Total"
+  ],
+  "afterOpen": {
+    "groupRows": [
+      {
+        "id": "cpBody_gvDatos_DXGroupRowExp0",
+        "visible": true,
+        "text": "Estatus: Embarcado"
+      }
+    ],
+    "dataRows": [
+      {
+        "id": "cpBody_gvDatos_DXDataRow1",
+        "visible": true,
+        "text": "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSONAL AMAZON"
+      }
+    ],
+    "detailRows": [
+      {
+        "id": "cpBody_gvDatos_DXADRow",
+        "cls": "dxgvDetailRow_Office365 dxgvADR",
+        "visible": false,
+        "text": ""
+      },
+      {
+        "id": "cpBody_gvDatos_DXADRow1",
+        "cls": "dxgvDetailRow_Office365 dxgvADR dxgvLVR",
+        "visible": true,
+        "text": "Servicio: FLETE AEREO Total: 0.00"
+      }
+    ],
+    "pager": 0,
+    "filterRow": 0,
+    "headers": [
+      {
+        "id": "cpBody_gvDatos_col0",
+        "text": "Post-Alerta",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col16",
+        "text": "AD",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col1",
+        "text": "Guia",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col2",
+        "text": "Fecha",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col3",
+        "text": "Tracking",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col8",
+        "text": "Peso",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col9",
+        "text": "FOB",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col11",
+        "text": "Contenido",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col12",
+        "text": "Suplidor",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col13",
+        "text": "RT",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col14",
+        "text": "Servicio",
+        "sortImg": false,
+        "visible": false,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col15",
+        "text": "Total",
+        "sortImg": false,
+        "visible": false,
+        "cursor": "pointer"
+      }
+    ],
+    "tableRole": null,
+    "thCount": 0,
+    "tdHeaderCount": 14,
+    "scopeCount": 0,
+    "ariaOnGrid": [],
+    "loadingVisible": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440
+  },
+  "openCallbacks": 0,
+  "detailShot": "audit/screenshots/rastreo-grid-row-detail-open.png",
+  "error": "locator.click: Timeout 30000ms exceeded."
+}

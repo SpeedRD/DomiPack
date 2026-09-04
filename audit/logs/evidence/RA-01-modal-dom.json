@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    {
+      "type": 3,
+      "text": ""
+    },
+    {
+      "type": 1,
+      "text": "Fecha Hasta:",
+      "tag": "LABEL"
+    },
+    {
+      "type": 3,
+      "text": ""
+    },
+    {
+      "type": 1,
+      "text": "",
+      "tag": "INPUT"
+    },
+    {
+      "type": 3,
+      "text": "gv"
+    }
+  ],
+  "modalText": "Filtro Fecha Desde: Fecha Hasta: gv Buscar",
+  "fgHTML": "<div class=\"form-group\">\n                                                <label>Fecha Hasta:</label>\n                                                <input name=\"ctl00$cpBody$lHasta\" type=\"date\" id=\"cpBody_lHasta\" class=\"form-control\">gv\n                                            </div>"
+}

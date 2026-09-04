@@ -1,0 +1,57 @@
+{
+  "768": {
+    "clientWidth": 768,
+    "scrollWidth": 942,
+    "readyState": "interactive",
+    "bodyOverflowX": "hidden",
+    "htmlOverflowX": "hidden",
+    "offenders": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "cls": "accountbg",
+        "right": 942,
+        "width": 768,
+        "left": 174,
+        "position": "absolute",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      }
+    ]
+  },
+  "1440": {
+    "clientWidth": 1440,
+    "scrollWidth": 1950,
+    "readyState": "interactive",
+    "bodyOverflowX": "visible",
+    "htmlOverflowX": "hidden",
+    "offenders": [
+      {
+        "tag": "DIV",
+        "id": "",
+        "cls": "accountbg",
+        "right": 1950,
+        "width": 1440,
+        "left": 510,
+        "position": "absolute",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      }
+    ]
+  },
+  "pending": {
+    "readyState": "interactive",
+    "total": 21,
+    "slow": [],
+    "notInPerf": [],
+    "imgs": [
+      {
+        "src": "https://clientes.domipack.com/assets/images/logo_lightnew.png",
+        "complete": true,
+        "w": 300
+      }
+    ]
+  }
+}

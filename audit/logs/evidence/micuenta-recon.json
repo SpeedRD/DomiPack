@@ -1,0 +1,1275 @@
+{
+  "title": "DOMIPACK - Web Clientes.",
+  "formAction": "https://clientes.domipack.com/MiCuenta.aspx",
+  "formOnsubmit": null,
+  "formMethod": "post",
+  "eventValidation": true,
+  "hasWebFormsJs": "function",
+  "hasPageValidators": false,
+  "validatorsCount": 0,
+  "validators": [],
+  "devexpress": {
+    "ASPx": "object",
+    "ASPxClientEdit": "function"
+  },
+  "fields": [
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lCodigo",
+        "type": "text",
+        "id": "cpBody_lCodigo",
+        "class": "form-control",
+        "placeholder": "Codigo",
+        "readonly": "readonly",
+        "value": "DP-014003"
+      },
+      "value": "DP-014003",
+      "readOnly": true,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Codigo: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(233, 236, 239)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lNombre",
+        "type": "text",
+        "id": "cpBody_lNombre",
+        "class": "form-control",
+        "placeholder": "Nombre",
+        "value": "JOSE ALEXANDER CABREJA AYBAR"
+      },
+      "value": "JOSE ALEXANDER CABREJA AYBAR",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Nombre: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lRNC",
+        "type": "text",
+        "id": "cpBody_lRNC",
+        "class": "form-control",
+        "placeholder": "Identificacion",
+        "value": "00111314480"
+      },
+      "value": "00111314480",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Identificacion: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lIdentificacion",
+        "type": "text",
+        "id": "cpBody_lIdentificacion",
+        "class": "form-control",
+        "placeholder": "Nombre"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Cedula/Pasaporte: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lEmail",
+        "type": "text",
+        "id": "cpBody_lEmail",
+        "class": "form-control",
+        "placeholder": "Email",
+        "value": "jacabreja@hotmail.com"
+      },
+      "value": "jacabreja@hotmail.com",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Email: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lContrasena",
+        "type": "password",
+        "id": "cpBody_lContrasena",
+        "class": "form-control",
+        "placeholder": "Nueva Contraseña"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Contrasena: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$ckConsolidation",
+        "type": "checkbox",
+        "id": "cpBody_ckConsolidation",
+        "class": "form-control"
+      },
+      "value": "on",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Consolidation: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lDireccion1",
+        "type": "text",
+        "id": "cpBody_lDireccion1",
+        "placeholder": "Direccion",
+        "class": "form-control",
+        "value": "Calle Coralillo 19, Punta Cana Village"
+      },
+      "value": "Calle Coralillo 19, Punta Cana Village",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Direccion 1: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lDireccion2",
+        "type": "text",
+        "id": "cpBody_lDireccion2",
+        "placeholder": "Direccion",
+        "class": "form-control"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Direccion 2: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "SELECT",
+      "attrs": {
+        "name": "ctl00$cpBody$lSucursal",
+        "id": "cpBody_lSucursal",
+        "disabled": "disabled",
+        "class": "aspNetDisabled"
+      },
+      "value": "DO.PTC",
+      "disabled": true,
+      "labels": [
+        "prevSiblingLabel(no-for?):Sucursal for=null"
+      ],
+      "optionsCount": 27,
+      "selectedText": "PUNTA CANA",
+      "firstOptions": [
+        {
+          "v": "DO.SDQ",
+          "t": "OFICINA PRINCIPAL NACO"
+        },
+        {
+          "v": "DO.BPS",
+          "t": "B PARTNERS"
+        },
+        {
+          "v": "DO.BCC",
+          "t": "BOCA CHICA"
+        },
+        {
+          "v": "DO.CAP",
+          "t": "CAP CANA"
+        },
+        {
+          "v": "DO.ELF",
+          "t": "ENSANCHE LA FE"
+        }
+      ],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "0.7",
+        "w": 333,
+        "h": 61
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lTelefono",
+        "type": "text",
+        "id": "cpBody_lTelefono",
+        "class": "form-control",
+        "placeholder": "Telefono"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Telefono: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lTelefono2",
+        "type": "text",
+        "id": "cpBody_lTelefono2",
+        "class": "form-control",
+        "placeholder": "Telefono"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Tel. Oficina: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lCelular",
+        "type": "text",
+        "id": "cpBody_lCelular",
+        "class": "form-control",
+        "placeholder": "Celular",
+        "value": "809-932-6810"
+      },
+      "value": "809-932-6810",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Celular: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 485,
+        "h": 38
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lCupon",
+        "type": "text",
+        "id": "cpBody_lCupon",
+        "class": "form-control"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Cupon for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$BVerificar",
+        "value": "Canjear Cupon",
+        "id": "cpBody_BVerificar",
+        "class": "btn btn-primary"
+      },
+      "value": "Canjear Cupon",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab1",
+      "tag": "INPUT",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$Button1",
+        "value": "Guardar",
+        "id": "cpBody_Button1",
+        "class": "btn btn-primary"
+      },
+      "value": "Guardar",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 74.15625,
+        "h": 33.1875
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab2",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lNombreDependiente",
+        "type": "text",
+        "id": "cpBody_lNombreDependiente",
+        "placeholder": "Nombre",
+        "class": "form-control"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Nombre: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab2",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lIdentificacionDependiente",
+        "type": "text",
+        "id": "cpBody_lIdentificacionDependiente",
+        "placeholder": "Cedula",
+        "class": "form-control"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Cedula/Pasaporte: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab2",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lEmailDependiente",
+        "type": "text",
+        "id": "cpBody_lEmailDependiente",
+        "placeholder": "Email",
+        "class": "form-control"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Email: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab2",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$lCelularDependiente",
+        "type": "text",
+        "id": "cpBody_lCelularDependiente",
+        "placeholder": "+99-99-9999-9999",
+        "class": "form-control"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Celular #: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab2",
+      "tag": "INPUT",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$Button3",
+        "value": "Guardar Dependiente",
+        "id": "cpBody_Button3",
+        "class": "btn btn-primary"
+      },
+      "value": "Guardar Dependiente",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab2",
+      "tag": "INPUT",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$Button2",
+        "value": "Agregar Dependiente",
+        "id": "cpBody_Button2",
+        "class": "btn btn-primary"
+      },
+      "value": "Agregar Dependiente",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab4",
+      "tag": "SELECT",
+      "attrs": {
+        "name": "ctl00$cpBody$cbPais",
+        "onchange": "javascript:setTimeout('__doPostBack(\\'ctl00$cpBody$cbPais\\',\\'\\')', 0)",
+        "id": "cpBody_cbPais",
+        "disabled": "disabled",
+        "tabindex": "8",
+        "class": "aspNetDisabled"
+      },
+      "value": "214",
+      "disabled": true,
+      "labels": [],
+      "optionsCount": 1,
+      "selectedText": "Republica Dominicana",
+      "firstOptions": [
+        {
+          "v": "214",
+          "t": "Republica Dominicana"
+        }
+      ],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "0.7",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab4",
+      "tag": "SELECT",
+      "attrs": {
+        "name": "ctl00$cpBody$cbProvincia",
+        "onchange": "javascript:setTimeout('__doPostBack(\\'ctl00$cpBody$cbProvincia\\',\\'\\')', 0)",
+        "id": "cpBody_cbProvincia",
+        "disabled": "disabled",
+        "class": "aspNetDisabled",
+        "style": "width: 100%"
+      },
+      "value": "0",
+      "disabled": true,
+      "labels": [
+        "prevSiblingLabel(no-for?):Provincia: for=null"
+      ],
+      "optionsCount": 32,
+      "selectedText": "SELECCIONAR PROVINCIA",
+      "firstOptions": [
+        {
+          "v": "02",
+          "t": "AZUA"
+        },
+        {
+          "v": "04",
+          "t": "BARAHONA"
+        },
+        {
+          "v": "05",
+          "t": "DAJABON"
+        },
+        {
+          "v": "01",
+          "t": "DISTRITO NACIONAL"
+        },
+        {
+          "v": "06",
+          "t": "DUARTE"
+        }
+      ],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "0.7",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab4",
+      "tag": "SELECT",
+      "attrs": {
+        "name": "ctl00$cpBody$cbCiudad",
+        "onchange": "javascript:setTimeout('__doPostBack(\\'ctl00$cpBody$cbCiudad\\',\\'\\')', 0)",
+        "id": "cpBody_cbCiudad",
+        "style": "width: 100%"
+      },
+      "value": "",
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Ciudad: for=null"
+      ],
+      "optionsCount": 0,
+      "firstOptions": [],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab4",
+      "tag": "SELECT",
+      "attrs": {
+        "name": "ctl00$cpBody$cbSector",
+        "onchange": "javascript:setTimeout('__doPostBack(\\'ctl00$cpBody$cbSector\\',\\'\\')', 0)",
+        "id": "cpBody_cbSector",
+        "style": "width: 100%"
+      },
+      "value": "",
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Sector: for=null"
+      ],
+      "optionsCount": 0,
+      "firstOptions": [],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab4",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$tbDireccion",
+        "type": "text",
+        "id": "cpBody_tbDireccion",
+        "placeholder": "Direccion",
+        "class": "form-control"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Direccion: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab4",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$tbNota",
+        "type": "text",
+        "id": "cpBody_tbNota",
+        "placeholder": "Nota",
+        "class": "form-control"
+      },
+      "value": "",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Nota: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab4",
+      "tag": "INPUT",
+      "attrs": {
+        "name": "ctl00$cpBody$ckPrincipal",
+        "type": "checkbox",
+        "id": "cpBody_ckPrincipal",
+        "placeholder": "Principal",
+        "class": "form-control"
+      },
+      "value": "on",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [
+        "prevSiblingLabel(no-for?):Principal: for=null"
+      ],
+      "style": {
+        "color": "rgb(73, 80, 87)",
+        "bg": "rgb(255, 255, 255)",
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab4",
+      "tag": "INPUT",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$bDireccion",
+        "value": "Guardar Direccion",
+        "id": "cpBody_bDireccion",
+        "class": "btn btn-primary"
+      },
+      "value": "Guardar Direccion",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab4",
+      "tag": "INPUT",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$Button6",
+        "value": "Agregar Direccion",
+        "id": "cpBody_Button6",
+        "class": "btn btn-primary"
+      },
+      "value": "Agregar Direccion",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    },
+    {
+      "tab": "cpBody_lefticontab3",
+      "tag": "INPUT",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$Button4",
+        "value": "Agregar Tarjeta",
+        "id": "cpBody_Button4",
+        "class": "btn btn-primary"
+      },
+      "value": "Agregar Tarjeta",
+      "readOnly": false,
+      "disabled": false,
+      "labels": [],
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(234, 53, 55)",
+        "display": "inline-block",
+        "visibility": "visible",
+        "opacity": "1",
+        "w": 0,
+        "h": 0
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "id": "cpBody_ltab1",
+      "href": "#cpBody_lefticontab1",
+      "text": "Datos Personales",
+      "cls": "nav-link active",
+      "attrs": {
+        "href": "#cpBody_lefticontab1",
+        "id": "cpBody_ltab1",
+        "class": "nav-link active",
+        "data-toggle": "tab"
+      },
+      "liDisplay": "list-item",
+      "liStyle": null
+    },
+    {
+      "id": "cpBody_ltab2",
+      "href": "#cpBody_lefticontab2",
+      "text": "Dependientes",
+      "cls": "nav-link",
+      "attrs": {
+        "href": "#cpBody_lefticontab2",
+        "id": "cpBody_ltab2",
+        "class": "nav-link",
+        "data-toggle": "tab"
+      },
+      "liDisplay": "list-item",
+      "liStyle": null
+    },
+    {
+      "id": "cpBody_ltab4",
+      "href": "#cpBody_lefticontab4",
+      "text": "Direccion",
+      "cls": "nav-link",
+      "attrs": {
+        "href": "#cpBody_lefticontab4",
+        "id": "cpBody_ltab4",
+        "class": "nav-link",
+        "data-toggle": "tab"
+      },
+      "liDisplay": "list-item",
+      "liStyle": null
+    },
+    {
+      "id": "cpBody_ltab3",
+      "href": "#cpBody_lefticontab3",
+      "text": "Tarjetas Registradas",
+      "cls": "nav-link",
+      "attrs": {
+        "href": "#cpBody_lefticontab3",
+        "id": "cpBody_ltab3",
+        "class": "nav-link",
+        "data-toggle": "tab"
+      },
+      "liDisplay": "none",
+      "liStyle": "Display:none;"
+    }
+  ],
+  "panes": [
+    {
+      "id": "cpBody_lefticontab1",
+      "cls": "tab-pane fade active show",
+      "display": "block",
+      "attrs": {
+        "id": "cpBody_lefticontab1",
+        "class": "tab-pane fade active show"
+      },
+      "textSample": "Personal Detalles Codigo: Nombre: Identificacion: Email: Contrasena: Otros Detalles Direccion 1: Direccion 2: Sucursal OFICINA PRINCIPAL NACO B PARTNERS BOCA CHICA CAP CANA ENSANCHE LA FE ENSANCHE PARAISO ENSANCHE SERRALLES GAZCUE GO TO LOGISTICS INVESTMENTS SRL INDEPENDENCIA – EL PORTAL INVIVIENDA "
+    },
+    {
+      "id": "cpBody_lefticontab2",
+      "cls": "tab-pane fade",
+      "display": "none",
+      "attrs": {
+        "id": "cpBody_lefticontab2",
+        "class": "tab-pane fade"
+      },
+      "textSample": " Agregar / Editar Dependiente Nombre: Cedula/Pasaporte: Email: Celular #: Listado de Dependientes Editar Borrar Nombre Cedula Celular Email No data to display Loading… <!-- ASPx.createControl(ASPxClientGridView,'cpBody_gvDependientes','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$g"
+    },
+    {
+      "id": "cpBody_lefticontab4",
+      "cls": "tab-pane fade",
+      "display": "none",
+      "attrs": {
+        "id": "cpBody_lefticontab4",
+        "class": "tab-pane fade"
+      },
+      "textSample": " Agregar / Editar Direcciones País: Republica Dominicana Provincia: AZUA BARAHONA DAJABON DISTRITO NACIONAL DUARTE EL SEIBO ELIAS PIÑA ESPAILLAT HATO MAYOR HERMANAS MIRABAL LA ALTAGRACIA LA ROMANA LA VEGA MARIA TRINIDAD SANCHEZ MONSEÑOR NOUEL MONTE CRISTI PEDERNALES PERAVIA PUERTO PLATA SAMANA SAN C"
+    },
+    {
+      "id": "cpBody_lefticontab3",
+      "cls": "tab-pane fade",
+      "display": "none",
+      "attrs": {
+        "id": "cpBody_lefticontab3",
+        "class": "tab-pane fade"
+      },
+      "textSample": " Borrar Tarjeta Numero Marca Fecha EXP No data to display Loading… <!-- ASPx.createControl(ASPxClientGridView,'cpBody_gvTarjetas','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$gvTarjetas',arg,ASPx.Callback,'cpBody_gvTarjetas',ASPx.CallbackError,true); },'uniqueID':'ctl00$cpBody$gvT"
+    }
+  ],
+  "buttons": [
+    {
+      "sel": "#cpBody_Button1",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$Button1",
+        "value": "Guardar",
+        "id": "cpBody_Button1",
+        "class": "btn btn-primary"
+      },
+      "value": "Guardar",
+      "formNoValidate": false,
+      "text": ""
+    },
+    {
+      "sel": "#cpBody_Button3",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$Button3",
+        "value": "Guardar Dependiente",
+        "id": "cpBody_Button3",
+        "class": "btn btn-primary"
+      },
+      "value": "Guardar Dependiente",
+      "formNoValidate": false,
+      "text": ""
+    },
+    {
+      "sel": "#cpBody_bDireccion",
+      "attrs": {
+        "type": "submit",
+        "name": "ctl00$cpBody$bDireccion",
+        "value": "Guardar Direccion",
+        "id": "cpBody_bDireccion",
+        "class": "btn btn-primary"
+      },
+      "value": "Guardar Direccion",
+      "formNoValidate": false,
+      "text": ""
+    }
+  ],
+  "chrome": {
+    "closeSidebarBtn": [
+      {
+        "tag": "BUTTON",
+        "attrs": {
+          "type": "button",
+          "class": "hamburger close-sidebar-btn hamburger--elastic",
+          "data-class": "closed-sidebar"
+        },
+        "text": "",
+        "html": "<button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\" data-class=\"closed-sidebar\">\n                            <span class=\"hamburger-box\">\n                                <span class=\"hamburger-inner\"></span>\n                            </span>\n                        </button>",
+        "display": "inline-block",
+        "rect": 24
+      },
+      {
+        "tag": "BUTTON",
+        "attrs": {
+          "type": "button",
+          "class": "hamburger hamburger--elastic mobile-toggle-nav"
+        },
+        "text": "",
+        "html": "<button type=\"button\" class=\"hamburger hamburger--elastic mobile-toggle-nav\">\n                        <span class=\"hamburger-box\">\n                            <span class=\"hamburger-inner\"></span>\n                        </span>\n                    </button>",
+        "display": "inline-block",
+        "rect": 0
+      },
+      {
+        "tag": "BUTTON",
+        "attrs": {
+          "type": "button",
+          "class": "btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+        },
+        "text": "",
+        "html": "<button type=\"button\" class=\"btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav\">\n                        <span class=\"btn-icon-wrapper\">\n                            <i class=\"fa fa-ellipsis-v fa-w-6\"></i>\n                        </span>\n                    </button>",
+        "display": "inline-block",
+        "rect": 0
+      },
+      {
+        "tag": "BUTTON",
+        "attrs": {
+          "type": "button",
+          "class": "hamburger close-sidebar-btn hamburger--elastic",
+          "data-class": "closed-sidebar"
+        },
+        "text": "",
+        "html": "<button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\" data-class=\"closed-sidebar\">\n                                <span class=\"hamburger-box\">\n                                    <span class=\"hamburger-inner\"></span>\n                                </span>\n                            </button>",
+        "display": "inline-block",
+        "rect": 0
+      },
+      {
+        "tag": "BUTTON",
+        "attrs": {
+          "type": "button",
+          "class": "hamburger hamburger--elastic mobile-toggle-nav"
+        },
+        "text": "",
+        "html": "<button type=\"button\" class=\"hamburger hamburger--elastic mobile-toggle-nav\">\n                            <span class=\"hamburger-box\">\n                                <span class=\"hamburger-inner\"></span>\n                            </span>\n                        </button>",
+        "display": "inline-block",
+        "rect": 0
+      },
+      {
+        "tag": "BUTTON",
+        "attrs": {
+          "type": "button",
+          "class": "btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+        },
+        "text": "",
+        "html": "<button type=\"button\" class=\"btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav\">\n                            <span class=\"btn-icon-wrapper\">\n                                <i class=\"fa fa-ellipsis-v fa-w-6\"></i>\n                            </span>\n                        </button>",
+        "display": "inline-block",
+        "rect": 0
+      }
+    ],
+    "userMenu": [
+      {
+        "tag": "A",
+        "attrs": {
+          "data-toggle": "dropdown",
+          "aria-haspopup": "true",
+          "aria-expanded": "false",
+          "class": "p-0 btn"
+        },
+        "text": "",
+        "html": "<a data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" class=\"p-0 btn\">\n                                            <img width=\"42\" class=\"rounded-circle\" src=\"https://lh3.googleusercontent.com/proxy/j6_9Gt0XFGwa_NtuObaVYIiUrX5Ge7xq2Xv02U3TcHfdyo2fkMha2gNYZPqpPWGiazSe4KaskZg\" alt=\"\">\n                                            <i class=\"fa fa-angle-down ml-2 opacity-8\"></i>\n                                        </a>"
+      }
+    ],
+    "salir": [
+      {
+        "tag": "BUTTON",
+        "attrs": {
+          "type": "button",
+          "tabindex": "0",
+          "class": "dropdown-item",
+          "onclick": "window.location.href='/Login.aspx'"
+        },
+        "text": "Salir",
+        "html": "<button type=\"button\" tabindex=\"0\" class=\"dropdown-item\" onclick=\"window.location.href='/Login.aspx'\">Salir</button>"
+      }
+    ],
+    "dropdownMenuHtml": "<div tabindex=\"-1\" role=\"menu\" aria-hidden=\"true\" class=\"dropdown-menu dropdown-menu-right\">\n                                            <button type=\"button\" tabindex=\"0\" class=\"dropdown-item\" onclick=\"window.location.href='/Login.aspx'\">Salir</button>\n\n                                        </div>",
+    "sidebarLinks": [
+      {
+        "id": "lMicuenta",
+        "href": "MiCuenta.aspx",
+        "text": "Mi Cuenta",
+        "cls": "mm-active",
+        "liCls": "",
+        "liDisplay": "list-item"
+      },
+      {
+        "id": "",
+        "href": "Estado.aspx",
+        "text": "Estados de Cuenta",
+        "cls": "",
+        "liCls": "",
+        "liDisplay": "list-item"
+      },
+      {
+        "id": "lRastreo",
+        "href": "Rastreo.aspx",
+        "text": "Rastreo",
+        "cls": "",
+        "liCls": "",
+        "liDisplay": "list-item"
+      },
+      {
+        "id": "lPruebaExportacion",
+        "href": "PruebaExportacion.aspx",
+        "text": "Prueba de Exportacion",
+        "cls": "",
+        "liCls": "",
+        "liDisplay": "list-item"
+      },
+      {
+        "id": "lPreAlerta",
+        "href": "PreAlerta.aspx",
+        "text": "PreAlerta",
+        "cls": "",
+        "liCls": "",
+        "liDisplay": "list-item"
+      },
+      {
+        "id": "",
+        "href": "PagoOnline.aspx",
+        "text": "Pagos Online",
+        "cls": "",
+        "liCls": "",
+        "liDisplay": "none"
+      }
+    ],
+    "footer": "<div class=\"app-wrapper-footer\">\n                    <div class=\"app-footer\">\n\n                        <div class=\"app-footer__inner\">\n\n\n                            <div class=\"app-footer-right\">\n                                <div class=\"left\">\n                                    <a href=\"#\">2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS.</a> - \n\t\t\t<a href=\"\">Términos y Condiciones de Uso</a> - \n\t\t\t<a href=\"\">Políticas de Privacidad</a> - \n\t\t\t<a href=\"\">Políticas de Entrega     </a>\n                                </div>\n                                <br>\n\n                                <br>\n                                <div class=\"right\">\n                                    <img src=\"https://tainoexpress.com//index_files/a.png\" alt=\"Merchant Equipment Store Credit Card Logos\">\n                                </div>\n                            </div>\n\n                        </div>\n                    </div>\n                </div>",
+    "footerLinks": [
+      {
+        "href": "#",
+        "text": "2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS.",
+        "onclick": null,
+        "target": null
+      },
+      {
+        "href": "",
+        "text": "Términos y Condiciones de Uso",
+        "onclick": null,
+        "target": null
+      },
+      {
+        "href": "",
+        "text": "Políticas de Privacidad",
+        "onclick": null,
+        "target": null
+      },
+      {
+        "href": "",
+        "text": "Políticas de Entrega",
+        "onclick": null,
+        "target": null
+      }
+    ]
+  },
+  "selectsWithHandlers": [
+    {
+      "id": "cpBody_lSucursal",
+      "onchange": null,
+      "hasOnchangeProp": false,
+      "disabled": true,
+      "cls": "aspNetDisabled",
+      "options": 27
+    },
+    {
+      "id": "cpBody_cbPais",
+      "onchange": "javascript:setTimeout('__doPostBack(\\'ctl00$cpBody$cbPais\\',\\'\\')', 0)",
+      "hasOnchangeProp": true,
+      "disabled": true,
+      "cls": "aspNetDisabled",
+      "options": 1
+    },
+    {
+      "id": "cpBody_cbProvincia",
+      "onchange": "javascript:setTimeout('__doPostBack(\\'ctl00$cpBody$cbProvincia\\',\\'\\')', 0)",
+      "hasOnchangeProp": true,
+      "disabled": true,
+      "cls": "aspNetDisabled",
+      "options": 32
+    },
+    {
+      "id": "cpBody_cbCiudad",
+      "onchange": "javascript:setTimeout('__doPostBack(\\'ctl00$cpBody$cbCiudad\\',\\'\\')', 0)",
+      "hasOnchangeProp": true,
+      "disabled": false,
+      "cls": "",
+      "options": 0
+    },
+    {
+      "id": "cpBody_cbSector",
+      "onchange": "javascript:setTimeout('__doPostBack(\\'ctl00$cpBody$cbSector\\',\\'\\')', 0)",
+      "hasOnchangeProp": true,
+      "disabled": false,
+      "cls": "",
+      "options": 0
+    }
+  ],
+  "inlineScripts": [
+    " function Confirmar(titulo, message, tipo, tituloPrint) { swal({ title: titulo, text: tituloPrint, icon: tipo, buttons: [ 'No!', 'Yes!' ], dangerMode: true, }).then(function (isConfirm) { if (isConfirm) { swal({ title: titulo, text: 'se esta Procesando la Informacion', icon: 'success' }).then(function () { Guardar(); }); } else { swal(titulo, message, tipo); } }); } ",
+    " //<![CDATA[ var theForm = document.forms['frmBody']; if (!theForm) { theForm = document.frmBody; } function __doPostBack(eventTarget, eventArgument) { if (!theForm.onsubmit || (theForm.onsubmit() != false)) { theForm.__EVENTTARGET.value = eventTarget; theForm.__EVENTARGUMENT.value = eventArgument; theForm.submit(); } } //]]> ",
+    " <!-- ASPx.createControl(ASPxClientGridView,'cpBody_gvDependientes','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$gvDependientes',arg,ASPx.Callback,'cpBody_gvDependientes',ASPx.CallbackError,true); },'uniqueID':'ctl00$cpBody$gvDependientes','stateObject':{'keys':[],'callbackState':'rYMQ9D10us1YCesWv+Ws+QoZykko7ZGBro1A8DIeaUeYn7t2mNOYc2BECVV6ERfYpitGTqjSgE5vRJg21eWfugyJbi56Xu30NepbjaUAlKgo20DB2HoWvDwXM88bQSTCCQonk8EJZGoXovq8Oe6/AKpKQ34BudowfX2ThzwQVcnLXYIFHpJm+zNGxzkrLLr3HwUQN3U8zzvpoZH2pxt8SXVF1I7pDfCrCcNSbiC0w0w4o//KHZVPzP9WoiEE1EIMeDFi415jLmdsw86NqmtLQ1Tqw+f956B7vQ2zKGa9VPFeV7Pkxs4gF+Bvc/E3RGtgDmerSsv7W/daySA62w4g1RQZJUKahppt7TQ0oO+kViCoUfGMQx9iOhWs6Sk/JUi3QLsLNOIIuza2vPBp3cjPY4Imjr/4LTkv+jEl+14cDg1C7JQqMmUM1NvgCNTbkFwdPgXomVWuHx2A57V2i46aRNUDyRR/U5Tqu+340LZ6zMeLiMiaMM0G5FiMabKbtM2hESJBPLCqAmxKfqAu8SmJMg==','groupLevelState':{},'selection':''},'callBacksEnabled':true,'pageRowCount':0,'pageRowSize':10,'pageIndex':0,'pageCount':0,'selectedWithoutPageRowCount':0,'visibleStartIndex':0,'focusedRowIndex':-1,'allowFocusedRow':false,'allowSelectByItemClick':false,'allowSelectSingleRowOnly':false,'callbackOnFocusedRowChanged':false,'callbackOnSelectionChanged':false,'editState':0,'editItemVisibleIndex':-1,'searchPanelFilter':'','allowDelete':true,'allowEdit':true,'allowInsert':true,'columnProp':[[0,,,,0,3,,,1,,,,,0,,,,,,,,0],[1,,,,0,3,,,1,,,,,0,,,,,,,,1],[2,0,,'TransaccionID',,3,,,3,,,,,,,,1],[3,,,'DependienteNombre',,3,,,3],[4,,,'Identificacion',,,,,4],[5,,,'Celul",
+    " <!-- ASPx.createControl(ASPxClientGridView,'cpBody_gvDireccion','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$gvDireccion',arg,ASPx.Callback,'cpBody_gvDireccion',ASPx.CallbackError,true); },'uniqueID':'ctl00$cpBody$gvDireccion','stateObject':{'keys':[],'callbackState':'zNML1q3IQc1hckKhZ478HE3RXRaFBo8vVQKuO8a4+gTQ4YGi9cxSCxKYFuE91xm8If8YqoYaBd9/iXOHSAFxParZcJMxv7jubEzR3wCoOxKkXBv7W+QzR3V5CmiwhVK9VT3rDiH/qDFmAsgCVna/3j14jggvoDj8c5mqDW7vxq1V33axWCTbyTeR6e5FffdgpnaJ3la4lgEXsMycFYWDvJZ17otd+w8bK9HitqrzO+N98tQPW5aCLVkLufZbmnpo+sgd74h47lkfavoCmPOYdDxUlo1m2ga+NZx0B4WFEsaLT05eUZuFkwQZ9vjI/17CGrS+RFftu5+QfrmQbg3vQ5qMUrrRYSMQMG/bThS5ebe/rpKhWYt6vmwmaep63HuePj6YibIn7FBQF7iONW5qbL2SoNzq1TkE3KsLesrzKvIa1TANSHuEhOt11Pp/HVbSglDN2eAUwvDRTjQXv80Y5O54EAh5GBSLp9sFDFg46m4aewcgsFlgvCc59XIK8n7BYWKbGRcn+u9ZXtgqdV+s2vBVuW2TqVASlPviyLfcveRFjXV3tnm8Mn6BHLBbN52r','groupLevelState':{},'selection':''},'callBacksEnabled':true,'pageRowCount':0,'pageRowSize':10,'pageIndex':0,'pageCount':0,'selectedWithoutPageRowCount':0,'visibleStartIndex':0,'focusedRowIndex':-1,'allowFocusedRow':false,'allowSelectByItemClick':false,'allowSelectSingleRowOnly':false,'callbackOnFocusedRowChanged':false,'callbackOnSelectionChanged':false,'editState':0,'editItemVisibleIndex':-1,'searchPanelFilter':'','allowDelete':true,'allowEdit':true,'allowInsert':true,'columnProp':[[0,,,,0,3,,,1,,,,,0,,,,,,,,0],[1,,,,0,3,,,1,,,,,0,,,,,,,,1],[2,0,,'ID',,3,,,3,,,,,,,,1],[3,,,'Direccion',,3,,,3],[4,,,'Nota',,,,,4],[5,,,'Princi",
+    " <!-- ASPx.createControl(ASPxClientGridView,'cpBody_gvTarjetas','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$gvTarjetas',arg,ASPx.Callback,'cpBody_gvTarjetas',ASPx.CallbackError,true); },'uniqueID':'ctl00$cpBody$gvTarjetas','stateObject':{'keys':[],'callbackState':'tOKT5lu8kc7P1QjVcfJECN4QxVb3IyI3D5mr8xAn5smlp8IOWXs43Sly3uGmc44Jvt40dJJoV8ofUqfwrMzAunyYpeAE4OeBArT6oOpeGJKKe66ouHrigz95nhUwcpz4YxTQHz0eSpZ4r0SlhrtT8zFd2j1f+4S/N5+gHQyd8Qxg1dXu7cIaoFWPWg3cF9O1RM20lx8wkC/g0heZpMY6B4FAS5ilKEBUeSfWJFYI6ODPzi9+8e3225nZ+hzCORJawRjFa3lRzXzSQg0Ra4QWDgWKCmGmrpXZAhoH0yaO3+vjVOSyB1H77fsjU/sQJtKMUYhom13KUyB/1il/lvbjgSiFyZ4KMBX6t6po+qQt1uRE2LDED6xGTXww1LpdrHf1sKB8H5jYG7amucHtYFAS1JNGwif0ZkmsaCfkrvQODllEf5XgEOZKF9fPtLNlWi3Rs2a1HcYMz6LvjvilWz0P5M9SSEzkxWiU0ce8PQwqpBC190FKjDBAsRD0Ts4ffaIh4Qc8n8tjt9xKuDJj9KNb7yNNQ0AT/MisqBL8bE3OgJU=','groupLevelState':{},'selection':''},'callBacksEnabled':true,'pageRowCount':0,'pageRowSize':10,'pageIndex':0,'pageCount':0,'selectedWithoutPageRowCount':0,'visibleStartIndex':0,'focusedRowIndex':-1,'allowFocusedRow':false,'allowSelectByItemClick':false,'allowSelectSingleRowOnly':false,'callbackOnFocusedRowChanged':false,'callbackOnSelectionChanged':false,'editState':0,'editItemVisibleIndex':-1,'searchPanelFilter':'','allowDelete':true,'allowEdit':true,'allowInsert':true,'columnProp':[[0,,,,0,3,,,1,,,,,0],[1,0,,'AuthHash',,3,,,1,,,,,,,,1],[2,0,,'ClienteID',,3,,,2,,,,,,,,1],[3,0,,'CompaniaID',,3,,,3,,,,,,,,1],[4,0,,'DataVaul_Token',,3,,,4,,,,,,,,1],[5",
+    " function GuardarDependiente() { document.getElementById(\"cpBody_BGuardarDependientes\").click(); } function Guardar() { document.getElementById(\"cpBody_bGuardarClientes\").click(); } function Editar(s) { document.getElementById(\"cpBody_DependienteId\").value = s; document.getElementById(\"cpBody_bEditar\").click(); } function Eliminar(s) { if (confirm('Desea Eliminar el Dependiente?')) { document.getElementById(\"cpBody_DependienteId\").value = s; document.getElementById(\"cpBody_BEliminar1\").click(); } } ",
+    " <!-- ASPx.AddHoverItems('cpBody_ppDelCard',[[['dxpc-closeBtnHover'],[''],['HCB-1']]]); ASPx.createControl(ASPxClientPopupControl,'cpBody_ppDelCard','ppDelCard',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$ppDelCard',arg,ASPx.Callback,'cpBody_ppDelCard',ASPx.CallbackError,true); },'enableCallbackAnimation':true,'uniqueID':'ctl00$cpBody$ppDelCard','popupAnimationType':'auto','closeAnimationType':'fade','closeAction':'CloseButton','popupHorizontalAlign':'WindowCenter','popupVerticalAlign':'WindowCenter','isPopupPositionCorrectionOn':false,'allowDragging':true,'width':400,'widthFromServer':true,'height':400,'adaptivityEnabled':true}); //--> ",
+    " //<![CDATA[ var callBackFrameUrl='/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdS9uCtpHzFr3PASHXQIGjhun65JpX7OPiKSe-NHQg4Cs7R1UUUHEqeeO4cRynjfHHQ2&t=639190689332169432'; WebForm_InitCallback();//]]> "
+  ],
+  "scriptSrcs": [
+    "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "https://code.jquery.com/jquery-3.7.1.js",
+    "/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_21,1_22,1_190,1_192,1_17,1_41,1_194,1_188-4oArn",
+    "http://maps.google.com/maps/api/js?sensor=true",
+    "./assets/scripts/main.js"
+  ],
+  "lang": "en",
+  "landmarks": {
+    "main": 0,
+    "nav": 0,
+    "h1": []
+  }
+}

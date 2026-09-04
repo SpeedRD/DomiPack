@@ -1,0 +1,62 @@
+{
+  "lUser": {
+    "required": true,
+    "maxLength": -1,
+    "autocomplete": null,
+    "type": "text",
+    "labels": [],
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "placeholder": "Usuario",
+    "title": ""
+  },
+  "lPass": {
+    "required": false,
+    "maxLength": -1,
+    "autocomplete": null,
+    "type": "password",
+    "labels": [],
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "placeholder": "Password",
+    "title": ""
+  },
+  "checkbox": {
+    "name": null,
+    "checked": true,
+    "defaultChecked": true,
+    "labels": [
+      "Remember me"
+    ]
+  },
+  "revealToggle": false,
+  "entrar": {
+    "tag": "A",
+    "href": "#",
+    "role": null,
+    "text": "Entrar",
+    "tabindex": 0
+  },
+  "recuperar": {
+    "tag": "A",
+    "href": "#",
+    "text": "Recuperar mi Contraseña?"
+  },
+  "logoHref": "index.html",
+  "footerPresent": false,
+  "bodyText": "Iniciar sesión Remember me Entrar Recuperar mi Contraseña? Crear Cuenta Gratis",
+  "lang": "",
+  "hiddenSubmits": [
+    {
+      "id": "blogin",
+      "display": "inline-block",
+      "formnovalidate": false
+    },
+    {
+      "id": "bRecuperar",
+      "display": "inline-block",
+      "formnovalidate": false
+    }
+  ],
+  "formNovalidate": false
+}

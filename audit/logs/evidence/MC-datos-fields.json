@@ -1,0 +1,691 @@
+{
+  "originalsLengths": {
+    "#cpBody_lCodigo": 9,
+    "#cpBody_lNombre": 28,
+    "#cpBody_lRNC": 11,
+    "#cpBody_lEmail": 21,
+    "#cpBody_lDireccion1": 38,
+    "#cpBody_lDireccion2": 0,
+    "#cpBody_lTelefono": 0,
+    "#cpBody_lTelefono2": 0,
+    "#cpBody_lCelular": 12,
+    "#cpBody_lContrasena": 0
+  },
+  "facts": {
+    "pageValidators": null,
+    "formOnsubmit": null,
+    "formNovalidate": false,
+    "defaultSubmitButton": {
+      "id": "SetCliente",
+      "value": "",
+      "hidden": true
+    },
+    "submits": [
+      {
+        "id": "SetCliente",
+        "value": "",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_BVerificar",
+        "value": "Canjear Cupon",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_Button1",
+        "value": "Guardar",
+        "hidden": false
+      },
+      {
+        "id": "cpBody_Button3",
+        "value": "Guardar Dependiente",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_Button2",
+        "value": "Agregar Dependiente",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_bDireccion",
+        "value": "Guardar Direccion",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_Button6",
+        "value": "Agregar Direccion",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_Button4",
+        "value": "Agregar Tarjeta",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_BEliminar1",
+        "value": "",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_bEditar",
+        "value": "",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_bGuardarClientes",
+        "value": "",
+        "hidden": true
+      },
+      {
+        "id": "cpBody_BGuardarDependientes",
+        "value": "",
+        "hidden": true
+      }
+    ],
+    "fields": [
+      {
+        "id": "cpBody_lCodigo",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": true,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Codigo",
+        "labelText": "Codigo:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_lNombre",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Nombre",
+        "labelText": "Nombre:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_lRNC",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Identificacion",
+        "labelText": "Identificacion:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_lIdentificacion",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Nombre",
+        "labelText": "Cedula/Pasaporte:",
+        "labelFor": null,
+        "hidden": true
+      },
+      {
+        "id": "cpBody_lEmail",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Email",
+        "labelText": "Email:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_lContrasena",
+        "type": "password",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Nueva Contraseña",
+        "labelText": "Contrasena:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_ckConsolidation",
+        "type": "checkbox",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "",
+        "labelText": "Consolidation:",
+        "labelFor": null,
+        "hidden": true
+      },
+      {
+        "id": "cpBody_lDireccion1",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Direccion",
+        "labelText": "Direccion 1:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_lDireccion2",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Direccion",
+        "labelText": "Direccion 2:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_lTelefono",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Telefono",
+        "labelText": "Telefono:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_lTelefono2",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Telefono",
+        "labelText": "Tel. Oficina:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_lCelular",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "Celular",
+        "labelText": "Celular:",
+        "labelFor": null,
+        "hidden": false
+      },
+      {
+        "id": "cpBody_lCupon",
+        "type": "text",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "",
+        "labelText": "Cupon",
+        "labelFor": null,
+        "hidden": true
+      },
+      {
+        "id": "cpBody_BVerificar",
+        "type": "submit",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "",
+        "labelText": null,
+        "labelFor": null,
+        "hidden": true
+      },
+      {
+        "id": "cpBody_Button1",
+        "type": "submit",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "readOnly": false,
+        "disabled": false,
+        "title": null,
+        "ariaLabel": null,
+        "placeholder": "",
+        "labelText": null,
+        "labelFor": null,
+        "hidden": false
+      }
+    ],
+    "swalType": "function",
+    "SwalType": "function",
+    "confirmarDefined": "function",
+    "guardarDefined": "function",
+    "button1": {
+      "onclick": null,
+      "value": "Guardar",
+      "disabled": false,
+      "hasClickListener": false
+    }
+  },
+  "sucursal": {
+    "disabled": true,
+    "title": null,
+    "cls": "aspNetDisabled",
+    "selected": "PUNTA CANA",
+    "opts": 27,
+    "tabbable": 0
+  },
+  "passwordHint": {
+    "groupText": "Contrasena:",
+    "siblings": [
+      "LABEL.",
+      "INPUT.form-control"
+    ],
+    "meterLike": 0
+  },
+  "tabOrder": [
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lNombre",
+      "cls": "form-control",
+      "text": "JOSE ALEXANDER CABREJA AYBAR",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lRNC",
+      "cls": "form-control",
+      "text": "00111314480",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lEmail",
+      "cls": "form-control",
+      "text": "jacabreja@hotmail.com",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lContrasena",
+      "cls": "form-control",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lDireccion1",
+      "cls": "form-control",
+      "text": "Calle Coralillo 19, Punta Cana Village",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lDireccion2",
+      "cls": "form-control",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lTelefono",
+      "cls": "form-control",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lTelefono2",
+      "cls": "form-control",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lCelular",
+      "cls": "form-control",
+      "text": "809-932-6810",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_Button1",
+      "cls": "btn btn-primary",
+      "text": "Guardar",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(255, 255, 255)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "2022 - DOMIPACK, TODOS LOS DERECHOS RESE",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "Términos y Condiciones de Uso",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "Políticas de Privacidad",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "Políticas de Entrega",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": false
+    },
+    {
+      "tag": "BODY",
+      "id": "",
+      "cls": "",
+      "text": " JOSE ALEXANDER CABREJA AYBAR jacabreja@",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "none",
+      "visible": true,
+      "inViewport": false,
+      "focusVisible": false,
+      "indicator": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "hamburger close-sidebar-btn hamburger--elastic",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "none",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": false
+    }
+  ],
+  "guardarFocus": {
+    "tag": "INPUT",
+    "id": "cpBody_Button1",
+    "cls": "btn btn-primary",
+    "text": "Guardar",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(255, 255, 255)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+    "visible": true,
+    "inViewport": true,
+    "focusVisible": true,
+    "indicator": true
+  },
+  "copy": {
+    "lang": "en",
+    "title": "DOMIPACK - Web Clientes.",
+    "heading": "Mi Cuenta Actualiza tu Datos.",
+    "labels": [
+      "Personal Detalles",
+      "Codigo:",
+      "Nombre:",
+      "Identificacion:",
+      "Cedula/Pasaporte:",
+      "Email:",
+      "Contrasena:",
+      "Consolidation:",
+      "Otros Detalles",
+      "Direccion 1:",
+      "Direccion 2:",
+      "Sucursal",
+      "Telefono:",
+      "Tel. Oficina:",
+      "Celular:",
+      "Cupon"
+    ],
+    "placeholders": [
+      "Codigo",
+      "Nombre",
+      "Identificacion",
+      "Nombre",
+      "Email",
+      "Nueva Contraseña",
+      "Direccion",
+      "Direccion",
+      "Telefono",
+      "Telefono",
+      "Celular"
+    ],
+    "tabs": [
+      "Datos Personales",
+      "Dependientes",
+      "Direccion",
+      "Tarjetas Registradas"
+    ],
+    "buttons": [
+      "Canjear Cupon",
+      "Guardar"
+    ]
+  },
+  "contrast": {
+    "sucursal": {
+      "sel": "#cpBody_lSucursal",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(234, 53, 55)",
+      "effectiveBg": {
+        "r": 240.3,
+        "g": 113.60000000000001,
+        "b": 115.00000000000001
+      },
+      "opacity": 0.7,
+      "fontSize": "14.08px",
+      "fontWeight": "400",
+      "ratio": 2.11,
+      "text": "OFICINA PRINCIPAL NACO\nB PARTNERS\nBOCA C"
+    },
+    "codigo": {
+      "sel": "#cpBody_lCodigo",
+      "color": "rgb(73, 80, 87)",
+      "background": "rgb(233, 236, 239)",
+      "effectiveBg": {
+        "r": 233,
+        "g": 236,
+        "b": 239
+      },
+      "opacity": 1,
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "ratio": 6.9,
+      "text": "DP-014003"
+    },
+    "placeholderTelefono": {
+      "color": "rgb(108, 117, 125)",
+      "bg": "rgb(255, 255, 255)"
+    },
+    "guardar": {
+      "sel": "#cpBody_Button1",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(234, 53, 55)",
+      "effectiveBg": {
+        "r": 234,
+        "g": 53,
+        "b": 55
+      },
+      "opacity": 1,
+      "fontSize": "12.8px",
+      "fontWeight": "400",
+      "ratio": 4.15,
+      "text": "Guardar"
+    }
+  }
+}

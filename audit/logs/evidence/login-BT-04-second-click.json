@@ -1,0 +1,15 @@
+{
+  "stillLoadingAt1s": true,
+  "landed": "https://clientes.domipack.com/Rastreo.aspx",
+  "posts": [
+    {
+      "dt": 24
+    }
+  ],
+  "responses": [
+    {
+      "dt": 100,
+      "status": 302
+    }
+  ]
+}

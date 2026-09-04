@@ -1,0 +1,19 @@
+{
+  "at375": {
+    "display": "inline",
+    "visibility": "visible",
+    "opacity": "1",
+    "w": 0,
+    "h": 0,
+    "complete": true,
+    "naturalWidth": 300,
+    "aDisplay": "none",
+    "h3Display": "block",
+    "h3Class": "text-center m-t-0 m-b-15"
+  },
+  "at768": {
+    "display": "inline",
+    "w": 331,
+    "h3Display": "block"
+  }
+}

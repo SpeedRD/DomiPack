@@ -1,0 +1,100 @@
+{
+  "initial": {
+    "expanded": "false",
+    "shown": false,
+    "menuAriaHidden": "true",
+    "menuRole": "menu",
+    "itemRoles": [
+      null
+    ],
+    "btnAria": [
+      "aria-haspopup=true",
+      "aria-expanded=false"
+    ]
+  },
+  "afterClick": {
+    "expanded": "true",
+    "shown": true,
+    "menuAriaHidden": "true",
+    "menuRole": "menu",
+    "itemRoles": [
+      null
+    ],
+    "btnAria": [
+      "aria-haspopup=true",
+      "aria-expanded=true"
+    ]
+  },
+  "menuShot": "audit/screenshots/rastreo-menu-open.png",
+  "afterClickOutside": {
+    "expanded": "false",
+    "shown": false,
+    "menuAriaHidden": "true",
+    "menuRole": "menu",
+    "itemRoles": [
+      null
+    ],
+    "btnAria": [
+      "aria-haspopup=true",
+      "aria-expanded=false"
+    ]
+  },
+  "afterEsc": {
+    "expanded": "false",
+    "shown": false,
+    "menuAriaHidden": "true",
+    "menuRole": "menu",
+    "itemRoles": [
+      null
+    ],
+    "btnAria": [
+      "aria-haspopup=true",
+      "aria-expanded=false"
+    ]
+  },
+  "afterEnter": {
+    "expanded": "true",
+    "shown": true,
+    "menuAriaHidden": "true",
+    "menuRole": "menu",
+    "itemRoles": [
+      null
+    ],
+    "btnAria": [
+      "aria-haspopup=true",
+      "aria-expanded=true"
+    ],
+    "active": "BUTTON#cpBody_bpagar.btn-shadow dropdown-toggle btn|Menu|inHistorial=false|inPopup=false"
+  },
+  "afterArrowDown": {
+    "active": "BUTTON#cpBody_bpagar.btn-shadow dropdown-toggle btn|Menu|inHistorial=false|inPopup=false"
+  },
+  "afterEsc2": {
+    "expanded": "false",
+    "shown": false,
+    "menuAriaHidden": "true",
+    "menuRole": "menu",
+    "itemRoles": [
+      null
+    ],
+    "btnAria": [
+      "aria-haspopup=true",
+      "aria-expanded=false"
+    ],
+    "active": "BUTTON#cpBody_bpagar.btn-shadow dropdown-toggle btn|Menu|inHistorial=false|inPopup=false"
+  },
+  "afterDblClick": {
+    "expanded": "false",
+    "shown": false,
+    "menuAriaHidden": "true",
+    "menuRole": "menu",
+    "itemRoles": [
+      null
+    ],
+    "btnAria": [
+      "aria-haspopup=true",
+      "aria-expanded=false"
+    ]
+  },
+  "dialogs": []
+}

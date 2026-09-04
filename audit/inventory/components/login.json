@@ -1,0 +1,46 @@
+{
+  "screenId": "login",
+  "screenName": "Iniciar Sesión (Login)",
+  "url": "https://clientes.domipack.com/Login.aspx",
+  "components": [
+    {
+      "type": "text field",
+      "name": "Usuario (#lUser)",
+      "action": "Free-text input for the account/username. No placeholder-derived <label>; only a placeholder attribute ('Usuario') is present, so screen-reader users get no accessible name unless the placeholder is announced by the AT."
+    },
+    {
+      "type": "password field",
+      "name": "Password (#lPass)",
+      "action": "Free-text password input, placeholder 'Password' only (no <label>, no aria-label)."
+    },
+    {
+      "type": "checkbox",
+      "name": "Remember me (#checkbox-signup)",
+      "action": "Toggles a 'remember me' preference; checked by default on page load. Purpose/behavior (session length? saved username?) not verified — no visible effect tested."
+    },
+    {
+      "type": "button",
+      "name": "Entrar",
+      "action": "An <a href=\"#\" onclick=\"login()\"> (not a real button/submit element). Triggers JS login() which POSTs credentials; on success shows an intermediate 'Loading https://.../Rastreo.aspx' document title for ~4-20s, then redirects to Rastreo.aspx."
+    },
+    {
+      "type": "button",
+      "name": "Recuperar mi Contraseña?",
+      "action": "<a href=\"#\" onclick=\"Recuperar();\">. Presumed password-recovery flow; not exercised further in this phase (out of scope — would likely send a real email)."
+    },
+    {
+      "type": "button",
+      "name": "Crear Cuenta Gratis",
+      "action": "Real link, href=\"NuevaCuenta.aspx\". Navigates to the public registration screen."
+    },
+    {
+      "type": "status message",
+      "name": "Page title 'Domipack - Web Trans'",
+      "action": "Static branding text, not a live status message on this screen."
+    }
+  ],
+  "notes": [
+    "Root '/' renders the same markup as this screen directly (no redirect observed).",
+    "Both primary form fields (#lUser, #lPass) rely on placeholder text as their only visible label — no <label for> or aria-label, which is an accessibility gap (placeholder text disappears once the field has a value or focus, in some browsers/AT configurations)."
+  ]
+}

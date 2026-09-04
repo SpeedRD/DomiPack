@@ -1,0 +1,68 @@
+[
+  {
+    "step": "load(Personal)",
+    "dCedula": true,
+    "dRnc": false,
+    "dRnc1": false,
+    "DFechaNacimiento": true,
+    "lrnc": "RNC",
+    "iRNCph": "RNC",
+    "tbFechaRequired": false,
+    "identVisible": true
+  },
+  {
+    "step": "Corporativo",
+    "dCedula": false,
+    "dRnc": true,
+    "dRnc1": true,
+    "DFechaNacimiento": false,
+    "lrnc": "RNC",
+    "iRNCph": "RNC",
+    "tbFechaRequired": false,
+    "identVisible": false
+  },
+  {
+    "step": "Extranjero",
+    "dCedula": false,
+    "dRnc": true,
+    "dRnc1": false,
+    "DFechaNacimiento": false,
+    "lrnc": "Pasaporte",
+    "iRNCph": "Pasaporte",
+    "tbFechaRequired": false,
+    "identVisible": false
+  },
+  {
+    "step": "Personal",
+    "dCedula": true,
+    "dRnc": false,
+    "dRnc1": false,
+    "DFechaNacimiento": true,
+    "lrnc": "Pasaporte",
+    "iRNCph": "Pasaporte",
+    "tbFechaRequired": false,
+    "identVisible": true
+  },
+  {
+    "step": "Corporativo",
+    "dCedula": false,
+    "dRnc": true,
+    "dRnc1": true,
+    "DFechaNacimiento": false,
+    "lrnc": "RNC",
+    "iRNCph": "RNC",
+    "tbFechaRequired": false,
+    "identVisible": false
+  },
+  {
+    "step": "Personal",
+    "dCedula": true,
+    "dRnc": false,
+    "dRnc1": false,
+    "DFechaNacimiento": true,
+    "lrnc": "RNC",
+    "iRNCph": "RNC",
+    "tbFechaRequired": false,
+    "identVisible": true
+  }
+]

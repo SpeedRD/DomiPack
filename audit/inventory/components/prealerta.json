@@ -1,0 +1,62 @@
+{
+  "screenId": "prealerta",
+  "screenName": "PreAlerta",
+  "url": "https://clientes.domipack.com/PreAlerta.aspx",
+  "sharedChrome": "See _shared-chrome.json for header/sidebar controls present on this and every other authenticated screen.",
+  "components": [
+    {
+      "type": "text field",
+      "name": "Tracking (#cpBody_Tracking)",
+      "action": "Free-text tracking/carrier number, required to identify the incoming package being pre-alerted."
+    },
+    {
+      "type": "text field",
+      "name": "Codigo Cliente (#cpBody_ClienteID)",
+      "action": "Loads disabled/pre-filled (presumably auto-populated with the account's client code)."
+    },
+    {
+      "type": "number field",
+      "name": "Valor Declarado (#cpBody_FOB)",
+      "action": "type=number, declared value of the package contents."
+    },
+    {
+      "type": "select",
+      "name": "Transportista (#cpBody_Transpos)",
+      "action": "Carrier picker: UPS, USPS, Amazon, Fedex, DHL, Otros."
+    },
+    {
+      "type": "text field",
+      "name": "Suplidor (#cpBody_Suplidor)",
+      "action": "Free-text supplier/merchant name."
+    },
+    {
+      "type": "text field",
+      "name": "Contenido (#cpBody_contenido)",
+      "action": "Multi-line textarea describing package contents."
+    },
+    {
+      "type": "file upload",
+      "name": "Subir Factura (#cpBody_File1)",
+      "action": "input[type=file]. Attaches an invoice document to the pre-alert."
+    },
+    {
+      "type": "button",
+      "name": "Envia tu Factura (#cpBody_bSend)",
+      "action": "input[type=submit], class 'Send'. DESTRUCTIVE — creates a real, persisted pre-alert record tied to the test account and uploads the attached file. NOT submitted, per audit/findings/destructive-actions-detected.md."
+    },
+    {
+      "type": "table",
+      "name": "Existing pre-alerts grid (#cpBody_gvDatos)",
+      "action": "DevExpress grid, columns: Fecha, Tracking, Proovedor, Contenido, Valor. Empty for this test account ('No data to display'), implying a successful submit would add a new row here."
+    },
+    {
+      "type": "status message",
+      "name": "'No data to display'",
+      "action": "DevExpress empty-state row (#cpBody_gvDatos_DXEmptyRow)."
+    }
+  ],
+  "notes": [
+    "Form was not submitted — see audit/findings/destructive-actions-detected.md, item 1.",
+    "Several fields have plain-text labels only via placeholder (no <label for> / aria-label captured) — same accessibility pattern seen on Login and Nueva Cuenta."
+  ]
+}

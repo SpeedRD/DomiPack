@@ -1,0 +1,149 @@
+{
+  "imgBefore": {
+    "cls": "dxGridView_gvExpandedButton_Office365",
+    "onclick": "ASPx.GVCollapseRow('cpBody_gvDatos',0,event);event.cancelBubble = true",
+    "alt": "Collapse",
+    "title": null,
+    "role": null,
+    "tabindex": null,
+    "ariaLabel": null
+  },
+  "afterCollapse": {
+    "groupRows": [],
+    "dataRows": [],
+    "detailRows": [
+      {
+        "id": "cpBody_gvDatos_DXADRow",
+        "cls": "dxgvDetailRow_Office365 dxgvADR",
+        "visible": false,
+        "text": ""
+      }
+    ],
+    "pager": 0,
+    "filterRow": 0,
+    "headers": [
+      {
+        "id": "cpBody_gvDatos_col0",
+        "text": "Post-Alerta",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col16",
+        "text": "AD",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col1",
+        "text": "Guia",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col2",
+        "text": "Fecha",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col3",
+        "text": "Tracking",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col8",
+        "text": "Peso",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col9",
+        "text": "FOB",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col11",
+        "text": "Contenido",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col12",
+        "text": "Suplidor",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col13",
+        "text": "RT",
+        "sortImg": false,
+        "visible": true,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col14",
+        "text": "Servicio",
+        "sortImg": false,
+        "visible": false,
+        "cursor": "pointer"
+      },
+      {
+        "id": "cpBody_gvDatos_col15",
+        "text": "Total",
+        "sortImg": false,
+        "visible": false,
+        "cursor": "pointer"
+      }
+    ],
+    "tableRole": null,
+    "thCount": 0,
+    "tdHeaderCount": 14,
+    "scopeCount": 0,
+    "ariaOnGrid": [],
+    "loadingVisible": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440
+  },
+  "afterCollapseEmptyRow": " \t\nNo data to display\n\t ",
+  "collapseCallbacks": 1,
+  "collapsedShot": "audit/screenshots/rastreo-grid-collapsed.png",
+  "expandImgCount": 0,
+  "afterReload": 1,
+  "focusPath": [
+    "BUTTON#.hamburger close-sidebar-btn hamburger--e||inGrid=false",
+    "A#lMicuenta.|Mi Cuenta|inGrid=false",
+    "A#.|Estados de Cuenta|inGrid=false",
+    "A#lRastreo.mm-active|Rastreo|inGrid=false",
+    "A#lPruebaExportacion.|Prueba de Exportacion|inGrid=false",
+    "A#lPreAlerta.|PreAlerta|inGrid=false",
+    "BUTTON#cpBody_bpagar.btn-shadow dropdown-toggle btn btn-info|Menu|inGrid=false",
+    "A#cpBody_gvDatos_DXCBtn0.dxbButton_Office365 dxgvCommandColumnIte||inGrid=true",
+    "A#.|0|inGrid=true",
+    "A#.|DP01-00306834|inGrid=true",
+    "A#cpBody_gvDatos_DXCBtn1.dxbButton_Office365 dxgvADSB dxbButtonSy||inGrid=true",
+    "A#.|2022 - DOMIPACK, TODOS LOS DER|inGrid=false",
+    "A#.|Términos y Condiciones de Uso|inGrid=false",
+    "A#.|Políticas de Privacidad|inGrid=false",
+    "A#.|Políticas de Entrega|inGrid=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AYBAR\nj|inGrid=false"
+  ],
+  "gridFocusables": [
+    "A#cpBody_gvDatos_DXCBtn0.dxbButton_Office365 dxgvCommandColumnIte||inGrid=true",
+    "A#.|0|inGrid=true",
+    "A#.|DP01-00306834|inGrid=true",
+    "A#cpBody_gvDatos_DXCBtn1.dxbButton_Office365 dxgvADSB dxbButtonSy||inGrid=true"
+  ],
+  "groupToggleFocusable": false
+}

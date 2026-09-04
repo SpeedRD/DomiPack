@@ -1,0 +1,275 @@
+[
+  {
+    "caseId": "RS-01",
+    "w": 375,
+    "h": 812,
+    "scrollWidth": 375,
+    "clientWidth": 375,
+    "overflow": false,
+    "htmlOverflowX": "hidden",
+    "offenders": [],
+    "preloader": {
+      "display": "none",
+      "opacity": "1"
+    },
+    "logo": {
+      "x": 20,
+      "y": 20,
+      "w": 300,
+      "h": 77,
+      "right": 320
+    },
+    "panel": {
+      "x": 20,
+      "y": 20,
+      "w": 335,
+      "h": 1618,
+      "right": 355
+    },
+    "bSend": {
+      "x": 20,
+      "y": 1199,
+      "w": 136,
+      "h": 38,
+      "right": 156
+    },
+    "lSucursal": {
+      "x": 20,
+      "y": 896,
+      "w": 335,
+      "h": 38,
+      "right": 355
+    },
+    "cbMedio": {
+      "x": 20,
+      "y": 1062,
+      "w": 335,
+      "h": 38,
+      "right": 355
+    },
+    "ckDomicilio": {
+      "x": 33,
+      "y": 986,
+      "w": 13,
+      "h": 13,
+      "right": 46
+    },
+    "ckRua": {
+      "x": 33,
+      "y": 1152,
+      "w": 13,
+      "h": 13,
+      "right": 46
+    },
+    "email": {
+      "x": 20,
+      "y": 671,
+      "w": 335,
+      "h": 38,
+      "right": 355
+    },
+    "fontSize": "14px",
+    "emailPlaceholderClipped": false,
+    "small": [
+      "ckDomicilio",
+      "ckRua"
+    ],
+    "axeCount": 10,
+    "axe": [
+      "color-contrast(serious,6)",
+      "empty-heading(minor,1)",
+      "html-has-lang(serious,1)",
+      "image-alt(critical,1)",
+      "label(critical,2)",
+      "landmark-one-main(moderate,2)",
+      "page-has-heading-one(moderate,2)",
+      "region(moderate,17)",
+      "select-name(critical,4)",
+      "tabindex(serious,12)"
+    ],
+    "shot": "audit/screenshots/rs-nueva-cuenta-375.png",
+    "axeFile": "audit/logs/axe/nueva-cuenta-375.json"
+  },
+  {
+    "caseId": "RS-02",
+    "w": 768,
+    "h": 1024,
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "overflow": false,
+    "htmlOverflowX": "hidden",
+    "offenders": [],
+    "preloader": {
+      "display": "none",
+      "opacity": "1"
+    },
+    "logo": {
+      "x": 20,
+      "y": 20,
+      "w": 300,
+      "h": 77,
+      "right": 320
+    },
+    "panel": {
+      "x": 20,
+      "y": 20,
+      "w": 728,
+      "h": 1618,
+      "right": 748
+    },
+    "bSend": {
+      "x": 20,
+      "y": 1199,
+      "w": 136,
+      "h": 38,
+      "right": 156
+    },
+    "lSucursal": {
+      "x": 20,
+      "y": 896,
+      "w": 354,
+      "h": 38,
+      "right": 374
+    },
+    "cbMedio": {
+      "x": 20,
+      "y": 1062,
+      "w": 354,
+      "h": 38,
+      "right": 374
+    },
+    "ckDomicilio": {
+      "x": 33,
+      "y": 986,
+      "w": 13,
+      "h": 13,
+      "right": 46
+    },
+    "ckRua": {
+      "x": 33,
+      "y": 1152,
+      "w": 13,
+      "h": 13,
+      "right": 46
+    },
+    "email": {
+      "x": 20,
+      "y": 671,
+      "w": 354,
+      "h": 38,
+      "right": 374
+    },
+    "fontSize": "14px",
+    "emailPlaceholderClipped": false,
+    "small": [
+      "ckDomicilio",
+      "ckRua"
+    ],
+    "axeCount": 10,
+    "axe": [
+      "color-contrast(serious,6)",
+      "empty-heading(minor,1)",
+      "html-has-lang(serious,1)",
+      "image-alt(critical,1)",
+      "label(critical,2)",
+      "landmark-one-main(moderate,2)",
+      "page-has-heading-one(moderate,2)",
+      "region(moderate,17)",
+      "select-name(critical,4)",
+      "tabindex(serious,12)"
+    ],
+    "shot": "audit/screenshots/rs-nueva-cuenta-768.png",
+    "axeFile": "audit/logs/axe/nueva-cuenta-768.json"
+  },
+  {
+    "caseId": "RS-03",
+    "w": 1440,
+    "h": 900,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "overflow": false,
+    "htmlOverflowX": "hidden",
+    "offenders": [],
+    "preloader": {
+      "display": "none",
+      "opacity": "1"
+    },
+    "logo": {
+      "x": 20,
+      "y": 20,
+      "w": 300,
+      "h": 77,
+      "right": 320
+    },
+    "panel": {
+      "x": 20,
+      "y": 20,
+      "w": 1400,
+      "h": 1618,
+      "right": 1420
+    },
+    "bSend": {
+      "x": 20,
+      "y": 1199,
+      "w": 136,
+      "h": 38,
+      "right": 156
+    },
+    "lSucursal": {
+      "x": 20,
+      "y": 896,
+      "w": 690,
+      "h": 38,
+      "right": 710
+    },
+    "cbMedio": {
+      "x": 20,
+      "y": 1062,
+      "w": 690,
+      "h": 38,
+      "right": 710
+    },
+    "ckDomicilio": {
+      "x": 33,
+      "y": 986,
+      "w": 13,
+      "h": 13,
+      "right": 46
+    },
+    "ckRua": {
+      "x": 33,
+      "y": 1152,
+      "w": 13,
+      "h": 13,
+      "right": 46
+    },
+    "email": {
+      "x": 20,
+      "y": 671,
+      "w": 690,
+      "h": 38,
+      "right": 710
+    },
+    "fontSize": "14px",
+    "emailPlaceholderClipped": false,
+    "small": [
+      "ckDomicilio",
+      "ckRua"
+    ],
+    "axeCount": 10,
+    "axe": [
+      "color-contrast(serious,6)",
+      "empty-heading(minor,1)",
+      "html-has-lang(serious,1)",
+      "image-alt(critical,1)",
+      "label(critical,2)",
+      "landmark-one-main(moderate,2)",
+      "page-has-heading-one(moderate,2)",
+      "region(moderate,17)",
+      "select-name(critical,4)",
+      "tabindex(serious,12)"
+    ],
+    "shot": "audit/screenshots/rs-nueva-cuenta-1440.png",
+    "axeFile": "audit/logs/axe/nueva-cuenta-1440.json"
+  }
+]

@@ -1,0 +1,228 @@
+{
+  "rows": [
+    {
+      "id": "cpBody_gvDatos_DXDataRow0",
+      "cells": [
+        "",
+        "DP01-00298714",
+        "8/17/2026",
+        "TBA333722866266",
+        "0.50",
+        "0.00",
+        "Entregado al Cliente",
+        "ART PERSONAL",
+        "AMAZON",
+        "EPS-12",
+        ""
+      ],
+      "print": {
+        "id": "cpBody_gvDatos_DXCBtn0",
+        "cls": "dxbButton_Office365 dxgvCommandColumnItem_Office365 dxgv__cci dxbButtonSys",
+        "disabledClass": false,
+        "ariaDisabled": null,
+        "tabindex": null,
+        "dataArgs": "[['CustomButton','Clone',0],1]",
+        "imgCls": "dxIcon_print_printviapdf_32x32 dx-vam",
+        "imgAlt": "Clone",
+        "imgTitle": "Imprimir",
+        "cursor": "pointer",
+        "opacity": "1",
+        "size": "32x32"
+      },
+      "expander": {
+        "id": "cpBody_gvDatos_DXCBtn1",
+        "visible": false,
+        "disabledClass": false,
+        "imgAlt": "..."
+      }
+    },
+    {
+      "id": "cpBody_gvDatos_DXDataRow1",
+      "cells": [
+        "",
+        "DP01-00298777",
+        "8/17/2026",
+        "TBA333712230266",
+        "11.50",
+        "0.00",
+        "Entregado al Cliente",
+        "ACCESORIO",
+        "SUPLIDOR GENERICO",
+        "EPS-12",
+        ""
+      ],
+      "print": {
+        "id": "cpBody_gvDatos_DXCBtn3",
+        "cls": "dxbButton_Office365 dxgvCommandColumnItem_Office365 dxgv__cci dxbButtonSys",
+        "disabledClass": false,
+        "ariaDisabled": null,
+        "tabindex": null,
+        "dataArgs": "[['CustomButton','Clone',1],1]",
+        "imgCls": "dxIcon_print_printviapdf_32x32 dx-vam",
+        "imgAlt": "Clone",
+        "imgTitle": "Imprimir",
+        "cursor": "pointer",
+        "opacity": "1",
+        "size": "32x32"
+      },
+      "expander": {
+        "id": "cpBody_gvDatos_DXCBtn4",
+        "visible": false,
+        "disabledClass": false,
+        "imgAlt": "..."
+      }
+    },
+    {
+      "id": "cpBody_gvDatos_DXDataRow2",
+      "cells": [
+        "",
+        "DP01-00302058",
+        "8/24/2026",
+        "TBA333991591262",
+        "1.25",
+        "0.00",
+        "Entregado al Cliente",
+        "ART PERSONAL",
+        "SUPLIDOR GENERICO",
+        "EPS-12",
+        ""
+      ],
+      "print": {
+        "id": "cpBody_gvDatos_DXCBtn6",
+        "cls": "dxbButton_Office365 dxgvCommandColumnItem_Office365 dxgv__cci dxbButtonSys",
+        "disabledClass": false,
+        "ariaDisabled": null,
+        "tabindex": null,
+        "dataArgs": "[['CustomButton','Clone',2],1]",
+        "imgCls": "dxIcon_print_printviapdf_32x32 dx-vam",
+        "imgAlt": "Clone",
+        "imgTitle": "Imprimir",
+        "cursor": "pointer",
+        "opacity": "1",
+        "size": "32x32"
+      },
+      "expander": {
+        "id": "cpBody_gvDatos_DXCBtn7",
+        "visible": false,
+        "disabledClass": false,
+        "imgAlt": "..."
+      }
+    },
+    {
+      "id": "cpBody_gvDatos_DXDataRow3",
+      "cells": [
+        "",
+        "DP01-00306834",
+        "9/2/2026",
+        "TBA334226770293",
+        "1.40",
+        "0.00",
+        "Embarcado",
+        "ART PERSONAL",
+        "AMAZON",
+        "EPS-12",
+        ""
+      ],
+      "print": {
+        "id": "cpBody_gvDatos_DXCBtn9",
+        "cls": "dxbButton_Office365 dxgvCommandColumnItem_Office365 dxgv__cci dxbButtonSys",
+        "disabledClass": false,
+        "ariaDisabled": null,
+        "tabindex": null,
+        "dataArgs": "[['CustomButton','Clone',3],1]",
+        "imgCls": "dxIcon_print_printviapdf_32x32 dx-vam",
+        "imgAlt": "Clone",
+        "imgTitle": "Imprimir",
+        "cursor": "pointer",
+        "opacity": "1",
+        "size": "32x32"
+      },
+      "expander": {
+        "id": "cpBody_gvDatos_DXCBtn10",
+        "visible": false,
+        "disabledClass": false,
+        "imgAlt": "..."
+      }
+    }
+  ],
+  "headers": [
+    {
+      "id": "cpBody_gvDatos_col0",
+      "text": "Imprimir",
+      "sortImg": false,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col1",
+      "text": "Guia",
+      "sortImg": false,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col2",
+      "text": "Fecha",
+      "sortImg": false,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col3",
+      "text": "Tracking",
+      "sortImg": false,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col8",
+      "text": "Peso",
+      "sortImg": false,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col9",
+      "text": "FOB",
+      "sortImg": false,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col10",
+      "text": "Estatus",
+      "sortImg": true,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col11",
+      "text": "Contenido",
+      "sortImg": false,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col12",
+      "text": "Suplidor",
+      "sortImg": false,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col16",
+      "text": "Categoria",
+      "sortImg": false,
+      "ariaSort": null
+    },
+    {
+      "id": "",
+      "text": "",
+      "sortImg": false,
+      "ariaSort": null
+    }
+  ],
+  "ths": 0,
+  "role": null,
+  "pager": 0,
+  "filterRow": 0,
+  "emptyRow": 0,
+  "pageTitle": "Prueba Exportacion",
+  "hiddenSection": {
+    "text": "Historial Guias",
+    "visible": false,
+    "container": "DIV#.modal-header"
+  },
+  "bodyText": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAlerta Prueba Exportacion Imprimir Guia Fecha Tracking Peso FOB Estatus Contenido Suplidor Categoria DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 Entregado al Cliente ART PERSONAL AMAZON EPS-12 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 Entregado al Cliente ACCESORIO SUPLIDOR GENERICO EPS-12 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 Entregado al Cliente ART PERSONAL SUPLIDOR GENERICO EPS-12 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 Embarcado ART PERSONAL AMAZON EPS-12 2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS. - Términos y Condiciones de Uso - Políticas de Privacidad - Políticas de Entrega"
+}

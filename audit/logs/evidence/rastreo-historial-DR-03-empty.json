@@ -1,0 +1,70 @@
+{
+  "label": "DR-03-empty",
+  "desde": "",
+  "hasta": "",
+  "before": {
+    "rows": [
+      {
+        "id": "cpBody_gvDatos_DXGroupRowExp0",
+        "text": "Estatus: Embarcado"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow1",
+        "text": "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSONAL AMAZON"
+      }
+    ],
+    "modalShown": true,
+    "desde": "",
+    "hasta": "",
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "hidden",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "after": {
+    "rows": [],
+    "modalShown": false,
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "ms": 828,
+  "navRes": "navigated",
+  "reqs": [
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "method": "POST",
+      "startedAt": 1788488364095,
+      "postFields": {
+        "__EVENTTARGET": "",
+        "__EVENTARGUMENT": "",
+        "__VIEWSTATE": "<3212 chars>",
+        "__VIEWSTATEGENERATOR": "<8 chars>",
+        "__EVENTVALIDATION": "<340 chars>",
+        "ctl00$lsClienteID": "",
+        "ctl00$cpBody$ClienteID": "DP-014003",
+        "ctl00$cpBody$Guia": "",
+        "ctl00$cpBody$bFiltro": "",
+        "ctl00$cpBody$TokenID": "GB123456789.101112131415",
+        "ctl00$cpBody$gvDatos": "{&quot;keys&quot;:[&quot;/^DXN&quot;,&quot;DP01-00306834&quot;],&quot;callbackState&quot;:&quot;BnHFb/eHmxsC/tamp86mJnkJIijlhTDRN8opV5w568Pg9VTOsArtXpE5F+uzxIqFRbMMg4HAL4tfn54GbEGc7E5yfvoMH+xOi8oaw/C1",
+        "ctl00$cpBody$ppCambioGuiaState": "{&quot;windowsState&quot;:&quot;0:0:-1:0:0:0:-10000:-10000:1:0:0:0&quot;}",
+        "ctl00$cpBody$ppCambioGuia$gvDetalles": "{&quot;keys&quot;:[],&quot;callbackState&quot;:&quot;oAUvEh8h1kOtCUwEMSm+QnPoRdPF+Q3zm3i8Hn8gxzn7/JjYIzc9pT2HKOXKzOV5OQforvDjq+rWcekcjkvnzmbimiRgQe8LNucBaKVrY9rhE/SRiFGBjGYAUAsK8ZvftnXpfCu0l4t1b1GpZmZ",
+        "ctl00$cpBody$lDesde": "",
+        "ctl00$cpBody$lHasta": "",
+        "DXScript": "<241 chars>",
+        "DXCss": "<196 chars>"
+      },
+      "status": 500,
+      "ms": 84,
+      "size": 3490
+    }
+  ],
+  "serverError": "Server Error in '/' Application",
+  "onLogin": false,
+  "dialogs": [],
+  "textSample": "Server Error in '/' Application. Runtime Error Description: An application error occurred on the server. The current custom error settings for this application prevent the details of the application error from being viewed remotely (for security reasons). It could, however, be viewed by browsers running on the local server machine. Details: To enable the details of this specific error message to be viewable on remote machines, please create a <customErrors> tag within a \"web.config\" configuration file located in the root directory of the current web application. This <customErrors> tag should ",
+  "status": [
+    500
+  ]
+}

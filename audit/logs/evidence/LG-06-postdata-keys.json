@@ -1,0 +1,31 @@
+{
+  "checkboxHasName": null,
+  "defaultChecked": true,
+  "postKeysChecked": [
+    "__VIEWSTATE",
+    "__VIEWSTATEGENERATOR",
+    "__EVENTVALIDATION",
+    "blogin",
+    "lUser",
+    "lPass"
+  ],
+  "postKeysUnchecked": [
+    "__VIEWSTATE",
+    "__VIEWSTATEGENERATOR",
+    "__EVENTVALIDATION",
+    "blogin",
+    "lUser",
+    "lPass"
+  ],
+  "checkboxInPost": false,
+  "rememberAfterFailedLogin": true,
+  "rememberAfterUnchecked": true,
+  "cookiesAfter": [
+    {
+      "name": "ASP.NET_SessionId",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false
+    }
+  ]
+}

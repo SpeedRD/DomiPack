@@ -1,0 +1,87 @@
+{
+  "screenId": "nueva-cuenta",
+  "screenName": "Registro de Nuevos Clientes",
+  "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+  "components": [
+    {
+      "type": "select",
+      "name": "Tipo de Cliente (#ddTipo)",
+      "action": "Options: Personal / Empresa / Extranjero. Likely toggles which of the other fields are enabled (several fields below load disabled by default, presumably until a type is chosen)."
+    },
+    {
+      "type": "text field",
+      "name": "Identificación (#Identificacion)",
+      "action": "Free-text ID/cédula number, placeholder-only label."
+    },
+    {
+      "type": "text field",
+      "name": "Nombre (#Nombre)",
+      "action": "Free-text full name, placeholder-only label."
+    },
+    {
+      "type": "password field",
+      "name": "Password (#Password)",
+      "action": "Account password. Loads disabled — presumably enabled after Tipo de Cliente / Identificación is set. Not verified further (would create a real account)."
+    },
+    {
+      "type": "select",
+      "name": "Sexo (#sSexo)",
+      "action": "Options: Seleccionar (placeholder) / Masculino / Femenino."
+    },
+    {
+      "type": "phone field",
+      "name": "Teléfono (#ltelefono)",
+      "action": "Free-text phone number (plain text input, not type=tel). Loads disabled."
+    },
+    {
+      "type": "phone field",
+      "name": "Celular (#lcelular)",
+      "action": "Free-text mobile number (plain text input, not type=tel). Loads disabled."
+    },
+    {
+      "type": "email field",
+      "name": "Email (#Email)",
+      "action": "Primary email. Placeholder instructs multiple emails can be separated with ';'."
+    },
+    {
+      "type": "email field",
+      "name": "Email1 (#Email1)",
+      "action": "Secondary email field, same ';'-separated-multiple convention. Having two separate fields both accepting ';'-separated lists is redundant/confusing UX worth flagging for redesign."
+    },
+    {
+      "type": "date field",
+      "name": "Fecha de Nacimiento (#tbFecha)",
+      "action": "Birth date picker (type=date). Loads disabled."
+    },
+    {
+      "type": "select",
+      "name": "Sucursal (#lSucursal)",
+      "action": "Branch/office picker — long list of physical Domipack branch locations (Oficina Principal, Naco, Boca Chica, Cap Cana, etc.)."
+    },
+    {
+      "type": "checkbox",
+      "name": "Domicilio (#ckDomicilio)",
+      "action": "Unlabeled checkbox next to Sucursal; presumed to toggle a home-delivery address option (not confirmed — no visible label text captured)."
+    },
+    {
+      "type": "select",
+      "name": "Medio (#cbMedioiD)",
+      "action": "'How did you hear about us' style dropdown — options include airlines, banks, social media, referral names, sponsorships, etc."
+    },
+    {
+      "type": "checkbox",
+      "name": "RUA (#ckRua)",
+      "action": "Unlabeled checkbox, presumed related to a RUA (Recinto de Usuarios Aduaneros / customs user) declaration — not confirmed."
+    },
+    {
+      "type": "button",
+      "name": "Submit (#bSend)",
+      "action": "input[type=submit] with no visible text captured in the DOM dump (icon-only or CSS-generated label). Would create a real customer account — not submitted, per the audit's golden rule."
+    }
+  ],
+  "notes": [
+    "Several fields (Password, Teléfono, Celular, Fecha de Nacimiento) load disabled, implying a client-side dependency on Tipo de Cliente/Identificación that was not exercised in this phase.",
+    "ckDomicilio and ckRua checkboxes have no captured accessible label/text — likely rely on adjacent plain text not programmatically associated via <label for> or aria-label.",
+    "Not filled in or submitted — would create a real account."
+  ]
+}

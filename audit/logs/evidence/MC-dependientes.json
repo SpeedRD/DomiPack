@@ -1,0 +1,366 @@
+{
+  "facts": {
+    "fields": [
+      {
+        "id": "cpBody_lNombreDependiente",
+        "type": "text",
+        "value": "",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "inputmode": null,
+        "placeholder": "Nombre",
+        "labelText": "Nombre:",
+        "labelFor": null,
+        "ariaLabel": null,
+        "visible": true,
+        "onclick": null
+      },
+      {
+        "id": "cpBody_lIdentificacionDependiente",
+        "type": "text",
+        "value": "",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "inputmode": null,
+        "placeholder": "Cedula",
+        "labelText": "Cedula/Pasaporte:",
+        "labelFor": null,
+        "ariaLabel": null,
+        "visible": true,
+        "onclick": null
+      },
+      {
+        "id": "cpBody_lEmailDependiente",
+        "type": "text",
+        "value": "",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "inputmode": null,
+        "placeholder": "Email",
+        "labelText": "Email:",
+        "labelFor": null,
+        "ariaLabel": null,
+        "visible": true,
+        "onclick": null
+      },
+      {
+        "id": "cpBody_lCelularDependiente",
+        "type": "text",
+        "value": "",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "inputmode": null,
+        "placeholder": "+99-99-9999-9999",
+        "labelText": "Celular #:",
+        "labelFor": null,
+        "ariaLabel": null,
+        "visible": true,
+        "onclick": null
+      },
+      {
+        "id": "cpBody_Button3",
+        "type": "submit",
+        "value": "Guardar Dependiente",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "inputmode": null,
+        "placeholder": "",
+        "labelText": null,
+        "labelFor": null,
+        "ariaLabel": null,
+        "visible": true,
+        "onclick": null
+      },
+      {
+        "id": "cpBody_Button2",
+        "type": "submit",
+        "value": "Agregar Dependiente",
+        "required": false,
+        "maxlength": null,
+        "pattern": null,
+        "autocomplete": null,
+        "inputmode": null,
+        "placeholder": "",
+        "labelText": null,
+        "labelFor": null,
+        "ariaLabel": null,
+        "visible": false,
+        "onclick": null
+      }
+    ],
+    "headers": [
+      {
+        "id": "cpBody_gvDependientes_col0",
+        "tag": "TD",
+        "text": "Editar",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col1",
+        "tag": "TD",
+        "text": "Borrar",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col3",
+        "tag": "TD",
+        "text": "Nombre",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col4",
+        "tag": "TD",
+        "text": "Cedula",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col5",
+        "tag": "TD",
+        "text": "Celular",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col6",
+        "tag": "TD",
+        "text": "Email",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      }
+    ],
+    "ths": 0,
+    "gridAttrs": {
+      "role": null,
+      "ariaLabel": null,
+      "caption": false,
+      "summary": null,
+      "nestedTables": 8
+    },
+    "emptyText": "No data to display",
+    "emptyColor": "rgb(79, 79, 79)",
+    "pageValidators": null,
+    "headingText": [
+      "Agregar / Editar Dependiente",
+      "Listado de Dependientes"
+    ],
+    "eliminarConfirm": "function Eliminar(s) {\n\n                if (confirm('Desea Eliminar el Dependiente?')) {\n                    document.getElementById(\"cpBody_DependienteId\").value = s;\n\n                    document.getElementById(\"cpBody_BEliminar1\").click();\n                }\n\n\n\n            }",
+    "editarFn": "function Editar(s) {\n                document.getElementById(\"cpBody_DependienteId\").value = s;\n\n                document.getElementById(\"cpBody_bEditar\").click();\n\n\n            }",
+    "guardarDependienteFn": "function GuardarDependiente() {\n\n                document.getElementById(\"cpBody_BGuardarDependientes\").click();\n            }",
+    "hiddenTargets": [
+      {
+        "id": "cpBody_BGuardarDependientes",
+        "exists": true,
+        "display": "none"
+      },
+      {
+        "id": "cpBody_bGuardarClientes",
+        "exists": true,
+        "display": "none"
+      },
+      {
+        "id": "cpBody_bEditar",
+        "exists": true,
+        "display": "none"
+      },
+      {
+        "id": "cpBody_BEliminar1",
+        "exists": true,
+        "display": "none"
+      },
+      {
+        "id": "cpBody_DependienteId",
+        "exists": true,
+        "display": "block"
+      }
+    ]
+  },
+  "sortClick": {
+    "sortable": [
+      {
+        "id": "cpBody_gvDependientes_col0",
+        "tag": "TD",
+        "text": "Editar",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col1",
+        "tag": "TD",
+        "text": "Borrar",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col3",
+        "tag": "TD",
+        "text": "Nombre",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col4",
+        "tag": "TD",
+        "text": "Cedula",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col5",
+        "tag": "TD",
+        "text": "Celular",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      },
+      {
+        "id": "cpBody_gvDependientes_col6",
+        "tag": "TD",
+        "text": "Email",
+        "onclick": null,
+        "cursor": "pointer",
+        "role": null,
+        "scope": null
+      }
+    ],
+    "respBefore": [],
+    "after": {
+      "url": "https://clientes.domipack.com/MiCuenta.aspx",
+      "empty": "No data to display",
+      "sortImg": 0
+    }
+  },
+  "buttons": {
+    "b": {
+      "value": "Guardar Dependiente",
+      "onclick": null,
+      "type": "submit",
+      "visible": true
+    },
+    "b2": {
+      "value": "Agregar Dependiente",
+      "visible": false,
+      "parentDisplay": "none"
+    }
+  },
+  "tabSeq": [
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lIdentificacionDependiente",
+      "cls": "form-control",
+      "text": "001-1234567-8",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lEmailDependiente",
+      "cls": "form-control",
+      "text": "名@例.jp",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lCelularDependiente",
+      "cls": "form-control",
+      "text": "809 123 4567",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_Button3",
+      "cls": "btn btn-primary",
+      "text": "Guardar Dependiente",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(255, 255, 255)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": true
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "2022 - DOMIPACK, TODOS LOS DERECHOS RESE",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "Términos y Condiciones de Uso",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "indicator": false
+    }
+  ]
+}

@@ -1,0 +1,452 @@
+{
+  "steps": [
+    "opened-1",
+    "closed-x",
+    "opened-2",
+    "opened-3"
+  ],
+  "scrollBefore": {
+    "overflow": "visible",
+    "cls": ""
+  },
+  "triggerBefore": "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false",
+  "open": {
+    "shown": true,
+    "backdrops": 1,
+    "bodyClass": "modal-open",
+    "bodyOverflow": "hidden",
+    "modalZ": "1095",
+    "headerZ": "10",
+    "headerPos": "relative",
+    "dialogRect": {
+      "x": 470,
+      "y": 28,
+      "width": 500,
+      "height": 371
+    },
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "titleRect": {
+      "x": 471,
+      "y": 29,
+      "width": 498,
+      "height": 63
+    },
+    "closeRect": {
+      "x": 795,
+      "y": 29,
+      "width": 48,
+      "height": 56
+    },
+    "elementAtClose": "DIV#.app-header__content inModal=false",
+    "elementAtTitle": "DIV#.modal-header inModal=true",
+    "modalAriaHidden": null,
+    "modalRole": null,
+    "modalAriaModal": "true",
+    "modalTabindex": null,
+    "closeAria": {
+      "ariaLabel": null,
+      "text": "×",
+      "title": null
+    },
+    "vw": 1440,
+    "vh": 900
+  },
+  "openActive": "A#.nav-link|Histórico|inHistorial=false",
+  "openShot": "audit/screenshots/RA-12.png",
+  "tabPath": [
+    "A#cpBody_gvDatos_DXCBtn0.dxbButton_Office365 dxgvComman||inHistorial=false",
+    "A#.|0|inHistorial=false",
+    "A#.|DP01-00306834|inHistorial=false",
+    "A#cpBody_gvDatos_DXCBtn1.dxbButton_Office365 dxgvADSB d||inHistorial=false",
+    "BUTTON#.close|×|inHistorial=true",
+    "INPUT#cpBody_lDesde.form-control||inHistorial=true",
+    "INPUT#cpBody_lDesde.form-control||inHistorial=true",
+    "INPUT#cpBody_lDesde.form-control||inHistorial=true",
+    "INPUT#cpBody_lDesde.form-control||inHistorial=true",
+    "INPUT#cpBody_lHasta.form-control||inHistorial=true",
+    "INPUT#cpBody_lHasta.form-control||inHistorial=true",
+    "INPUT#cpBody_lHasta.form-control||inHistorial=true",
+    "INPUT#cpBody_lHasta.form-control||inHistorial=true",
+    "A#.mb-2 mr-2 btn-icon btn-shadow |Buscar|inHistorial=true"
+  ],
+  "focusEscapes": true,
+  "closeClick": "intercepted: page.click: Timeout 5000ms exceeded. | Call log: | \u001b[2m  - waiting for locator('#modal_Historial .close')\u001b[22m",
+  "afterX": {
+    "shown": true,
+    "backdrops": 1,
+    "bodyClass": "modal-open",
+    "bodyOverflow": "hidden",
+    "modalZ": "1095",
+    "headerZ": "10",
+    "headerPos": "relative",
+    "dialogRect": {
+      "x": 470,
+      "y": 28,
+      "width": 500,
+      "height": 371
+    },
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "titleRect": {
+      "x": 471,
+      "y": 29,
+      "width": 498,
+      "height": 63
+    },
+    "closeRect": {
+      "x": 795,
+      "y": 29,
+      "width": 48,
+      "height": 56
+    },
+    "elementAtClose": "DIV#.app-header__content inModal=false",
+    "elementAtTitle": "DIV#.modal-header inModal=true",
+    "modalAriaHidden": null,
+    "modalRole": null,
+    "modalAriaModal": "true",
+    "modalTabindex": null,
+    "closeAria": {
+      "ariaLabel": null,
+      "text": "×",
+      "title": null
+    },
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterXActive": "BODY#.modal-open|JOSE ALEXANDER CABREJA AY|inHistorial=false",
+  "afterXBottomEdge": {
+    "shown": false,
+    "backdrops": 0,
+    "bodyClass": "",
+    "bodyOverflow": "visible",
+    "modalZ": "1095",
+    "headerZ": "10",
+    "headerPos": "relative",
+    "dialogRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "titleRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "closeRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "elementAtClose": "DIV#.app-header__logo inModal=false",
+    "elementAtTitle": "DIV#.app-header__logo inModal=false",
+    "modalAriaHidden": "true",
+    "modalRole": null,
+    "modalAriaModal": null,
+    "modalTabindex": null,
+    "closeAria": {
+      "ariaLabel": null,
+      "text": "×",
+      "title": null
+    },
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterXThenEsc": {
+    "shown": false,
+    "backdrops": 0,
+    "bodyClass": "",
+    "bodyOverflow": "visible",
+    "modalZ": "1095",
+    "headerZ": "10",
+    "headerPos": "relative",
+    "dialogRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "titleRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "closeRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "elementAtClose": "DIV#.app-header__logo inModal=false",
+    "elementAtTitle": "DIV#.app-header__logo inModal=false",
+    "modalAriaHidden": "true",
+    "modalRole": null,
+    "modalAriaModal": null,
+    "modalTabindex": null,
+    "closeAria": {
+      "ariaLabel": null,
+      "text": "×",
+      "title": null
+    },
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterBackdrop": {
+    "shown": false,
+    "backdrops": 0,
+    "bodyClass": "",
+    "bodyOverflow": "visible",
+    "modalZ": "1095",
+    "headerZ": "10",
+    "headerPos": "relative",
+    "dialogRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "titleRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "closeRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "elementAtClose": "DIV#.app-header__logo inModal=false",
+    "elementAtTitle": "DIV#.app-header__logo inModal=false",
+    "modalAriaHidden": "true",
+    "modalRole": null,
+    "modalAriaModal": null,
+    "modalTabindex": null,
+    "closeAria": {
+      "ariaLabel": null,
+      "text": "×",
+      "title": null
+    },
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterEsc": {
+    "shown": true,
+    "backdrops": 1,
+    "bodyClass": "modal-open",
+    "bodyOverflow": "hidden",
+    "modalZ": "1095",
+    "headerZ": "10",
+    "headerPos": "relative",
+    "dialogRect": {
+      "x": 470,
+      "y": 28,
+      "width": 500,
+      "height": 371
+    },
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "titleRect": {
+      "x": 471,
+      "y": 29,
+      "width": 498,
+      "height": 63
+    },
+    "closeRect": {
+      "x": 795,
+      "y": 29,
+      "width": 48,
+      "height": 56
+    },
+    "elementAtClose": "DIV#.app-header__content inModal=false",
+    "elementAtTitle": "DIV#.modal-header inModal=true",
+    "modalAriaHidden": null,
+    "modalRole": null,
+    "modalAriaModal": "true",
+    "modalTabindex": null,
+    "closeAria": {
+      "ariaLabel": null,
+      "text": "×",
+      "title": null
+    },
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterEscActive": "BUTTON#cpBody_bpagar.btn-shadow dropdown-toggle btn|Menu|inHistorial=false",
+  "escInsideActive": "INPUT#cpBody_lDesde.form-control||inHistorial=true",
+  "afterEscInside": {
+    "shown": false,
+    "backdrops": 0,
+    "bodyClass": "",
+    "bodyOverflow": "visible",
+    "modalZ": "1095",
+    "headerZ": "10",
+    "headerPos": "relative",
+    "dialogRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "titleRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "closeRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "elementAtClose": "DIV#.app-header__logo inModal=false",
+    "elementAtTitle": "DIV#.app-header__logo inModal=false",
+    "modalAriaHidden": "true",
+    "modalRole": null,
+    "modalAriaModal": null,
+    "modalTabindex": null,
+    "closeAria": {
+      "ariaLabel": null,
+      "text": "×",
+      "title": null
+    },
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterDoubleOpen": {
+    "shown": false,
+    "backdrops": 0,
+    "bodyClass": "",
+    "bodyOverflow": "visible",
+    "modalZ": "1095",
+    "headerZ": "10",
+    "headerPos": "relative",
+    "dialogRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "titleRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "closeRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "elementAtClose": "DIV#.app-header__logo inModal=false",
+    "elementAtTitle": "DIV#.app-header__logo inModal=false",
+    "modalAriaHidden": "true",
+    "modalRole": null,
+    "modalAriaModal": null,
+    "modalTabindex": null,
+    "closeAria": {
+      "ariaLabel": null,
+      "text": "×",
+      "title": null
+    },
+    "vw": 1440,
+    "vh": 900
+  },
+  "modalsShown": 0,
+  "afterDoubleOpenEsc": {
+    "shown": false,
+    "backdrops": 0,
+    "bodyClass": "",
+    "bodyOverflow": "visible",
+    "modalZ": "1095",
+    "headerZ": "10",
+    "headerPos": "relative",
+    "dialogRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "titleRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "closeRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "elementAtClose": "DIV#.app-header__logo inModal=false",
+    "elementAtTitle": "DIV#.app-header__logo inModal=false",
+    "modalAriaHidden": "true",
+    "modalRole": null,
+    "modalAriaModal": null,
+    "modalTabindex": null,
+    "closeAria": {
+      "ariaLabel": null,
+      "text": "×",
+      "title": null
+    },
+    "vw": 1440,
+    "vh": 900
+  },
+  "dialogs": []
+}

@@ -1,0 +1,574 @@
+[
+  {
+    "id": "RA-01",
+    "pantalla": "Rastreo > Historial Guías (modal)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "#modal_Historial .modal-body > .form-group (después de #cpBody_lHasta)",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "El texto literal \"gv\" se renderiza como contenido visible entre el campo \"Fecha Hasta\" y el botón \"Buscar\" del modal Historial Guías. Es un nodo de texto huérfano en el markup (probablemente restos de un control/ID de grid), no un rótulo intencional.",
+    "pasos_para_reproducir": [
+      "1. Iniciar sesión y abrir Rastreo.aspx.",
+      "2. Clic en \"Menu\" → \"Histórico\".",
+      "3. Observar el modal: bajo el campo \"Fecha Hasta\" aparece el texto \"gv\"."
+    ],
+    "comportamiento_actual": "Se muestra \"gv\" como texto suelto en el formulario de filtro.",
+    "comportamiento_esperado": "No debería mostrarse ningún texto residual; el formulario solo debería tener etiquetas, campos y el botón Buscar.",
+    "impacto_usuario": "Aspecto descuidado y confusión (el usuario puede pensar que falta algo o que es un código).",
+    "evidencia": [
+      "audit/screenshots/RA-01.png",
+      "audit/logs/evidence/RA-01-modal-dom.json"
+    ],
+    "propuesta_preliminar": "Eliminar el nodo de texto \"gv\" del markup del modal (o cerrar correctamente el control que lo genera).",
+    "info_tecnica": "DOM capturado: <div class=\"form-group\"><label>Fecha Hasta:</label><input name=\"ctl00$cpBody$lHasta\" type=\"date\" id=\"cpBody_lHasta\" class=\"form-control\">gv</div>. innerText del modal-body: \"Filtro Fecha Desde: Fecha Hasta: gv Buscar\".",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "DR-10",
+      "CC-02"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-02",
+    "pantalla": "Rastreo > Historial Guías (modal)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "#cpBody_lDesde / #cpBody_lHasta (type=date) y sus <label>",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "Las etiquetas \"Fecha Desde:\" y \"Fecha Hasta:\" son elementos <label> sin atributo for y los inputs no tienen aria-label/aria-labelledby, por lo que los campos de fecha no tienen nombre accesible (labels.length = 0 en ambos).",
+    "pasos_para_reproducir": [
+      "1. Abrir Rastreo → Menu → Histórico.",
+      "2. Inspeccionar #cpBody_lDesde y #cpBody_lHasta: input.labels está vacío; el <label> previo no tiene for.",
+      "3. Con lector de pantalla, los campos se anuncian sin nombre."
+    ],
+    "comportamiento_actual": "Campos de fecha sin asociación programática con su etiqueta. El teclado sí funciona (tecleando 01012026 se fija 2026-01-01; Tab avanza entre segmentos/campos).",
+    "comportamiento_esperado": "<label for=\"cpBody_lDesde\"> / <label for=\"cpBody_lHasta\"> o aria-labelledby, de modo que AT anuncie el nombre del campo y el clic en la etiqueta enfoque el input.",
+    "impacto_usuario": "Usuarios de lector de pantalla no saben qué fecha están introduciendo; clic en la etiqueta no enfoca el campo.",
+    "evidencia": [
+      "audit/screenshots/RA-02.png",
+      "audit/logs/evidence/rastreo-DR-09-labels.json",
+      "audit/screenshots/RA-01.png"
+    ],
+    "propuesta_preliminar": "Añadir for= a las etiquetas (o AssociatedControlID en el control ASP.NET Label) y revisar el resto de formularios del portal.",
+    "info_tecnica": "Evidencia: {\"id\":\"cpBody_lDesde\",\"type\":\"date\",\"labels\":[],\"ariaLabel\":null,\"ariaLabelledby\":null,\"prevSiblingLabel\":{\"text\":\"Fecha Desde:\",\"for\":null},\"required\":false,\"min\":\"\",\"max\":\"\"} (ídem lHasta). Sin min/max ni required.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "DR-09",
+      "AX-02"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-03",
+    "pantalla": "Rastreo > Historial Guías (modal)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "Buscar (Filtro() → #cpBody_bFiltro, postback POST ./Rastreo.aspx)",
+    "categoria": "servidor",
+    "severidad": "critico",
+    "descripcion": "Pulsar \"Buscar\" con las fechas vacías (ambas o una sola) o con una fecha imposible produce un error no controlado en el servidor: HTTP 500 con la página cruda de ASP.NET \"Server Error in '/' Application – Runtime Error\". No hay validación en cliente ni mensaje de la aplicación; el usuario pierde toda la interfaz del portal.",
+    "pasos_para_reproducir": [
+      "1. Iniciar sesión, en Rastreo.aspx pulsar Menu → Histórico.",
+      "2. Sin rellenar fechas, pulsar \"Buscar\" → página de error (HTTP 500).",
+      "3. Repetir rellenando solo \"Fecha Desde\" (2026-01-01) o solo \"Fecha Hasta\" (2026-12-31) → mismo error.",
+      "4. Enviar el formulario con lDesde=2026-02-30 / lHasta=2026-13-45 (valor imposible; el navegador lo sanea, la prueba se hizo reescribiendo el POST) → mismo error."
+    ],
+    "comportamiento_actual": "Respuesta 500 en ~0,8–1,4 s con la página genérica \"Runtime Error\" (customErrors=RemoteOnly, sin stack trace). La app no vuelve por sí sola; el usuario debe usar Atrás o volver a escribir la URL.",
+    "comportamiento_esperado": "Validar en cliente y servidor: exigir ambas fechas (o definir un valor por defecto), rechazar fechas inválidas con un mensaje claro en el modal, y en cualquier caso capturar excepciones y mostrar una página/mensaje de error de la aplicación.",
+    "impacto_usuario": "Acción muy probable (pulsar Buscar sin fechas) rompe la pantalla principal del portal y expone una página técnica en inglés.",
+    "evidencia": [
+      "audit/screenshots/RA-03.png",
+      "audit/screenshots/rastreo-historial-DR-03-empty.png",
+      "audit/logs/evidence/rastreo-historial-DR-03-empty-response.html",
+      "audit/logs/evidence/rastreo-historial-DR-03-empty.json",
+      "audit/logs/evidence/rastreo-historial-DR-04-onlyDesde.json",
+      "audit/logs/evidence/rastreo-historial-DR-04-onlyHasta.json",
+      "audit/logs/evidence/rastreo-historial-DR-07-impossible-server.json",
+      "audit/logs/evidence/rastreo-historial-DR-07-browser.json"
+    ],
+    "propuesta_preliminar": "Añadir validación required/rango en el modal antes de llamar a Filtro(); en servidor, DateTime.TryParse con mensaje de error y try/catch alrededor de la consulta; configurar una página de error personalizada.",
+    "info_tecnica": "POST https://clientes.domipack.com/Rastreo.aspx con ctl00$cpBody$bFiltro='' y ctl00$cpBody$lDesde='' / ctl00$cpBody$lHasta='' → 500 (828 ms). Solo Desde → 500 (1440 ms). Solo Hasta → 500 (1427 ms). lDesde=2026-02-30&lHasta=2026-13-45 → 500 (817 ms). Cuerpo: <title>Runtime Error</title> … \"Server Error in '/' Application.\" (sin detalles; RemoteOnly). Filtro() = document.getElementById('cpBody_bFiltro').click(). En navegador, input type=date sanea 2026-02-30 → '' (badInput=true al teclearlo).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "DR-03",
+      "DR-04",
+      "DR-07",
+      "CC-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-04",
+    "pantalla": "Rastreo > Historial Guías (modal)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "Buscar (<a href=\"#\" onclick=\"Filtro()\">)",
+    "categoria": "robustez",
+    "severidad": "menor",
+    "descripcion": "El botón Buscar no se deshabilita ni muestra ningún estado de carga al pulsarlo; un doble clic dispara dos POST de Rastreo.aspx (el segundo cancela/duplica al primero). No hay feedback visual de que la búsqueda está en curso.",
+    "pasos_para_reproducir": [
+      "1. Menu → Histórico, rellenar 2026-01-01 / 2026-12-31.",
+      "2. Hacer doble clic en \"Buscar\".",
+      "3. En la pestaña de red se observan 2 POST a Rastreo.aspx (status 200 y null/abortado)."
+    ],
+    "comportamiento_actual": "2 envíos por doble clic; el botón conserva la misma clase, sin disabled ni spinner (muestras cada 150 ms tras el clic).",
+    "comportamiento_esperado": "Deshabilitar el botón o ignorar clics repetidos mientras se procesa, y mostrar un indicador de carga.",
+    "impacto_usuario": "Bajo aquí (la búsqueda no es destructiva), pero el usuario no sabe si el clic surtió efecto y puede repetirlo; el mismo patrón en formularios que escriben datos sería grave.",
+    "evidencia": [
+      "audit/screenshots/RA-04.png",
+      "audit/logs/evidence/rastreo-historial-BT-01-dblclick.json",
+      "audit/screenshots/rastreo-historial-BT-01-dblclick.png",
+      "audit/logs/evidence/rastreo-BT-07-feedback.json"
+    ],
+    "propuesta_preliminar": "En Filtro(): deshabilitar el enlace y mostrar spinner antes de disparar el postback; o usar UpdatePanel/callback con indicador.",
+    "info_tecnica": "BT-01: reqs=2 status=[200,null]. BT-07: btnClass='mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-primary' disabled=null visibleSpinners=[] en las 6 muestras.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-01",
+      "BT-07"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-05",
+    "pantalla": "Rastreo (grid #cpBody_gvDatos)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "img.dxGridView_gvExpandedButton_Office365 (onclick ASPx.GVCollapseRow) en la fila de grupo \"Estatus: …\"",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "El control para plegar/desplegar el grupo de estado es una <img> con onclick, sin tabindex ni rol: no se alcanza con Tab ni se activa con teclado. El recorrido con Tab de toda la página pasa por sidebar → Menu → botones de fila → footer sin detenerse nunca en el toggle de grupo.",
+    "pasos_para_reproducir": [
+      "1. En Rastreo.aspx pulsar Tab repetidamente y observar document.activeElement.",
+      "2. El toggle del grupo (imagen con alt \"Collapse\") nunca recibe el foco.",
+      "3. Enfocar programáticamente la fila y pulsar Enter: no ocurre nada."
+    ],
+    "comportamiento_actual": "Solo operable con ratón (y, al usarlo, vacía el grid: ver RA-09).",
+    "comportamiento_esperado": "Control con role=button, tabindex=0, nombre accesible y activación con Enter/Espacio (o un <button>).",
+    "impacto_usuario": "Usuarios de teclado/AT no pueden plegar/desplegar grupos.",
+    "evidencia": [
+      "audit/screenshots/RA-05.png",
+      "audit/logs/evidence/rastreo-TB-05-groups.json"
+    ],
+    "propuesta_preliminar": "Habilitar la accesibilidad de teclado del grid DevExpress (KeyboardSupport / AccessibilityCompliant) o sustituir el toggle por un botón real.",
+    "info_tecnica": "imgBefore: {cls:'dxGridView_gvExpandedButton_Office365', onclick:\"ASPx.GVCollapseRow('cpBody_gvDatos',0,event);event.cancelBubble = true\", alt:'Collapse', role:null, tabindex:null}. focusPath (16 paradas) sin ningún elemento DXGroupRow; gridFocusables=4 (DXCBtn0, enlace '0', enlace guía, DXCBtn1).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TB-05",
+      "AX-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-06",
+    "pantalla": "Rastreo (grid #cpBody_gvDatos) y Adjuntos (#gvDatos)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "#cpBody_gvDatos_DXMainTable, #gvDatos_DXMainTable (DevExpress ASPxGridView)",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "Las cabeceras de los grids se renderizan como <td class=\"dxgvHeader_Office365\"> (0 <th>, 0 scope, sin role en la tabla), por lo que los lectores de pantalla no asocian cabecera y celda; las filas de grupo y la fila vacía tampoco tienen semántica.",
+    "pasos_para_reproducir": [
+      "1. Inspeccionar #cpBody_gvDatos en Rastreo.aspx: th=0, td.dxgvHeader_Office365=14, [scope]=0.",
+      "2. Ídem en dlg/Adjuntos.aspx #gvDatos: th=0, td.dxgvHeader=6."
+    ],
+    "comportamiento_actual": "Tablas de datos sin cabeceras semánticas.",
+    "comportamiento_esperado": "Cabeceras <th scope=\"col\">, caption o aria-label para el grid, filas de grupo anunciables.",
+    "impacto_usuario": "Navegación por tabla con AT sin contexto de columna (Guía, Fecha, Tracking, Peso…).",
+    "evidencia": [
+      "audit/screenshots/RA-06.png",
+      "audit/logs/evidence/rastreo-grid-base.json",
+      "audit/logs/evidence/rastreo-adjuntos-page.html"
+    ],
+    "propuesta_preliminar": "Activar AccessibilityCompliant=true en los ASPxGridView (renderiza th/scope) y revisar el resto de grids del portal.",
+    "info_tecnica": "gridState: tableRole=null, thCount=0, tdHeaderCount=14, scopeCount=0, ariaOnGrid=[]. Adjuntos: th=0 tdHeaders=6.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TB-08"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-07",
+    "pantalla": "Rastreo (grid #cpBody_gvDatos)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "Botones de fila DXCBtn0 (Post-Alerta), DXCBtn1 (\"...\"), imagen Clip.png (columna AD), toggles de grupo/detalle",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "Controles solo-icono del grid sin nombre accesible o con nombre engañoso: la imagen del clip (http://sys.translogic.com.do/img/Clip.png) no tiene alt; los toggles dxGridView_gvExpandedButton / gvHideAdaptiveDetailButton se renderizan con alt vacío tras interactuar; el botón Post-Alerta tiene alt=\"Clone\" mientras su tooltip dice \"Subir Factura\"; el botón \"...\" solo tiene alt/title \"...\"; el enlace a Adjuntos se llama \"0\".",
+    "pasos_para_reproducir": [
+      "1. Inspeccionar los controles visibles dentro de #cpBody_gvDatos.",
+      "2. Observar nombre accesible: img Clip.png → ''; img toggle → ''; a#cpBody_gvDatos_DXCBtn0 → 'Clone' (title del img 'Subir Factura'); a.dxgvADSB → '...'; a[href*=Adjuntos] → '0'."
+    ],
+    "comportamiento_actual": "3 controles visibles sin nombre y varios con nombre no descriptivo.",
+    "comportamiento_esperado": "Nombres descriptivos: \"Subir factura de la guía X\", \"Ver detalle\", \"Adjuntos (0)\", \"Plegar grupo Embarcado\", alt del clip o alt=\"\" si es decorativo.",
+    "impacto_usuario": "Usuarios de AT no saben qué hacen los iconos de cada fila.",
+    "evidencia": [
+      "audit/screenshots/RA-07.png",
+      "audit/logs/evidence/rastreo-BT-06-names.json",
+      "audit/logs/evidence/rastreo-DXCBtn0.json",
+      "audit/logs/axe/rastreo-1440.json"
+    ],
+    "propuesta_preliminar": "Definir Text/ToolTip/alt coherentes en los CommandButton del grid y alt en la imagen del clip; renombrar el CustomButton 'Clone'.",
+    "info_tecnica": "UNNAMED: IMG.dxGridView_gvExpandedButton_Office365 (alt ''), IMG.dxGridView_gvHideAdaptiveDetailButton_Office365 (alt ''), IMG src=http://sys.translogic.com.do/img/Clip.png (sin alt). DXCBtn0: <a … data-args=\"[['CustomButton','Clone',1],1]\"><img title=\"Subir Factura\" alt=\"Clone\" src=…/images/box.png>. axe image-alt (critical, 1 nodo img[width=\"16\"]). El botón Post-Alerta/'Subir Factura' NO se pulsó (posible acción de escritura).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-06",
+      "AX-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-08",
+    "pantalla": "Rastreo",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "Enlaces del grid (guía → VerGuia, Adjuntos, DXCBtn0) y enlace de sidebar #lRastreo",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "Al recibir el foco por teclado, los enlaces del grid y el elemento activo del sidebar no muestran ningún cambio visual (outline: none, sin box-shadow ni cambio de fondo). Solo el botón \"Menu\" cambia (box-shadow).",
+    "pasos_para_reproducir": [
+      "1. En Rastreo.aspx pulsar Tab hasta el enlace de la guía DP01-00306834.",
+      "2. No hay indicador de foco visible.",
+      "3. Comparar estilos computados antes/después de focus(): idénticos para a[onclick*=VerGuia], a[href*=Adjuntos], #cpBody_gvDatos_DXCBtn0, #lRastreo."
+    ],
+    "comportamiento_actual": "Foco invisible en los enlaces principales de la pantalla.",
+    "comportamiento_esperado": "Indicador de foco visible (outline/box-shadow) en todos los controles interactivos.",
+    "impacto_usuario": "Usuarios de teclado pierden la posición del foco.",
+    "evidencia": [
+      "audit/screenshots/RA-08.png",
+      "audit/logs/evidence/rastreo-BT-11-focus.json",
+      "audit/logs/evidence/rastreo-TB-05-groups.json"
+    ],
+    "propuesta_preliminar": "No anular outline en :focus; añadir :focus-visible con contraste suficiente en el tema.",
+    "info_tecnica": "BT-11: focused-without-visible-change = [a[onclick*=VerGuia], a[href*=Adjuntos.aspx], #cpBody_gvDatos_DXCBtn0, #lRastreo]; before/after outline 'none 3px rgb(234,53,55)', boxShadow 'none'.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-11",
+      "AX-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-09",
+    "pantalla": "Rastreo (grid #cpBody_gvDatos)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "Cabeceras ordenables (AD, Guia, …) y toggle de grupo (ASPx.GVCollapseRow) — callbacks DevExpress",
+    "categoria": "funcional",
+    "severidad": "critico",
+    "descripcion": "Cualquier callback del grid (clic en una cabecera para ordenar, o plegar el grupo de estado) devuelve un grid vacío: desaparecen la fila de grupo y los paquetes y se muestra \"No data to display\". Un segundo clic no recupera los datos; solo recargar la página los devuelve.",
+    "pasos_para_reproducir": [
+      "1. Iniciar sesión (Rastreo.aspx muestra 1 grupo \"Estatus: Embarcado\" con 1 paquete).",
+      "2. Clic en la cabecera \"AD\" (o \"Guia\"): aparece la flecha de orden y el grid queda en \"No data to display\".",
+      "3. Clic de nuevo en la cabecera: sigue vacío.",
+      "4. Alternativamente, clic en la flecha de plegado del grupo: mismo resultado, y el toggle de expandir ya no existe.",
+      "5. Recargar Rastreo.aspx: vuelve el paquete."
+    ],
+    "comportamiento_actual": "Callback POST Rastreo.aspx (__CALLBACKID=ctl00$cpBody$gvDatos) responde 200 (~12 KB) con 0 filas; el grid muestra el estado vacío de DevExpress.",
+    "comportamiento_esperado": "Ordenar debe reordenar las filas; plegar debe ocultarlas y permitir volver a desplegar; en ningún caso perder los datos.",
+    "impacto_usuario": "El usuario cree que no tiene paquetes tras una acción trivial en la pantalla principal; sin pista de cómo recuperarlos.",
+    "evidencia": [
+      "audit/screenshots/RA-09.png",
+      "audit/screenshots/rastreo-grid-collapsed.png",
+      "audit/screenshots/rastreo-grid-after-sort-reload.png",
+      "audit/logs/evidence/rastreo-TB-12-sort.json",
+      "audit/logs/evidence/rastreo-TB-05-groups.json"
+    ],
+    "propuesta_preliminar": "Volver a enlazar el DataSource del ASPxGridView en cada request (no solo en !IsPostBack), o usar un DataSource declarativo/EnableCallbacks=false.",
+    "info_tecnica": "TB-12 steps: fresh:1 → click header AD:0 → click AD again:0 → click Guia:0 → after reload:1 → new page same context:1. Callback __CALLBACKPARAM=c0:KV|25;[\"/^DXN\",\"DP01-00306834\"];GB|20;4|SORT2|160|0|4|true; → 200, 11953 bytes. TB-05: collapse callback → dataRows=0 groupRows=0, emptyRow='No data to display', expand img count=0. El botón '...' (a.dxgvADSB) es client-side (0 callbacks) y no provoca el problema; Buscar y VerGuia (postbacks completos) tampoco.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TB-12",
+      "TB-05"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-10",
+    "pantalla": "Rastreo > Historial Guías (modal)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "#cpBody_lDesde / #cpBody_lHasta + Buscar; grid de resultados",
+    "categoria": "validacion",
+    "severidad": "menor",
+    "descripcion": "Un rango invertido (Desde 2026-06-01, Hasta 2026-01-01) se acepta sin aviso y el grid muestra \"No data to display\"; el mismo texto aparece para un rango futuro sin datos. No se distingue \"no hay resultados para este filtro\" de \"no hay datos\", ni se indica el rango aplicado.",
+    "pasos_para_reproducir": [
+      "1. Menu → Histórico, Desde=2026-06-01, Hasta=2026-01-01, Buscar.",
+      "2. El modal se cierra y el grid muestra \"No data to display\" sin ningún mensaje.",
+      "3. Repetir con Desde=2030-01-01, Hasta=2030-12-31: mismo resultado."
+    ],
+    "comportamiento_actual": "Sin validación de orden de fechas; estado vacío genérico en inglés.",
+    "comportamiento_esperado": "Rechazar (o corregir automáticamente) el rango invertido con mensaje; mostrar \"No hay guías entre el 1/1/2026 y el 30/6/2026\" y una acción para limpiar el filtro.",
+    "impacto_usuario": "El usuario no sabe si se equivocó de fechas o si realmente no hay envíos.",
+    "evidencia": [
+      "audit/screenshots/RA-10.png",
+      "audit/screenshots/rastreo-historial-DR-01-inverted.png",
+      "audit/logs/evidence/rastreo-historial-DR-01-inverted.json",
+      "audit/screenshots/rastreo-historial-DR-06-future.png"
+    ],
+    "propuesta_preliminar": "Validar Desde ≤ Hasta en cliente y servidor; personalizar SettingsText.EmptyDataText con un mensaje en español que incluya el rango.",
+    "info_tecnica": "DR-01: POST 200, after.rows=[{id:'cpBody_gvDatos_DXEmptyRow', text:'No data to display'}], alerts=[], swal=null, dialogs=[]. DR-06 idéntico.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "DR-01",
+      "DR-06",
+      "TB-02",
+      "CC-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-11",
+    "pantalla": "Rastreo (+ modales y Adjuntos)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "Textos visibles: subtítulo, título del modal, cabeceras de grid, mensajes DevExpress, fechas",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "Copy inconsistente/incorrecto: subtítulo \"Consulta el estatus de tu Paquetes.\" (concordancia: \"tus paquetes\"); \"Historial Guias\" y columna \"Guia\" sin tilde frente a \"Histórico\" con tilde; \"Codigo\" sin tilde en Adjuntos; mensajes en inglés de DevExpress (\"No data to display\", \"Loading…\") en una interfaz en español; fechas en formato EE. UU. (\"9/2/2026 4:43:55 PM\") en Movimientos; html lang=\"en\"; tooltip \"Subir Factura\" sobre una columna llamada \"Post-Alerta\" y cabecera \"AD\" sin explicación.",
+    "pasos_para_reproducir": [
+      "1. Abrir Rastreo.aspx y leer el encabezado y las cabeceras del grid.",
+      "2. Abrir Menu → Histórico y leer el título.",
+      "3. Abrir una guía (Movimientos) y observar el formato de fecha.",
+      "4. Abrir Adjuntos (\"0\") y leer cabeceras y estado vacío."
+    ],
+    "comportamiento_actual": "Mezcla de español sin tildes, inglés y formato de fecha anglosajón.",
+    "comportamiento_esperado": "Copy revisado en español con tildes, mensajes de DevExpress localizados, fechas dd/MM/yyyy, lang=\"es\", nombres de columna autoexplicativos (o tooltip en la cabecera).",
+    "impacto_usuario": "Percepción de baja calidad y ambigüedad (¿qué es \"AD\"? ¿\"Post-Alerta\"?).",
+    "evidencia": [
+      "audit/screenshots/RA-11.png",
+      "audit/logs/evidence/rastreo-CC-01-copy.json",
+      "audit/screenshots/rastreo.png",
+      "audit/screenshots/rastreo-movimientos-open.png",
+      "audit/screenshots/rastreo-adjuntos-popup.png"
+    ],
+    "propuesta_preliminar": "Pasada de copy en toda la pantalla; localizar DevExpress (Localization es-DO) y fijar CultureInfo es-DO en la app.",
+    "info_tecnica": "CC-01: subheading 'Consulta el estatus de tu Paquetes.'; modalTexts[0] 'Historial Guias'; headers ['Post-Alerta','AD','Guia',…]; emptyRow 'No data to display'; loading 'Loading…'; lang='en'; popup rows '9/2/2026 4:43:55 PM'.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "CC-01",
+      "CC-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-12",
+    "pantalla": "Rastreo > Historial Guías (modal)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "#modal_Historial .modal-header (título + botón ×) vs .app-header",
+    "categoria": "ux-ui",
+    "severidad": "mayor",
+    "descripcion": "El modal se posiciona a ~28 px del borde superior y su cabecera (63 px) queda debajo de la barra superior fija de la app (60 px). A 1440/768 px el título se ve cortado y el centro del botón × está cubierto por la cabecera (un clic normal no lo alcanza: Playwright informa que .app-header__content intercepta el puntero); a 375 px la cabecera del modal, incluido el ×, queda completamente oculta. Cerrar solo es posible clicando el borde inferior del ×, el fondo, o Esc con el foco dentro (ver RA-13).",
+    "pasos_para_reproducir": [
+      "1. En Rastreo.aspx pulsar Menu → Histórico.",
+      "2. A 1440 px: el título \"Historial Guias\" aparece medio tapado por la barra superior; clicar en el centro del × no cierra el modal.",
+      "3. A 375 px: no se ve ni título ni ×."
+    ],
+    "comportamiento_actual": "Cabecera del modal tapada por la barra superior en todos los anchos; × inoperante en su mayor parte.",
+    "comportamiento_esperado": "Modal por encima de la cabecera de la app (z-index/stacking correcto) y con margen superior suficiente; × clicable en toda su área.",
+    "impacto_usuario": "El usuario no encuentra cómo cerrar el modal (sobre todo en móvil) y no ve su título.",
+    "evidencia": [
+      "audit/screenshots/RA-12.png",
+      "audit/screenshots/rs-rastreo-historial-375.png",
+      "audit/screenshots/rs-rastreo-historial-768.png",
+      "audit/screenshots/rs-rastreo-historial-1440.png",
+      "audit/logs/evidence/rastreo-MD-historial.json",
+      "audit/logs/evidence/rastreo-responsive.json"
+    ],
+    "propuesta_preliminar": "Renderizar el modal fuera del contenedor que crea el stacking context de la cabecera (o subir el z-index del .modal por encima de .app-header) y usar margin-top ≥ altura de la cabecera; revisar la clase modal-full.",
+    "info_tecnica": "MD-06: modal-header rect {x:471,y:29,w:498,h:63}, app-header rect {x:0,y:0,w:1440,h:60}, header position relative z-index 10, .modal z-index 1095; elementFromPoint en el centro del × = DIV.app-header__content (inModal=false). A 375: elementFromPoint en el centro del título = DIV.app-header (inModal=false). MD-01: page.click('#modal_Historial .close') → timeout (intercepted); clic en y=closeRect.bottom-2 sí cierra.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "MD-01",
+      "MD-06",
+      "RS-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-13",
+    "pantalla": "Rastreo > Historial Guías (modal) y Movimientos del Paquete (popup)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "#modal_Historial (Bootstrap) y cpBody_ppCambioGuia (ASPxPopupControl)",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "Gestión del foco deficiente en ambos diálogos. Historial: al abrirse el foco permanece en el enlace \"Histórico\" (fuera del modal), Tab recorre primero los controles del grid de fondo antes de entrar al modal (sin trampa de foco), Esc no cierra hasta que el foco está dentro, al cerrar el foco cae en <body>, no hay role=\"dialog\" y el × no tiene aria-label. Movimientos: ningún elemento del popup es enfocable (el botón de cierre es un <div> sin tabindex), 14 pulsaciones de Tab dejan el foco en <body>, sin role=dialog/aria-modal; solo Esc lo cierra por teclado.",
+    "pasos_para_reproducir": [
+      "1. Menu → Histórico; pulsar Esc inmediatamente: el modal sigue abierto (foco en el trigger).",
+      "2. Pulsar Tab: el foco pasa por DXCBtn0, enlace '0', enlace de guía, DXCBtn1 (grid de fondo) y solo después llega al × del modal.",
+      "3. Cerrar (fondo o Esc con foco dentro): document.activeElement = body.",
+      "4. Clic en la guía DP01-00306834: se abre Movimientos; pulsar Tab 14 veces: activeElement sigue siendo body; el × (#cpBody_ppCambioGuia_HCB-1) no es alcanzable."
+    ],
+    "comportamiento_actual": "Sin enfoque inicial, sin trampa de foco, sin retorno de foco; en Movimientos ningún control accesible por teclado.",
+    "comportamiento_esperado": "Al abrir, foco en el primer control del diálogo; Tab confinado; Esc cierra siempre; al cerrar, foco de vuelta al trigger; role=dialog + aria-modal + aria-labelledby; botón de cierre real (<button aria-label=\"Cerrar\">).",
+    "impacto_usuario": "Usuarios de teclado y AT quedan desorientados o atrapados (Movimientos) y no pueden cerrar con el ×.",
+    "evidencia": [
+      "audit/screenshots/RA-13.png",
+      "audit/logs/evidence/rastreo-MD-historial.json",
+      "audit/logs/evidence/rastreo-MD-movimientos.json",
+      "audit/screenshots/rastreo-movimientos-open.png"
+    ],
+    "propuesta_preliminar": "Bootstrap: opción focus:true y mover el foco al primer campo en shown.bs.modal, devolverlo en hidden.bs.modal; DevExpress: ShowCloseButton con elemento enfocable, PopupElementID y Shown/CloseUp para gestionar el foco.",
+    "info_tecnica": "MD-07 Historial: openActive='A#.nav-link|Histórico|inHistorial=false', focusEscapes=true, afterXActive='BODY#.modal-open', modalRole=null aria-modal='true' (sin role), closeAria {ariaLabel:null,text:'×'}. MD-03: Esc con foco en trigger → shown=true; Esc con foco en #cpBody_lDesde → cerrado. Movimientos: tabPath 14×'BODY', closeBtn {role:null,tabindex:null,aria-label:null,title:null}, popupRole=null; config ASPx: closeAction:'CloseButton', closeOnEscape:true.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "MD-03",
+      "MD-07",
+      "MD-04",
+      "AX-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-14",
+    "pantalla": "Rastreo > Adjuntos (dlg/Adjuntos.aspx)",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=DP01-00306834&c=01",
+    "componente": "Pestaña nueva (target=_blank) con #gvDatos",
+    "categoria": "ux-ui",
+    "severidad": "menor",
+    "descripcion": "El enlace \"0\" de la columna AD abre en una pestaña nueva una página desnuda: sin título (<title> vacío), sin cabecera ni logotipo, sin botón de cerrar/volver, sin explicación de qué es ni de cómo adjuntar algo, y con el estado vacío en inglés (\"No data to display\"). El enlace se llama \"0\" (el número de adjuntos) y no indica que abre otra pestaña.",
+    "pasos_para_reproducir": [
+      "1. En Rastreo.aspx clic en el \"0\" de la columna AD.",
+      "2. Se abre una pestaña con solo una tabla (Codigo, Nombre, Fecha, Objeto, Adjunto) y \"No data to display\"."
+    ],
+    "comportamiento_actual": "Página auxiliar sin contexto ni acciones; axe: document-title, html-has-lang, landmark, heading, contraste.",
+    "comportamiento_esperado": "Diálogo/modal en la misma pantalla o pestaña con título \"Adjuntos de la guía X\", texto de estado vacío en español (\"Esta guía no tiene adjuntos\"), acción para volver/cerrar y, si aplica, para adjuntar.",
+    "impacto_usuario": "El usuario no entiende dónde está ni qué puede hacer; hay que cerrar la pestaña a mano.",
+    "evidencia": [
+      "audit/screenshots/RA-14.png",
+      "audit/screenshots/rastreo-adjuntos-popup.png",
+      "audit/logs/evidence/rastreo-MD-09-adjuntos.json",
+      "audit/logs/axe/rastreo-adjuntos.json"
+    ],
+    "propuesta_preliminar": "Integrar Adjuntos como popup DevExpress/modal en Rastreo, o dotar a la página de layout, título, copy y botón de cierre.",
+    "info_tecnica": "MD-09: title='' hasChrome=false closeControl=[] fileInputs=0 gridEmpty='No data to display'. URL final tras 302: /dlg/Adjuntos.aspx (parámetros guardados en sesión). axe: color-contrast(serious,1), document-title(serious,1), html-has-lang(serious,1), landmark-one-main, page-has-heading-one, region(6). No existe control de subida en el DOM para este registro (no se intentó nada).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "MD-09",
+      "TB-01",
+      "AX-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-15",
+    "pantalla": "Rastreo > Adjuntos (dlg/Adjuntos.aspx)",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+    "componente": "Parámetros de query o / cl / c",
+    "categoria": "robustez",
+    "severidad": "mayor",
+    "descripcion": "La página no valida sus parámetros: sin \"c\", sin \"o\", sin parámetros, o con caracteres especiales en \"cl\" devuelve HTTP 500 con la página cruda de ASP.NET \"Runtime Error\". Con \"cl\" ausente/vacío o con un valor inexistente (zzz, otra guía) responde 302 → misma página y muestra un grid vacío, sin mensaje de error.",
+    "pasos_para_reproducir": [
+      "1. Autenticado, abrir https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=DP01-00306834 (sin c) → Runtime Error 500.",
+      "2. Abrir …/dlg/Adjuntos.aspx (sin parámetros) → Runtime Error 500.",
+      "3. Abrir …?o=Rastreo.aspx&cl=zzz&c=zzz → 302 a /dlg/Adjuntos.aspx y grid vacío."
+    ],
+    "comportamiento_actual": "500 crudo para parámetros faltantes/inválidos; silencio para valores inexistentes. Reproducido con Playwright request y en pestaña real, antes y después de una visita válida.",
+    "comportamiento_esperado": "Validar parámetros y mostrar un mensaje de la aplicación (\"Solicitud no válida\"), nunca la página de error del framework.",
+    "impacto_usuario": "Cualquier enlace roto/antiguo a Adjuntos (p. ej. marcador tras el 302, que pierde los parámetros) lleva a una página de error técnica. Nota neutral, sin verificar impacto: el parámetro cl acepta cualquier número de guía (DP01-00000001 → 302 y carga la página); no se comprobó si listaría adjuntos de otra cuenta porque excede el alcance de la auditoría.",
+    "evidencia": [
+      "audit/screenshots/RA-15.png",
+      "audit/logs/evidence/rastreo-NV-07-adjuntos-params.json",
+      "audit/logs/evidence/rastreo-NV-07-recheck.json",
+      "audit/logs/evidence/rastreo-NV-07-missing-c.html",
+      "audit/logs/evidence/rastreo-NV-07-no-params.html",
+      "audit/logs/evidence/rastreo-NV-07-garbage.html"
+    ],
+    "propuesta_preliminar": "Comprobar Request.QueryString antes de usarlos, responder con mensaje/redirección a Rastreo.aspx y, además, verificar que la guía pertenece al cliente autenticado.",
+    "info_tecnica": "GET variantes (request API, sin redirecciones): baseline 302→/dlg/Adjuntos.aspx; missing-cl 200 (grid vacío); missing-c 500; missing-o 500; no-params 500; garbage 302; empty-values 200; other-guia 302; specials (%3Cscript%3E en cl) 500 (probablemente request validation). Recheck en pestaña: missing-c/missing-o/no-params/specials → 500 tanto antes como después de una visita válida; garbage → 200 tras 302 con 'No data to display'. Página 500 = 'Server Error in '/' Application. Runtime Error' (RemoteOnly, sin stack).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "NV-07"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "RA-18",
+    "pantalla": "Rastreo > Movimientos del Paquete (popup)",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "cpBody_ppCambioGuia (ASPxPopupControl width=1000, height=600)",
+    "categoria": "responsive",
+    "severidad": "mayor",
+    "descripcion": "El popup de movimientos tiene tamaño fijo 1000×600 px. A 375 y 768 px desborda el viewport: se ve solo la columna Tracking, las columnas Estatus/Fecha y el botón × (x=961) quedan fuera de pantalla y la página adquiere scroll horizontal.",
+    "pasos_para_reproducir": [
+      "1. Con viewport 375×812 (o 768×1024) abrir Rastreo.aspx.",
+      "2. Clic en la guía DP01-00306834.",
+      "3. El popup ocupa 1000 px de ancho; hay que desplazarse horizontalmente para ver estatus, fechas y el ×."
+    ],
+    "comportamiento_actual": "Popup no responsive; × fuera del viewport; scroll horizontal del documento.",
+    "comportamiento_esperado": "Ancho relativo (p. ej. 95 % del viewport, máx. 1000 px), altura auto/max, tabla adaptativa.",
+    "impacto_usuario": "En móvil no se ven los estados ni las fechas del paquete (la información clave de la pantalla) y cerrar es difícil.",
+    "evidencia": [
+      "audit/screenshots/RA-18.png",
+      "audit/screenshots/rs-rastreo-movimientos-375.png",
+      "audit/screenshots/rs-rastreo-movimientos-768.png",
+      "audit/logs/evidence/rastreo-responsive.json"
+    ],
+    "propuesta_preliminar": "Usar Width en porcentaje / MaxWidth, AdaptivitySettings del ASPxPopupControl y modo adaptativo del grid interior.",
+    "info_tecnica": "375: popup {x:0,y:106,width:1000,height:600,fits:false, closeBtn {x:961,y:115,inViewport:false}, hOverflow:true}. 768: {x:0,y:212,width:1000,height:600,fits:false, closeBtn {x:961,inViewport:false}, hOverflow:true}. 1440: fits:true. Config: 'width':1000,'widthFromServer':true,'height':600.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "RS-04",
+      "MD-06"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-19",
+    "pantalla": "Rastreo",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "Resultados axe-core (Rastreo.aspx a 375/768/1440 y dlg/Adjuntos.aspx)",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "axe reporta en Rastreo.aspx (1440) 8 tipos de violación: color-contrast (serious, 23 nodos: subtítulo .page-title-subheading, enlaces del sidebar, #llocalidad…), image-alt (critical: imagen del clip sin alt), aria-allowed-attr (critical), button-name (critical: hamburguesas), meta-viewport, landmark-one-main, page-has-heading-one, region. Los elementos de cabecera/sidebar son chrome compartido (competen al grupo SH-); los específicos de esta pantalla son el contraste del subtítulo y la imagen del clip en la columna AD.",
+    "pasos_para_reproducir": [
+      "1. Ejecutar axe-core sobre Rastreo.aspx autenticado a 1440, 768 y 375 px.",
+      "2. Ver audit/logs/axe/rastreo-1440.json, rastreo-768.json, rastreo-375.json."
+    ],
+    "comportamiento_actual": "Contraste insuficiente en texto secundario; imagen informativa sin alt; sin landmarks ni h1.",
+    "comportamiento_esperado": "Contraste ≥ 4.5:1, alt en imágenes, landmarks main/nav, h1 por página.",
+    "impacto_usuario": "Legibilidad reducida para baja visión; AT sin estructura de página.",
+    "evidencia": [
+      "audit/screenshots/RA-19.png",
+      "audit/logs/axe/rastreo-1440.json",
+      "audit/logs/axe/rastreo-768.json",
+      "audit/logs/axe/rastreo-375.json",
+      "audit/logs/axe/rastreo-adjuntos.json"
+    ],
+    "propuesta_preliminar": "Ajustar color del subtítulo y enlaces del tema; alt en Clip.png; añadir <main>/<h1>; corregir meta viewport (compete a chrome compartido).",
+    "info_tecnica": "1440: aria-allowed-attr(critical,1 .p-0[data-toggle=dropdown]), button-name(critical,1 .close-sidebar-btn.hamburger), color-contrast(serious,23; muestra #llocalidad, .app-sidebar__heading, #lMicuenta), image-alt(critical,1 img[width=\"16\"]), landmark-one-main, meta-viewport, page-has-heading-one, region(30). 375: color-contrast 4 (.page-title-subheading), button-name 2 (.mobile-toggle-nav), image-alt 1, region 13.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "AX-01",
+      "AX-05"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "RA-20",
+    "pantalla": "Rastreo > Historial Guías (modal) / grid principal",
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "componente": "Resultado de Buscar (Filtro()) → #cpBody_gvDatos",
+    "categoria": "ux-ui",
+    "severidad": "mayor",
+    "descripcion": "Al pulsar Buscar, el modal se cierra (postback completo) y los resultados sustituyen al grid principal sin ninguna indicación del rango aplicado (las fechas solo se ven reabriendo el modal) y sin botón para limpiar el filtro. Además el estado filtrado se guarda en servidor: tras Atrás/Adelante, recargar o volver a Rastreo.aspx el grid sigue mostrando el histórico (10 filas) en lugar de la vista por defecto (1 paquete en tránsito) durante toda la sesión.",
+    "pasos_para_reproducir": [
+      "1. Rastreo.aspx muestra 1 grupo/1 paquete.",
+      "2. Menu → Histórico, Desde 2025-01-01, Hasta 2026-12-31, Buscar: el grid muestra 2 grupos (Embarcado, Entregado) y 8 paquetes; ningún texto indica el filtro.",
+      "3. Pulsar Atrás, Adelante, F5 o navegar a otra pantalla y volver a Rastreo: siguen las 10 filas."
+    ],
+    "comportamiento_actual": "Filtro invisible, sin reset y persistente en sesión; el título sigue diciendo \"Consulta el estatus de tu Paquetes\".",
+    "comportamiento_esperado": "Mostrar el rango activo (\"Histórico del 01/01/2025 al 31/12/2026\") con acción \"Quitar filtro\"; al volver a Rastreo mostrar la vista por defecto o hacer explícita la persistencia.",
+    "impacto_usuario": "El usuario no sabe por qué ve paquetes entregados antiguos ni cómo volver a la vista normal.",
+    "evidencia": [
+      "audit/screenshots/RA-20.png",
+      "audit/screenshots/rastreo-historial-control-wide.png",
+      "audit/logs/evidence/rastreo-historial-control-wide.json",
+      "audit/logs/evidence/rastreo-NV-01-02-historial.json",
+      "audit/screenshots/rastreo-nav-after-back.png"
+    ],
+    "propuesta_preliminar": "Renderizar un resumen del filtro y un botón de limpiar; no persistir el filtro en Session (o limpiarlo al cargar Rastreo por GET).",
+    "info_tecnica": "control-wide: after.modalShown=false, rows=10 (grupos Embarcado + Entregado), desde/hasta conservados solo en los inputs del modal cerrado. NV: s0 rows=2 → afterFilter → afterBack rows=10 → afterForward rows=10 (0 POST) → reload rows=10 (1 POST) → nueva navegación GET Rastreo.aspx rows=10.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "MD-08",
+      "TB-02",
+      "NV-01",
+      "NV-02"
+    ],
+    "impacto_a_confirmar": false
+  }
+]

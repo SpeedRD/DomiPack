@@ -1,0 +1,45 @@
+{
+  "note": "Shared header + sidebar chrome present on every authenticated screen (Mi Cuenta, Estado.aspx, Rastreo.aspx, PruebaExportacion.aspx, PreAlerta.aspx, PagoOnline.aspx). Documented once here; each screen's own component file lists only its screen-specific content and links back to this file rather than repeating these entries.",
+  "components": [
+    {
+      "type": "button",
+      "name": "Sidebar collapse toggle (hamburger, class close-sidebar-btn)",
+      "action": "Collapses/expands the left sidebar nav. No text label or aria-label captured — icon-only button, accessibility gap."
+    },
+    {
+      "type": "button",
+      "name": "Mobile nav toggle (hamburger, class mobile-toggle-nav / mobile-toggle-header-nav)",
+      "action": "Hidden at desktop viewport width; presumed to open the sidebar/header nav on mobile. Not tested at mobile viewport in this phase."
+    },
+    {
+      "type": "dropdown",
+      "name": "User menu trigger (<a class=\"p-0 btn\">, no id, empty text)",
+      "action": "Opens the top-right user dropdown menu. No accessible name (empty text, no aria-label) — icon/avatar-only trigger, accessibility gap."
+    },
+    {
+      "type": "status message",
+      "name": "Logged-in user display (name + email, inside the user dropdown)",
+      "action": "Static text showing the account's full name and email (e.g. 'JOSE ALEXANDER CABREJA AYBAR' / 'jacabreja@hotmail.com'), visible once the dropdown is open. Not individually selectored (no distinct id/class captured), grouped with the dropdown here."
+    },
+    {
+      "type": "button",
+      "name": "Salir (logout, inside user dropdown)",
+      "action": "onclick=\"window.location.href='/Login.aspx'\" — client-side redirect to Login.aspx, not a server logout call observed directly. Reversible via re-login; not treated as destructive. NOTE: see audit/notes/session-behavior.md — returning to Login.aspx after authenticating appears to invalidate the session even though the session cookie is unchanged, so this control's effect may be broader than a simple redirect."
+    },
+    {
+      "type": "breadcrumb/nav",
+      "name": "Sidebar menu",
+      "action": "Persistent left-nav list of links: 'Mi Cuenta' (href MiCuenta.aspx), 'Estados de Cuenta' (href Estado.aspx), 'Rastreo' (href Rastreo.aspx), 'Prueba de Exportacion' (href PruebaExportacion.aspx), 'PreAlerta' (href PreAlerta.aspx). The active item gets class 'mm-active'."
+    },
+    {
+      "type": "button",
+      "name": "Pagos Online (sidebar link, hidden)",
+      "action": "Real <a href=\"PagoOnline.aspx\"> exists in the DOM on every authenticated screen but its parent <li> is display:none for this test account — not visible/clickable in the rendered UI. Confirmed hidden (not just styled) via computed-style + zero-size bounding rect check."
+    },
+    {
+      "type": "status message",
+      "name": "Footer text",
+      "action": "Static, non-interactive: '2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS.' plus three links — 'Términos y Condiciones de Uso', 'Políticas de Privacidad', 'Políticas de Entrega' — all with empty/missing href (href=\"\" or none captured), i.e. dead links."
+    }
+  ]
+}

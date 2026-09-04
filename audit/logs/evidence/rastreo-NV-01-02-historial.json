@@ -1,0 +1,107 @@
+{
+  "s0": {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "hist": 4,
+    "rows": [
+      "Estatus: Embarcado",
+      "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSO"
+    ],
+    "modal": false,
+    "popup": false,
+    "desde": "",
+    "hasta": "",
+    "bodyHead": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAle"
+  },
+  "s1_modalOpen": {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "hist": 4,
+    "rows": [
+      "Estatus: Embarcado",
+      "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSO"
+    ],
+    "modal": true,
+    "popup": false,
+    "desde": "",
+    "hasta": "",
+    "bodyHead": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAle"
+  },
+  "s2_afterFilter": {
+    "error": "page.evaluate: Execution context was destroyed, most likely because of a navigation",
+    "url": "https://clientes.domipack.com/Rastreo.aspx#"
+  },
+  "backErr": "page.goBack: Protocol error (Page.getNavigationHistory): Not attached to an active page",
+  "s3_afterBack": {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "hist": 6,
+    "rows": [
+      "Estatus: Embarcado",
+      "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSO",
+      "Estatus: Entregado",
+      "0 DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 ART PERS",
+      "0 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 ACCESOR",
+      "0 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 ART PERS",
+      "0 DP01-00303692 8/26/2026 TBA333908870710 0.50 0.00 ARTICULO",
+      "0 DP01-00303746 8/26/2026 TBA333977356002 1.45 0.00 ARTÍCULO",
+      "0 DP01-00304156 8/26/2026 TBA333978097076 7.15 0.00 ART. PER",
+      "0 DP01-00304172 8/26/2026 TBA333978110538 7.10 0.00 ARTICULO"
+    ],
+    "modal": false,
+    "popup": false,
+    "desde": "2025-01-01",
+    "hasta": "2026-12-31",
+    "bodyHead": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAle"
+  },
+  "s3_serverErr": null,
+  "s3_shot": "audit/screenshots/rastreo-nav-after-back.png",
+  "s4_afterForward": {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "hist": 6,
+    "rows": [
+      "Estatus: Embarcado",
+      "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSO",
+      "Estatus: Entregado",
+      "0 DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 ART PERS",
+      "0 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 ACCESOR",
+      "0 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 ART PERS",
+      "0 DP01-00303692 8/26/2026 TBA333908870710 0.50 0.00 ARTICULO",
+      "0 DP01-00303746 8/26/2026 TBA333977356002 1.45 0.00 ARTÍCULO",
+      "0 DP01-00304156 8/26/2026 TBA333978097076 7.15 0.00 ART. PER",
+      "0 DP01-00304172 8/26/2026 TBA333978110538 7.10 0.00 ARTICULO"
+    ],
+    "modal": false,
+    "popup": false,
+    "desde": "2025-01-01",
+    "hasta": "2026-12-31",
+    "bodyHead": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAle"
+  },
+  "s4_postsFired": [],
+  "s4_serverErr": null,
+  "s4_dialogs": [],
+  "s4_shot": "audit/screenshots/rastreo-nav-after-forward.png",
+  "s4_onLogin": false,
+  "s5_afterReload": {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "hist": 6,
+    "rows": [
+      "Estatus: Embarcado",
+      "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSO",
+      "Estatus: Entregado",
+      "0 DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 ART PERS",
+      "0 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 ACCESOR",
+      "0 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 ART PERS",
+      "0 DP01-00303692 8/26/2026 TBA333908870710 0.50 0.00 ARTICULO",
+      "0 DP01-00303746 8/26/2026 TBA333977356002 1.45 0.00 ARTÍCULO",
+      "0 DP01-00304156 8/26/2026 TBA333978097076 7.15 0.00 ART. PER",
+      "0 DP01-00304172 8/26/2026 TBA333978110538 7.10 0.00 ARTICULO"
+    ],
+    "modal": false,
+    "popup": false,
+    "desde": "2025-01-01",
+    "hasta": "2026-12-31",
+    "bodyHead": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAle"
+  },
+  "s5_postsFired": [
+    "2026-09-04T02:28:37.880Z https://clientes.domipack.com/Rastreo.aspx"
+  ],
+  "s5_onLogin": false
+}

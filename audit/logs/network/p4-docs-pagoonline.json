@@ -1,0 +1,1535 @@
+[
+  {
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "status": 302,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:18:31.722Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:18:31.790Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnew.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:31.865Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/css/style.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:31.928Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/css/bootstrap.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:31.930Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:31.935Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:31.977Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/css/icons.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:31.997Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:31.997Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/bootstrap.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.067Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/modernizr.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.067Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/detect.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.133Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/fastclick.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.135Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.slimscroll.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.137Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/wow.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.137Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.blockUI.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.137Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.scrollTo.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.137Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/app.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.137Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.nicescroll.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.139Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/waves.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:32.141Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:18:32.176Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "status": 302,
+    "method": "POST",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:18:32.272Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:18:45.362Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:45.370Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:45.370Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:45.437Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:45.463Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4853,0_4968,1_68,1_69,1_70,0_4856,0_4971,1_210,0_4838,1_209,0_4841-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:45.585Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:45.589Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:18:45.606Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:45.669Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/images/box.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:45.669Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:45.670Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_21,1_22,1_190,1_192,1_17,1_41,1_194,1_188,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:45.675Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:18:45.698Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:45.774Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4970-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:45.797Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4855-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:45.799Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:45.799Z"
+  },
+  {
+    "url": "https://sys.translogic.com.do/img/Clip.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:45.820Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:18:46.624Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:46.636Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:46.636Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:46.636Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:46.636Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:46.636Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:46.636Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:46.636Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:46.636Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-1.10.2.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:46.699Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:18:46.711Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:18:46.711Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:46.711Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2697,0_2771,1_68,1_69,1_70,0_2701,0_2776,1_210,0_2685,1_209,0_2690-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:46.788Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:46.794Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2699-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:46.887Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:18:48.976Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:48.984Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:48.984Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:48.984Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:48.984Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-1.10.2.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:48.985Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:48.985Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:48.985Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2697,0_2771,1_68,1_69,1_70,0_2701,0_2776,1_210,0_2685,1_209,0_2690-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:18:48.985Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:48.985Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:48.985Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:18:48.985Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:18:49.006Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:18:49.006Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:49.006Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2699-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:18:49.006Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:03.394Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:03.400Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:03.400Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:03.400Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:03.400Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:03.400Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_21,1_22,1_190,1_192,1_17,1_41,1_194,1_188,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:03.401Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4853,0_4968,1_68,1_69,1_70,0_4856,0_4971,1_210,0_4838,1_209,0_4841-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:03.401Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:03.401Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:03.401Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:03.401Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/images/box.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:03.401Z"
+  },
+  {
+    "url": "https://sys.translogic.com.do/img/Clip.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:03.421Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:03.423Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:03.424Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:03.424Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4855-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:03.429Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4970-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:03.429Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:04.841Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:04.848Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:04.848Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:04.849Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:04.849Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-1.10.2.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:04.849Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:04.849Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:04.849Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2697,0_2771,1_68,1_69,1_70,0_2701,0_2776,1_210,0_2685,1_209,0_2690-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:04.849Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:04.849Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:04.849Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:04.849Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:04.862Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:04.862Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:04.862Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2699-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:04.864Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:06.198Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:06.208Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:06.208Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:06.208Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:06.208Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:06.208Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_21,1_22,1_190,1_192,1_17,1_41,1_194,1_188,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:06.209Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:06.209Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:06.209Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:06.209Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:06.224Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:06.224Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:06.224Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4853,0_4968,1_68,1_69,1_70,0_4856,0_4971,0_20,1_210,0_4838,1_209,0_4841-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:06.302Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4855-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:06.316Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_18-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:06.387Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:07.721Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:07.730Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:07.730Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:07.730Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:07.730Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-1.10.2.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:07.730Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:07.730Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:07.730Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2697,0_2771,1_68,1_69,1_70,0_2701,0_2776,1_210,0_2685,1_209,0_2690-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:07.731Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:07.731Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:07.731Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:07.731Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:07.741Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:07.741Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:07.741Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2699-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:07.741Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PreAlerta.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:09.045Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:09.053Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:09.053Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:09.053Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:09.053Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:09.054Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4853,0_4968,1_68,1_69,1_70,0_4856,0_4971,1_210,0_4838,1_209,0_4841-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:09.054Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:09.054Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:09.054Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:09.054Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:09.061Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:09.061Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:09.061Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_21,1_22,1_190,1_192,1_17,1_41,1_194-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:09.231Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4855-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:09.256Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:10.685Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:10.694Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:10.694Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:10.694Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:10.694Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-1.10.2.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:10.694Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:10.695Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:10.695Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2697,0_2771,1_68,1_69,1_70,0_2701,0_2776,1_210,0_2685,1_209,0_2690-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:10.695Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:10.695Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:10.695Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:10.695Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:10.708Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:10.708Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:10.708Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2699-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:10.708Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/Estado.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:12.023Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:12.032Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:12.032Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:12.032Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:12.033Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:12.033Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:12.033Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:12.033Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:12.033Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:12.033Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:12.044Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:12.044Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:12.044Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4853,0_4968,1_68,1_69,1_70,0_4856,0_4971,0_2,1_210,0_4838,1_209,0_4841-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:12.121Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4855-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:12.135Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_0-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:12.199Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "status": 500,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:13.531Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:14.928Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:14.934Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:14.934Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:14.934Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:14.934Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:14.934Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:14.934Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:14.934Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:14.934Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:14.942Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:14.942Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:14.943Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_2697,0_2771,1_68,1_69,1_70,0_2701,0_2776,1_210,0_2685,1_209,0_2690,0_4968,0_4971-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:15.026Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_21,1_22,1_190,1_192,1_17,1_41,1_194,1_188-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:15.096Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "status": 500,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:16.534Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "status": 500,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:18.535Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "status": 500,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:30.537Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/Estado.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-04T02:19:31.865Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:31.877Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/main.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:31.877Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:31.878Z"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.7.1.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:31.878Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:31.878Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_182-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:31.879Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4853,0_4968,1_68,1_69,1_70,0_4856,0_4971,0_2,1_210,0_4838,1_209,0_4841-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-04T02:19:31.880Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:31.880Z"
+  },
+  {
+    "url": "https://tainoexpress.com//index_files/a.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:31.880Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/scripts/main.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-04T02:19:31.880Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:31.898Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/Pe-icon-7-stroke.woff",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-04T02:19:31.898Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnexxxxx.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:31.898Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4855-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:31.898Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_0-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-04T02:19:31.899Z"
+  }
+]

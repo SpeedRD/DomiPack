@@ -1,0 +1,163 @@
+{
+  "ddTipo": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": true
+  },
+  "Identificacion": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": true
+  },
+  "iRNC": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": false
+  },
+  "Nombre": {
+    "label": null,
+    "asterisk": null,
+    "required": true,
+    "disabled": false,
+    "visible": true
+  },
+  "tbContacto": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": false
+  },
+  "Password": {
+    "label": null,
+    "asterisk": null,
+    "required": true,
+    "disabled": true,
+    "visible": true
+  },
+  "sSexo": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": true
+  },
+  "ltelefono": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": true,
+    "visible": true
+  },
+  "lcelular": {
+    "label": null,
+    "asterisk": null,
+    "required": true,
+    "disabled": true,
+    "visible": true
+  },
+  "Email": {
+    "label": null,
+    "asterisk": null,
+    "required": true,
+    "disabled": false,
+    "visible": true
+  },
+  "Email1": {
+    "label": "Fecha Nacimiento (opcional)",
+    "asterisk": false,
+    "required": true,
+    "disabled": false,
+    "visible": true
+  },
+  "tbFecha": {
+    "label": "Fecha Nacimiento (opcional)",
+    "asterisk": false,
+    "required": false,
+    "disabled": true,
+    "visible": true
+  },
+  "lSucursal": {
+    "label": "Oficina",
+    "asterisk": false,
+    "required": false,
+    "disabled": false,
+    "visible": true
+  },
+  "ckDomicilio": {
+    "label": "Domicilio",
+    "asterisk": false,
+    "required": false,
+    "disabled": false,
+    "visible": true
+  },
+  "Direccion": {
+    "label": "Direccion",
+    "asterisk": false,
+    "required": false,
+    "disabled": false,
+    "visible": false
+  },
+  "cbMedioiD": {
+    "label": "Referido",
+    "asterisk": false,
+    "required": false,
+    "disabled": false,
+    "visible": true
+  },
+  "ckRua": {
+    "label": "Rua Registrado",
+    "asterisk": false,
+    "required": false,
+    "disabled": false,
+    "visible": true
+  },
+  "bSend": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": true
+  },
+  "bsendConfi": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": false
+  },
+  "codigoPromo": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": false
+  },
+  "TokenID": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": false
+  },
+  "cbPais": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": false
+  },
+  "cbProvincias": {
+    "label": null,
+    "asterisk": null,
+    "required": false,
+    "disabled": false,
+    "visible": false
+  }
+}

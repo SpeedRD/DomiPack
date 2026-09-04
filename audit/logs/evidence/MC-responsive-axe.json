@@ -1,0 +1,2878 @@
+{
+  "datos-375": {
+    "ov": {
+      "scrollWidth": 398,
+      "clientWidth": 375,
+      "overflow": true
+    },
+    "lay": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 375,
+        "h": 1479,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 375,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 328,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 325,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "taps": [
+      {
+        "id": "hamburger hamburger--elastic m",
+        "text": "",
+        "w": 24,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "btn-icon btn-icon-only btn btn",
+        "text": "",
+        "w": 23,
+        "h": 29,
+        "small": true
+      },
+      {
+        "id": "p-0 btn",
+        "text": "",
+        "w": 22,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "lMicuenta",
+        "text": "Mi Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "Estados de Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lRastreo",
+        "text": "Rastreo",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPruebaExportacion",
+        "text": "Prueba de Exportacion",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPreAlerta",
+        "text": "PreAlerta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab1",
+        "text": "Datos Personales",
+        "w": 147,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab2",
+        "text": "Dependientes",
+        "w": 124,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab4",
+        "text": "Direccion",
+        "w": 95,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_Button1",
+        "text": "Guardar",
+        "w": 74,
+        "h": 33,
+        "small": false
+      }
+    ]
+  },
+  "dependientes-375": {
+    "ov": {
+      "scrollWidth": 609,
+      "clientWidth": 375,
+      "overflow": true
+    },
+    "lay": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 375,
+        "h": 906,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 375,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 328,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 325,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": {
+        "x": 70,
+        "w": 539,
+        "h": 112,
+        "display": "table"
+      },
+      "gridOverflow": {
+        "scrollW": 539,
+        "clientW": 539,
+        "parentOverflowX": "visible"
+      },
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "taps": [
+      {
+        "id": "hamburger hamburger--elastic m",
+        "text": "",
+        "w": 24,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "btn-icon btn-icon-only btn btn",
+        "text": "",
+        "w": 23,
+        "h": 29,
+        "small": true
+      },
+      {
+        "id": "p-0 btn",
+        "text": "",
+        "w": 22,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "lMicuenta",
+        "text": "Mi Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "Estados de Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lRastreo",
+        "text": "Rastreo",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPruebaExportacion",
+        "text": "Prueba de Exportacion",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPreAlerta",
+        "text": "PreAlerta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab1",
+        "text": "Datos Personales",
+        "w": 147,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab2",
+        "text": "Dependientes",
+        "w": 124,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab4",
+        "text": "Direccion",
+        "w": 95,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_Button3",
+        "text": "Guardar Dependiente",
+        "w": 154,
+        "h": 33,
+        "small": false
+      }
+    ]
+  },
+  "direccion-375": {
+    "ov": {
+      "scrollWidth": 534,
+      "clientWidth": 375,
+      "overflow": true
+    },
+    "lay": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 375,
+        "h": 1239,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 375,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 328,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 325,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": {
+        "x": 70,
+        "w": 464,
+        "h": 112,
+        "display": "table"
+      },
+      "gridOverflow": {
+        "scrollW": 464,
+        "clientW": 464,
+        "parentOverflowX": "visible"
+      },
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "taps": [
+      {
+        "id": "hamburger hamburger--elastic m",
+        "text": "",
+        "w": 24,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "btn-icon btn-icon-only btn btn",
+        "text": "",
+        "w": 23,
+        "h": 29,
+        "small": true
+      },
+      {
+        "id": "p-0 btn",
+        "text": "",
+        "w": 22,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "lMicuenta",
+        "text": "Mi Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "Estados de Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lRastreo",
+        "text": "Rastreo",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPruebaExportacion",
+        "text": "Prueba de Exportacion",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPreAlerta",
+        "text": "PreAlerta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab1",
+        "text": "Datos Personales",
+        "w": 147,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab2",
+        "text": "Dependientes",
+        "w": 124,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab4",
+        "text": "Direccion",
+        "w": 95,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ckPrincipal",
+        "text": "on",
+        "w": 205,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_bDireccion",
+        "text": "Guardar Direccion",
+        "w": 134,
+        "h": 33,
+        "small": false
+      }
+    ]
+  },
+  "datos-768": {
+    "ov": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": false
+    },
+    "lay": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 768,
+        "h": 1052,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 768,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 721,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 698,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "taps": [
+      {
+        "id": "hamburger hamburger--elastic m",
+        "text": "",
+        "w": 24,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "btn-icon btn-icon-only btn btn",
+        "text": "",
+        "w": 23,
+        "h": 29,
+        "small": true
+      },
+      {
+        "id": "p-0 btn",
+        "text": "",
+        "w": 22,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "lMicuenta",
+        "text": "Mi Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "Estados de Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lRastreo",
+        "text": "Rastreo",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPruebaExportacion",
+        "text": "Prueba de Exportacion",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPreAlerta",
+        "text": "PreAlerta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab1",
+        "text": "Datos Personales",
+        "w": 147,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab2",
+        "text": "Dependientes",
+        "w": 124,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab4",
+        "text": "Direccion",
+        "w": 95,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_Button1",
+        "text": "Guardar",
+        "w": 74,
+        "h": 33,
+        "small": false
+      }
+    ]
+  },
+  "dependientes-768": {
+    "ov": {
+      "scrollWidth": 823,
+      "clientWidth": 768,
+      "overflow": true
+    },
+    "lay": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 768,
+        "h": 722,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 768,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 721,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 698,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": {
+        "x": 284,
+        "w": 539,
+        "h": 112,
+        "display": "table"
+      },
+      "gridOverflow": {
+        "scrollW": 539,
+        "clientW": 539,
+        "parentOverflowX": "visible"
+      },
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "taps": [
+      {
+        "id": "hamburger hamburger--elastic m",
+        "text": "",
+        "w": 24,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "btn-icon btn-icon-only btn btn",
+        "text": "",
+        "w": 23,
+        "h": 29,
+        "small": true
+      },
+      {
+        "id": "p-0 btn",
+        "text": "",
+        "w": 22,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "lMicuenta",
+        "text": "Mi Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "Estados de Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lRastreo",
+        "text": "Rastreo",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPruebaExportacion",
+        "text": "Prueba de Exportacion",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPreAlerta",
+        "text": "PreAlerta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab1",
+        "text": "Datos Personales",
+        "w": 147,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab2",
+        "text": "Dependientes",
+        "w": 124,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab4",
+        "text": "Direccion",
+        "w": 95,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_Button3",
+        "text": "Guardar Dependiente",
+        "w": 154,
+        "h": 33,
+        "small": false
+      }
+    ]
+  },
+  "direccion-768": {
+    "ov": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflow": false
+    },
+    "lay": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 768,
+        "h": 1055,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 768,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 721,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 698,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": {
+        "x": 284,
+        "w": 399,
+        "h": 112,
+        "display": "table"
+      },
+      "gridOverflow": {
+        "scrollW": 399,
+        "clientW": 399,
+        "parentOverflowX": "visible"
+      },
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "taps": [
+      {
+        "id": "hamburger hamburger--elastic m",
+        "text": "",
+        "w": 24,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "btn-icon btn-icon-only btn btn",
+        "text": "",
+        "w": 23,
+        "h": 29,
+        "small": true
+      },
+      {
+        "id": "p-0 btn",
+        "text": "",
+        "w": 22,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "lMicuenta",
+        "text": "Mi Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "Estados de Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lRastreo",
+        "text": "Rastreo",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPruebaExportacion",
+        "text": "Prueba de Exportacion",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPreAlerta",
+        "text": "PreAlerta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab1",
+        "text": "Datos Personales",
+        "w": 147,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab2",
+        "text": "Dependientes",
+        "w": 124,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab4",
+        "text": "Direccion",
+        "w": 95,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ckPrincipal",
+        "text": "on",
+        "w": 169,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_bDireccion",
+        "text": "Guardar Direccion",
+        "w": 134,
+        "h": 33,
+        "small": false
+      }
+    ]
+  },
+  "datos-1440": {
+    "ov": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "lay": {
+      "sidebar": {
+        "x": 0,
+        "w": 280,
+        "h": 1090,
+        "display": "flex"
+      },
+      "main": {
+        "x": 280,
+        "w": 1160,
+        "h": 1030,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 1440,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 232,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 1130,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white"
+    },
+    "taps": [
+      {
+        "id": "hamburger close-sidebar-btn ha",
+        "text": "",
+        "w": 24,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "p-0 btn",
+        "text": "",
+        "w": 22,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "lMicuenta",
+        "text": "Mi Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "Estados de Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lRastreo",
+        "text": "Rastreo",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPruebaExportacion",
+        "text": "Prueba de Exportacion",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPreAlerta",
+        "text": "PreAlerta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab1",
+        "text": "Datos Personales",
+        "w": 147,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab2",
+        "text": "Dependientes",
+        "w": 124,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab4",
+        "text": "Direccion",
+        "w": 95,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_Button1",
+        "text": "Guardar",
+        "w": 74,
+        "h": 33,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "2022 - DOMIPACK, TODOS LO",
+        "w": 385,
+        "h": 17,
+        "small": true
+      },
+      {
+        "id": "A",
+        "text": "Términos y Condiciones de",
+        "w": 204,
+        "h": 17,
+        "small": true
+      },
+      {
+        "id": "A",
+        "text": "Políticas de Privacidad",
+        "w": 146,
+        "h": 17,
+        "small": true
+      },
+      {
+        "id": "A",
+        "text": "Políticas de Entrega",
+        "w": 128,
+        "h": 17,
+        "small": true
+      }
+    ]
+  },
+  "dependientes-1440": {
+    "ov": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "lay": {
+      "sidebar": {
+        "x": 0,
+        "w": 280,
+        "h": 840,
+        "display": "flex"
+      },
+      "main": {
+        "x": 280,
+        "w": 1160,
+        "h": 780,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 1440,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 232,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 1130,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": {
+        "x": 695,
+        "w": 660,
+        "h": 112,
+        "display": "table"
+      },
+      "gridOverflow": {
+        "scrollW": 660,
+        "clientW": 660,
+        "parentOverflowX": "visible"
+      },
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white"
+    },
+    "taps": [
+      {
+        "id": "hamburger close-sidebar-btn ha",
+        "text": "",
+        "w": 24,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "p-0 btn",
+        "text": "",
+        "w": 22,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "lMicuenta",
+        "text": "Mi Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "Estados de Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lRastreo",
+        "text": "Rastreo",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPruebaExportacion",
+        "text": "Prueba de Exportacion",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPreAlerta",
+        "text": "PreAlerta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab1",
+        "text": "Datos Personales",
+        "w": 147,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab2",
+        "text": "Dependientes",
+        "w": 124,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab4",
+        "text": "Direccion",
+        "w": 95,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_Button3",
+        "text": "Guardar Dependiente",
+        "w": 154,
+        "h": 33,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "2022 - DOMIPACK, TODOS LO",
+        "w": 385,
+        "h": 17,
+        "small": true
+      },
+      {
+        "id": "A",
+        "text": "Términos y Condiciones de",
+        "w": 204,
+        "h": 17,
+        "small": true
+      },
+      {
+        "id": "A",
+        "text": "Políticas de Privacidad",
+        "w": 146,
+        "h": 17,
+        "small": true
+      },
+      {
+        "id": "A",
+        "text": "Políticas de Entrega",
+        "w": 128,
+        "h": 17,
+        "small": true
+      }
+    ]
+  },
+  "direccion-1440": {
+    "ov": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflow": false
+    },
+    "lay": {
+      "sidebar": {
+        "x": 0,
+        "w": 280,
+        "h": 1100,
+        "display": "flex"
+      },
+      "main": {
+        "x": 280,
+        "w": 1160,
+        "h": 1040,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 1440,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 232,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 1130,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": {
+        "x": 695,
+        "w": 660,
+        "h": 112,
+        "display": "table"
+      },
+      "gridOverflow": {
+        "scrollW": 660,
+        "clientW": 660,
+        "parentOverflowX": "visible"
+      },
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white"
+    },
+    "taps": [
+      {
+        "id": "hamburger close-sidebar-btn ha",
+        "text": "",
+        "w": 24,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "p-0 btn",
+        "text": "",
+        "w": 22,
+        "h": 21,
+        "small": true
+      },
+      {
+        "id": "lMicuenta",
+        "text": "Mi Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "Estados de Cuenta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lRastreo",
+        "text": "Rastreo",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPruebaExportacion",
+        "text": "Prueba de Exportacion",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "lPreAlerta",
+        "text": "PreAlerta",
+        "w": 232,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab1",
+        "text": "Datos Personales",
+        "w": 147,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab2",
+        "text": "Dependientes",
+        "w": 124,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ltab4",
+        "text": "Direccion",
+        "w": 95,
+        "h": 39,
+        "small": false
+      },
+      {
+        "id": "cpBody_ckPrincipal",
+        "text": "on",
+        "w": 300,
+        "h": 38,
+        "small": false
+      },
+      {
+        "id": "cpBody_bDireccion",
+        "text": "Guardar Direccion",
+        "w": 134,
+        "h": 33,
+        "small": false
+      },
+      {
+        "id": "A",
+        "text": "2022 - DOMIPACK, TODOS LO",
+        "w": 385,
+        "h": 17,
+        "small": true
+      },
+      {
+        "id": "A",
+        "text": "Términos y Condiciones de",
+        "w": 204,
+        "h": 17,
+        "small": true
+      },
+      {
+        "id": "A",
+        "text": "Políticas de Privacidad",
+        "w": 146,
+        "h": 17,
+        "small": true
+      },
+      {
+        "id": "A",
+        "text": "Políticas de Entrega",
+        "w": 128,
+        "h": 17,
+        "small": true
+      }
+    ]
+  },
+  "rs05-375": {
+    "toggleInfo": [
+      {
+        "cls": "hamburger close-sidebar-btn hamburger--elastic",
+        "visible": false,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "hamburger hamburger--elastic mobile-toggle-nav",
+        "visible": true,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav",
+        "visible": true,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "hamburger close-sidebar-btn hamburger--elastic",
+        "visible": false,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "hamburger hamburger--elastic mobile-toggle-nav",
+        "visible": false,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav",
+        "visible": false,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      }
+    ],
+    "before": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 375,
+        "h": 1479,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 375,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 328,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 325,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "open": {
+      "sidebar": {
+        "x": 0,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 375,
+        "h": 1479,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 375,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 328,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 325,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar sidebar-mobile-open"
+    },
+    "closed": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 375,
+        "h": 1479,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 375,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 328,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 325,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "headerOpen": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 375,
+        "h": 1479,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 375,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 328,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 325,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "sidebarVisible": true
+  },
+  "rs05-768": {
+    "toggleInfo": [
+      {
+        "cls": "hamburger close-sidebar-btn hamburger--elastic",
+        "visible": false,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "hamburger hamburger--elastic mobile-toggle-nav",
+        "visible": true,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav",
+        "visible": true,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "hamburger close-sidebar-btn hamburger--elastic",
+        "visible": false,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "hamburger hamburger--elastic mobile-toggle-nav",
+        "visible": false,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "cls": "btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav",
+        "visible": false,
+        "ariaLabel": null,
+        "ariaExpanded": null,
+        "ariaControls": null,
+        "text": "",
+        "title": null
+      }
+    ],
+    "before": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 768,
+        "h": 1052,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 768,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 721,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 698,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "open": {
+      "sidebar": {
+        "x": 0,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 768,
+        "h": 1052,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 768,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 721,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 698,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar sidebar-mobile-open"
+    },
+    "closed": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 768,
+        "h": 1052,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 768,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 721,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 698,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "headerOpen": {
+      "sidebar": {
+        "x": -280,
+        "w": 280,
+        "h": 329,
+        "display": "flex"
+      },
+      "main": {
+        "x": 0,
+        "w": 768,
+        "h": 1052,
+        "display": "flex"
+      },
+      "header": {
+        "x": 0,
+        "w": 768,
+        "h": 60,
+        "display": "flex"
+      },
+      "mobileToggle": {
+        "x": 24,
+        "w": 24,
+        "h": 21,
+        "display": "inline-block"
+      },
+      "mobileHeaderToggle": {
+        "x": 721,
+        "w": 23,
+        "h": 29,
+        "display": "inline-block"
+      },
+      "closeSidebarBtn": {
+        "x": 0,
+        "w": 0,
+        "h": 0,
+        "display": "inline-block"
+      },
+      "userMenu": {
+        "x": 698,
+        "w": 22,
+        "h": 21,
+        "display": "block"
+      },
+      "grid": null,
+      "gridOverflow": null,
+      "bodyClasses": "",
+      "containerClasses": "app-container app-theme-white closed-sidebar-mobile closed-sidebar"
+    },
+    "sidebarVisible": true
+  },
+  "axe": {
+    "datos": {
+      "file": "audit/logs/axe/micuenta-datos-1440.json",
+      "violations": [
+        {
+          "id": "aria-allowed-attr",
+          "impact": "critical",
+          "help": "Elements must only use supported ARIA attributes",
+          "nodes": 1,
+          "sample": [
+            "a[data-toggle=\"dropdown\"]"
+          ]
+        },
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 1,
+          "sample": [
+            ".app-header > .app-header__logo > .header__pane.ml-auto > div > .close-sidebar-btn.hamburger[data-class=\"closed-sidebar\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 14,
+          "sample": [
+            "#llocalidad",
+            ".app-sidebar__heading",
+            "a[href$=\"Estado.aspx\"]"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 26,
+          "sample": [
+            ".ml-3",
+            ".app-sidebar__heading",
+            ".vertical-nav-menu > li:nth-child(2)"
+          ]
+        },
+        {
+          "id": "select-name",
+          "impact": "critical",
+          "help": "Select element must have an accessible name",
+          "nodes": 1,
+          "sample": [
+            "#cpBody_lSucursal"
+          ]
+        }
+      ],
+      "count": 8
+    },
+    "dependientes": {
+      "file": "audit/logs/axe/micuenta-dependientes-1440.json",
+      "violations": [
+        {
+          "id": "aria-allowed-attr",
+          "impact": "critical",
+          "help": "Elements must only use supported ARIA attributes",
+          "nodes": 1,
+          "sample": [
+            "a[data-toggle=\"dropdown\"]"
+          ]
+        },
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 1,
+          "sample": [
+            ".app-header > .app-header__logo > .header__pane.ml-auto > div > .close-sidebar-btn.hamburger[data-class=\"closed-sidebar\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 20,
+          "sample": [
+            "#llocalidad",
+            ".app-sidebar__heading",
+            "a[href$=\"Estado.aspx\"]"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 25,
+          "sample": [
+            ".ml-3",
+            ".app-sidebar__heading",
+            ".vertical-nav-menu > li:nth-child(2)"
+          ]
+        }
+      ],
+      "count": 7
+    },
+    "direccion": {
+      "file": "audit/logs/axe/micuenta-direccion-1440.json",
+      "violations": [
+        {
+          "id": "aria-allowed-attr",
+          "impact": "critical",
+          "help": "Elements must only use supported ARIA attributes",
+          "nodes": 1,
+          "sample": [
+            "a[data-toggle=\"dropdown\"]"
+          ]
+        },
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 1,
+          "sample": [
+            ".app-header > .app-header__logo > .header__pane.ml-auto > div > .close-sidebar-btn.hamburger[data-class=\"closed-sidebar\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 15,
+          "sample": [
+            "#llocalidad",
+            ".app-sidebar__heading",
+            "a[href$=\"Estado.aspx\"]"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 23,
+          "sample": [
+            ".ml-3",
+            ".app-sidebar__heading",
+            ".vertical-nav-menu > li:nth-child(2)"
+          ]
+        },
+        {
+          "id": "select-name",
+          "impact": "critical",
+          "help": "Select element must have an accessible name",
+          "nodes": 4,
+          "sample": [
+            "#cpBody_cbPais",
+            "#cpBody_cbProvincia",
+            "#cpBody_cbCiudad"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 1,
+          "sample": [
+            "#cpBody_cbPais"
+          ]
+        }
+      ],
+      "count": 9
+    },
+    "datos375": {
+      "file": "audit/logs/axe/micuenta-datos-375.json",
+      "violations": [
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 2,
+          "sample": [
+            ".app-header > .app-header__mobile-menu > div > .mobile-toggle-nav.hamburger.hamburger--elastic",
+            ".app-header > .app-header__menu > span > .btn-icon.btn-icon-only.btn-sm"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 4,
+          "sample": [
+            ".page-title-subheading",
+            "#cpBody_ltab2",
+            "#cpBody_ltab4"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 24,
+          "sample": [
+            ".app-sidebar__heading",
+            ".vertical-nav-menu > li:nth-child(2)",
+            ".vertical-nav-menu > li:nth-child(3)"
+          ]
+        },
+        {
+          "id": "select-name",
+          "impact": "critical",
+          "help": "Select element must have an accessible name",
+          "nodes": 1,
+          "sample": [
+            "#cpBody_lSucursal"
+          ]
+        }
+      ],
+      "count": 7
+    }
+  },
+  "traversal": [
+    {
+      "tag": "A",
+      "id": "cpBody_ltab2",
+      "cls": "nav-link show",
+      "text": "Dependientes",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(233, 236, 239) rgb(233, 236, 239) rgb(222, 226, 230)",
+      "blurredBorder": "rgba(0, 0, 0, 0)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": true,
+      "indicator": true
+    },
+    {
+      "tag": "A",
+      "id": "cpBody_ltab4",
+      "cls": "nav-link show",
+      "text": "Direccion",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(233, 236, 239) rgb(233, 236, 239) rgb(222, 226, 230)",
+      "blurredBorder": "rgba(0, 0, 0, 0)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": true,
+      "indicator": true
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lCodigo",
+      "cls": "form-control",
+      "text": "DP-014003",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lNombre",
+      "cls": "form-control",
+      "text": "JOSE ALEXANDER CABREJA AYBAR",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lRNC",
+      "cls": "form-control",
+      "text": "00111314480",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lEmail",
+      "cls": "form-control",
+      "text": "jacabreja@hotmail.com",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lContrasena",
+      "cls": "form-control",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lDireccion1",
+      "cls": "form-control",
+      "text": "Calle Coralillo 19, Punta Cana Village",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lDireccion2",
+      "cls": "form-control",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lTelefono",
+      "cls": "form-control",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lTelefono2",
+      "cls": "form-control",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_lCelular",
+      "cls": "form-control",
+      "text": "809-932-6810",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(206, 212, 218)",
+      "blurredBorder": "rgb(206, 212, 218)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "INPUT",
+      "id": "cpBody_Button1",
+      "cls": "btn btn-primary",
+      "text": "Guardar",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(255, 255, 255)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "focusedBorder": "rgb(234, 53, 55)",
+      "blurredBorder": "rgb(234, 53, 55)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "2022 - DOMIPACK, TODOS LOS DERECHOS RESE",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(247, 106, 148)",
+      "blurredBorder": "rgb(247, 106, 148)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "Términos y Condiciones de Uso",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(247, 106, 148)",
+      "blurredBorder": "rgb(247, 106, 148)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "Políticas de Privacidad",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(247, 106, 148)",
+      "blurredBorder": "rgb(247, 106, 148)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "Políticas de Entrega",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(247, 106, 148)",
+      "blurredBorder": "rgb(247, 106, 148)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "BODY",
+      "id": "",
+      "cls": "",
+      "text": " JOSE ALEXANDER CABREJA AYBAR jacabreja@",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(73, 80, 87)",
+      "blurredBorder": "rgb(73, 80, 87)",
+      "visible": true,
+      "inViewport": false,
+      "focusVisible": false,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "BUTTON",
+      "id": "",
+      "cls": "hamburger close-sidebar-btn hamburger--elastic",
+      "text": "",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(73, 80, 87)",
+      "blurredBorder": "rgb(73, 80, 87)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "lMicuenta",
+      "cls": "mm-active",
+      "text": "Mi Cuenta",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(52, 58, 64)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(52, 58, 64)",
+      "blurredBorder": "rgb(52, 58, 64)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "",
+      "cls": "",
+      "text": "Estados de Cuenta",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(234, 53, 55)",
+      "blurredBorder": "rgb(234, 53, 55)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "lRastreo",
+      "cls": "",
+      "text": "Rastreo",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(234, 53, 55)",
+      "blurredBorder": "rgb(234, 53, 55)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "lPruebaExportacion",
+      "cls": "",
+      "text": "Prueba de Exportacion",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(234, 53, 55)",
+      "blurredBorder": "rgb(234, 53, 55)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "lPreAlerta",
+      "cls": "",
+      "text": "PreAlerta",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(234, 53, 55)",
+      "blurredBorder": "rgb(234, 53, 55)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "cpBody_ltab1",
+      "cls": "nav-link show active",
+      "text": "Datos Personales",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(63, 106, 216)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(222, 226, 230) rgb(222, 226, 230) rgb(255, 255, 255)",
+      "blurredBorder": "rgb(222, 226, 230) rgb(222, 226, 230) rgb(255, 255, 255)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    {
+      "tag": "A",
+      "id": "cpBody_ltab2",
+      "cls": "nav-link show",
+      "text": "Dependientes",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(233, 236, 239) rgb(233, 236, 239) rgb(222, 226, 230)",
+      "blurredBorder": "rgba(0, 0, 0, 0)",
+      "visible": true,
+      "inViewport": true,
+      "focusVisible": true,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": true,
+      "indicator": true
+    }
+  ],
+  "contrast": {
+    "res": [
+      {
+        "sel": "#cpBody_lSucursal",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(234, 53, 55)",
+        "effectiveBg": {
+          "r": 240.3,
+          "g": 113.60000000000001,
+          "b": 115.00000000000001
+        },
+        "opacity": 0.7,
+        "fontSize": "14.08px",
+        "fontWeight": "400",
+        "ratio": 2.11,
+        "text": "OFICINA PRINCIPAL NACO\nB PARTNERS\nBOCA C"
+      },
+      {
+        "sel": "#cpBody_Button1",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(234, 53, 55)",
+        "effectiveBg": {
+          "r": 234,
+          "g": 53,
+          "b": 55
+        },
+        "opacity": 1,
+        "fontSize": "12.8px",
+        "fontWeight": "400",
+        "ratio": 4.15,
+        "text": "Guardar"
+      },
+      {
+        "sel": ".vertical-nav-menu a.mm-active",
+        "color": "rgb(52, 58, 64)",
+        "background": "rgb(224, 243, 255)",
+        "effectiveBg": {
+          "r": 224,
+          "g": 243,
+          "b": 255
+        },
+        "opacity": 1,
+        "fontSize": "14.08px",
+        "fontWeight": "700",
+        "ratio": 10.1,
+        "text": "Mi Cuenta"
+      },
+      {
+        "sel": ".vertical-nav-menu li:nth-child(2) a",
+        "color": "rgb(52, 58, 64)",
+        "background": "rgb(224, 243, 255)",
+        "effectiveBg": {
+          "r": 224,
+          "g": 243,
+          "b": 255
+        },
+        "opacity": 1,
+        "fontSize": "14.08px",
+        "fontWeight": "700",
+        "ratio": 10.1,
+        "text": "Mi Cuenta"
+      },
+      {
+        "sel": ".app-footer .left a",
+        "color": "rgb(247, 106, 148)",
+        "background": "rgba(0, 0, 0, 0)",
+        "effectiveBg": {
+          "r": 250,
+          "g": 251,
+          "b": 252,
+          "a": 1
+        },
+        "opacity": 1,
+        "fontSize": "14.08px",
+        "fontWeight": "400",
+        "ratio": 2.72,
+        "text": "2022 - DOMIPACK, TODOS LOS DERECHOS RESE"
+      },
+      {
+        "sel": "a[data-toggle=tab]:not(.active)",
+        "color": "rgb(247, 106, 148)",
+        "background": "rgba(0, 0, 0, 0)",
+        "effectiveBg": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 1
+        },
+        "opacity": 1,
+        "fontSize": "14.08px",
+        "fontWeight": "400",
+        "ratio": 2.82,
+        "text": "Dependientes"
+      },
+      {
+        "sel": ".page-title-subheading",
+        "color": "rgb(73, 80, 87)",
+        "background": "rgba(0, 0, 0, 0)",
+        "effectiveBg": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 0.45
+        },
+        "opacity": 0.6,
+        "fontSize": "14.08px",
+        "fontWeight": "400",
+        "ratio": 2.98,
+        "text": "Actualiza tu Datos."
+      },
+      {
+        "sel": "#cpBody_lCodigo",
+        "color": "rgb(73, 80, 87)",
+        "background": "rgb(233, 236, 239)",
+        "effectiveBg": {
+          "r": 233,
+          "g": 236,
+          "b": 239
+        },
+        "opacity": 1,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "ratio": 6.9,
+        "text": "DP-014003"
+      },
+      {
+        "sel": "label",
+        "color": "rgb(73, 80, 87)",
+        "background": "rgba(0, 0, 0, 0)",
+        "effectiveBg": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 1
+        },
+        "opacity": 1,
+        "fontSize": "14.08px",
+        "fontWeight": "400",
+        "ratio": 8.18,
+        "text": "Codigo:"
+      }
+    ],
+    "placeholder": {
+      "color": "rgb(108, 117, 125)",
+      "fontSize": "16px"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "before": {
+    "dom": false,
+    "rua": false,
+    "dir": "none",
+    "dirVisible": false
+  },
+  "after": {
+    "dom": true,
+    "dir": "block",
+    "dirVisible": true,
+    "dirRequired": false,
+    "paisVisible": false,
+    "provOptions": 0
+  },
+  "rua": {
+    "rua": true,
+    "handlers": []
+  },
+  "offAgain": "none"
+}

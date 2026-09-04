@@ -1,0 +1,149 @@
+[
+  {
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-03T21:30:29.505Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/css/bootstrap.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:29.510Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/css/icons.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:29.510Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/css/style.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:29.510Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:29.510Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/images/logo_lightnew.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-03T21:30:29.515Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.515Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.517Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/bootstrap.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.524Z"
+  },
+  {
+    "url": "https://i.postimg.cc/sX0Pnq4z/bg02.jpg",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-03T21:30:29.538Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/fonts/fa-solid-900.woff2",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "font",
+    "timestamp": "2026-09-03T21:30:29.538Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/modernizr.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.538Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/detect.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.538Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/fastclick.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.538Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.slimscroll.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.538Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.blockUI.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.538Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/wow.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.538Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/app.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.538Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.scrollTo.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.539Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/waves.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.539Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.nicescroll.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:29.539Z"
+  }
+]

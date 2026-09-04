@@ -1,0 +1,20 @@
+{
+  "afterLogin": "https://clientes.domipack.com/Rastreo.aspx",
+  "miCuenta": "https://clientes.domipack.com/MiCuenta.aspx",
+  "visitLogin": "https://clientes.domipack.com/Login.aspx",
+  "loginBody": "Iniciar sesión Remember me Entrar Recuperar mi Contraseña? Crear Cuenta Gratis",
+  "rastreoAfter": "https://clientes.domipack.com/Login.aspx",
+  "sessionDead": true,
+  "cookiesBefore": [
+    {
+      "name": "ASP.NET_SessionId",
+      "expires": -1
+    }
+  ],
+  "cookiesAfter": [
+    {
+      "name": "ASP.NET_SessionId",
+      "expires": -1
+    }
+  ]
+}

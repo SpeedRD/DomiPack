@@ -1,0 +1,146 @@
+[
+  {
+    "id": "ddTipo",
+    "tag": "SELECT",
+    "tabindex": "1",
+    "text": "Personal",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "Identificacion",
+    "tag": "INPUT",
+    "tabindex": "2",
+    "text": "",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "Nombre",
+    "tag": "INPUT",
+    "tabindex": "3",
+    "text": "",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "Email",
+    "tag": "INPUT",
+    "tabindex": "6",
+    "text": "",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "Email1",
+    "tag": "INPUT",
+    "tabindex": "6",
+    "text": "",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "lSucursal",
+    "tag": "SELECT",
+    "tabindex": "8",
+    "text": "DO.SDQ",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "cbMedioiD",
+    "tag": "SELECT",
+    "tabindex": "8",
+    "text": "AMERICAN AIRLINES\n\tC",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "bSend",
+    "tag": "INPUT",
+    "tabindex": "10",
+    "text": "Crear Cuenta",
+    "outline": "none 3px",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+  },
+  {
+    "id": "sSexo",
+    "tag": "SELECT",
+    "tabindex": null,
+    "text": "S",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "ckDomicilio",
+    "tag": "INPUT",
+    "tabindex": null,
+    "text": "on",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "ckRua",
+    "tag": "INPUT",
+    "tabindex": null,
+    "text": "on",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "",
+    "tag": "BODY",
+    "tabindex": null,
+    "text": "//<![CDATA[\nvar theF",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "ddTipo",
+    "tag": "SELECT",
+    "tabindex": "1",
+    "text": "Personal",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "Identificacion",
+    "tag": "INPUT",
+    "tabindex": "2",
+    "text": "",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "Nombre",
+    "tag": "INPUT",
+    "tabindex": "3",
+    "text": "",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "Email",
+    "tag": "INPUT",
+    "tabindex": "6",
+    "text": "",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "Email1",
+    "tag": "INPUT",
+    "tabindex": "6",
+    "text": "",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  },
+  {
+    "id": "lSucursal",
+    "tag": "SELECT",
+    "tabindex": "8",
+    "text": "DO.SDQ",
+    "outline": "none 3px",
+    "boxShadow": "none"
+  }
+]

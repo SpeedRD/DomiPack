@@ -1,0 +1,109 @@
+{
+  "label": "DR-01-inverted",
+  "desde": "2026-06-01",
+  "hasta": "2026-01-01",
+  "before": {
+    "rows": [
+      {
+        "id": "cpBody_gvDatos_DXGroupRowExp0",
+        "text": "Estatus: Embarcado"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow1",
+        "text": "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSONAL AMAZON"
+      },
+      {
+        "id": "cpBody_gvDatos_DXGroupRowExp2",
+        "text": "Estatus: Entregado"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow3",
+        "text": "0 DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 ART PERSONAL AMAZON"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow4",
+        "text": "0 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 ACCESORIO SUPLIDOR GENERICO"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow5",
+        "text": "0 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 ART PERSONAL SUPLIDOR GENERICO"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow6",
+        "text": "0 DP01-00303692 8/26/2026 TBA333908870710 0.50 0.00 ARTICULOS ... AMAZON"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow7",
+        "text": "0 DP01-00303746 8/26/2026 TBA333977356002 1.45 0.00 ARTÍCULOS ... SUPLIDOR GENERICO"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow8",
+        "text": "0 DP01-00304156 8/26/2026 TBA333978097076 7.15 0.00 ART. PERSONAL SUPLIDOR GENERICO"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow9",
+        "text": "0 DP01-00304172 8/26/2026 TBA333978110538 7.10 0.00 ARTICULOS ... SUPLIDOR GENERICO"
+      }
+    ],
+    "modalShown": true,
+    "desde": "2026-06-01",
+    "hasta": "2026-01-01",
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "hidden",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "after": {
+    "rows": [
+      {
+        "id": "cpBody_gvDatos_DXEmptyRow",
+        "text": "No data to display"
+      }
+    ],
+    "modalShown": false,
+    "desde": "2026-06-01",
+    "hasta": "2026-01-01",
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "visible",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "ms": 1780,
+  "navRes": "navigated",
+  "reqs": [
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "method": "POST",
+      "startedAt": 1788488387106,
+      "postFields": {
+        "__EVENTTARGET": "",
+        "__EVENTARGUMENT": "",
+        "__VIEWSTATE": "<6198 chars>",
+        "__VIEWSTATEGENERATOR": "<8 chars>",
+        "__EVENTVALIDATION": "<338 chars>",
+        "ctl00$lsClienteID": "",
+        "ctl00$cpBody$ClienteID": "DP-014003",
+        "ctl00$cpBody$Guia": "",
+        "ctl00$cpBody$bFiltro": "",
+        "ctl00$cpBody$TokenID": "GB123456789.101112131415",
+        "ctl00$cpBody$gvDatos": "{&quot;keys&quot;:[&quot;/^DXN&quot;,&quot;DP01-00306834&quot;,&quot;/^DXN&quot;,&quot;DP01-00298714&quot;,&quot;DP01-00298777&quot;,&quot;DP01-00302058&quot;,&quot;DP01-00303692&quot;,&quot;DP01-0030",
+        "ctl00$cpBody$ppCambioGuiaState": "{&quot;windowsState&quot;:&quot;0:0:-1:0:0:0:-10000:-10000:1:0:0:0&quot;}",
+        "ctl00$cpBody$ppCambioGuia$gvDetalles": "{&quot;keys&quot;:[],&quot;callbackState&quot;:&quot;g0OfUG+lTRoEREzMXcwXPR7nT1R0emFGXPtzAc+HNLBqyrtflFujI/S51KT5rEqSZDPRi6hq3xDxna19YGkogeCQ+TeVVOHfDhakuwvryKAGNVCvb1WBNh43LDmo6PboxrAnGz9bIhm+a5L6cnY",
+        "ctl00$cpBody$lDesde": "2026-06-01",
+        "ctl00$cpBody$lHasta": "2026-01-01",
+        "DXScript": "<241 chars>",
+        "DXCss": "<196 chars>"
+      },
+      "status": 200,
+      "ms": 232,
+      "size": 48673
+    }
+  ],
+  "serverError": null,
+  "onLogin": false,
+  "dialogs": [],
+  "textSample": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAlerta Rastreo de Paquetes Consulta el estatus de tu Paquetes. Menu Post-Alerta AD Guia Fecha Tracking Peso FOB Contenido Suplidor RT No data to display 2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS. - Términos y Condiciones de Uso - Políticas de Privacidad - Políticas de Entrega",
+  "status": [
+    200
+  ]
+}

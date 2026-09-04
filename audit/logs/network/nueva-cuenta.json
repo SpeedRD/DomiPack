@@ -1,0 +1,247 @@
+[
+  {
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "document",
+    "timestamp": "2026-09-03T21:30:31.343Z"
+  },
+  {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:31.349Z"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.352Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/css/bootstrap.min.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:31.354Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/css/icons.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/css/style.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/bootstrap.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/modernizr.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/detect.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/fastclick.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.slimscroll.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.blockUI.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/wow.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.nicescroll.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.scrollTo.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/app.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/jquery.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/waves.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.355Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/plugins/morris/morris.css",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:31.414Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/pages/datatables_data_sources.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.416Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/js/popper.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.427Z"
+  },
+  {
+    "url": "https://i.postimg.cc/XvKNRMW3/BANNER-ANDROID.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-03T21:30:31.427Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/pages/dashborad.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.428Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/plugins/morris/morris.min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.428Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/assets/plugins/raphael/raphael-min.js",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.453Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_89-4oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-03T21:30:31.462Z"
+  },
+  {
+    "url": "https://i.postimg.cc/sX0Pnq4z/bg02.jpg",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-03T21:30:31.469Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=5_4,0_4915-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:31.526Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=4_154-3oArn",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.531Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4869,1_68,1_69,1_70,4_120,0_4872,4_136-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:31.532Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,4_0,1_18,5_1,5_2,4_115,4_3,4_31,4_2,4_24,4_22,4_23,4_27,4_28,4_32,4_29,4_35,4_47,4_48,4_42,4_80,4_36,4_37,4_38,4_39,4_40,4_43,4_44,4_45,4_46,4_49,4_50,4_51,4_52,4_41,4_53,4_54,4_55,4_56,4_57,4_58,4_59,4_60,4_61,4_62,4_67,4_68,4_69,4_70,4_71,4_72,4_73,4_74,4_75,4_76,4_77,4_63,4_64,4_65,4_66,4_78,4_79,4_86,4_87,4_89,4_93,4_88,4_90,4_91,4_81,4_84,4_83,4_85,4_82,4_15,4_16,4_17,4_18,4_19,4_20,4_92,4_25,4_26,4_30,4_14,4_6,4_7,4_9,4_10,4_11,4_21,4_12,4_4,4_5,4_13,1_183-4oArn&p=d7a99294",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "script",
+    "timestamp": "2026-09-03T21:30:31.618Z"
+  },
+  {
+    "url": "https://cliente.tpack.com.do/assets/images/preloader11.gif",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-03T21:30:31.672Z"
+  },
+  {
+    "url": "https://domipack.com/wp-content/uploads/2022/05/Logo250.png",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "image",
+    "timestamp": "2026-09-03T21:30:31.696Z"
+  },
+  {
+    "url": "https://clientes.domipack.com/DXR.axd?r=0_4872-4oArn&p=ab775575",
+    "status": 200,
+    "method": "GET",
+    "resourceType": "stylesheet",
+    "timestamp": "2026-09-03T21:30:31.717Z"
+  }
+]

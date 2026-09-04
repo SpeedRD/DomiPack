@@ -1,0 +1,116 @@
+[
+  {
+    "input": "abc",
+    "calls": [
+      {
+        "url": "ack.com/WebService1.asmx/GetNombreCedula"
+      },
+      {
+        "url": "mipack.com/WebService1.asmx/GetNombreRNC"
+      },
+      {
+        "url": "23456789.101112131415&ID=abc&Tipo=Cedula",
+        "status": 200,
+        "body": "false"
+      }
+    ],
+    "after": {
+      "disabled": {
+        "Password": false,
+        "ltelefono": false,
+        "lcelular": false,
+        "Email": false,
+        "tbFecha": false
+      },
+      "nombre": "[]",
+      "fecha": "",
+      "mensaje": "",
+      "swal": false,
+      "preloader": "none",
+      "rua": false
+    },
+    "dialogs": [
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      }
+    ]
+  },
+  {
+    "input": "00000000000",
+    "calls": [
+      {
+        "url": "ack.com/WebService1.asmx/GetNombreCedula"
+      },
+      {
+        "url": "mipack.com/WebService1.asmx/GetNombreRNC"
+      },
+      {
+        "url": ".101112131415&ID=00000000000&Tipo=Cedula",
+        "status": 200,
+        "body": "false"
+      }
+    ],
+    "after": {
+      "disabled": {
+        "Password": false,
+        "ltelefono": false,
+        "lcelular": false,
+        "Email": false,
+        "tbFecha": false
+      },
+      "nombre": "[]",
+      "fecha": "",
+      "mensaje": "",
+      "swal": false,
+      "preloader": "none",
+      "rua": false
+    },
+    "dialogs": [
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      },
+      {
+        "type": "alert",
+        "message": "[object Object]"
+      }
+    ]
+  }
+]

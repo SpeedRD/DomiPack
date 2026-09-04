@@ -1,0 +1,38 @@
+{
+  "lbl": [
+    {
+      "id": "cpBody_lDesde",
+      "type": "date",
+      "labels": [],
+      "ariaLabel": null,
+      "ariaLabelledby": null,
+      "prevSiblingLabel": {
+        "text": "Fecha Desde:",
+        "for": null
+      },
+      "required": false,
+      "min": "",
+      "max": "",
+      "tabIndex": 0
+    },
+    {
+      "id": "cpBody_lHasta",
+      "type": "date",
+      "labels": [],
+      "ariaLabel": null,
+      "ariaLabelledby": null,
+      "prevSiblingLabel": {
+        "text": "Fecha Hasta:",
+        "for": null
+      },
+      "required": false,
+      "min": "",
+      "max": "",
+      "tabIndex": 0
+    }
+  ],
+  "kb": {
+    "desde": "2026-01-01",
+    "active": "cpBody_lDesde"
+  }
+}

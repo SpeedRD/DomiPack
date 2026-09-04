@@ -1,0 +1,146 @@
+[
+  {
+    "row": 0,
+    "guia": "DP01-00298714",
+    "estatus": "Entregado al Cliente",
+    "print": {
+      "id": "cpBody_gvDatos_DXCBtn0",
+      "cls": "dxbButton_Office365 dxgvCommandColumnItem_Office365 dxgv__cci dxbButtonSys",
+      "disabledClass": false,
+      "ariaDisabled": null,
+      "tabindex": null,
+      "dataArgs": "[['CustomButton','Clone',0],1]",
+      "imgCls": "dxIcon_print_printviapdf_32x32 dx-vam",
+      "imgAlt": "Clone",
+      "imgTitle": "Imprimir",
+      "cursor": "pointer",
+      "opacity": "1",
+      "size": "32x32"
+    },
+    "posts": [
+      {
+        "status": 200,
+        "method": "POST",
+        "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+        "ct": "text/html"
+      }
+    ],
+    "urlAfter": "https://clientes.domipack.com/PruebaExportacion.aspx",
+    "download": {
+      "suggested": "TBA333722866266.pdf",
+      "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+      "size": 159473,
+      "isPdf": true,
+      "dest": "audit/logs/evidence/prueba-row0.pdf"
+    },
+    "serverError": null
+  },
+  {
+    "row": 1,
+    "guia": "DP01-00298777",
+    "estatus": "Entregado al Cliente",
+    "print": {
+      "id": "cpBody_gvDatos_DXCBtn3",
+      "cls": "dxbButton_Office365 dxgvCommandColumnItem_Office365 dxgv__cci dxbButtonSys",
+      "disabledClass": false,
+      "ariaDisabled": null,
+      "tabindex": null,
+      "dataArgs": "[['CustomButton','Clone',1],1]",
+      "imgCls": "dxIcon_print_printviapdf_32x32 dx-vam",
+      "imgAlt": "Clone",
+      "imgTitle": "Imprimir",
+      "cursor": "pointer",
+      "opacity": "1",
+      "size": "32x32"
+    },
+    "posts": [
+      {
+        "status": 200,
+        "method": "POST",
+        "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+        "ct": "text/html"
+      }
+    ],
+    "urlAfter": "https://clientes.domipack.com/PruebaExportacion.aspx",
+    "download": {
+      "suggested": "TBA333712230266.pdf",
+      "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+      "size": 159313,
+      "isPdf": true,
+      "dest": "audit/logs/evidence/prueba-row1.pdf"
+    },
+    "serverError": null
+  },
+  {
+    "row": 2,
+    "guia": "DP01-00302058",
+    "estatus": "Entregado al Cliente",
+    "print": {
+      "id": "cpBody_gvDatos_DXCBtn6",
+      "cls": "dxbButton_Office365 dxgvCommandColumnItem_Office365 dxgv__cci dxbButtonSys",
+      "disabledClass": false,
+      "ariaDisabled": null,
+      "tabindex": null,
+      "dataArgs": "[['CustomButton','Clone',2],1]",
+      "imgCls": "dxIcon_print_printviapdf_32x32 dx-vam",
+      "imgAlt": "Clone",
+      "imgTitle": "Imprimir",
+      "cursor": "pointer",
+      "opacity": "1",
+      "size": "32x32"
+    },
+    "posts": [
+      {
+        "status": 200,
+        "method": "POST",
+        "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+        "ct": "text/html"
+      }
+    ],
+    "urlAfter": "https://clientes.domipack.com/PruebaExportacion.aspx",
+    "download": {
+      "suggested": "TBA333991591262.pdf",
+      "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+      "size": 159297,
+      "isPdf": true,
+      "dest": "audit/logs/evidence/prueba-row2.pdf"
+    },
+    "serverError": null
+  },
+  {
+    "row": 3,
+    "guia": "DP01-00306834",
+    "estatus": "Embarcado",
+    "print": {
+      "id": "cpBody_gvDatos_DXCBtn9",
+      "cls": "dxbButton_Office365 dxgvCommandColumnItem_Office365 dxgv__cci dxbButtonSys",
+      "disabledClass": false,
+      "ariaDisabled": null,
+      "tabindex": null,
+      "dataArgs": "[['CustomButton','Clone',3],1]",
+      "imgCls": "dxIcon_print_printviapdf_32x32 dx-vam",
+      "imgAlt": "Clone",
+      "imgTitle": "Imprimir",
+      "cursor": "pointer",
+      "opacity": "1",
+      "size": "32x32"
+    },
+    "posts": [
+      {
+        "status": 200,
+        "method": "POST",
+        "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+        "ct": "text/html"
+      }
+    ],
+    "urlAfter": "https://clientes.domipack.com/PruebaExportacion.aspx",
+    "download": {
+      "suggested": "TBA334226770293.pdf",
+      "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+      "size": 159475,
+      "isPdf": true,
+      "dest": "audit/logs/evidence/prueba-row3.pdf"
+    },
+    "serverError": null
+  }
+]

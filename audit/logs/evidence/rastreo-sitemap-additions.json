@@ -1,0 +1,39 @@
+{
+  "WebService1": {
+    "status": 200,
+    "size": 9999,
+    "contentType": "text/html; charset=utf-8",
+    "titleMatch": "\r\n\tWebService1 Web Service\r\n",
+    "methods": [
+      "DesEncripty",
+      "Encripty",
+      "GetCalculadora",
+      "GetChartData",
+      "GetChartDataS",
+      "GetChartDataSUcursal",
+      "GetCupones",
+      "GetDataCal",
+      "GetDataTK",
+      "GetDependientes",
+      "GetDigitados",
+      "GetEmbarqueInstrucciones",
+      "GetEstados",
+      "GetEstatus",
+      "GetNombreCedula",
+      "GetNombreRNC",
+      "GetPaquetes",
+      "GetPaquetesCan",
+      "GetPaquetesHistorico",
+      "GetTemplate",
+      "GetTicketAdjuntos",
+      "GetTickets",
+      "Provincias",
+      "RuaVerify",
+      "Sectores",
+      "UpdateGuiapty"
+    ],
+    "sig": null,
+    "ev": "audit/logs/evidence/rastreo-sitemap-WebService1.html"
+  },
+  "evidenceSource": "Rastreo.aspx inline script: $.ajax url \"WebService1.asmx/GetPaquetesCan\" and \"WebService1.asmx/GetEstatus\" (functions GetPaquetesCan/GetEstatus, not wired to any UI control found)"
+}

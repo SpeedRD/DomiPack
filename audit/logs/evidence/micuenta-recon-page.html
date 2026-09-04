@@ -1,0 +1,898 @@
+<!DOCTYPE html><html lang="en" class="dxChrome dxMacOSPlatform dxWebKitFamily dxBrowserVersion-151"><head><link rel="stylesheet" href="/DXR.axd?r=0_2697,0_2771,1_68,1_69,1_70,0_2701,0_2776,1_210,0_2685,1_209,0_2690,0_4968,0_4971-4oArn&amp;p=ab775575">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>DOMIPACK - Web Clientes.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Core JS files -->
+    <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+    <!--
+    =========================================================
+    * ArchitectUI HTML Theme Dashboard - v1.0.0
+    =========================================================
+    * Product Page: https://dashboardpack.com
+    * Copyright 2019 DashboardPack (https://dashboardpack.com)
+    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+    =========================================================
+    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    -->
+    <script type="text/javascript">
+
+        function Confirmar(titulo, message, tipo, tituloPrint) {
+
+
+            swal({
+                title: titulo,
+                text: tituloPrint,
+                icon: tipo,
+                buttons: [
+                    'No!',
+                    'Yes!'
+                ],
+                dangerMode: true,
+            }).then(function (isConfirm) {
+                if (isConfirm) {
+                    swal({
+                        title: titulo,
+                        text: 'se esta Procesando la Informacion',
+                        icon: 'success'
+                    }).then(function () {
+                        Guardar();
+                    });
+                } else {
+                    swal(titulo, message, tipo);
+                }
+            });
+        }
+    </script>
+    <link href="./main.css" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script><style>.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;overflow-y:hidden;background:#fff;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row;padding:0}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;padding:0;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex-basis:auto!important;width:auto;height:auto;margin:0 .3125em}.swal2-popup.swal2-toast .swal2-styled{margin:0 .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(50,100,150,.4)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-no-transition{transition:none!important}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:.3125em;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center;padding:0 1.8em}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-actions.swal2-loading .swal2-styled.swal2-confirm{box-sizing:border-box;width:2.5em;height:2.5em;margin:.46875em;padding:0;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:.25em solid transparent;border-radius:100%;border-color:transparent;background-color:transparent!important;color:transparent!important;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-actions.swal2-loading .swal2-styled.swal2-cancel{margin-right:30px;margin-left:30px}.swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after{content:"";display:inline-block;width:15px;height:15px;margin-left:5px;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:3px solid #999;border-radius:50%;border-right-color:transparent;box-shadow:1px 1px 1px #fff}.swal2-styled{margin:.3125em;padding:.625em 2em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#3085d6;color:#fff;font-size:1.0625em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#aaa;color:#fff;font-size:1.0625em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(50,100,150,.4)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;height:.25em;overflow:hidden;border-bottom-right-radius:.3125em;border-bottom-left-radius:.3125em}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;z-index:2;top:0;right:0;align-items:center;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:0;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close::-moz-focus-inner{border:0}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0 1.6em;color:#545454;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 3px #c4e6f5}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::-ms-input-placeholder,.swal2-input::-ms-input-placeholder,.swal2-textarea::-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{margin:0 .4em}.swal2-validation-message{display:none;align-items:center;justify-content:center;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{align-items:center;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;width:2em;height:2em;border-radius:2em;background:#3085d6;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#3085d6}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;width:2.5em;height:.4em;margin:0 -1px;background:#3085d6}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-moz-document url-prefix(){.swal2-close:focus{outline:2px solid rgba(50,100,150,.4)}}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent!important}body.swal2-no-backdrop .swal2-container>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-container.swal2-top{top:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-top-left,body.swal2-no-backdrop .swal2-container.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-top-end,body.swal2-no-backdrop .swal2-container.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-container.swal2-center{top:50%;left:50%;transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-left,body.swal2-no-backdrop .swal2-container.swal2-center-start{top:50%;left:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-end,body.swal2-no-backdrop .swal2-container.swal2-center-right{top:50%;right:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom{bottom:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom-left,body.swal2-no-backdrop .swal2-container.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-bottom-end,body.swal2-no-backdrop .swal2-container.swal2-bottom-right{right:0;bottom:0}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}</style>
+
+    <!-- Core JS files -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <!-- /core JS files -->
+    
+
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+<body>
+    <div class="app-container app-theme-white">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <div class="logo-src"></div>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div>
+            <div class="app-header__content">
+                <div class="app-header-left">
+                    
+                    
+                </div>
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="btn-group">
+                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                                            <img width="42" class="rounded-circle" src="https://lh3.googleusercontent.com/proxy/j6_9Gt0XFGwa_NtuObaVYIiUrX5Ge7xq2Xv02U3TcHfdyo2fkMha2gNYZPqpPWGiazSe4KaskZg" alt="">
+                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                        </a>
+                                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                            <button type="button" tabindex="0" class="dropdown-item" onclick="window.location.href='/Login.aspx'">Salir</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div id="lnombre" class="widget-heading">JOSE ALEXANDER CABREJA AYBAR</div>
+                                    <div id="llocalidad" class="widget-subheading">jacabreja@hotmail.com</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu metismenu">
+                            <li class="app-sidebar__heading">Menu</li>
+                            <li>
+                                <a href="MiCuenta.aspx" id="lMicuenta" class="mm-active">
+                                    <i class="metismenu-icon icon-gradient bg-grow-early pe-7s-user"></i>
+                                    Mi Cuenta
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Estado.aspx">
+                                    <i class="metismenu-icon icon-gradient bg-grow-early pe-7s-cash"></i>
+                                    Estados de Cuenta
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="Rastreo.aspx" id="lRastreo">
+                                    <i class="metismenu-icon icon-gradient bg-grow-early pe-7s-search"></i>
+                                    Rastreo
+                                </a>
+                            </li>
+ <li>
+                                <a href="PruebaExportacion.aspx" id="lPruebaExportacion">
+                                    <i class="metismenu-icon icon-gradient bg-grow-early pe-7s-search"></i>
+                                    Prueba de Exportacion
+                                </a>
+                            </li>
+                            <li>
+                                <a href="PreAlerta.aspx" id="lPreAlerta">
+                                    <i class="metismenu-icon icon-gradient bg-grow-early pe-7s-upload"></i>
+                                    PreAlerta
+                                </a>
+                            </li>
+                            <li id="PPagos" style="Display:none;">
+                                <a href="PagoOnline.aspx">
+                                    <i class="metismenu-icon icon-gradient bg-grow-early pe-7s-cash"></i>
+                                    Pagos Online
+                                </a>
+                            </li>
+							
+							
+
+                            <li id="PPoliticas"></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="app-main__outer">
+                <form method="post" action="./MiCuenta.aspx" id="frmBody">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmBody'];
+if (!theForm) {
+    theForm = document.frmBody;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&amp;t=639190689332169432" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5793C6A2">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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">
+</div>
+
+                    <div style="display: none">
+                        <input name="ctl00$lsClienteID" type="text" id="lsClienteID">
+                        <input type="submit" name="ctl00$SetCliente" value="" id="SetCliente">
+                    </div>
+                    <!-- Start content -->
+
+
+
+
+                    
+
+
+
+
+    <div class="app-main__inner">
+        <div class="app-page-title">
+            <div class="page-title-wrapper">
+                <div class="page-title-heading">
+                    <div class="page-title-icon">
+                        <i class=" pe-7s-user icon-gradient bg-tempting-azure"></i>
+                    </div>
+                    <div>
+                        Mi Cuenta
+                                        <div class="page-title-subheading">
+                                            Actualiza tu Datos.
+                                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <input name="ctl00$cpBody$DireccionID" type="text" id="cpBody_DireccionID" style="display: none">
+        <input name="ctl00$cpBody$DependienteId" type="text" id="cpBody_DependienteId" style="display: none">
+        <input name="ctl00$cpBody$ClienteID" type="text" value="DP-014003" id="cpBody_ClienteID" style="display: none">
+        <input name="ctl00$cpBody$TokenID" type="text" value="GB123456789.101112131415" id="cpBody_TokenID" style="display: none">
+
+        <div class="col-md-12">
+            <div class="card">
+
+                <div class="card-body">
+                    <ul class="nav nav-tabs nav-tabs-highlight">
+                        <li class="nav-item"><a href="#cpBody_lefticontab1" id="cpBody_ltab1" class="nav-link active" data-toggle="tab"><i class="icon-profile"></i>Datos Personales</a></li>
+                        <li class="nav-item"><a href="#cpBody_lefticontab2" id="cpBody_ltab2" class="nav-link" data-toggle="tab"><i class="icon-user-plus"></i>Dependientes</a></li>
+                        <li class="nav-item"><a href="#cpBody_lefticontab4" id="cpBody_ltab4" class="nav-link" data-toggle="tab"><i class="icon-user-plus"></i>Direccion</a></li>
+
+                        <li id="cpBody_lRegistrar" class="nav-item" style="Display:none;"><a href="#cpBody_lefticontab3" id="cpBody_ltab3" class="nav-link" data-toggle="tab"><i class="icon-credit-card"></i>Tarjetas Registradas</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="cpBody_lefticontab1" class="tab-pane fade active show">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <legend class="text-semibold"><i class="icon-reading position-left"></i>Personal Detalles</legend>
+
+                                            <div class="form-group">
+                                                <label>Codigo:</label>
+                                                <input name="ctl00$cpBody$lCodigo" type="text" id="cpBody_lCodigo" class="form-control" placeholder="Codigo" readonly="readonly" value="DP-014003">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Nombre:</label>
+                                                <input name="ctl00$cpBody$lNombre" type="text" id="cpBody_lNombre" class="form-control" placeholder="Nombre" value="JOSE ALEXANDER CABREJA AYBAR">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Identificacion:</label>
+                                                <input name="ctl00$cpBody$lRNC" type="text" id="cpBody_lRNC" class="form-control" placeholder="Identificacion" value="00111314480">
+                                            </div>
+                                            <div class="form-group" style="display: none">
+                                                <label>Cedula/Pasaporte:</label>
+                                                <input name="ctl00$cpBody$lIdentificacion" type="text" id="cpBody_lIdentificacion" class="form-control" placeholder="Nombre">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email:</label>
+                                                <input name="ctl00$cpBody$lEmail" type="text" id="cpBody_lEmail" class="form-control" placeholder="Email" value="jacabreja@hotmail.com">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Contrasena:</label>
+                                                <input name="ctl00$cpBody$lContrasena" type="password" id="cpBody_lContrasena" class="form-control" placeholder="Nueva Contraseña">
+                                            </div>
+       <div class="form-group" style="display:none">
+      <label>Consolidation:</label>
+      <input name="ctl00$cpBody$ckConsolidation" type="checkbox" id="cpBody_ckConsolidation" class="form-control">
+  </div>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <legend class="text-semibold"><i class="icon-truck position-left"></i>Otros Detalles</legend>
+
+
+                                            <div class="form-group">
+                                                <label>Direccion 1:</label>
+                                                <input name="ctl00$cpBody$lDireccion1" type="text" id="cpBody_lDireccion1" placeholder="Direccion" class="form-control" value="Calle Coralillo 19, Punta Cana Village">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Direccion 2:</label>
+                                                <input name="ctl00$cpBody$lDireccion2" type="text" id="cpBody_lDireccion2" placeholder="Direccion" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-2">Sucursal</label>
+                                                <select name="ctl00$cpBody$lSucursal" id="cpBody_lSucursal" disabled="disabled" class="aspNetDisabled">
+	<option value="DO.SDQ">OFICINA PRINCIPAL NACO</option>
+	<option value="DO.BPS">B PARTNERS </option>
+	<option value="DO.BCC">BOCA CHICA</option>
+	<option value="DO.CAP">CAP CANA</option>
+	<option value="DO.ELF">ENSANCHE LA FE</option>
+	<option value="DO.EPA">ENSANCHE PARAISO</option>
+	<option value="DO.EOZ">ENSANCHE SERRALLES</option>
+	<option value="DO.GAZ">GAZCUE</option>
+	<option value="DO.GOT">GO TO LOGISTICS INVESTMENTS SRL</option>
+	<option value="DO.IND">INDEPENDENCIA – EL PORTAL</option>
+	<option value="DO.LTO">INVIVIENDA</option>
+	<option value="DO.EPL">LA ESPERILLA</option>
+	<option value="DO.LRO">LA ROMANA</option>
+	<option value="DO.LPH">LAS PALMAS DE HERRERA </option>
+	<option value="DO.PRO">LOS PROCERES</option>
+	<option value="DO.OFL">OFALEX</option>
+	<option value="DO.PTN">PIANTINI</option>
+	<option value="DO.PCL">PLAZA CENTRAL</option>
+	<option value="DO.P27">PROLONGACIÓN 27 DE FEBRERO</option>
+	<option selected="selected" value="DO.PTC">PUNTA CANA</option>
+	<option value="DO.SFM">SAN FRANCISCO</option>
+	<option value="DO.SGO">SAN GERÓNIMO</option>
+	<option value="DO.SPM">SAN PEDRO DE MACORÍS</option>
+	<option value="DO.SPT">SPIRIT</option>
+	<option value="DO.URO">URBANIZACION RENACIMIENTO</option>
+	<option value="DO.VAG">VILLA ALTAGRACIA</option>
+	<option value="DO.SVO">VILLA OLGA-STGO</option>
+
+</select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Telefono:</label>
+                                                <input name="ctl00$cpBody$lTelefono" type="text" id="cpBody_lTelefono" class="form-control" placeholder="Telefono">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Tel. Oficina:</label>
+                                                <input name="ctl00$cpBody$lTelefono2" type="text" id="cpBody_lTelefono2" class="form-control" placeholder="Telefono">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Celular:</label>
+                                                <input name="ctl00$cpBody$lCelular" type="text" id="cpBody_lCelular" class="form-control" placeholder="Celular" value="809-932-6810">
+                                            </div>
+                                            <div class="form-group" style="display: none">
+                                                <label class="control-label col-lg-2">Cupon</label>
+                                                <input name="ctl00$cpBody$lCupon" type="text" id="cpBody_lCupon" class="form-control">
+                                            </div>
+                                            <div class="form-group" style="display: none">
+                                                <input type="submit" name="ctl00$cpBody$BVerificar" value="Canjear Cupon" id="cpBody_BVerificar" class="btn btn-primary">
+                                            </div>
+
+
+                                        </fieldset>
+										 <div class="row">
+          <div class="card1 col-lg-6">
+              <div class="card-header">
+                  <i class="header-icon lnr-laptop-phone icon-gradient bg-plum-plate"></i>Dirección de paquetes
+        
+              </div>
+              <div class="card-body">
+                  <strong>
+                      <p id="cpBody_PNombre2"></p>
+                  </strong>
+                  <p id="cpBody_pdireccion" class="mb-0">7968 NW 66th Street Doral</p>
+                  <p id="cpBody_Pcodigo2">DP-014003</p>
+                  <p id="cpBody_Dmiamizip">FL 33195-2912</p>
+
+              </div>
+
+          </div>
+      </div>
+                                    </div>
+
+
+                                    <div class="text-right">
+                                        <input type="submit" name="ctl00$cpBody$Button1" value="Guardar" id="cpBody_Button1" class="btn btn-primary">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cpBody_lefticontab2" class="tab-pane fade">
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-4">
+
+                                                <div class="card-header">
+                                                    <i class="icon-reading position-left"></i>Agregar / Editar Dependiente
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Nombre:</label>
+                                                    <input name="ctl00$cpBody$lNombreDependiente" type="text" id="cpBody_lNombreDependiente" placeholder="Nombre" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Cedula/Pasaporte:</label>
+                                                    <input name="ctl00$cpBody$lIdentificacionDependiente" type="text" id="cpBody_lIdentificacionDependiente" placeholder="Cedula" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Email:</label>
+                                                    <input name="ctl00$cpBody$lEmailDependiente" type="text" id="cpBody_lEmailDependiente" placeholder="Email" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Celular #:</label>
+                                                    <input name="ctl00$cpBody$lCelularDependiente" type="text" id="cpBody_lCelularDependiente" placeholder="+99-99-9999-9999" class="form-control">
+                                                </div>
+
+                                                <div class="text-right">
+                                                    <input type="submit" name="ctl00$cpBody$Button3" value="Guardar Dependiente" id="cpBody_Button3" class="btn btn-primary">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8">
+
+                                                <div class="card-header">
+                                                    <i class="icon-reading position-left"></i>Listado de Dependientes
+                                                </div>
+                                                <div style="display: none">
+                                                    <div class="text-right">
+
+
+                                                        <input type="submit" name="ctl00$cpBody$Button2" value="Agregar Dependiente" id="cpBody_Button2" class="btn btn-primary">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+
+
+                                                    <script id="dxis_174118876" src="/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_21,1_22,1_190,1_192,1_17,1_41,1_194,1_188-4oArn"></script><table class="dxgvControl_Moderno dxgv" id="cpBody_gvDependientes" style="width:100%;border-collapse:separate;">
+	<tbody><tr>
+		<td><table id="cpBody_gvDependientes_DXMainTable" class="dxgvTable_Moderno" oncontextmenu="return ASPx.GVContextMenu('cpBody_gvDependientes',event);" style="width:100%;empty-cells:show;">
+			<tbody><tr id="cpBody_gvDependientes_DXHeadersRow0">
+				<td id="cpBody_gvDependientes_col0" class="dxgvHeader_Moderno" style="width:25px;border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Editar</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvDependientes_col1" class="dxgvHeader_Moderno" style="width:25px;border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Borrar</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvDependientes_col3" class="dxgvHeader_Moderno" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Nombre</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvDependientes_col4" class="dxgvHeader_Moderno" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Cedula</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvDependientes_col5" class="dxgvHeader_Moderno" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Celular</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvDependientes_col6" class="dxgvHeader_Moderno dxgRRB" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Email</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td class="dxgvAIC dxgvHeader_Moderno" style="width:0.1%;border-top-width:0px;border-left-width:0px;cursor:default;"><img class="dxGridView_gvHideAdaptiveDetailButton_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="" style="visibility:hidden;"></td>
+			</tr><tr id="cpBody_gvDependientes_DXADRow" class="dxgvDetailRow_Moderno dxgvADR" style="display:none;">
+				<td class="dxgv dxgvDetailCell_Moderno" colspan="6"></td><td class="dxgvAIC dxgv dxgRRB" style="border-left-width:0px;">&nbsp;</td>
+			</tr><tr id="cpBody_gvDependientes_DXEmptyRow" class="dxgvEmptyDataRow_Moderno dxgvLVR">
+				<td class="dxgv" colspan="6" style="border-bottom-width:0px;"><div>
+					No data to display
+				</div></td><td class="dxgvAIC dxgv dxgRRB" style="border-left-width:0px;border-bottom-width:0px;">&nbsp;</td>
+			</tr>
+		</tbody></table><table id="cpBody_gvDependientes_LP" class="dxgvLoadingPanel_Moderno" style="left:0px;top:0px;z-index:30000;display:none;">
+			<tbody><tr>
+				<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_89-4oArn" alt="" style="vertical-align:middle;"></td><td class="dx" style="padding-left:0px;"><span id="cpBody_gvDependientes_TL">Loading…</span></td>
+			</tr>
+		</tbody></table><div id="cpBody_gvDependientes_LD" class="dxgvLoadingDiv_Moderno" style="display:none;z-index:29999;position:absolute;">
+
+		</div><img id="cpBody_gvDependientes_IADD" class="dxGridView_gvDragAndDropArrowDown_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Down Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvDependientes_IADU" class="dxGridView_gvDragAndDropArrowUp_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Up Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvDependientes_IADL" class="dxGridView_gvDragAndDropArrowLeft_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Left Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvDependientes_IADR" class="dxGridView_gvDragAndDropArrowRight_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Right Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvDependientes_IDHF" class="dxGridView_gvDragAndDropHideColumn_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Hide" style="position:absolute;visibility:hidden;top:-100px;"></td>
+	</tr>
+</tbody></table><script id="dxss_1931063042" data-executed="true">
+<!--
+ASPx.createControl(ASPxClientGridView,'cpBody_gvDependientes','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$gvDependientes',arg,ASPx.Callback,'cpBody_gvDependientes',ASPx.CallbackError,true); },'uniqueID':'ctl00$cpBody$gvDependientes','stateObject':{'keys':[],'callbackState':'rYMQ9D10us1YCesWv+Ws+QoZykko7ZGBro1A8DIeaUeYn7t2mNOYc2BECVV6ERfYpitGTqjSgE5vRJg21eWfugyJbi56Xu30NepbjaUAlKgo20DB2HoWvDwXM88bQSTCCQonk8EJZGoXovq8Oe6/AKpKQ34BudowfX2ThzwQVcnLXYIFHpJm+zNGxzkrLLr3HwUQN3U8zzvpoZH2pxt8SXVF1I7pDfCrCcNSbiC0w0w4o//KHZVPzP9WoiEE1EIMeDFi415jLmdsw86NqmtLQ1Tqw+f956B7vQ2zKGa9VPFeV7Pkxs4gF+Bvc/E3RGtgDmerSsv7W/daySA62w4g1RQZJUKahppt7TQ0oO+kViCoUfGMQx9iOhWs6Sk/JUi3QLsLNOIIuza2vPBp3cjPY4Imjr/4LTkv+jEl+14cDg1C7JQqMmUM1NvgCNTbkFwdPgXomVWuHx2A57V2i46aRNUDyRR/U5Tqu+340LZ6zMeLiMiaMM0G5FiMabKbtM2hESJBPLCqAmxKfqAu8SmJMg==','groupLevelState':{},'selection':''},'callBacksEnabled':true,'pageRowCount':0,'pageRowSize':10,'pageIndex':0,'pageCount':0,'selectedWithoutPageRowCount':0,'visibleStartIndex':0,'focusedRowIndex':-1,'allowFocusedRow':false,'allowSelectByItemClick':false,'allowSelectSingleRowOnly':false,'callbackOnFocusedRowChanged':false,'callbackOnSelectionChanged':false,'editState':0,'editItemVisibleIndex':-1,'searchPanelFilter':'','allowDelete':true,'allowEdit':true,'allowInsert':true,'columnProp':[[0,,,,0,3,,,1,,,,,0,,,,,,,,0],[1,,,,0,3,,,1,,,,,0,,,,,,,,1],[2,0,,'TransaccionID',,3,,,3,,,,,,,,1],[3,,,'DependienteNombre',,3,,,3],[4,,,'Identificacion',,,,,4],[5,,,'Celular',,,,,5],[6,,,'Email',,,,,6]],'shouldScrollToNewRow':false,'editMode':2,'indentColumnCount':0,'allowChangeColumnHierarchy':false,'allowMultiColumnAutoFilter':false,'adaptiveButtonPos':2,'adaptiveColumnsOrder':[1,0,6,5,4,3]},null,null,{'adaptiveModeInfo':{'adaptivityMode':1,'hideDataCellsWindowInnerWidth':0,'adaptiveDetailColumnCount':1,'allowTextTruncationInAdaptiveMode':[false,false,false,false,false,false],'allowHideDataCellsByColumnMinWidth':false,'allowOnlyOneAdaptiveDetailExpanded':false}});
+ASPxClientGridBase.PostponeInitialize('cpBody_gvDependientes',({'commandButtonIDs':[],'styleInfo':{'ei':'<tr class="dxgvEditingErrorRow_Moderno">\r\n\t<td class="dxgv dxgRRB" data-colSpan="6"></td><td class="dxgvAIC dxgv dxgRRB" style="border-left-width:0px;">&nbsp;</td>\r\n</tr>','fc':{'className':'dxgvFocusedCell_Moderno'},'bec':{'className':'dxgvBatchEditCell_Moderno dxgv'},'bemc':{'className':'dxgvBatchEditModifiedCell_Moderno dxgv'},'bemergmc':{'className':'dxgvBatchEditModifiedCell_Moderno dxgvBatchEditCell_Moderno dxgv'},'bedi':{'className':'dxgvBatchEditDeletedItem_Moderno dxgv'},'sel':{'className':'dxgvSelectedRow_Moderno'},'fi':{'className':'dxgvFocusedRow_Moderno'},'fgi':{'className':'dxgvFocusedGroupRow_Moderno'},'beni':{'className':'dxgvBatchEditNewItem_Moderno dxgv'}}}));
+
+//-->
+</script>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cpBody_lefticontab4" class="tab-pane fade">
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-4">
+
+                                                <div class="card-header">
+                                                    <i class="icon-reading position-left"></i>Agregar / Editar Direcciones
+                                                </div>
+<div class="form-group">
+     <span class="required">País:</span>
+     <select name="ctl00$cpBody$cbPais" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cpBody$cbPais\',\'\')', 0)" id="cpBody_cbPais" disabled="disabled" tabindex="8" class="aspNetDisabled">
+	<option selected="selected" value="214">Republica Dominicana</option>
+
+</select>
+ </div>
+                                                   <div class="form-group">
+                                                    <label>Provincia:</label>
+                                                    <select name="ctl00$cpBody$cbProvincia" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cpBody$cbProvincia\',\'\')', 0)" id="cpBody_cbProvincia" disabled="disabled" class="aspNetDisabled" style="width: 100%">
+	<option value="02">AZUA</option>
+	<option value="04">BARAHONA</option>
+	<option value="05">DAJABON</option>
+	<option value="01">DISTRITO NACIONAL</option>
+	<option value="06">DUARTE</option>
+	<option value="08">EL SEIBO</option>
+	<option value="07">ELIAS PIÑA</option>
+	<option value="09">ESPAILLAT</option>
+	<option value="30">HATO MAYOR</option>
+	<option value="19">HERMANAS MIRABAL</option>
+	<option value="11">LA ALTAGRACIA</option>
+	<option value="12">LA ROMANA</option>
+	<option value="13">LA VEGA</option>
+	<option value="14">MARIA TRINIDAD SANCHEZ</option>
+	<option value="28">MONSEÑOR NOUEL</option>
+	<option value="15">MONTE CRISTI</option>
+	<option value="16">PEDERNALES</option>
+	<option value="17">PERAVIA</option>
+	<option value="18">PUERTO PLATA</option>
+	<option value="20">SAMANA</option>
+	<option value="21">SAN CRISTOBAL</option>
+	<option value="31">SAN JOSE DE OCOA</option>
+	<option value="22">SAN JUAN</option>
+	<option value="23">SAN PEDRO DE MACORIS</option>
+	<option value="24">SANCHEZ RAMIREZ</option>
+	<option value="25">SANTIAGO</option>
+	<option value="26">SANTIAGO RODRIGUEZ</option>
+	<option value="35">SANTO DOMINGO ESTE</option>
+	<option value="33">SANTO DOMINGO NORTE</option>
+	<option value="34">SANTO DOMINGO OESTE</option>
+	<option selected="selected" value="0">SELECCIONAR PROVINCIA</option>
+	<option value="27">VALVERDE</option>
+
+</select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Ciudad:</label>
+                                                    <select name="ctl00$cpBody$cbCiudad" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cpBody$cbCiudad\',\'\')', 0)" id="cpBody_cbCiudad" style="width: 100%">
+
+</select>
+                                                </div>
+                                                 <div class="form-group">
+                                                    <label>Sector:</label>
+                                                    <select name="ctl00$cpBody$cbSector" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cpBody$cbSector\',\'\')', 0)" id="cpBody_cbSector" style="width: 100%">
+
+</select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Direccion:</label>
+                                                    <input name="ctl00$cpBody$tbDireccion" type="text" id="cpBody_tbDireccion" placeholder="Direccion" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Nota:</label>
+                                                    <input name="ctl00$cpBody$tbNota" type="text" id="cpBody_tbNota" placeholder="Nota" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Principal:</label>
+                                                    <input name="ctl00$cpBody$ckPrincipal" type="checkbox" id="cpBody_ckPrincipal" placeholder="Principal" class="form-control">
+                                                </div>
+
+
+                                                <div class="text-right">
+                                                    <input type="submit" name="ctl00$cpBody$bDireccion" value="Guardar Direccion" id="cpBody_bDireccion" class="btn btn-primary">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8">
+
+                                                <div class="card-header">
+                                                    <i class="icon-reading position-left"></i>Listado de Direcciones
+                                                </div>
+                                                <div style="display: none">
+                                                    <div class="text-right">
+
+
+                                                        <input type="submit" name="ctl00$cpBody$Button6" value="Agregar Direccion" id="cpBody_Button6" class="btn btn-primary">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+
+
+                                                    <table class="dxgvControl_Moderno dxgv" id="cpBody_gvDireccion" style="width:100%;border-collapse:separate;">
+	<tbody><tr>
+		<td><table id="cpBody_gvDireccion_DXMainTable" class="dxgvTable_Moderno" oncontextmenu="return ASPx.GVContextMenu('cpBody_gvDireccion',event);" style="width:100%;empty-cells:show;">
+			<tbody><tr id="cpBody_gvDireccion_DXHeadersRow0">
+				<td id="cpBody_gvDireccion_col0" class="dxgvHeader_Moderno" style="width:25px;border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Editar</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvDireccion_col1" class="dxgvHeader_Moderno" style="width:25px;border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Borrar</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvDireccion_col3" class="dxgvHeader_Moderno" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Direccion</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvDireccion_col4" class="dxgvHeader_Moderno" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Nota</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvDireccion_col5" class="dxgvHeader_Moderno dxgRRB" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Principal</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td class="dxgvAIC dxgvHeader_Moderno" style="width:0.1%;border-top-width:0px;border-left-width:0px;cursor:default;"><img class="dxGridView_gvHideAdaptiveDetailButton_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="" style="visibility:hidden;"></td>
+			</tr><tr id="cpBody_gvDireccion_DXADRow" class="dxgvDetailRow_Moderno dxgvADR" style="display:none;">
+				<td class="dxgv dxgvDetailCell_Moderno" colspan="5"></td><td class="dxgvAIC dxgv dxgRRB" style="border-left-width:0px;">&nbsp;</td>
+			</tr><tr id="cpBody_gvDireccion_DXEmptyRow" class="dxgvEmptyDataRow_Moderno dxgvLVR">
+				<td class="dxgv" colspan="5" style="border-bottom-width:0px;"><div>
+					No data to display
+				</div></td><td class="dxgvAIC dxgv dxgRRB" style="border-left-width:0px;border-bottom-width:0px;">&nbsp;</td>
+			</tr>
+		</tbody></table><table id="cpBody_gvDireccion_LP" class="dxgvLoadingPanel_Moderno" style="left:0px;top:0px;z-index:30000;display:none;">
+			<tbody><tr>
+				<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_89-4oArn" alt="" style="vertical-align:middle;"></td><td class="dx" style="padding-left:0px;"><span id="cpBody_gvDireccion_TL">Loading…</span></td>
+			</tr>
+		</tbody></table><div id="cpBody_gvDireccion_LD" class="dxgvLoadingDiv_Moderno" style="display:none;z-index:29999;position:absolute;">
+
+		</div><img id="cpBody_gvDireccion_IADD" class="dxGridView_gvDragAndDropArrowDown_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Down Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvDireccion_IADU" class="dxGridView_gvDragAndDropArrowUp_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Up Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvDireccion_IADL" class="dxGridView_gvDragAndDropArrowLeft_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Left Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvDireccion_IADR" class="dxGridView_gvDragAndDropArrowRight_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Right Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvDireccion_IDHF" class="dxGridView_gvDragAndDropHideColumn_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Hide" style="position:absolute;visibility:hidden;top:-100px;"></td>
+	</tr>
+</tbody></table><script id="dxss_230321314" data-executed="true">
+<!--
+ASPx.createControl(ASPxClientGridView,'cpBody_gvDireccion','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$gvDireccion',arg,ASPx.Callback,'cpBody_gvDireccion',ASPx.CallbackError,true); },'uniqueID':'ctl00$cpBody$gvDireccion','stateObject':{'keys':[],'callbackState':'zNML1q3IQc1hckKhZ478HE3RXRaFBo8vVQKuO8a4+gTQ4YGi9cxSCxKYFuE91xm8If8YqoYaBd9/iXOHSAFxParZcJMxv7jubEzR3wCoOxKkXBv7W+QzR3V5CmiwhVK9VT3rDiH/qDFmAsgCVna/3j14jggvoDj8c5mqDW7vxq1V33axWCTbyTeR6e5FffdgpnaJ3la4lgEXsMycFYWDvJZ17otd+w8bK9HitqrzO+N98tQPW5aCLVkLufZbmnpo+sgd74h47lkfavoCmPOYdDxUlo1m2ga+NZx0B4WFEsaLT05eUZuFkwQZ9vjI/17CGrS+RFftu5+QfrmQbg3vQ5qMUrrRYSMQMG/bThS5ebe/rpKhWYt6vmwmaep63HuePj6YibIn7FBQF7iONW5qbL2SoNzq1TkE3KsLesrzKvIa1TANSHuEhOt11Pp/HVbSglDN2eAUwvDRTjQXv80Y5O54EAh5GBSLp9sFDFg46m4aewcgsFlgvCc59XIK8n7BYWKbGRcn+u9ZXtgqdV+s2vBVuW2TqVASlPviyLfcveRFjXV3tnm8Mn6BHLBbN52r','groupLevelState':{},'selection':''},'callBacksEnabled':true,'pageRowCount':0,'pageRowSize':10,'pageIndex':0,'pageCount':0,'selectedWithoutPageRowCount':0,'visibleStartIndex':0,'focusedRowIndex':-1,'allowFocusedRow':false,'allowSelectByItemClick':false,'allowSelectSingleRowOnly':false,'callbackOnFocusedRowChanged':false,'callbackOnSelectionChanged':false,'editState':0,'editItemVisibleIndex':-1,'searchPanelFilter':'','allowDelete':true,'allowEdit':true,'allowInsert':true,'columnProp':[[0,,,,0,3,,,1,,,,,0,,,,,,,,0],[1,,,,0,3,,,1,,,,,0,,,,,,,,1],[2,0,,'ID',,3,,,3,,,,,,,,1],[3,,,'Direccion',,3,,,3],[4,,,'Nota',,,,,4],[5,,,'Principal',,,,,5],[6,0,,'Provincia',,,,,6,,,,,,,,1],[7,0,,'Pais',,,,,6,,,,,,,,1],[8,0,,'Ciudad',,,,,6,,,,,,,,1],[9,0,,'Sector',,,,,6,,,,,,,,1]],'shouldScrollToNewRow':false,'editMode':2,'indentColumnCount':0,'allowChangeColumnHierarchy':false,'allowMultiColumnAutoFilter':false,'adaptiveButtonPos':2,'adaptiveColumnsOrder':[1,0,5,4,3]},null,null,{'adaptiveModeInfo':{'adaptivityMode':1,'hideDataCellsWindowInnerWidth':0,'adaptiveDetailColumnCount':1,'allowTextTruncationInAdaptiveMode':[false,false,false,false,false],'allowHideDataCellsByColumnMinWidth':false,'allowOnlyOneAdaptiveDetailExpanded':false}});
+ASPxClientGridBase.PostponeInitialize('cpBody_gvDireccion',({'commandButtonIDs':[],'styleInfo':{'ei':'<tr class="dxgvEditingErrorRow_Moderno">\r\n\t<td class="dxgv dxgRRB" data-colSpan="5"></td><td class="dxgvAIC dxgv dxgRRB" style="border-left-width:0px;">&nbsp;</td>\r\n</tr>','fc':{'className':'dxgvFocusedCell_Moderno'},'bec':{'className':'dxgvBatchEditCell_Moderno dxgv'},'bemc':{'className':'dxgvBatchEditModifiedCell_Moderno dxgv'},'bemergmc':{'className':'dxgvBatchEditModifiedCell_Moderno dxgvBatchEditCell_Moderno dxgv'},'bedi':{'className':'dxgvBatchEditDeletedItem_Moderno dxgv'},'sel':{'className':'dxgvSelectedRow_Moderno'},'fi':{'className':'dxgvFocusedRow_Moderno'},'fgi':{'className':'dxgvFocusedGroupRow_Moderno'},'beni':{'className':'dxgvBatchEditNewItem_Moderno dxgv'}}}));
+
+//-->
+</script>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="cpBody_lefticontab3" class="tab-pane fade">
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="col-md-12">
+
+                                        <div class="text-right">
+
+
+                                            <input type="submit" name="ctl00$cpBody$Button4" value="Agregar Tarjeta" id="cpBody_Button4" class="btn btn-primary">
+                                        </div>
+
+                                        <div class="row">
+
+
+                                            <table class="dxgvControl_Moderno dxgv" id="cpBody_gvTarjetas" style="width:100%;border-collapse:separate;">
+	<tbody><tr>
+		<td><table id="cpBody_gvTarjetas_DXMainTable" class="dxgvTable_Moderno" oncontextmenu="return ASPx.GVContextMenu('cpBody_gvTarjetas',event);" style="width:100%;empty-cells:show;">
+			<tbody><tr id="cpBody_gvTarjetas_DXHeadersRow0">
+				<td id="cpBody_gvTarjetas_col0" class="dxgvHeader_Moderno" style="width:25px;border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Borrar</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvTarjetas_col5" class="dxgvHeader_Moderno" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Tarjeta Numero</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvTarjetas_col6" class="dxgvHeader_Moderno" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Marca</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td id="cpBody_gvTarjetas_col7" class="dxgvHeader_Moderno dxgRRB" style="border-top-width:0px;border-left-width:0px;"><table style="width:100%;">
+					<tbody><tr>
+						<td>Fecha EXP</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</tbody></table></td><td class="dxgvAIC dxgvHeader_Moderno" style="width:0.1%;border-top-width:0px;border-left-width:0px;cursor:default;"><img class="dxGridView_gvHideAdaptiveDetailButton_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="" style="visibility:hidden;"></td>
+			</tr><tr id="cpBody_gvTarjetas_DXADRow" class="dxgvDetailRow_Moderno dxgvADR" style="display:none;">
+				<td class="dxgv dxgvDetailCell_Moderno" colspan="4"></td><td class="dxgvAIC dxgv dxgRRB" style="border-left-width:0px;">&nbsp;</td>
+			</tr><tr id="cpBody_gvTarjetas_DXEmptyRow" class="dxgvEmptyDataRow_Moderno dxgvLVR">
+				<td class="dxgv" colspan="4" style="border-bottom-width:0px;"><div>
+					No data to display
+				</div></td><td class="dxgvAIC dxgv dxgRRB" style="border-left-width:0px;border-bottom-width:0px;">&nbsp;</td>
+			</tr>
+		</tbody></table><table id="cpBody_gvTarjetas_LP" class="dxgvLoadingPanel_Moderno" style="left:0px;top:0px;z-index:30000;display:none;">
+			<tbody><tr>
+				<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_89-4oArn" alt="" style="vertical-align:middle;"></td><td class="dx" style="padding-left:0px;"><span id="cpBody_gvTarjetas_TL">Loading…</span></td>
+			</tr>
+		</tbody></table><div id="cpBody_gvTarjetas_LD" class="dxgvLoadingDiv_Moderno" style="display:none;z-index:29999;position:absolute;">
+
+		</div><img id="cpBody_gvTarjetas_IADD" class="dxGridView_gvDragAndDropArrowDown_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Down Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvTarjetas_IADU" class="dxGridView_gvDragAndDropArrowUp_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Up Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvTarjetas_IADL" class="dxGridView_gvDragAndDropArrowLeft_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Left Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvTarjetas_IADR" class="dxGridView_gvDragAndDropArrowRight_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Right Arrow" style="position:absolute;visibility:hidden;top:-100px;"><img id="cpBody_gvTarjetas_IDHF" class="dxGridView_gvDragAndDropHideColumn_Moderno" src="/DXR.axd?r=1_89-4oArn" alt="Hide" style="position:absolute;visibility:hidden;top:-100px;"></td>
+	</tr>
+</tbody></table><script id="dxss_314995453" data-executed="true">
+<!--
+ASPx.createControl(ASPxClientGridView,'cpBody_gvTarjetas','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$gvTarjetas',arg,ASPx.Callback,'cpBody_gvTarjetas',ASPx.CallbackError,true); },'uniqueID':'ctl00$cpBody$gvTarjetas','stateObject':{'keys':[],'callbackState':'tOKT5lu8kc7P1QjVcfJECN4QxVb3IyI3D5mr8xAn5smlp8IOWXs43Sly3uGmc44Jvt40dJJoV8ofUqfwrMzAunyYpeAE4OeBArT6oOpeGJKKe66ouHrigz95nhUwcpz4YxTQHz0eSpZ4r0SlhrtT8zFd2j1f+4S/N5+gHQyd8Qxg1dXu7cIaoFWPWg3cF9O1RM20lx8wkC/g0heZpMY6B4FAS5ilKEBUeSfWJFYI6ODPzi9+8e3225nZ+hzCORJawRjFa3lRzXzSQg0Ra4QWDgWKCmGmrpXZAhoH0yaO3+vjVOSyB1H77fsjU/sQJtKMUYhom13KUyB/1il/lvbjgSiFyZ4KMBX6t6po+qQt1uRE2LDED6xGTXww1LpdrHf1sKB8H5jYG7amucHtYFAS1JNGwif0ZkmsaCfkrvQODllEf5XgEOZKF9fPtLNlWi3Rs2a1HcYMz6LvjvilWz0P5M9SSEzkxWiU0ce8PQwqpBC190FKjDBAsRD0Ts4ffaIh4Qc8n8tjt9xKuDJj9KNb7yNNQ0AT/MisqBL8bE3OgJU=','groupLevelState':{},'selection':''},'callBacksEnabled':true,'pageRowCount':0,'pageRowSize':10,'pageIndex':0,'pageCount':0,'selectedWithoutPageRowCount':0,'visibleStartIndex':0,'focusedRowIndex':-1,'allowFocusedRow':false,'allowSelectByItemClick':false,'allowSelectSingleRowOnly':false,'callbackOnFocusedRowChanged':false,'callbackOnSelectionChanged':false,'editState':0,'editItemVisibleIndex':-1,'searchPanelFilter':'','allowDelete':true,'allowEdit':true,'allowInsert':true,'columnProp':[[0,,,,0,3,,,1,,,,,0],[1,0,,'AuthHash',,3,,,1,,,,,,,,1],[2,0,,'ClienteID',,3,,,2,,,,,,,,1],[3,0,,'CompaniaID',,3,,,3,,,,,,,,1],[4,0,,'DataVaul_Token',,3,,,4,,,,,,,,1],[5,,,'CardNumber',,3,,,5],[6,,,'DataVault_Brand',,3,,,6],[7,,,'DataVault_Expiry',,3,,,7],[8,0,,'Primaria',,,,,8,,,,,,,,1]],'shouldScrollToNewRow':false,'editMode':2,'indentColumnCount':0,'allowChangeColumnHierarchy':false,'allowMultiColumnAutoFilter':false,'adaptiveButtonPos':2,'adaptiveColumnsOrder':[0,7,6,5]},null,null,{'adaptiveModeInfo':{'adaptivityMode':1,'hideDataCellsWindowInnerWidth':0,'adaptiveDetailColumnCount':1,'allowTextTruncationInAdaptiveMode':[false,false,false,false],'allowHideDataCellsByColumnMinWidth':false,'allowOnlyOneAdaptiveDetailExpanded':false}});
+ASPxClientGridBase.PostponeInitialize('cpBody_gvTarjetas',({'commandButtonIDs':[],'styleInfo':{'ei':'<tr class="dxgvEditingErrorRow_Moderno">\r\n\t<td class="dxgv dxgRRB" data-colSpan="4"></td><td class="dxgvAIC dxgv dxgRRB" style="border-left-width:0px;">&nbsp;</td>\r\n</tr>','fc':{'className':'dxgvFocusedCell_Moderno'},'bec':{'className':'dxgvBatchEditCell_Moderno dxgv'},'bemc':{'className':'dxgvBatchEditModifiedCell_Moderno dxgv'},'bemergmc':{'className':'dxgvBatchEditModifiedCell_Moderno dxgvBatchEditCell_Moderno dxgv'},'bedi':{'className':'dxgvBatchEditDeletedItem_Moderno dxgv'},'sel':{'className':'dxgvSelectedRow_Moderno'},'fi':{'className':'dxgvFocusedRow_Moderno'},'fgi':{'className':'dxgvFocusedGroupRow_Moderno'},'beni':{'className':'dxgvBatchEditNewItem_Moderno dxgv'}}}));
+
+//-->
+</script>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div style="display: none">
+
+            <input type="submit" name="ctl00$cpBody$BEliminar1" value="" id="cpBody_BEliminar1">
+            <input type="submit" name="ctl00$cpBody$bEditar" value="" id="cpBody_bEditar">
+            <input type="submit" name="ctl00$cpBody$bGuardarClientes" value="" id="cpBody_bGuardarClientes">
+            <input type="submit" name="ctl00$cpBody$BGuardarDependientes" value="" id="cpBody_BGuardarDependientes">
+        </div>
+
+        <script>
+
+            function GuardarDependiente() {
+
+                document.getElementById("cpBody_BGuardarDependientes").click();
+            }
+            function Guardar() {
+
+                document.getElementById("cpBody_bGuardarClientes").click();
+            }
+            function Editar(s) {
+                document.getElementById("cpBody_DependienteId").value = s;
+
+                document.getElementById("cpBody_bEditar").click();
+
+
+            }
+            function Eliminar(s) {
+
+                if (confirm('Desea Eliminar el Dependiente?')) {
+                    document.getElementById("cpBody_DependienteId").value = s;
+
+                    document.getElementById("cpBody_BEliminar1").click();
+                }
+
+
+
+            }
+
+
+        </script>
+
+
+
+        <div class="dxmodalSys">
+	<div id="cpBody_ppDelCard_PW-1" class="dxpcLite_Office365 dxpclW" style="z-index:10000;display:none;visibility:hidden;">
+		<div class="dxpc-mainDiv modal-full dxpc-shadow">
+			<div class="dxpc-header drag dxpc-withBtn" style="-webkit-user-select:none;" id="cpBody_ppDelCard_PWH-1">
+				<div class="dxpc-closeBtn" id="cpBody_ppDelCard_HCB-1">
+					<img class="dxWeb_pcCloseButton_Office365" src="/DXR.axd?r=1_89-4oArn" alt="Close">
+				</div><div class="dxpc-headerContent">
+					<span class="dxpc-headerText dx-vam" id="cpBody_ppDelCard_PWH-1T">Eliminar Tarjeta</span>
+				</div><b class="dx-clear"></b>
+			</div><div class="dxpc-contentWrapper">
+				<div class="dxpc-content" id="cpBody_ppDelCard_PWC-1">
+					&nbsp;&nbsp;
+				</div>
+			</div>
+		</div>
+	</div>
+</div><div id="cpBody_ppDelCard_DXPWMB-1" class="dxpcModalBackLite_Office365" style="z-index:9999;">
+
+</div><table id="cpBody_ppDelCard_LP" class="dxpcLoadingPanel_Office365 dxlpLoadingPanel_Office365" style="left:0px;top:0px;z-index:30000;display:none;">
+	<tbody><tr>
+		<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_89-4oArn" alt="" style="vertical-align:middle;"></td><td class="dx" style="padding-left:0px;"><span id="cpBody_ppDelCard_TL">Loading…</span></td>
+	</tr>
+</tbody></table><div id="cpBody_ppDelCard_LD" class="dxpcLoadingDiv_Office365 dxlpLoadingDiv_Office365 dx-ft" style="left:0px;top:0px;z-index:29999;display:none;position:absolute;">
+
+</div><script id="dxss_740210952" data-executed="true">
+<!--
+ASPx.AddHoverItems('cpBody_ppDelCard',[[['dxpc-closeBtnHover'],[''],['HCB-1']]]);
+ASPx.createControl(ASPxClientPopupControl,'cpBody_ppDelCard','ppDelCard',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$ppDelCard',arg,ASPx.Callback,'cpBody_ppDelCard',ASPx.CallbackError,true); },'enableCallbackAnimation':true,'uniqueID':'ctl00$cpBody$ppDelCard','popupAnimationType':'auto','closeAnimationType':'fade','closeAction':'CloseButton','popupHorizontalAlign':'WindowCenter','popupVerticalAlign':'WindowCenter','isPopupPositionCorrectionOn':false,'allowDragging':true,'width':400,'widthFromServer':true,'height':400,'adaptivityEnabled':true});
+
+//-->
+</script>
+    </div>
+    <br>
+
+
+
+
+
+                
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdS9uCtpHzFr3PASHXQIGjhun65JpX7OPiKSe-NHQg4Cs7R1UUUHEqeeO4cRynjfHHQ2&t=639190689332169432';
+WebForm_InitCallback();//]]>
+</script>
+<input type="hidden" name="DXScript" value="1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_21,1_22,1_190,1_192,1_17,1_41,1_194,1_188"><input type="hidden" name="DXCss" value="0_2697,0_2771,1_68,1_69,1_70,0_2701,0_2776,1_210,0_2685,1_209,0_2690,0_4968,0_4971,https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css,./main.css"></form>
+               
+          
+            </div>
+
+            <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        </div>
+               <div class="app-wrapper-footer">
+                    <div class="app-footer">
+
+                        <div class="app-footer__inner">
+
+
+                            <div class="app-footer-right">
+                                <div class="left">
+                                    <a href="#">2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS.</a> - 
+			<a href="">Términos y Condiciones de Uso</a> - 
+			<a href="">Políticas de Privacidad</a> - 
+			<a href="">Políticas de Entrega     </a>
+                                </div>
+                                <br>
+
+                                <br>
+                                <div class="right">
+                                    <img src="https://tainoexpress.com//index_files/a.png" alt="Merchant Equipment Store Credit Card Logos">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
+
+
+</body></html>

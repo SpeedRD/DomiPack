@@ -1,0 +1,157 @@
+{
+  "generatedAt": "2026-09-03",
+  "baseUrl": "https://clientes.domipack.com",
+  "testAccount": "DP-014003",
+  "screens": [
+    {
+      "id": "login",
+      "name": "Iniciar Sesión (Login)",
+      "url": "https://clientes.domipack.com/Login.aspx",
+      "reachedVia": "Entry point of the app. Root '/' and unauthenticated GET on any protected .aspx (MiCuenta.aspx, Estado.aspx, Rastreo.aspx, PruebaExportacion.aspx, PreAlerta.aspx, PagoOnline.aspx) all redirect here when there is no valid session. The visible 'Entrar' button (an <a onclick=\"login()\">) triggers the login form, which POSTs to Login.aspx.",
+      "requiresAuth": false,
+      "screenshot": "audit/screenshots/login.png",
+      "notes": "Root '/' renders the same login markup directly (no redirect observed) under the page title 'Domipack - Web Trans'."
+    },
+    {
+      "id": "nueva-cuenta",
+      "name": "Registro de Nuevos Clientes",
+      "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+      "reachedVia": "Visible link 'Crear Cuenta Gratis' on the Login screen.",
+      "requiresAuth": false,
+      "screenshot": "audit/screenshots/nueva-cuenta.png",
+      "notes": "Not filled in or submitted (would create a real account)."
+    },
+    {
+      "id": "mi-cuenta",
+      "name": "Mi Cuenta",
+      "url": "https://clientes.domipack.com/MiCuenta.aspx",
+      "reachedVia": "Sidebar menu item 'Mi Cuenta' (visible on every authenticated screen).",
+      "requiresAuth": true,
+      "screenshot": "audit/screenshots/mi-cuenta.png",
+      "notes": "Unauthenticated GET redirects to Login.aspx (verified directly). Contains 3 visible in-page tabs (no distinct URL, anchor-based): Datos Personales (default), Dependientes, Direccion. A 4th tab, 'Tarjetas Registradas' (#cpBody_lefticontab3), exists in the DOM but its parent element is display:none — not visible or clickable in the UI for this test account.",
+      "subViews": [
+        {
+          "id": "mi-cuenta-datos-personales",
+          "name": "Mi Cuenta > Datos Personales",
+          "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab1",
+          "reachedVia": "Default active tab on Mi Cuenta.",
+          "screenshot": "audit/screenshots/mi-cuenta.png"
+        },
+        {
+          "id": "mi-cuenta-dependientes",
+          "name": "Mi Cuenta > Dependientes",
+          "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab2",
+          "reachedVia": "Visible tab 'Dependientes' on Mi Cuenta.",
+          "screenshot": "audit/screenshots/mi-cuenta-dependientes.png"
+        },
+        {
+          "id": "mi-cuenta-direccion",
+          "name": "Mi Cuenta > Direccion",
+          "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab4",
+          "reachedVia": "Visible tab 'Direccion' on Mi Cuenta.",
+          "screenshot": "audit/screenshots/mi-cuenta-direccion.png"
+        },
+        {
+          "id": "mi-cuenta-tarjetas-registradas-hidden",
+          "name": "Mi Cuenta > Tarjetas Registradas (hidden, not reachable via UI)",
+          "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab3",
+          "reachedVia": "Found only via DOM inspection: <a href=\"#cpBody_lefticontab3\"> exists but its parent tab-list item has display:none, so it is not visible or clickable for this account.",
+          "notes": "Not counted as a reachable screen; documented as evidence of a hidden/orphaned nav item for the redesign findings."
+        }
+      ]
+    },
+    {
+      "id": "estado-cuenta",
+      "name": "Estados de Cuenta (Cuenta por Pagar)",
+      "url": "https://clientes.domipack.com/Estado.aspx",
+      "reachedVia": "Sidebar menu item 'Estados de Cuenta'.",
+      "requiresAuth": true,
+      "screenshot": "audit/screenshots/estado-cuenta.png",
+      "notes": "Unauthenticated GET redirects to Login.aspx (verified directly). Invoice list with a PDF/print icon per row; not clicked (would trigger a file download)."
+    },
+    {
+      "id": "rastreo",
+      "name": "Rastreo de Paquetes",
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "reachedVia": "Sidebar menu item 'Rastreo'; also the default landing screen immediately after login.",
+      "requiresAuth": true,
+      "screenshot": "audit/screenshots/rastreo.png",
+      "notes": "Unauthenticated GET redirects to Login.aspx (verified directly).",
+      "subViews": [
+        {
+          "id": "rastreo-movimientos-modal",
+          "name": "Rastreo > Movimientos del Paquete (modal)",
+          "url": "https://clientes.domipack.com/Rastreo.aspx (in-page modal, no distinct URL)",
+          "reachedVia": "Clicking the tracking-number link (e.g. 'DP01-00306834'), which calls the JS function VerGuia().",
+          "screenshot": "audit/screenshots/rastreo-verguia-modal.png"
+        },
+        {
+          "id": "rastreo-historico-modal",
+          "name": "Rastreo > Historial Guías (modal, date-filter dialog)",
+          "url": "https://clientes.domipack.com/Rastreo.aspx (in-page modal, no distinct URL)",
+          "reachedVia": "Menu button 'Menu' (top-right) > 'Histórico' link.",
+          "screenshot": "audit/screenshots/rastreo-historico.png",
+          "notes": "Minor rendering glitch observed: stray text 'gv' near the Buscar button, and the modal title partially overlaps the top nav bar."
+        },
+        {
+          "id": "rastreo-adjuntos",
+          "name": "Adjuntos (attachments dialog)",
+          "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=<guia>&c=<code>",
+          "reachedVia": "Clicking the small paperclip/count icon (e.g. '📎0') in a Rastreo grid row; opens as a browser popup window.",
+          "requiresAuth": true,
+          "screenshot": "audit/screenshots/adjuntos-dialog.png",
+          "notes": "Standalone real page under /dlg/. Showed 'No data to display' for the test record (no attachments)."
+        },
+        {
+          "id": "rastreo-row-detail-expander",
+          "name": "Rastreo grid row detail expander (inline, not a screen)",
+          "url": "https://clientes.domipack.com/Rastreo.aspx",
+          "reachedVia": "Clicking the '...' icon on a grid row expands an inline detail panel (Suplidor, RT, Servicio, Total) in place.",
+          "notes": "Not a separate screen — DevExpress grid master-detail expand/collapse, confirmed via screenshot."
+        }
+      ]
+    },
+    {
+      "id": "prueba-exportacion",
+      "name": "Prueba de Exportación",
+      "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+      "reachedVia": "Sidebar menu item 'Prueba de Exportacion'.",
+      "requiresAuth": true,
+      "screenshot": "audit/screenshots/prueba-exportacion.png",
+      "notes": "Unauthenticated GET redirects to Login.aspx (verified directly). Same grid pattern as Rastreo (per-row '...' inline expander + a PDF 'Imprimir' icon per row). PDF icon not clicked (would trigger a file download)."
+    },
+    {
+      "id": "prealerta",
+      "name": "PreAlerta",
+      "url": "https://clientes.domipack.com/PreAlerta.aspx",
+      "reachedVia": "Sidebar menu item 'PreAlerta'.",
+      "requiresAuth": true,
+      "screenshot": "audit/screenshots/prealerta.png",
+      "notes": "Unauthenticated GET redirects to Login.aspx (verified directly). Contains a form ('AGREGAR PRE-ALERTA') that creates a real record and uploads a file — not submitted. See audit/findings/destructive-actions-detected.md."
+    },
+    {
+      "id": "pago-online",
+      "name": "Pagos Online (Pagos En Linea)",
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "reachedVia": "The sidebar link exists in the DOM (href=\"PagoOnline.aspx\") but its parent <li> is display:none — NOT visible or clickable in the UI for this test account. Reached by navigating directly to the URL, using the real href found in the rendered markup as evidence.",
+      "requiresAuth": true,
+      "screenshot": "audit/screenshots/pago-online.png",
+      "notes": "Unauthenticated GET redirects to Login.aspx (verified directly). Contains a 'Pagar Con' payment button — not exercised further. See audit/findings/destructive-actions-detected.md."
+    }
+  ],
+  "controlsNotNavigatedFurther": [
+    {
+      "control": "Salir (logout)",
+      "location": "Top-right header dropdown, on every authenticated screen.",
+      "behavior": "window.location.href = '/Login.aspx' (client-side JS, not a distinct screen).",
+      "note": "Reversible (re-login); not treated as a destructive action."
+    }
+  ],
+  "methodologyNotes": [
+    "Evidence-based discovery only: every entry above was reached via an observed link, menu item, form action, or redirect in this session — no route was guessed by pattern.",
+    "Unauthenticated access was directly verified (real navigation, observed redirect to Login.aspx) for: MiCuenta.aspx, Estado.aspx, Rastreo.aspx, PruebaExportacion.aspx, PreAlerta.aspx, PagoOnline.aspx.",
+    "Session-behavior finding: navigating back to Login.aspx (or presumably NuevaCuenta.aspx) AFTER authenticating appears to silently invalidate the session — all subsequent requests are redirected to Login.aspx again, even though the ASP.NET_SessionId cookie is unchanged. Worth carrying into the functional-findings phase.",
+    "A fresh Playwright page (new tab) in the same authenticated browser context, opened after login, was redirected to Login.aspx even with the session cookie present — suggesting some client-side session/tab-scoped state is also involved, not only the server session cookie. Also worth carrying into findings.",
+    "Login has an observed variable-length delay (roughly 4-20 seconds) between submitting credentials and the redirect to Rastreo.aspx, with an intermediate document.title of 'Loading https://.../Rastreo.aspx'."
+  ]
+}

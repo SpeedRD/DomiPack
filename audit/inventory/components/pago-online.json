@@ -1,0 +1,36 @@
+{
+  "screenId": "pago-online",
+  "screenName": "Pagos Online (Pagos En Linea)",
+  "url": "https://clientes.domipack.com/PagoOnline.aspx",
+  "sharedChrome": "See _shared-chrome.json for header/sidebar controls — note the 'Pagos Online' sidebar link itself is hidden (display:none) for this test account; this screen was reached only by direct URL navigation, per audit/findings/destructive-actions-detected.md.",
+  "components": [
+    {
+      "type": "table",
+      "name": "Paquetes Disponibles grid (#cpBody_gvDatos)",
+      "action": "DevExpress grid, columns: Guia, Fecha, Peso, FOB, Descripcion, Envianombre, Total A Pagar (DOP). One row for this account (DP01-00306834), already shown with class dxgvSelectedRow_Moderno (pre-selected). Footer row shows 'DOP$: 0.000' total."
+    },
+    {
+      "type": "button",
+      "name": "Pagar Con (#cpBody_bpagar)",
+      "action": "Dropdown toggle. DESTRUCTIVE — per audit/findings/destructive-actions-detected.md, clicking it opened an empty dropdown panel (no options rendered, confirmed again in this phase: the DOM was byte-identical before/after the click). Not explored further — any real selection risks entering a live payment/checkout flow."
+    },
+    {
+      "type": "status message",
+      "name": "Footer total (#cpBody_gvDatos_DXFooterRow)",
+      "action": "Non-interactive, shows 'DOP$: 0.000' — likely the running total of selected packages to pay (0 since nothing was interactively selected/checked by this audit)."
+    }
+  ],
+  "notes": [
+    "IMPORTANT — found by static DOM inspection only, NOT triggered or submitted: this page's markup already contains a hidden checkout sub-form (all elements below have visible:false, i.e. not rendered until some client-side trigger reveals them). Documenting its fields here purely as evidence for the redesign/Phase 3 planning, since this is the shape of the real payment flow flagged as destructive:",
+    "  - #cpBody_ClienteID (hidden text) — client code, presumably auto-filled.",
+    "  - #cpBody_Guia (hidden text) — selected package/guia identifier.",
+    "  - Radio group 'Recoger' (#cpBody_sRecoger, checked by default) vs 'Domicilio' (#cpBody_sdelivery) — pickup vs. home-delivery choice for the paid package(s).",
+    "  - #cpBody_Direcciones (hidden select) — saved-address picker, presumably enabled when 'Domicilio' is chosen.",
+    "  - #cpBody_nota (hidden textarea) — delivery note.",
+    "  - #cpBody_tbProvincia / #cpBody_tbSectores (hidden text) — likely populated alongside the address selection.",
+    "  - #cpBody_TokenID (hidden text) — likely a payment-gateway token field, strongly suggesting the next step reaches a real payment processor.",
+    "  - #cpBody_bCheckOut (hidden submit, id 'bCheckOut') — the actual checkout/pay action. NOT clicked or triggered.",
+    "  - A separate small form is also present: #lsClienteID (hidden text) + #SetCliente (hidden submit) — purpose not confirmed, possibly a client-switch control for multi-account users.",
+    "This confirms the 'Pagar Con' flow is a real, multi-step, real-money checkout — reinforces why it stays untouched for the rest of this audit unless the user explicitly authorizes exercising it in a sandboxed/test-payment context."
+  ]
+}

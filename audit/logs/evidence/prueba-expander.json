@@ -1,0 +1,106 @@
+[
+  {
+    "width": 1440,
+    "overflow": false,
+    "hiddenAdaptive": 6,
+    "expanders": [
+      {
+        "id": "cpBody_gvDatos_DXCBtn1",
+        "visible": false
+      },
+      {
+        "id": "cpBody_gvDatos_DXCBtn4",
+        "visible": false
+      },
+      {
+        "id": "cpBody_gvDatos_DXCBtn7",
+        "visible": false
+      },
+      {
+        "id": "cpBody_gvDatos_DXCBtn10",
+        "visible": false
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "hiddenAdaptive": 6,
+    "expanders": [
+      {
+        "id": "cpBody_gvDatos_DXCBtn1",
+        "visible": true
+      },
+      {
+        "id": "cpBody_gvDatos_DXCBtn4",
+        "visible": true
+      },
+      {
+        "id": "cpBody_gvDatos_DXCBtn7",
+        "visible": true
+      },
+      {
+        "id": "cpBody_gvDatos_DXCBtn10",
+        "visible": true
+      }
+    ],
+    "afterFirst": {
+      "detailRows": 2,
+      "rows": 4,
+      "before": 4,
+      "serverError": null,
+      "overflow": false
+    },
+    "afterSecond": {
+      "detailRows": 3,
+      "serverError": null
+    },
+    "detailText": [
+      "",
+      "Estatus: Entregado al Cliente Contenido: ART PERSONAL Suplidor: AMAZON Categoria: EPS-12",
+      "Estatus: Entregado al Cliente Contenido: ACCESORIO Suplidor: SUPLIDOR GENERICO Categoria: EPS-12"
+    ],
+    "afterCollapse": 3
+  },
+  {
+    "width": 375,
+    "overflow": false,
+    "hiddenAdaptive": 8,
+    "expanders": [
+      {
+        "id": "cpBody_gvDatos_DXCBtn1",
+        "visible": true
+      },
+      {
+        "id": "cpBody_gvDatos_DXCBtn4",
+        "visible": false
+      },
+      {
+        "id": "cpBody_gvDatos_DXCBtn7",
+        "visible": true
+      },
+      {
+        "id": "cpBody_gvDatos_DXCBtn10",
+        "visible": true
+      }
+    ],
+    "afterFirst": {
+      "detailRows": 3,
+      "rows": 4,
+      "before": 4,
+      "serverError": null,
+      "overflow": false
+    },
+    "afterSecond": {
+      "detailRows": 4,
+      "serverError": null
+    },
+    "detailText": [
+      "",
+      "Tracking: TBA333722866266 Peso: 0.50 FOB: 0.00 Estatus: Entregado al Cliente Contenido: ART PERSONAL Suplidor: AMAZON Categoria: EPS-12",
+      "Tracking: TBA333712230266 Peso: 11.50 FOB: 0.00 Estatus: Entregado al Cliente Contenido: ACCESORIO Suplidor: SUPLIDOR GENERICO Categoria: EPS-12",
+      "Tracking: TBA333991591262 Peso: 1.25 FOB: 0.00 Estatus: Entregado al Cliente Contenido: ART PERSONAL Suplidor: SUPLIDOR GENERICO Categoria: EPS-12"
+    ],
+    "afterCollapse": 4
+  }
+]

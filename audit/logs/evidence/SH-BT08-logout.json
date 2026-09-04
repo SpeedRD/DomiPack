@@ -1,0 +1,44 @@
+{
+  "salirInfo": {
+    "onclick": "window.location.href='/Login.aspx'",
+    "visible": true,
+    "type": "button"
+  },
+  "afterSalirUrl": "https://clientes.domipack.com/Login.aspx",
+  "afterProtected": "https://clientes.domipack.com/Login.aspx",
+  "requests": [
+    "GET https://clientes.domipack.com/Login.aspx",
+    "GET https://clientes.domipack.com/MiCuenta.aspx",
+    "GET https://clientes.domipack.com/Login.aspx"
+  ],
+  "responses": [
+    {
+      "url": "https://clientes.domipack.com/Login.aspx",
+      "status": 200,
+      "setCookie": null
+    },
+    {
+      "url": "https://clientes.domipack.com/MiCuenta.aspx",
+      "status": 302,
+      "setCookie": null
+    },
+    {
+      "url": "https://clientes.domipack.com/Login.aspx",
+      "status": 200,
+      "setCookie": null
+    }
+  ],
+  "cookiesBefore": [
+    {
+      "name": "ASP.NET_SessionId",
+      "expires": -1
+    }
+  ],
+  "cookiesAfter": [
+    {
+      "name": "ASP.NET_SessionId",
+      "expires": -1,
+      "value": "onizzt…"
+    }
+  ]
+}

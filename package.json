@@ -1,0 +1,12 @@
+{
+  "name": "domipack-audit",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "dotenv": "^17.4.2",
+    "playwright": "^1.62.1",
+    "tsx": "^4.23.13"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "entrarRoleLink": 1,
+  "entrarRoleButton": 0,
+  "focusable": true,
+  "enterActivates": true,
+  "spaceActivates": false,
+  "postsDuring": 0,
+  "urlAfter": "https://clientes.domipack.com/Login.aspx#"
+}

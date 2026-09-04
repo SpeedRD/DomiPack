@@ -1,0 +1,93 @@
+{
+  "s0": {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "hist": 6,
+    "rows": [
+      "Estatus: Embarcado",
+      "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSO",
+      "Estatus: Entregado",
+      "0 DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 ART PERS",
+      "0 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 ACCESOR",
+      "0 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 ART PERS",
+      "0 DP01-00303692 8/26/2026 TBA333908870710 0.50 0.00 ARTICULO",
+      "0 DP01-00303746 8/26/2026 TBA333977356002 1.45 0.00 ARTÍCULO",
+      "0 DP01-00304156 8/26/2026 TBA333978097076 7.15 0.00 ART. PER",
+      "0 DP01-00304172 8/26/2026 TBA333978110538 7.10 0.00 ARTICULO"
+    ],
+    "modal": false,
+    "popup": false,
+    "desde": "2025-01-01",
+    "hasta": "2026-12-31",
+    "bodyHead": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAle"
+  },
+  "s1_popup": {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "hist": 8,
+    "rows": [
+      "Estatus: Embarcado",
+      "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSO",
+      "Estatus: Entregado",
+      "0 DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 ART PERS",
+      "0 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 ACCESOR",
+      "0 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 ART PERS",
+      "0 DP01-00303692 8/26/2026 TBA333908870710 0.50 0.00 ARTICULO",
+      "0 DP01-00303746 8/26/2026 TBA333977356002 1.45 0.00 ARTÍCULO",
+      "0 DP01-00304156 8/26/2026 TBA333978097076 7.15 0.00 ART. PER",
+      "0 DP01-00304172 8/26/2026 TBA333978110538 7.10 0.00 ARTICULO"
+    ],
+    "modal": false,
+    "popup": true,
+    "desde": "2025-01-01",
+    "hasta": "2026-12-31",
+    "bodyHead": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAle"
+  },
+  "s2_back": {
+    "url": "https://clientes.domipack.com/Rastreo.aspx#",
+    "hist": 8,
+    "rows": [
+      "Estatus: Embarcado",
+      "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSO",
+      "Estatus: Entregado",
+      "0 DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 ART PERS",
+      "0 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 ACCESOR",
+      "0 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 ART PERS",
+      "0 DP01-00303692 8/26/2026 TBA333908870710 0.50 0.00 ARTICULO",
+      "0 DP01-00303746 8/26/2026 TBA333977356002 1.45 0.00 ARTÍCULO",
+      "0 DP01-00304156 8/26/2026 TBA333978097076 7.15 0.00 ART. PER",
+      "0 DP01-00304172 8/26/2026 TBA333978110538 7.10 0.00 ARTICULO"
+    ],
+    "modal": false,
+    "popup": false,
+    "desde": "2025-01-01",
+    "hasta": "2026-12-31",
+    "bodyHead": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAle"
+  },
+  "s2_err": null,
+  "s3_fwd": {
+    "url": "https://clientes.domipack.com/Rastreo.aspx",
+    "hist": 8,
+    "rows": [
+      "Estatus: Embarcado",
+      "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSO",
+      "Estatus: Entregado",
+      "0 DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 ART PERS",
+      "0 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 ACCESOR",
+      "0 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 ART PERS",
+      "0 DP01-00303692 8/26/2026 TBA333908870710 0.50 0.00 ARTICULO",
+      "0 DP01-00303746 8/26/2026 TBA333977356002 1.45 0.00 ARTÍCULO",
+      "0 DP01-00304156 8/26/2026 TBA333978097076 7.15 0.00 ART. PER",
+      "0 DP01-00304172 8/26/2026 TBA333978110538 7.10 0.00 ARTICULO"
+    ],
+    "modal": false,
+    "popup": true,
+    "desde": "2025-01-01",
+    "hasta": "2026-12-31",
+    "bodyHead": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAle"
+  },
+  "s3_posts": [
+    "2026-09-04T02:28:43.977Z https://clientes.domipack.com/Rastreo.aspx"
+  ],
+  "s3_err": null,
+  "s3_onLogin": false,
+  "dialogs": []
+}

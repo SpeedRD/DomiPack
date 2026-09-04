@@ -1,0 +1,261 @@
+{
+  "names": [
+    {
+      "sel": ".close-sidebar-btn",
+      "i": 0,
+      "tag": "BUTTON",
+      "role": null,
+      "href": null,
+      "tabindex": null,
+      "focusable": true,
+      "visible": true,
+      "source": "none",
+      "name": "",
+      "imgAlt": null
+    },
+    {
+      "sel": ".close-sidebar-btn",
+      "i": 1,
+      "tag": "BUTTON",
+      "role": null,
+      "href": null,
+      "tabindex": null,
+      "focusable": true,
+      "visible": false,
+      "source": "none",
+      "name": "",
+      "imgAlt": null
+    },
+    {
+      "sel": ".mobile-toggle-nav",
+      "i": 0,
+      "tag": "BUTTON",
+      "role": null,
+      "href": null,
+      "tabindex": null,
+      "focusable": true,
+      "visible": false,
+      "source": "none",
+      "name": "",
+      "imgAlt": null
+    },
+    {
+      "sel": ".mobile-toggle-nav",
+      "i": 1,
+      "tag": "BUTTON",
+      "role": null,
+      "href": null,
+      "tabindex": null,
+      "focusable": true,
+      "visible": false,
+      "source": "none",
+      "name": "",
+      "imgAlt": null
+    },
+    {
+      "sel": ".mobile-toggle-header-nav",
+      "i": 0,
+      "tag": "BUTTON",
+      "role": null,
+      "href": null,
+      "tabindex": null,
+      "focusable": true,
+      "visible": false,
+      "source": "none",
+      "name": "",
+      "imgAlt": null
+    },
+    {
+      "sel": ".mobile-toggle-header-nav",
+      "i": 1,
+      "tag": "BUTTON",
+      "role": null,
+      "href": null,
+      "tabindex": null,
+      "focusable": true,
+      "visible": false,
+      "source": "none",
+      "name": "",
+      "imgAlt": null
+    },
+    {
+      "sel": "a.p-0.btn",
+      "i": 0,
+      "tag": "A",
+      "role": null,
+      "href": null,
+      "tabindex": null,
+      "focusable": true,
+      "visible": true,
+      "source": "none",
+      "name": "",
+      "imgAlt": ""
+    }
+  ],
+  "sidebarToggle": {
+    "before": {
+      "container": "app-container app-theme-white",
+      "sidebarW": 280
+    },
+    "after": {
+      "container": "app-container app-theme-white closed-sidebar",
+      "sidebarW": 80,
+      "menuTextVisible": [
+        "32px"
+      ],
+      "ariaExpanded": null
+    },
+    "hovered": {
+      "container": "app-container app-theme-white closed-sidebar",
+      "sidebarW": 280
+    },
+    "restored": {
+      "container": "app-container app-theme-white",
+      "sidebarW": 280
+    }
+  },
+  "sidebarPersist": {
+    "container": "app-container app-theme-white",
+    "sidebarW": 280
+  },
+  "md10": {
+    "closed0": {
+      "shown": false,
+      "display": "none",
+      "ariaExpanded": "false",
+      "ariaHidden": "true",
+      "items": [
+        "Salir"
+      ],
+      "userText": "JOSE ALEXANDER CABREJA AYBAR",
+      "active": "BODY."
+    },
+    "open1": {
+      "shown": true,
+      "display": "block",
+      "ariaExpanded": "true",
+      "ariaHidden": "true",
+      "items": [
+        "Salir"
+      ],
+      "userText": "JOSE ALEXANDER CABREJA AYBAR",
+      "active": "BODY."
+    },
+    "menuText": "Salir",
+    "afterOutside": {
+      "shown": false,
+      "display": "none",
+      "ariaExpanded": "false",
+      "ariaHidden": "true",
+      "items": [
+        "Salir"
+      ],
+      "userText": "JOSE ALEXANDER CABREJA AYBAR",
+      "active": "INPUT.form-control"
+    },
+    "open2": {
+      "shown": true,
+      "display": "block",
+      "ariaExpanded": "true",
+      "ariaHidden": "true",
+      "items": [
+        "Salir"
+      ],
+      "userText": "JOSE ALEXANDER CABREJA AYBAR",
+      "active": "BODY."
+    },
+    "afterEsc": {
+      "shown": true,
+      "display": "block",
+      "ariaExpanded": "true",
+      "ariaHidden": "true",
+      "items": [
+        "Salir"
+      ],
+      "userText": "JOSE ALEXANDER CABREJA AYBAR",
+      "active": "BODY."
+    },
+    "afterArrow": {
+      "tag": "BODY",
+      "id": "",
+      "cls": "",
+      "text": " JOSE ALEXANDER CABREJA AYBAR jacabreja@",
+      "outlineStyle": "none",
+      "outlineWidth": "3px",
+      "outlineColor": "rgb(73, 80, 87)",
+      "boxShadow": "none",
+      "focusedBorder": "rgb(73, 80, 87)",
+      "blurredBorder": "rgb(73, 80, 87)",
+      "visible": true,
+      "inViewport": false,
+      "focusVisible": false,
+      "outlineVisible": false,
+      "shadowVisible": false,
+      "borderChanged": false,
+      "indicator": false
+    },
+    "afterDouble": {
+      "shown": false,
+      "display": "none",
+      "ariaExpanded": "false",
+      "ariaHidden": "true",
+      "items": [
+        "Salir"
+      ],
+      "userText": "JOSE ALEXANDER CABREJA AYBAR",
+      "active": "BODY."
+    },
+    "menus": 0,
+    "trigFocusable": {
+      "sel": "a.p-0.btn",
+      "i": 0,
+      "tag": "A",
+      "role": null,
+      "href": null,
+      "tabindex": null,
+      "focusable": true,
+      "visible": true,
+      "source": "none",
+      "name": "",
+      "imgAlt": ""
+    }
+  },
+  "footer": {
+    "text": "2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS. - Términos y Condiciones de Uso - Políticas de Privacidad - Políticas de Entrega",
+    "links": [
+      {
+        "text": "2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS.",
+        "href": "#",
+        "resolved": "https://clientes.domipack.com/MiCuenta.aspx#",
+        "target": ""
+      },
+      {
+        "text": "Términos y Condiciones de Uso",
+        "href": "",
+        "resolved": "https://clientes.domipack.com/MiCuenta.aspx",
+        "target": ""
+      },
+      {
+        "text": "Políticas de Privacidad",
+        "href": "",
+        "resolved": "https://clientes.domipack.com/MiCuenta.aspx",
+        "target": ""
+      },
+      {
+        "text": "Políticas de Entrega",
+        "href": "",
+        "resolved": "https://clientes.domipack.com/MiCuenta.aspx",
+        "target": ""
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://tainoexpress.com//index_files/a.png",
+        "alt": "Merchant Equipment Store Credit Card Logos",
+        "w": 190,
+        "complete": true
+      }
+    ]
+  },
+  "consoleNote": null
+}

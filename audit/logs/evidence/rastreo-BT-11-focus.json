@@ -1,0 +1,98 @@
+[
+  {
+    "sel": "#cpBody_bpagar",
+    "before": {
+      "outline": "none 3px rgb(255, 255, 255)",
+      "boxShadow": "none",
+      "bg": "rgb(234, 53, 55)"
+    },
+    "after": {
+      "outline": "none 3px rgb(255, 255, 255)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+      "bg": "rgb(234, 53, 55)",
+      "focused": true,
+      "tabIndex": 0
+    },
+    "changed": true
+  },
+  {
+    "sel": "a[onclick*=\"VerGuia\"]",
+    "before": {
+      "outline": "none 3px rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "after": {
+      "outline": "none 3px rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "focused": true,
+      "tabIndex": 0
+    },
+    "changed": false
+  },
+  {
+    "sel": "a[href*=\"Adjuntos.aspx\"]",
+    "before": {
+      "outline": "none 3px rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "after": {
+      "outline": "none 3px rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "focused": true,
+      "tabIndex": 0
+    },
+    "changed": false
+  },
+  {
+    "sel": "#cpBody_gvDatos_DXCBtn0",
+    "before": {
+      "outline": "none 3px rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "after": {
+      "outline": "none 3px rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "focused": true,
+      "tabIndex": 0
+    },
+    "changed": false
+  },
+  {
+    "sel": "#cpBody_gvDatos_DXCBtn1",
+    "before": {
+      "outline": "none 3px rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "after": {
+      "outline": "none 3px rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "bg": "rgba(0, 0, 0, 0)",
+      "focused": false,
+      "tabIndex": 0
+    },
+    "changed": false
+  },
+  {
+    "sel": "#lRastreo",
+    "before": {
+      "outline": "none 3px rgb(52, 58, 64)",
+      "boxShadow": "none",
+      "bg": "rgb(224, 243, 255)"
+    },
+    "after": {
+      "outline": "none 3px rgb(52, 58, 64)",
+      "boxShadow": "none",
+      "bg": "rgb(224, 243, 255)",
+      "focused": true,
+      "tabIndex": 0
+    },
+    "changed": false
+  }
+]

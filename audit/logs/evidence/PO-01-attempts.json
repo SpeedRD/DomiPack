@@ -1,0 +1,83 @@
+{
+  "sequence": [
+    {
+      "label": "fresh session, straight after login",
+      "status": 200,
+      "title": "DOMIPACK - Web Clientes.",
+      "sig": null,
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "ts": "2026-09-04T02:18:48.048Z"
+    },
+    {
+      "label": "2nd consecutive GET",
+      "status": 200,
+      "title": "DOMIPACK - Web Clientes.",
+      "sig": null,
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "ts": "2026-09-04T02:18:50.220Z"
+    },
+    {
+      "label": "after visiting Rastreo.aspx",
+      "status": 200,
+      "title": "DOMIPACK - Web Clientes.",
+      "sig": null,
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "ts": "2026-09-04T02:19:06.079Z"
+    },
+    {
+      "label": "after visiting PruebaExportacion.aspx",
+      "status": 200,
+      "title": "DOMIPACK - Web Clientes.",
+      "sig": null,
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "ts": "2026-09-04T02:19:08.956Z"
+    },
+    {
+      "label": "after visiting PreAlerta.aspx",
+      "status": 200,
+      "title": "DOMIPACK - Web Clientes.",
+      "sig": null,
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "ts": "2026-09-04T02:19:11.923Z"
+    },
+    {
+      "label": "after visiting Estado.aspx",
+      "status": 500,
+      "title": "Runtime Error",
+      "sig": "Server Error in '/' Application",
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "ts": "2026-09-04T02:19:14.747Z"
+    },
+    {
+      "label": "after visiting MiCuenta.aspx",
+      "status": 500,
+      "title": "Runtime Error",
+      "sig": "Server Error in '/' Application",
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "ts": "2026-09-04T02:19:17.743Z"
+    },
+    {
+      "label": "consecutive GET after previous",
+      "status": 500,
+      "title": "Runtime Error",
+      "sig": "Server Error in '/' Application",
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "ts": "2026-09-04T02:19:19.743Z"
+    },
+    {
+      "label": "after 10s idle",
+      "status": 500,
+      "title": "Runtime Error",
+      "sig": "Server Error in '/' Application",
+      "url": "https://clientes.domipack.com/PagoOnline.aspx",
+      "ts": "2026-09-04T02:19:31.753Z"
+    }
+  ],
+  "sidebar": {
+    "href": "PagoOnline.aspx",
+    "text": "Pagos Online",
+    "liDisplay": "none",
+    "liStyleAttr": "Display:none;",
+    "aVisible": false
+  }
+}

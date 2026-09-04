@@ -1,0 +1,247 @@
+[
+  {
+    "caseId": "RS-01",
+    "w": 375,
+    "h": 812,
+    "scrollWidth": 375,
+    "clientWidth": 375,
+    "overflow": false,
+    "bodyScrollWidth": 375,
+    "card": {
+      "x": 19,
+      "y": 141,
+      "w": 338,
+      "h": 517
+    },
+    "lUser": {
+      "x": 60,
+      "y": 214,
+      "w": 256,
+      "h": 38
+    },
+    "lPass": {
+      "x": 60,
+      "y": 268,
+      "w": 256,
+      "h": 38
+    },
+    "entrar": {
+      "x": 60,
+      "y": 391,
+      "w": 256,
+      "h": 46
+    },
+    "recuperar": {
+      "x": 45,
+      "y": 469,
+      "w": 188,
+      "h": 17
+    },
+    "crear": {
+      "x": 45,
+      "y": 490,
+      "w": 128,
+      "h": 17
+    },
+    "checkbox": {
+      "x": 60,
+      "y": 325,
+      "w": 13,
+      "h": 13
+    },
+    "checkboxLabel": {
+      "x": 77,
+      "y": 322,
+      "w": 99,
+      "h": 21
+    },
+    "fontSizeInput": "14px",
+    "tapSmall": [
+      "recuperar",
+      "crear",
+      "checkbox"
+    ],
+    "axeCount": 4,
+    "axeIds": [
+      "color-contrast",
+      "empty-heading",
+      "html-has-lang",
+      "region"
+    ],
+    "shot": "audit/screenshots/rs-login-375.png",
+    "afterFailedLogin": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflow": false,
+      "popup": {
+        "x": 9,
+        "w": 358,
+        "right": 366
+      }
+    }
+  },
+  {
+    "caseId": "RS-02",
+    "w": 768,
+    "h": 1024,
+    "scrollWidth": 942,
+    "clientWidth": 768,
+    "overflow": true,
+    "bodyScrollWidth": 768,
+    "card": {
+      "x": 174,
+      "y": 247,
+      "w": 420,
+      "h": 517
+    },
+    "lUser": {
+      "x": 215,
+      "y": 405,
+      "w": 338,
+      "h": 38
+    },
+    "lPass": {
+      "x": 215,
+      "y": 459,
+      "w": 338,
+      "h": 38
+    },
+    "entrar": {
+      "x": 215,
+      "y": 582,
+      "w": 338,
+      "h": 46
+    },
+    "recuperar": {
+      "x": 200,
+      "y": 660,
+      "w": 188,
+      "h": 17
+    },
+    "crear": {
+      "x": 426,
+      "y": 660,
+      "w": 128,
+      "h": 17
+    },
+    "checkbox": {
+      "x": 215,
+      "y": 516,
+      "w": 13,
+      "h": 13
+    },
+    "checkboxLabel": {
+      "x": 232,
+      "y": 513,
+      "w": 99,
+      "h": 21
+    },
+    "fontSizeInput": "14px",
+    "tapSmall": [
+      "recuperar",
+      "crear",
+      "checkbox"
+    ],
+    "axeCount": 5,
+    "axeIds": [
+      "color-contrast",
+      "html-has-lang",
+      "landmark-one-main",
+      "page-has-heading-one",
+      "region"
+    ],
+    "shot": "audit/screenshots/rs-login-768.png",
+    "afterFailedLogin": {
+      "scrollWidth": 942,
+      "clientWidth": 768,
+      "overflow": true,
+      "popup": {
+        "x": 128,
+        "w": 512,
+        "right": 640
+      }
+    }
+  },
+  {
+    "caseId": "RS-03",
+    "w": 1440,
+    "h": 900,
+    "scrollWidth": 1950,
+    "clientWidth": 1440,
+    "overflow": true,
+    "bodyScrollWidth": 1950,
+    "card": {
+      "x": 510,
+      "y": 185,
+      "w": 420,
+      "h": 517
+    },
+    "lUser": {
+      "x": 551,
+      "y": 343,
+      "w": 338,
+      "h": 38
+    },
+    "lPass": {
+      "x": 551,
+      "y": 397,
+      "w": 338,
+      "h": 38
+    },
+    "entrar": {
+      "x": 551,
+      "y": 520,
+      "w": 338,
+      "h": 46
+    },
+    "recuperar": {
+      "x": 536,
+      "y": 598,
+      "w": 188,
+      "h": 17
+    },
+    "crear": {
+      "x": 762,
+      "y": 598,
+      "w": 128,
+      "h": 17
+    },
+    "checkbox": {
+      "x": 551,
+      "y": 454,
+      "w": 13,
+      "h": 13
+    },
+    "checkboxLabel": {
+      "x": 568,
+      "y": 451,
+      "w": 99,
+      "h": 21
+    },
+    "fontSizeInput": "14px",
+    "tapSmall": [
+      "recuperar",
+      "crear",
+      "checkbox"
+    ],
+    "axeCount": 5,
+    "axeIds": [
+      "color-contrast",
+      "html-has-lang",
+      "landmark-one-main",
+      "page-has-heading-one",
+      "region"
+    ],
+    "shot": "audit/screenshots/rs-login-1440.png",
+    "afterFailedLogin": {
+      "scrollWidth": 1950,
+      "clientWidth": 1440,
+      "overflow": true,
+      "popup": {
+        "x": 464,
+        "w": 512,
+        "right": 976
+      }
+    }
+  }
+]

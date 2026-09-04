@@ -1,0 +1,143 @@
+{
+  "avatar": {
+    "src": "https://lh3.googleusercontent.com/proxy/j6_9Gt0XFGwa_NtuObaVYIiUrX5Ge7xq2Xv02U3TcHfdyo2fkMha2gNYZPqpPWGiazSe4KaskZg",
+    "naturalWidth": 0,
+    "complete": true,
+    "alt": "",
+    "rendered": 0
+  },
+  "hidden": [
+    {
+      "id": "cpBody_lIdentificacion",
+      "exists": true,
+      "type": "text",
+      "value": "",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_ckConsolidation",
+      "exists": true,
+      "type": "checkbox",
+      "value": "<non-empty>",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_lCupon",
+      "exists": true,
+      "type": "text",
+      "value": "",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_BVerificar",
+      "exists": true,
+      "type": "submit",
+      "value": "Canjear Cupon",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_Button2",
+      "exists": true,
+      "type": "submit",
+      "value": "Agregar Dependiente",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_Button6",
+      "exists": true,
+      "type": "submit",
+      "value": "Agregar Direccion",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_Button4",
+      "exists": true,
+      "type": "submit",
+      "value": "Agregar Tarjeta",
+      "hiddenBy": "visible?"
+    },
+    {
+      "id": "SetCliente",
+      "exists": true,
+      "type": "submit",
+      "value": "",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "lsClienteID",
+      "exists": true,
+      "type": "text",
+      "value": "",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_TokenID",
+      "exists": true,
+      "type": "text",
+      "value": "GB123456789.101112131415",
+      "hiddenBy": "own style"
+    },
+    {
+      "id": "cpBody_ClienteID",
+      "exists": true,
+      "type": "text",
+      "value": "DP-014003",
+      "hiddenBy": "own style"
+    },
+    {
+      "id": "cpBody_DireccionID",
+      "exists": true,
+      "type": "text",
+      "value": "",
+      "hiddenBy": "own style"
+    },
+    {
+      "id": "cpBody_DependienteId",
+      "exists": true,
+      "type": "text",
+      "value": "",
+      "hiddenBy": "own style"
+    },
+    {
+      "id": "cpBody_bGuardarClientes",
+      "exists": true,
+      "type": "submit",
+      "value": "",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_BGuardarDependientes",
+      "exists": true,
+      "type": "submit",
+      "value": "",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_bEditar",
+      "exists": true,
+      "type": "submit",
+      "value": "",
+      "hiddenBy": "ancestor style"
+    },
+    {
+      "id": "cpBody_BEliminar1",
+      "exists": true,
+      "type": "submit",
+      "value": "",
+      "hiddenBy": "ancestor style"
+    }
+  ],
+  "mixedContent": [
+    "http://maps.google.com/maps/api/js?sensor=true"
+  ],
+  "llocalidad": {
+    "text": "jacabreja@hotmail.com",
+    "tag": "DIV",
+    "visible": true,
+    "color": "rgb(73, 80, 87)",
+    "parent": "widget-content-left  ml-3 header-user-info"
+  },
+  "metaViewport": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no",
+  "estadoActive": [],
+  "collapsedAfterNav": "app-container app-theme-white"
+}

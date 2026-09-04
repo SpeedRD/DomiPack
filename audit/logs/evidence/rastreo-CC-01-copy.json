@@ -1,0 +1,59 @@
+{
+  "pageTitle": "DOMIPACK - Web Clientes.",
+  "heading": [
+    "Rastreo de Paquetes Consulta el estatus de tu Paquetes."
+  ],
+  "subheading": [
+    "Consulta el estatus de tu Paquetes."
+  ],
+  "menu": [
+    "Menu",
+    "Histórico"
+  ],
+  "headers": [
+    "Post-Alerta",
+    "AD",
+    "Guia",
+    "Fecha",
+    "Tracking",
+    "Peso",
+    "FOB",
+    "Contenido",
+    "Suplidor",
+    "RT",
+    "Servicio",
+    "Total"
+  ],
+  "group": [
+    "Estatus: Embarcado"
+  ],
+  "tooltips": [
+    "Subir Factura",
+    "...",
+    "X"
+  ],
+  "modalTexts": [
+    "Historial Guias",
+    "Filtro",
+    "Fecha Desde:",
+    "Fecha Hasta:",
+    "Buscar"
+  ],
+  "popupHeader": "Movimientos del Paquete",
+  "popupHeaders": [
+    "Tracking",
+    "Estatus",
+    "Fecha"
+  ],
+  "popupEmpty": [
+    "No data to display"
+  ],
+  "loading": [
+    "Loading…",
+    "Loading…"
+  ],
+  "lang": "en",
+  "footer": [
+    "2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS. - Términos y Condiciones de Uso - Políticas de Privacidad - Políticas de Entrega"
+  ]
+}

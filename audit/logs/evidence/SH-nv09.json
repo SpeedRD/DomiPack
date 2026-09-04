@@ -1,0 +1,95 @@
+[
+  {
+    "expect": "Mi Cuenta",
+    "url": "/MiCuenta.aspx",
+    "active": [
+      "Mi Cuenta"
+    ],
+    "activeCount": 1,
+    "ariaCurrent": [],
+    "heading": "Mi Cuenta Actualiza tu Datos.",
+    "title": "DOMIPACK - Web Clientes.",
+    "lang": "en",
+    "footerYear": "2022",
+    "hamburgerNames": [
+      "",
+      "",
+      ""
+    ],
+    "pagoHidden": "none"
+  },
+  {
+    "expect": "Estados de Cuenta",
+    "url": "/Estado.aspx",
+    "active": [],
+    "activeCount": 0,
+    "ariaCurrent": [],
+    "heading": "Cuenta por Pagar Consulta Estados de Cuenta.",
+    "title": "DOMIPACK - Web Clientes.",
+    "lang": "en",
+    "footerYear": "2022",
+    "hamburgerNames": [
+      "",
+      "",
+      ""
+    ],
+    "pagoHidden": "none"
+  },
+  {
+    "expect": "Rastreo",
+    "url": "/Rastreo.aspx",
+    "active": [
+      "Rastreo"
+    ],
+    "activeCount": 1,
+    "ariaCurrent": [],
+    "heading": "Rastreo de Paquetes Consulta el estatus de tu Paquetes.",
+    "title": "DOMIPACK - Web Clientes.",
+    "lang": "en",
+    "footerYear": "2022",
+    "hamburgerNames": [
+      "",
+      "",
+      ""
+    ],
+    "pagoHidden": "none"
+  },
+  {
+    "expect": "Prueba de Exportacion",
+    "url": "/PruebaExportacion.aspx",
+    "active": [
+      "Rastreo"
+    ],
+    "activeCount": 1,
+    "ariaCurrent": [],
+    "heading": "Prueba Exportacion",
+    "title": "DOMIPACK - Web Clientes.",
+    "lang": "en",
+    "footerYear": "2022",
+    "hamburgerNames": [
+      "",
+      "",
+      ""
+    ],
+    "pagoHidden": "none"
+  },
+  {
+    "expect": "PreAlerta",
+    "url": "/PreAlerta.aspx",
+    "active": [
+      "PreAlerta"
+    ],
+    "activeCount": 1,
+    "ariaCurrent": [],
+    "heading": "PreAlerta Agiliza su entrega.",
+    "title": "DOMIPACK - Web Clientes.",
+    "lang": "en",
+    "footerYear": "2022",
+    "hamburgerNames": [
+      "",
+      "",
+      ""
+    ],
+    "pagoHidden": "none"
+  }
+]

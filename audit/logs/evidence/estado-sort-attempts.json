@@ -1,0 +1,114 @@
+[
+  {
+    "header": "Factura",
+    "id": "cpBody_gvDatos_col3",
+    "before": "FT33-006983|FT33-006951|FT33-006833",
+    "after": "FT33-006833|FT33-006951|FT33-006983",
+    "changed": true,
+    "posts": [
+      "POST https://clientes.domipack.com/Estado.aspx"
+    ],
+    "sortImg": true,
+    "ariaSort": null,
+    "err": null,
+    "serverError": null
+  },
+  {
+    "header": "Fecha",
+    "id": "cpBody_gvDatos_col10",
+    "before": "FT33-006833|FT33-006951|FT33-006983",
+    "after": "FT33-006833|FT33-006951|FT33-006983",
+    "changed": false,
+    "posts": [
+      "POST https://clientes.domipack.com/Estado.aspx"
+    ],
+    "sortImg": true,
+    "ariaSort": null,
+    "err": null,
+    "serverError": null
+  },
+  {
+    "header": "TotalFacturado",
+    "id": "cpBody_gvDatos_col4",
+    "before": "FT33-006833|FT33-006951|FT33-006983",
+    "after": "FT33-006951|FT33-006833|FT33-006983",
+    "changed": true,
+    "posts": [
+      "POST https://clientes.domipack.com/Estado.aspx"
+    ],
+    "sortImg": true,
+    "ariaSort": null,
+    "err": null,
+    "serverError": null
+  },
+  {
+    "header": "Debito",
+    "id": "cpBody_gvDatos_col5",
+    "before": "FT33-006951|FT33-006833|FT33-006983",
+    "after": "FT33-006983|FT33-006951|FT33-006833",
+    "changed": true,
+    "posts": [
+      "POST https://clientes.domipack.com/Estado.aspx"
+    ],
+    "sortImg": true,
+    "ariaSort": null,
+    "err": null,
+    "serverError": null
+  },
+  {
+    "header": "Credito",
+    "id": "cpBody_gvDatos_col6",
+    "before": "FT33-006983|FT33-006951|FT33-006833",
+    "after": "FT33-006983|FT33-006951|FT33-006833",
+    "changed": false,
+    "posts": [
+      "POST https://clientes.domipack.com/Estado.aspx"
+    ],
+    "sortImg": true,
+    "ariaSort": null,
+    "err": null,
+    "serverError": null
+  },
+  {
+    "header": "Balance",
+    "id": "cpBody_gvDatos_col7",
+    "before": "FT33-006983|FT33-006951|FT33-006833",
+    "after": "FT33-006951|FT33-006833|FT33-006983",
+    "changed": true,
+    "posts": [
+      "POST https://clientes.domipack.com/Estado.aspx"
+    ],
+    "sortImg": true,
+    "ariaSort": null,
+    "err": null,
+    "serverError": null
+  },
+  {
+    "header": "Dias Vencidos",
+    "id": "cpBody_gvDatos_col8",
+    "before": "FT33-006951|FT33-006833|FT33-006983",
+    "after": "FT33-006983|FT33-006951|FT33-006833",
+    "changed": true,
+    "posts": [
+      "POST https://clientes.domipack.com/Estado.aspx"
+    ],
+    "sortImg": true,
+    "ariaSort": null,
+    "err": null,
+    "serverError": null
+  },
+  {
+    "header": "Monedas",
+    "id": "cpBody_gvDatos_col9",
+    "before": "FT33-006983|FT33-006951|FT33-006833",
+    "after": "FT33-006983|FT33-006951|FT33-006833",
+    "changed": false,
+    "posts": [
+      "POST https://clientes.domipack.com/Estado.aspx"
+    ],
+    "sortImg": true,
+    "ariaSort": null,
+    "err": null,
+    "serverError": null
+  }
+]

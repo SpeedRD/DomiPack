@@ -1,0 +1,389 @@
+{
+  "before": {
+    "shown": false,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "closeBtn": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "html": "<div class=\"dxpc-closeBtn\" id=\"cpBody_ppCambioGuia_HCB-1\">\n\t\t\t\t<img class=\"dxWeb_pcCloseButton_Office365\" src=\"/DXR.axd?r=1_89-4oArn\" alt=\"Close\">\n\t\t\t</div>",
+      "role": null,
+      "tabindex": null,
+      "ariaLabel": null,
+      "title": null
+    },
+    "backdrop": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    "headerText": "Movimientos del Paquete",
+    "rows": [
+      "No data to display"
+    ],
+    "pageRows": 1,
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "popupRole": null,
+    "popupAriaModal": null,
+    "vw": 1440,
+    "vh": 900
+  },
+  "postsFired": [
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "status": 200,
+      "t": 1788488852222
+    }
+  ],
+  "open": {
+    "shown": true,
+    "rect": {
+      "x": 220,
+      "y": 150,
+      "width": 1000,
+      "height": 600
+    },
+    "closeBtn": {
+      "visible": true,
+      "rect": {
+        "x": 1181,
+        "y": 159,
+        "width": 28,
+        "height": 28
+      },
+      "html": "<div class=\"dxpc-closeBtn\" id=\"cpBody_ppCambioGuia_HCB-1\">\n\t\t\t\t<img class=\"dxWeb_pcCloseButton_Office365\" src=\"/DXR.axd?r=1_89-4oArn\" alt=\"Close\">\n\t\t\t</div>",
+      "role": null,
+      "tabindex": null,
+      "ariaLabel": null,
+      "title": null
+    },
+    "backdrop": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      }
+    },
+    "headerText": "Movimientos del Paquete",
+    "rows": [
+      "Guia: DP01-003068340001",
+      "TBA334226770293 Embarcado 9/2/2026 4:43:55 PM",
+      "TBA334226770293 Empacado 9/2/2026 11:22:46 AM",
+      "TBA334226770293 Recibido Miami 9/2/2026 9:35:52 AM"
+    ],
+    "pageRows": 1,
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "popupRole": null,
+    "popupAriaModal": null,
+    "vw": 1440,
+    "vh": 900
+  },
+  "openActive": "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+  "serverErr": null,
+  "openShot": "audit/screenshots/rastreo-movimientos-open.png",
+  "tabPath": [
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+    "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false"
+  ],
+  "focusEscapes": false,
+  "afterBackdrop": {
+    "shown": true,
+    "rect": {
+      "x": 220,
+      "y": 150,
+      "width": 1000,
+      "height": 600
+    },
+    "closeBtn": {
+      "visible": true,
+      "rect": {
+        "x": 1181,
+        "y": 159,
+        "width": 28,
+        "height": 28
+      },
+      "html": "<div class=\"dxpc-closeBtn\" id=\"cpBody_ppCambioGuia_HCB-1\">\n\t\t\t\t<img class=\"dxWeb_pcCloseButton_Office365\" src=\"/DXR.axd?r=1_89-4oArn\" alt=\"Close\">\n\t\t\t</div>",
+      "role": null,
+      "tabindex": null,
+      "ariaLabel": null,
+      "title": null
+    },
+    "backdrop": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      }
+    },
+    "headerText": "Movimientos del Paquete",
+    "rows": [
+      "Guia: DP01-003068340001",
+      "TBA334226770293 Embarcado 9/2/2026 4:43:55 PM",
+      "TBA334226770293 Empacado 9/2/2026 11:22:46 AM",
+      "TBA334226770293 Recibido Miami 9/2/2026 9:35:52 AM"
+    ],
+    "pageRows": 1,
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "popupRole": null,
+    "popupAriaModal": null,
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterEsc": {
+    "shown": false,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "closeBtn": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "html": "<div class=\"dxpc-closeBtn\" id=\"cpBody_ppCambioGuia_HCB-1\">\n\t\t\t\t<img class=\"dxWeb_pcCloseButton_Office365\" src=\"/DXR.axd?r=1_89-4oArn\" alt=\"Close\">\n\t\t\t</div>",
+      "role": null,
+      "tabindex": null,
+      "ariaLabel": null,
+      "title": null
+    },
+    "backdrop": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    "headerText": "Movimientos del Paquete",
+    "rows": [
+      "Guia: DP01-003068340001",
+      "TBA334226770293Embarcado9/2/2026 4:43:55 PM <!-- ASPx.AddDisabledItems('cpBody_ppCambioGuia_gvDetall",
+      "TBA334226770293Empacado9/2/2026 11:22:46 AM <!-- ASPx.AddDisabledItems('cpBody_ppCambioGuia_gvDetall",
+      "TBA334226770293Recibido Miami9/2/2026 9:35:52 AM <!-- ASPx.AddDisabledItems('cpBody_ppCambioGuia_gvD"
+    ],
+    "pageRows": 1,
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "popupRole": null,
+    "popupAriaModal": null,
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterEscActive": "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+  "pageRowsAfterEsc": 1,
+  "reopen": {
+    "shown": true,
+    "rect": {
+      "x": 220,
+      "y": 150,
+      "width": 1000,
+      "height": 600
+    },
+    "closeBtn": {
+      "visible": true,
+      "rect": {
+        "x": 1181,
+        "y": 159,
+        "width": 28,
+        "height": 28
+      },
+      "html": "<div class=\"dxpc-closeBtn\" id=\"cpBody_ppCambioGuia_HCB-1\">\n\t\t\t\t<img class=\"dxWeb_pcCloseButton_Office365\" src=\"/DXR.axd?r=1_89-4oArn\" alt=\"Close\">\n\t\t\t</div>",
+      "role": null,
+      "tabindex": null,
+      "ariaLabel": null,
+      "title": null
+    },
+    "backdrop": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      }
+    },
+    "headerText": "Movimientos del Paquete",
+    "rows": [
+      "Guia: DP01-003068340001",
+      "TBA334226770293 Embarcado 9/2/2026 4:43:55 PM",
+      "TBA334226770293 Empacado 9/2/2026 11:22:46 AM",
+      "TBA334226770293 Recibido Miami 9/2/2026 9:35:52 AM"
+    ],
+    "pageRows": 1,
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "popupRole": null,
+    "popupAriaModal": null,
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterX": {
+    "shown": false,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "closeBtn": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "html": "<div class=\"dxpc-closeBtn dxpc-closeBtnHover\" id=\"cpBody_ppCambioGuia_HCB-1\">\n\t\t\t\t<img class=\"dxWeb_pcCloseButton_Office365\" src=\"/DXR.axd?r=1_89-4oArn\" alt=\"Close\">\n\t\t\t</div>",
+      "role": null,
+      "tabindex": null,
+      "ariaLabel": null,
+      "title": null
+    },
+    "backdrop": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      }
+    },
+    "headerText": "Movimientos del Paquete",
+    "rows": [
+      "Guia: DP01-003068340001",
+      "TBA334226770293Embarcado9/2/2026 4:43:55 PM <!-- ASPx.AddDisabledItems('cpBody_ppCambioGuia_gvDetall",
+      "TBA334226770293Empacado9/2/2026 11:22:46 AM <!-- ASPx.AddDisabledItems('cpBody_ppCambioGuia_gvDetall",
+      "TBA334226770293Recibido Miami9/2/2026 9:35:52 AM <!-- ASPx.AddDisabledItems('cpBody_ppCambioGuia_gvD"
+    ],
+    "pageRows": 1,
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "popupRole": null,
+    "popupAriaModal": null,
+    "vw": 1440,
+    "vh": 900
+  },
+  "afterXActive": "BODY#.|JOSE ALEXANDER CABREJA AY|inHistorial=false|inPopup=false",
+  "closeBtnInTabPath": false,
+  "dblPosts": [
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "status": 200,
+      "t": 1788488856222
+    }
+  ],
+  "afterDbl": {
+    "shown": true,
+    "rect": {
+      "x": 220,
+      "y": 150,
+      "width": 1000,
+      "height": 600
+    },
+    "closeBtn": {
+      "visible": true,
+      "rect": {
+        "x": 1181,
+        "y": 159,
+        "width": 28,
+        "height": 28
+      },
+      "html": "<div class=\"dxpc-closeBtn\" id=\"cpBody_ppCambioGuia_HCB-1\">\n\t\t\t\t<img class=\"dxWeb_pcCloseButton_Office365\" src=\"/DXR.axd?r=1_89-4oArn\" alt=\"Close\">\n\t\t\t</div>",
+      "role": null,
+      "tabindex": null,
+      "ariaLabel": null,
+      "title": null
+    },
+    "backdrop": {
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      }
+    },
+    "headerText": "Movimientos del Paquete",
+    "rows": [
+      "Guia: DP01-003068340001",
+      "TBA334226770293 Embarcado 9/2/2026 4:43:55 PM",
+      "TBA334226770293 Empacado 9/2/2026 11:22:46 AM",
+      "TBA334226770293 Recibido Miami 9/2/2026 9:35:52 AM"
+    ],
+    "pageRows": 1,
+    "headerRect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 60
+    },
+    "popupRole": null,
+    "popupAriaModal": null,
+    "vw": 1440,
+    "vh": 900
+  },
+  "popupsInDom": 1,
+  "dialogs": []
+}

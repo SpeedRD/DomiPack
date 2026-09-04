@@ -1,0 +1,62 @@
+{
+  "attrs": {
+    "id": "cpBody_File1",
+    "tag": "INPUT",
+    "type": "file",
+    "placeholder": null,
+    "required": true,
+    "maxlength": null,
+    "pattern": null,
+    "min": null,
+    "max": null,
+    "step": null,
+    "accept": null,
+    "multiple": false,
+    "disabled": false,
+    "readOnly": false,
+    "tabindex": "2",
+    "autofocus": false,
+    "autocomplete": null,
+    "ariaLabel": null,
+    "ariaLabelledby": null,
+    "ariaDescribedby": null,
+    "ariaRequired": null,
+    "title": null,
+    "labelFor": null,
+    "labelsCount": 0,
+    "onclick": null,
+    "onchange": null,
+    "visible": true,
+    "containerText": "Subir Factura *"
+  },
+  "txt": {
+    "name": "fixture-1kb.txt",
+    "size": 948,
+    "type": "text/plain",
+    "valid": true,
+    "msg": "",
+    "feedbackText": "Subir Factura *",
+    "swalOpen": false,
+    "blocked": 0
+  },
+  "pdf": {
+    "name": "fixture-invoice.pdf",
+    "size": 188,
+    "type": "application/pdf",
+    "valid": true,
+    "msg": "",
+    "feedbackText": "Subir Factura *",
+    "swalOpen": false,
+    "blocked": 0
+  },
+  "exe": {
+    "name": "fixture-fake.pdf.exe",
+    "size": 9,
+    "type": "application/x-msdownload",
+    "valid": true,
+    "msg": "",
+    "feedbackText": "Subir Factura *",
+    "swalOpen": false,
+    "blocked": 0
+  }
+}

@@ -1,0 +1,1305 @@
+{
+  "pagoonline": {
+    "375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": false,
+      "gridWidth": 305,
+      "gridRight": 340,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 4,
+      "adaptiveDetailButtonsVisible": 1,
+      "wideElements": [],
+      "sidebarVisible": false,
+      "mobileToggle": true,
+      "taps": {
+        "total": 10,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "button#",
+            "w": 23,
+            "h": 29,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "a#cpBody_gvDatos_DXCBtn0",
+            "w": 13,
+            "h": 11,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 340,
+        "cardRight": 360,
+        "mainRight": 375,
+        "gridW": 305,
+        "viewport": 375,
+        "cellsHidden": 4,
+        "visibleHeaders": [
+          "Guia",
+          "Fecha",
+          "Peso"
+        ]
+      },
+      "form375": null,
+      "shot": "audit/screenshots/rs-pagoonline-375.png"
+    },
+    "768": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflow": false,
+      "gridWidth": 483.5,
+      "gridRight": 534,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 4,
+      "adaptiveDetailButtonsVisible": 1,
+      "wideElements": [],
+      "sidebarVisible": false,
+      "mobileToggle": true,
+      "taps": {
+        "total": 10,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "button#",
+            "w": 23,
+            "h": 29,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "a#cpBody_gvDatos_DXCBtn0",
+            "w": 13,
+            "h": 11,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 534,
+        "cardRight": 554,
+        "mainRight": 768,
+        "gridW": 484,
+        "viewport": 768,
+        "cellsHidden": 4,
+        "visibleHeaders": [
+          "Guia",
+          "Fecha",
+          "Peso",
+          "FOB"
+        ]
+      },
+      "form375": null,
+      "shot": "audit/screenshots/rs-pagoonline-768.png"
+    },
+    "1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "overflow": false,
+      "gridWidth": 777.5,
+      "gridRight": 1108,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 4,
+      "adaptiveDetailButtonsVisible": 0,
+      "wideElements": [],
+      "sidebarVisible": true,
+      "mobileToggle": false,
+      "taps": {
+        "total": 8,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 1108,
+        "cardRight": 1128,
+        "mainRight": 1440,
+        "gridW": 778,
+        "viewport": 1440,
+        "cellsHidden": 4,
+        "visibleHeaders": [
+          "Guia",
+          "Fecha",
+          "Peso",
+          "FOB",
+          "Descripcion",
+          "Envianombre",
+          "Total A Pagar (DOP)"
+        ]
+      },
+      "form375": null,
+      "shot": "audit/screenshots/rs-pagoonline-1440.png"
+    },
+    "axe": {
+      "file": "audit/logs/axe/pagoonline.json",
+      "violations": [
+        {
+          "id": "aria-allowed-attr",
+          "impact": "critical",
+          "help": "Elements must only use supported ARIA attributes",
+          "nodes": 1,
+          "sample": [
+            ".p-0[data-toggle=\"dropdown\"][aria-haspopup=\"true\"]"
+          ]
+        },
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 1,
+          "sample": [
+            ".app-header > .app-header__logo > .header__pane.ml-auto > div > .close-sidebar-btn.hamburger[data-class=\"closed-sidebar\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 20,
+          "sample": [
+            "#llocalidad",
+            ".app-sidebar__heading",
+            "#lMicuenta"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 26,
+          "sample": [
+            ".ml-3",
+            ".app-sidebar__heading",
+            "li:nth-child(2)"
+          ]
+        }
+      ],
+      "count": 7
+    },
+    "axe375": {
+      "file": "audit/logs/axe/pagoonline-375.json",
+      "violations": [
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 2,
+          "sample": [
+            ".app-header > .app-header__mobile-menu > div > .mobile-toggle-nav.hamburger.hamburger--elastic",
+            ".app-header > .app-header__menu > span > .btn-icon.btn-icon-only.btn-primary"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 5,
+          "sample": [
+            ".page-title-subheading",
+            "#cpBody_bpagar",
+            "#cpBody_gvDatos_col0 > table > tbody > tr > td:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 16,
+          "sample": [
+            ".app-sidebar__heading",
+            "li:nth-child(2)",
+            "li:nth-child(3)"
+          ]
+        }
+      ],
+      "count": 6
+    }
+  },
+  "prueba": {
+    "375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": false,
+      "gridWidth": 348.46875,
+      "gridRight": 363,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 6,
+      "adaptiveDetailButtonsVisible": 4,
+      "wideElements": [],
+      "sidebarVisible": false,
+      "mobileToggle": true,
+      "taps": {
+        "total": 16,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "button#",
+            "w": 23,
+            "h": 29,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 363,
+        "cardRight": 360,
+        "mainRight": 375,
+        "gridW": 348,
+        "viewport": 375,
+        "cellsHidden": 6,
+        "visibleHeaders": [
+          "Imprimir",
+          "Guia",
+          "Fecha"
+        ]
+      },
+      "form375": null,
+      "shot": "audit/screenshots/rs-prueba-375.png"
+    },
+    "768": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflow": false,
+      "gridWidth": 708,
+      "gridRight": 738,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 6,
+      "adaptiveDetailButtonsVisible": 4,
+      "wideElements": [],
+      "sidebarVisible": false,
+      "mobileToggle": true,
+      "taps": {
+        "total": 16,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "button#",
+            "w": 23,
+            "h": 29,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 738,
+        "cardRight": 738,
+        "mainRight": 768,
+        "gridW": 708,
+        "viewport": 768,
+        "cellsHidden": 6,
+        "visibleHeaders": [
+          "Imprimir",
+          "Guia",
+          "Fecha",
+          "Tracking",
+          "Peso",
+          "FOB"
+        ]
+      },
+      "form375": null,
+      "shot": "audit/screenshots/rs-prueba-768.png"
+    },
+    "1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "overflow": false,
+      "gridWidth": 1100,
+      "gridRight": 1410,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 6,
+      "adaptiveDetailButtonsVisible": 0,
+      "wideElements": [],
+      "sidebarVisible": true,
+      "mobileToggle": false,
+      "taps": {
+        "total": 11,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 1410,
+        "cardRight": 1410,
+        "mainRight": 1440,
+        "gridW": 1100,
+        "viewport": 1440,
+        "cellsHidden": 6,
+        "visibleHeaders": [
+          "Imprimir",
+          "Guia",
+          "Fecha",
+          "Tracking",
+          "Peso",
+          "FOB",
+          "Estatus",
+          "Contenido",
+          "Suplidor",
+          "Categoria"
+        ]
+      },
+      "form375": null,
+      "shot": "audit/screenshots/rs-prueba-1440.png"
+    },
+    "axe": {
+      "file": "audit/logs/axe/prueba.json",
+      "violations": [
+        {
+          "id": "aria-allowed-attr",
+          "impact": "critical",
+          "help": "Elements must only use supported ARIA attributes",
+          "nodes": 1,
+          "sample": [
+            "a[data-toggle=\"dropdown\"]"
+          ]
+        },
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 1,
+          "sample": [
+            ".app-header > .app-header__logo > .header__pane.ml-auto > div > .close-sidebar-btn.hamburger[data-class=\"closed-sidebar\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 20,
+          "sample": [
+            "#llocalidad",
+            ".app-sidebar__heading",
+            "#lMicuenta"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 59,
+          "sample": [
+            ".ml-3",
+            ".app-sidebar__heading",
+            "li:nth-child(2)"
+          ]
+        }
+      ],
+      "count": 7
+    },
+    "axe375": {
+      "file": "audit/logs/axe/prueba-375.json",
+      "violations": [
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 2,
+          "sample": [
+            ".app-header > .app-header__mobile-menu > div > .mobile-toggle-nav.hamburger.hamburger--elastic",
+            ".app-header > .app-header__menu > span > .btn-icon-only.btn-primary.btn-sm"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 3,
+          "sample": [
+            "#cpBody_gvDatos_col0 > table > tbody > tr > td:nth-child(1)",
+            "#cpBody_gvDatos_col1 > table > tbody > tr > td:nth-child(1)",
+            "#cpBody_gvDatos_col2 > table > tbody > tr > td:nth-child(1)"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 26,
+          "sample": [
+            ".app-sidebar__heading",
+            "li:nth-child(2)",
+            "li:nth-child(3)"
+          ]
+        }
+      ],
+      "count": 6
+    }
+  },
+  "prealerta": {
+    "375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": false,
+      "gridWidth": 312.421875,
+      "gridRight": 347,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 3,
+      "adaptiveDetailButtonsVisible": 0,
+      "wideElements": [],
+      "sidebarVisible": false,
+      "mobileToggle": true,
+      "taps": {
+        "total": 16,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "button#",
+            "w": 23,
+            "h": 29,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 347,
+        "cardRight": 360,
+        "mainRight": 375,
+        "gridW": 312,
+        "viewport": 375,
+        "cellsHidden": 3,
+        "visibleHeaders": [
+          "Fecha",
+          "Tracking"
+        ]
+      },
+      "form375": [
+        "cpBody_Tracking:35-340",
+        "cpBody_FOB:35-340",
+        "cpBody_Transpos:35-340",
+        "cpBody_Suplidor:35-340",
+        "cpBody_contenido:35-340",
+        "cpBody_File1:35-340",
+        "cpBody_bSend:35-203"
+      ],
+      "shot": "audit/screenshots/rs-prealerta-375.png"
+    },
+    "768": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflow": false,
+      "gridWidth": 437.890625,
+      "gridRight": 721,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 3,
+      "adaptiveDetailButtonsVisible": 0,
+      "wideElements": [],
+      "sidebarVisible": false,
+      "mobileToggle": true,
+      "taps": {
+        "total": 16,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "button#",
+            "w": 23,
+            "h": 29,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 721,
+        "cardRight": 738,
+        "mainRight": 768,
+        "gridW": 438,
+        "viewport": 768,
+        "cellsHidden": 3,
+        "visibleHeaders": [
+          "Fecha",
+          "Tracking",
+          "Proovedor"
+        ]
+      },
+      "form375": [
+        "cpBody_Tracking:50-253",
+        "cpBody_FOB:50-253",
+        "cpBody_Transpos:50-253",
+        "cpBody_Suplidor:50-253",
+        "cpBody_contenido:50-253",
+        "cpBody_File1:50-253",
+        "cpBody_bSend:50-218"
+      ],
+      "shot": "audit/screenshots/rs-prealerta-768.png"
+    },
+    "1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "overflow": false,
+      "gridWidth": 696.65625,
+      "gridRight": 1390,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 3,
+      "adaptiveDetailButtonsVisible": 0,
+      "wideElements": [],
+      "sidebarVisible": true,
+      "mobileToggle": false,
+      "taps": {
+        "total": 15,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 1390,
+        "cardRight": 1410,
+        "mainRight": 1440,
+        "gridW": 697,
+        "viewport": 1440,
+        "cellsHidden": 3,
+        "visibleHeaders": [
+          "Fecha",
+          "Tracking",
+          "Proovedor",
+          "Contenido",
+          "Valor"
+        ]
+      },
+      "form375": [
+        "cpBody_Tracking:330-663",
+        "cpBody_FOB:330-663",
+        "cpBody_Transpos:330-663",
+        "cpBody_Suplidor:330-663",
+        "cpBody_contenido:330-663",
+        "cpBody_File1:330-663",
+        "cpBody_bSend:330-498"
+      ],
+      "shot": "audit/screenshots/rs-prealerta-1440.png"
+    },
+    "axe": {
+      "file": "audit/logs/axe/prealerta.json",
+      "violations": [
+        {
+          "id": "aria-allowed-attr",
+          "impact": "critical",
+          "help": "Elements must only use supported ARIA attributes",
+          "nodes": 1,
+          "sample": [
+            "a[data-toggle=\"dropdown\"]"
+          ]
+        },
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 1,
+          "sample": [
+            ".app-header > .app-header__logo > .header__pane.ml-auto > div > .close-sidebar-btn.hamburger[data-class=\"closed-sidebar\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 18,
+          "sample": [
+            "#llocalidad",
+            ".app-sidebar__heading",
+            "#lMicuenta"
+          ]
+        },
+        {
+          "id": "label",
+          "impact": "critical",
+          "help": "Form elements must have labels",
+          "nodes": 1,
+          "sample": [
+            "#cpBody_File1"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 23,
+          "sample": [
+            ".ml-3",
+            ".app-sidebar__heading",
+            "li:nth-child(2)"
+          ]
+        },
+        {
+          "id": "select-name",
+          "impact": "critical",
+          "help": "Select element must have an accessible name",
+          "nodes": 1,
+          "sample": [
+            "#cpBody_Transpos"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 7,
+          "sample": [
+            "#cpBody_Tracking",
+            "#cpBody_ClienteID",
+            "#cpBody_FOB"
+          ]
+        }
+      ],
+      "count": 10
+    },
+    "axe375": {
+      "file": "audit/logs/axe/prealerta-375.json",
+      "violations": [
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 2,
+          "sample": [
+            ".app-header > .app-header__mobile-menu > div > .mobile-toggle-nav.hamburger.hamburger--elastic",
+            ".app-header > .app-header__menu > span > .btn-icon.btn-icon-only.btn-primary"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 5,
+          "sample": [
+            ".page-title-subheading",
+            "#cpBody_bSend",
+            "#cpBody_gvDatos_col1 > table > tbody > tr > td:nth-child(1)"
+          ]
+        },
+        {
+          "id": "label",
+          "impact": "critical",
+          "help": "Form elements must have labels",
+          "nodes": 1,
+          "sample": [
+            "#cpBody_File1"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 18,
+          "sample": [
+            ".app-sidebar__heading",
+            "li:nth-child(2)",
+            "li:nth-child(3)"
+          ]
+        },
+        {
+          "id": "select-name",
+          "impact": "critical",
+          "help": "Select element must have an accessible name",
+          "nodes": 1,
+          "sample": [
+            "#cpBody_Transpos"
+          ]
+        },
+        {
+          "id": "tabindex",
+          "impact": "serious",
+          "help": "Elements should not have tabindex greater than zero",
+          "nodes": 7,
+          "sample": [
+            "#cpBody_Tracking",
+            "#cpBody_ClienteID",
+            "#cpBody_FOB"
+          ]
+        }
+      ],
+      "count": 9
+    }
+  },
+  "estado": {
+    "375": {
+      "scrollWidth": 931,
+      "clientWidth": 375,
+      "bodyScrollWidth": 931,
+      "overflow": true,
+      "gridWidth": 915.65625,
+      "gridRight": 931,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 0,
+      "adaptiveDetailButtonsVisible": 0,
+      "wideElements": [
+        "table#cpBody_gvDatos.dxgvControl_Office365.dxgv.dxgvAdD@931",
+        "tbody#.@931",
+        "tr#.@931",
+        "td#.@931",
+        "div#.dxAC@926",
+        "div#.@926",
+        "table#cpBody_gvDatos_DXMainTable.dxgvTable_Office365.dxgvRBB@926",
+        "tbody#.@925"
+      ],
+      "sidebarVisible": false,
+      "mobileToggle": true,
+      "taps": {
+        "total": 11,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "button#",
+            "w": 23,
+            "h": 29,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 931,
+        "cardRight": 360,
+        "mainRight": 375,
+        "gridW": 916,
+        "viewport": 375,
+        "cellsHidden": 0,
+        "visibleHeaders": [
+          "Factura",
+          "Fecha",
+          "TotalFacturado",
+          "Debito",
+          "Credito",
+          "Balance",
+          "Dias Vencidos",
+          "Monedas"
+        ]
+      },
+      "form375": null,
+      "shot": "audit/screenshots/rs-estado-375.png"
+    },
+    "768": {
+      "scrollWidth": 946,
+      "clientWidth": 768,
+      "bodyScrollWidth": 946,
+      "overflow": true,
+      "gridWidth": 915.65625,
+      "gridRight": 946,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 0,
+      "adaptiveDetailButtonsVisible": 0,
+      "wideElements": [
+        "table#cpBody_gvDatos.dxgvControl_Office365.dxgv.dxgvAdD@946",
+        "tbody#.@946",
+        "tr#.@946",
+        "td#.@946",
+        "div#.dxAC@941",
+        "div#.@941",
+        "table#cpBody_gvDatos_DXMainTable.dxgvTable_Office365.dxgvRBB@941",
+        "tbody#.@940"
+      ],
+      "sidebarVisible": false,
+      "mobileToggle": true,
+      "taps": {
+        "total": 11,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "button#",
+            "w": 23,
+            "h": 29,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 946,
+        "cardRight": 738,
+        "mainRight": 768,
+        "gridW": 916,
+        "viewport": 768,
+        "cellsHidden": 0,
+        "visibleHeaders": [
+          "Factura",
+          "Fecha",
+          "TotalFacturado",
+          "Debito",
+          "Credito",
+          "Balance",
+          "Dias Vencidos",
+          "Monedas"
+        ]
+      },
+      "form375": null,
+      "shot": "audit/screenshots/rs-estado-768.png"
+    },
+    "1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "overflow": false,
+      "gridWidth": 1100,
+      "gridRight": 1410,
+      "gridScrollContainer": null,
+      "hiddenAdaptiveCells": 0,
+      "adaptiveDetailButtonsVisible": 0,
+      "wideElements": [],
+      "sidebarVisible": true,
+      "mobileToggle": false,
+      "taps": {
+        "total": 10,
+        "small": [
+          {
+            "sel": "button#",
+            "w": 24,
+            "h": 21,
+            "text": ""
+          },
+          {
+            "sel": "a#",
+            "w": 22,
+            "h": 21,
+            "text": ""
+          }
+        ]
+      },
+      "gridBox": {
+        "gridRight": 1410,
+        "cardRight": 1410,
+        "mainRight": 1440,
+        "gridW": 1100,
+        "viewport": 1440,
+        "cellsHidden": 0,
+        "visibleHeaders": [
+          "Factura",
+          "Fecha",
+          "TotalFacturado",
+          "Debito",
+          "Credito",
+          "Balance",
+          "Dias Vencidos",
+          "Monedas"
+        ]
+      },
+      "form375": null,
+      "shot": "audit/screenshots/rs-estado-1440.png"
+    },
+    "axe": {
+      "file": "audit/logs/axe/estado.json",
+      "violations": [
+        {
+          "id": "aria-allowed-attr",
+          "impact": "critical",
+          "help": "Elements must only use supported ARIA attributes",
+          "nodes": 1,
+          "sample": [
+            "a[data-toggle=\"dropdown\"]"
+          ]
+        },
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 1,
+          "sample": [
+            ".app-header > .app-header__logo > .header__pane.ml-auto > div > .close-sidebar-btn.hamburger[data-class=\"closed-sidebar\"]"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 16,
+          "sample": [
+            "#llocalidad",
+            ".app-sidebar__heading",
+            "#lMicuenta"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 35,
+          "sample": [
+            ".ml-3",
+            ".app-sidebar__heading",
+            "li:nth-child(2)"
+          ]
+        }
+      ],
+      "count": 7
+    },
+    "axe375": {
+      "file": "audit/logs/axe/estado-375.json",
+      "violations": [
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "help": "Buttons must have discernible text",
+          "nodes": 2,
+          "sample": [
+            ".app-header > .app-header__mobile-menu > div > .mobile-toggle-nav.hamburger.hamburger--elastic",
+            ".app-header > .app-header__menu > span > .btn-icon.btn-icon-only.btn-primary"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": 5,
+          "sample": [
+            ".page-title-subheading",
+            "#cpBody_gvDatos_DXFooterRow > .dxgv:nth-child(4)",
+            "#cpBody_gvDatos_DXFooterRow > .dxgv:nth-child(5)"
+          ]
+        },
+        {
+          "id": "landmark-one-main",
+          "impact": "moderate",
+          "help": "Document should have one main landmark",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "meta-viewport",
+          "impact": "moderate",
+          "help": "Zooming and scaling must not be disabled",
+          "nodes": 1,
+          "sample": [
+            "meta[name=\"viewport\"]"
+          ]
+        },
+        {
+          "id": "page-has-heading-one",
+          "impact": "moderate",
+          "help": "Page should contain a level-one heading",
+          "nodes": 1,
+          "sample": [
+            "html"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "nodes": 33,
+          "sample": [
+            ".app-sidebar__heading",
+            "li:nth-child(2)",
+            "li:nth-child(3)"
+          ]
+        }
+      ],
+      "count": 6
+    }
+  }
+}

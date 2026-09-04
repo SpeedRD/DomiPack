@@ -1,0 +1,776 @@
+[
+  {
+    "id": "MC-01",
+    "pantalla": "Mi Cuenta > Datos Personales / Dependientes / Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "Todos los <label> de los tres formularios; selects #cpBody_lSucursal, #cpBody_cbPais, #cpBody_cbProvincia, #cpBody_cbCiudad, #cpBody_cbSector; checkbox #cpBody_ckPrincipal",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "Todos los campos tienen una etiqueta visible pero ninguna está asociada programáticamente (sin for/id, sin aria-label, sin envolver el control). Los cinco selects no tienen nombre accesible (axe select-name: 1 nodo en Datos Personales, 4 en Direccion). Hacer clic en la etiqueta no enfoca el campo ni marca el checkbox.",
+    "pasos_para_reproducir": [
+      "1. Iniciar sesión y abrir MiCuenta.aspx.",
+      "2. Inspeccionar cualquier <label> (p. ej. 'Nombre:') y su <input>: label sin atributo for; input sin aria-label.",
+      "3. Ejecutar axe-core: regla select-name falla en #cpBody_lSucursal (Datos Personales) y en cbPais/cbProvincia/cbCiudad/cbSector (Direccion).",
+      "4. En Direccion, hacer clic en el texto 'Principal:' — el checkbox no cambia."
+    ],
+    "comportamiento_actual": "Etiquetas visibles sin asociación (TF-10: 9/9 campos visibles en Datos Personales, 4/4 en Dependientes, 2/2 + checkbox en Direccion). Un lector de pantalla anuncia los campos solo por placeholder ('Nombre', 'Direccion', 'Telefono'...) o sin nombre en el caso de los selects.",
+    "comportamiento_esperado": "Cada control con <label for=id> o aria-labelledby; selects y checkbox con nombre accesible; clic en la etiqueta enfoca/activa el control.",
+    "impacto_usuario": "Usuarios de lector de pantalla no saben qué campo están rellenando (varios comparten placeholder 'Direccion'/'Telefono'); área de clic reducida en el checkbox.",
+    "evidencia": [
+      "audit/screenshots/MC-01.png",
+      "audit/logs/evidence/MC-datos-fields.json",
+      "audit/logs/evidence/MC-dependientes.json",
+      "audit/logs/evidence/MC-direccion.json",
+      "audit/logs/axe/micuenta-datos-1440.json",
+      "audit/logs/axe/micuenta-direccion-1440.json"
+    ],
+    "propuesta_preliminar": "Añadir for/id a cada label (los ids ya son estables: cpBody_lNombre, etc.) y aria-label a los selects; en el rediseño usar un componente de campo que asocie etiqueta por defecto.",
+    "info_tecnica": "Ejemplo del DOM: <label>Nombre:</label><input name=\"ctl00$cpBody$lNombre\" type=\"text\" id=\"cpBody_lNombre\" class=\"form-control\" placeholder=\"Nombre\">. axe: select-name [critical] '#cpBody_lSucursal | Element does not have an implicit (wrapped) <label> / explicit <label> / aria-label'. Patrón sugerido (a consolidar por el coordinador): Etiquetado por placeholder (Login, Nueva Cuenta, PreAlerta).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TF-10",
+      "AX-02",
+      "SL-05",
+      "CB-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-02",
+    "pantalla": "Mi Cuenta > Datos Personales / Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "#cpBody_lCodigo (readonly), #cpBody_lSucursal (disabled), #cpBody_cbPais y #cpBody_cbProvincia (disabled)",
+    "categoria": "ux-ui",
+    "severidad": "menor",
+    "descripcion": "Cuatro controles cargan bloqueados sin ninguna explicación (sin tooltip, title, texto de ayuda ni icono): Codigo es readonly con fondo gris, Sucursal y País/Provincia son selects disabled con opacidad 0.7 sobre fondo rojo.",
+    "pasos_para_reproducir": [
+      "1. Abrir MiCuenta.aspx.",
+      "2. Intentar escribir en Codigo (readonly=readonly, el valor 'DP-014003' no cambia).",
+      "3. Intentar abrir Sucursal (disabled, class aspNetDisabled, title=null).",
+      "4. Pestaña Direccion: País y Provincia disabled, title=null."
+    ],
+    "comportamiento_actual": "El usuario no sabe si puede cambiar la sucursal o la provincia ni a quién pedirlo. En Direccion el bloqueo deja el formulario sin poder completarse (ver MC-14).",
+    "comportamiento_esperado": "Indicar el motivo del bloqueo ('Para cambiar tu sucursal contacta a…') o no mostrar el control como campo editable.",
+    "impacto_usuario": "Confusión y percepción de error; posibles tickets de soporte.",
+    "evidencia": [
+      "audit/screenshots/MC-02.png",
+      "audit/screenshots/DS-07.png",
+      "audit/logs/evidence/MC-datos-fields.json"
+    ],
+    "propuesta_preliminar": "Convertir en texto de solo lectura con nota explicativa, o habilitar la edición con validación de negocio.",
+    "info_tecnica": "#cpBody_lCodigo: readonly=\"readonly\" (no disabled), bg rgb(233,236,239). #cpBody_lSucursal: disabled, 27 opciones, seleccionado 'PUNTA CANA', opacity 0.7 → contraste 2.11:1. #cpBody_cbPais: 1 opción 'Republica Dominicana', tabindex=\"8\". #cpBody_cbProvincia: 32 opciones, 'SELECCIONAR PROVINCIA'. Patrón sugerido (a consolidar por el coordinador): Campos deshabilitados sin explicación (Nueva Cuenta teléfonos/contraseña).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TF-12",
+      "SL-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-03",
+    "pantalla": "Mi Cuenta > Datos Personales / Dependientes",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "#cpBody_lEmail, #cpBody_lEmailDependiente (email); #cpBody_lTelefono, #cpBody_lTelefono2, #cpBody_lCelular, #cpBody_lCelularDependiente (teléfonos)",
+    "categoria": "validacion",
+    "severidad": "mayor",
+    "descripcion": "Los campos de correo y teléfono son <input type=\"text\"> sin pattern, inputmode ni autocomplete: no hay semántica nativa (teclado móvil, validación inline) y cualquier formato inválido se acepta en cliente ('abc', 'a@@x.com', 'a@x.com.', 'abc +++ ()').",
+    "pasos_para_reproducir": [
+      "1. Pestaña Dependientes, escribir 'a@@x.com' en Email: checkValidity()=true, sin mensaje.",
+      "2. Escribir 'abc +++ ()' en Celular #: aceptado.",
+      "3. Datos Personales: Email y los tres teléfonos se comportan igual (type=text, validity siempre true)."
+    ],
+    "comportamiento_actual": "EM-02: los 7 formatos inválidos de la matriz devuelven checkValidity=true en #cpBody_lEmailDependiente. PH-02: letras y símbolos aceptados en los 4 teléfonos. No se disparó el guardado (STATIC-ONLY), por lo que la validación de servidor no está confirmada.",
+    "comportamiento_esperado": "type=email / type=tel con inputmode y autocomplete (email, tel), validación inline con mensaje claro antes de enviar.",
+    "impacto_usuario": "Datos de contacto erróneos guardados sin aviso (notificaciones de paquetes no llegan); teclado inadecuado en móvil.",
+    "evidencia": [
+      "audit/screenshots/MC-03.png",
+      "audit/logs/evidence/MC-dependientes.json",
+      "audit/logs/evidence/MC-datos-fields.json"
+    ],
+    "propuesta_preliminar": "Cambiar tipos de input y añadir validación cliente + servidor; normalizar teléfonos.",
+    "info_tecnica": "facts.fields (MC-dependientes.json): cpBody_lEmailDependiente {type:'text', pattern:null, autocomplete:null, inputmode:null}; EM-02 checkValidity por entrada: {\"abc\":true,\"abc@\":true,\"@x.com\":true,\"a b@x.com\":true,\"a@x\":true,\"a@@x.com\":true,\"a@x.com.\":true}. Patrón sugerido (a consolidar por el coordinador): Nueva Cuenta #Email/#ltelefono (mismo patrón).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "EM-02",
+      "EM-07",
+      "PH-02",
+      "PH-06"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "MC-04",
+    "pantalla": "Mi Cuenta > Datos Personales",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "#cpBody_lContrasena (Nueva Contraseña)",
+    "categoria": "ux-ui",
+    "severidad": "mayor",
+    "descripcion": "El cambio de contraseña es un único campo password sin política visible (sin longitud mínima, sin medidor), sin confirmación, sin botón mostrar/ocultar, sin autocomplete=\"new-password\" y sin texto que aclare que dejarlo vacío conserva la contraseña actual.",
+    "pasos_para_reproducir": [
+      "1. Abrir MiCuenta.aspx > Datos Personales.",
+      "2. Inspeccionar #cpBody_lContrasena: minlength=null, autocomplete=null, sin elementos de tipo meter/eye.",
+      "3. Escribir 10.000 caracteres o solo espacios: aceptado en cliente sin aviso (no se pulsó Guardar)."
+    ],
+    "comportamiento_actual": "Campo suelto con placeholder 'Nueva Contraseña' y etiqueta 'Contrasena:'. El navegador puede autocompletar la contraseña guardada en este campo (no está marcado como new-password), con lo que un clic en Guardar podría cambiarla sin intención.",
+    "comportamiento_esperado": "Bloque de cambio de contraseña con contraseña actual + nueva + confirmación, política visible, mostrar/ocultar, autocomplete=new-password y ayuda 'Déjalo en blanco para no cambiarla'.",
+    "impacto_usuario": "Riesgo de cambio accidental o de contraseña débil/escrita con error (sin confirmación); bloqueo de cuenta posterior.",
+    "evidencia": [
+      "audit/screenshots/MC-04.png",
+      "audit/logs/evidence/MC-datos-fields.json"
+    ],
+    "propuesta_preliminar": "Separar el cambio de contraseña en su propio flujo con confirmación y política.",
+    "info_tecnica": "<input name=\"ctl00$cpBody$lContrasena\" type=\"password\" id=\"cpBody_lContrasena\" class=\"form-control\" placeholder=\"Nueva Contraseña\"> — sin minlength/maxlength/autocomplete. PW-03: 10000 chars aceptados (3 ms). PW-04: '     ' (5 espacios) aceptado. Patrón sugerido (a consolidar por el coordinador): Nueva Cuenta #Password (misma ausencia de política).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "PW-03",
+      "PW-04",
+      "PW-05",
+      "PW-06",
+      "PW-07"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "MC-05",
+    "pantalla": "Mi Cuenta > Datos Personales / Dependientes / Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "#cpBody_Button1 'Guardar', #cpBody_Button3 'Guardar Dependiente', #cpBody_bDireccion 'Guardar Direccion'",
+    "categoria": "robustez",
+    "severidad": "menor",
+    "descripcion": "Los tres botones de guardado son <input type=submit> sin onclick, sin diálogo de confirmación, sin deshabilitado-al-enviar ni indicador de carga. La página incluye un helper Confirmar()/SweetAlert pero no está conectado a ningún botón.",
+    "pasos_para_reproducir": [
+      "1. Inspeccionar #cpBody_Button1: onclick=null, form onsubmit=null.",
+      "2. Comprobar en consola: typeof Confirmar === 'function', typeof swal === 'function', pero ningún botón lo invoca (una sola ocurrencia de 'Confirmar(' en el HTML: su definición).",
+      "3. (No se pulsó ningún botón: escriben datos reales de la cuenta.)"
+    ],
+    "comportamiento_actual": "Postback completo de WebForms sin feedback; un doble clic podría enviar dos veces (no verificado por ser destructivo).",
+    "comportamiento_esperado": "Deshabilitar el botón y mostrar estado 'Guardando…' tras el clic; confirmar acciones con efecto en la cuenta (contraseña, dirección principal).",
+    "impacto_usuario": "Ambigüedad '¿se guardó?' y posibles envíos duplicados.",
+    "evidencia": [
+      "audit/screenshots/MC-05.png",
+      "audit/logs/evidence/MC-datos-fields.json",
+      "audit/logs/evidence/micuenta-recon.json"
+    ],
+    "propuesta_preliminar": "Usar el helper existente o un patrón de submit con disable + spinner; confirmar cambios sensibles.",
+    "info_tecnica": "facts.button1: {onclick:null, value:'Guardar', disabled:false}; inline script: function Confirmar(titulo, message, tipo, tituloPrint) { swal({ title: titulo, text: tituloPrint, icon: tipo, buttons: ['No!','Yes!'], dangerMode: true }).then(...Guardar()...) } — Guardar() hace click en #cpBody_bGuardarClientes (botón oculto). Eliminar(s) sí usa confirm('Desea Eliminar el Dependiente?'). Patrón sugerido (a consolidar por el coordinador): Envíos sin protección de doble clic (PreAlerta, Nueva Cuenta).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-02",
+      "BT-07"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "MC-06",
+    "pantalla": "Mi Cuenta > Datos Personales / Dependientes / Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "Los 16 campos de texto de las tres pestañas (Nombre, Identificacion, Email, Direccion 1/2, Telefono, Tel. Oficina, Celular, Nombre/Cedula/Email/Celular dependiente, Direccion, Nota) y #cpBody_lContrasena",
+    "categoria": "validacion",
+    "severidad": "mayor",
+    "descripcion": "No existe ninguna validación en el cliente: ningún campo tiene required, maxlength ni pattern; window.Page_Validators no existe (sin validadores ASP.NET) y no hay JS de validación. Vacío, solo espacios, 100.000 caracteres, '<script>alert(1)</script>', emojis o \"' OR 1=1 --\" se aceptan tal cual y llegarían al servidor con un solo clic.",
+    "pasos_para_reproducir": [
+      "1. En cualquier campo escribir 'A'×100000 (Nombre, Direccion 1, Nombre dependiente): aceptado (len=100000, 12 ms), sin maxlength.",
+      "2. Vaciar Nombre y dejar Email con '   ': ningún indicador; checkValidity()=true.",
+      "3. En consola: window.Page_Validators → undefined; document.querySelectorAll('[required],[maxlength],[pattern]').length → 0.",
+      "4. (Guardar no se pulsó: STATIC-ONLY.)"
+    ],
+    "comportamiento_actual": "El formulario delega el 100 % de la validación al servidor; la respuesta del servidor ante datos vacíos/enormes/especiales no se ejercitó por ser destructivo.",
+    "comportamiento_esperado": "required/maxlength coherentes con la base de datos, validación inline con mensajes en español y bloqueo del envío inválido.",
+    "impacto_usuario": "Errores de servidor o datos corruptos (nombre vacío, dirección con 100k caracteres) sin feedback previo; impacto real pendiente de confirmar con una cuenta de pruebas desechable.",
+    "evidencia": [
+      "audit/screenshots/MC-06.png",
+      "audit/screenshots/MC-tf04-long-values.png",
+      "audit/logs/evidence/MC-datos-fields.json",
+      "audit/logs/evidence/MC-dependientes.json",
+      "audit/logs/evidence/MC-direccion.json"
+    ],
+    "propuesta_preliminar": "Definir reglas por campo (longitud, formato cédula/RNC, email, teléfono) y aplicarlas en cliente y servidor.",
+    "info_tecnica": "recon: validators=[] (Page_Validators ausente), formOnsubmit=null, ningún atributo required/maxlength/pattern en los inputs de #cpBody_lefticontab1/2/4. TF-04: len=5000 en los 8 campos; len=100000 en lNombre/lDireccion1/lNombreDependiente sin overflow (overflowX=false). Patrón sugerido (a consolidar por el coordinador): Ausencia de validación cliente en formularios WebForms (PreAlerta, Nueva Cuenta).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TF-01",
+      "TF-02",
+      "TF-04",
+      "TF-05",
+      "TF-06",
+      "TF-07",
+      "TF-08",
+      "BT-03",
+      "EM-01",
+      "EM-05",
+      "PH-01",
+      "PH-04"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "MC-07",
+    "pantalla": "Mi Cuenta (y toda pantalla autenticada: formulario único frmBody de la master page)",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "form#frmBody — primer submit del documento: #SetCliente (oculto, master page)",
+    "categoria": "robustez",
+    "severidad": "menor",
+    "descripcion": "Toda la página es un único <form> sin defaultbutton. El primer botón submit en orden de documento es #SetCliente (input oculto junto a #lsClienteID en la master page), por lo que pulsar Enter en cualquier campo de Mi Cuenta dispararía ese botón oculto en lugar de 'Guardar' (o de nada).",
+    "pasos_para_reproducir": [
+      "1. En MiCuenta.aspx ejecutar en consola: document.forms[0].querySelector('input[type=submit]').id → 'SetCliente'.",
+      "2. Observar el markup: <div style=\"display: none\"><input name=\"ctl00$lsClienteID\" type=\"text\" id=\"lsClienteID\"><input type=\"submit\" name=\"ctl00$SetCliente\" value=\"\" id=\"SetCliente\"></div>.",
+      "3. NO se pulsó Enter (provocaría un postback con posible efecto en la cuenta)."
+    ],
+    "comportamiento_actual": "Comportamiento de Enter no verificado en ejecución; por especificación HTML el envío implícito activa el primer submit del formulario aunque esté oculto.",
+    "comportamiento_esperado": "Enter en un formulario debe activar el botón principal visible del formulario en el que está el usuario (o nada), nunca un handler oculto de la master page.",
+    "impacto_usuario": "Resultado impredecible al pulsar Enter (postback a un handler desconocido, pérdida de lo escrito); en el peor caso un efecto lateral no intencionado.",
+    "evidencia": [
+      "audit/screenshots/MC-07.png",
+      "audit/logs/evidence/MC-datos-fields.json",
+      "audit/logs/evidence/micuenta-recon-page.html"
+    ],
+    "propuesta_preliminar": "Separar formularios por pestaña o fijar DefaultButton por panel; mover #SetCliente fuera del flujo de envío implícito.",
+    "info_tecnica": "facts.submits[0] = {id:'SetCliente', value:'', hidden:true}; luego cpBody_BVerificar 'Canjear Cupon' (oculto), cpBody_Button1 'Guardar'. No hay onkeypress/onkeydown ni defaultbutton en el HTML (grep: 0 ocurrencias).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-03"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "MC-08",
+    "pantalla": "Mi Cuenta (chrome compartido)",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "Enlaces del sidebar (#lRastreo, etc.), botón hamburguesa .close-sidebar-btn, enlaces del footer, botones .btn-primary (Guardar)",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "Al navegar con teclado no hay indicador de foco visible en los enlaces del sidebar, la hamburguesa ni los enlaces del footer (outline:none, sin box-shadow ni cambio de color). El botón Guardar tiene box-shadow con spread 0px (invisible). Los inputs de texto y las pestañas sí muestran foco.",
+    "pasos_para_reproducir": [
+      "1. Abrir MiCuenta.aspx y pulsar Tab repetidamente.",
+      "2. Al llegar a 'Rastreo' (sidebar) o a la hamburguesa no se ve ningún cambio visual.",
+      "3. Estilos computados con el foco asentado (500 ms): #lRastreo outline 'none', boxShadow 'none', borderColor igual que sin foco."
+    ],
+    "comportamiento_actual": "Medido con transiciones terminadas: sin indicador en #lRastreo, .close-sidebar-btn y .app-footer a; #cpBody_Button1 box-shadow 'rgba(92,128,222,0.5) 0px 0px 0px 0px' (radio 0 → invisible). Inputs: box-shadow rgba(0,123,255,.25) 3.2px + borde (visible).",
+    "comportamiento_esperado": "Indicador de foco visible en todos los elementos interactivos (WCAG 2.4.7).",
+    "impacto_usuario": "Usuarios de teclado pierden la posición del foco en la navegación principal.",
+    "evidencia": [
+      "audit/screenshots/MC-08.png",
+      "audit/screenshots/focus-lRastreo.png",
+      "audit/screenshots/focus-closesidebarbtn.png",
+      "audit/screenshots/focus-cpBodyButton1.png",
+      "audit/logs/evidence/MC-08-focus-styles.json"
+    ],
+    "propuesta_preliminar": "Definir :focus-visible global (outline 2px de alto contraste) y no anular el outline del tema.",
+    "info_tecnica": "MC-08-focus-styles.json: '#lRastreo' settled {outline:'none 3px rgb(234,53,55)', boxShadow:'none', borderColor:'rgb(234,53,55)'} vs blurred idéntico. Nota: la primera lectura (micuenta-responsive-axe AX-04) se hizo a mitad de transición CSS y marcó erróneamente los inputs; corregido en micuenta-focus-check (entrada 'CORRECTION' en el jsonl). Patrón sugerido (a consolidar por el coordinador): Tema Architect UI con outline anulado en todas las pantallas.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-11",
+      "AX-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-09",
+    "pantalla": "Mi Cuenta > Datos Personales / Dependientes / Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "Encabezados, etiquetas, placeholders, textos de botón y <html lang>",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "Copy inconsistente y con errores: 'Personal Detalles' (calco del inglés), subtítulo 'Actualiza tu Datos.' (concordancia), tildes ausentes de forma sistemática (Codigo, Identificacion, Contrasena, Direccion, Telefono, Sucursal sin dos puntos) frente a 'Nueva Contraseña' y 'DIRECCIÓN DE PAQUETES' con tilde; encabezado 'Agregar / Editar Dependiente' con botón 'Guardar Dependiente' (el botón 'Agregar Dependiente' está oculto); 'SELECCIONAR PROVINCIA' en mayúsculas; etiqueta 'Cedula/Pasaporte:' con placeholder 'Cedula'; <html lang=\"en\"> en una página en español.",
+    "pasos_para_reproducir": [
+      "1. Abrir MiCuenta.aspx y leer los encabezados de columna ('Personal Detalles', 'Otros Detalles').",
+      "2. Leer el subtítulo bajo 'Mi Cuenta': 'Actualiza tu Datos.'.",
+      "3. Comparar etiquetas 'Contrasena:' vs placeholder 'Nueva Contraseña'.",
+      "4. document.documentElement.lang → 'en'."
+    ],
+    "comportamiento_actual": "Textos capturados: labels ['Personal Detalles','Codigo:','Nombre:','Identificacion:','Email:','Contrasena:','Otros Detalles','Direccion 1:','Direccion 2:','Sucursal','Telefono:','Tel. Oficina:','Celular:']; pestañas ['Datos Personales','Dependientes','Direccion']; botones ['Guardar','Guardar Dependiente','Guardar Direccion'].",
+    "comportamiento_esperado": "Copy en español correcto y consistente (Datos personales, Código, Identificación, Contraseña, Dirección, Teléfono), verbos coherentes entre encabezado y botón, lang=\"es\".",
+    "impacto_usuario": "Percepción de descuido; lectores de pantalla pronuncian el español con voz inglesa por lang=en.",
+    "evidencia": [
+      "audit/screenshots/MC-09.png",
+      "audit/logs/evidence/MC-datos-fields.json",
+      "audit/logs/evidence/MC-dependientes.json",
+      "audit/logs/evidence/MC-direccion.json"
+    ],
+    "propuesta_preliminar": "Glosario de términos para el rediseño; corregir lang en la master page.",
+    "info_tecnica": "copy (MC-datos-fields.json): {lang:'en', heading:'Mi Cuenta Actualiza tu Datos.', labels:[...], placeholders:['Codigo','Nombre','Identificacion','Nombre','Email','Nueva Contraseña','Direccion','Direccion','Telefono','Telefono','Celular']}. El campo oculto Cedula/Pasaporte tiene placeholder 'Nombre'. Patrón sugerido (a consolidar por el coordinador): Tildes inconsistentes en todo el portal (CC-01).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "CC-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-10",
+    "pantalla": "Mi Cuenta > Dependientes",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab2",
+    "componente": "#cpBody_lCelularDependiente (placeholder '+99-99-9999-9999')",
+    "categoria": "validacion",
+    "severidad": "menor",
+    "descripcion": "El placeholder promete un formato de máscara '+99-99-9999-9999' pero el campo no aplica máscara, pattern ni longitud: '8091234567', '123', '9'×60 o 'abc +++ ()' se aceptan.",
+    "pasos_para_reproducir": [
+      "1. Pestaña Dependientes, campo Celular #.",
+      "2. Escribir '123' → aceptado (len=3, validity=true).",
+      "3. Escribir '8091234567' → aceptado sin reformatear."
+    ],
+    "comportamiento_actual": "pattern=null, maxlength=null, inputmode=null; el placeholder es el único indicio de formato y desaparece al escribir.",
+    "comportamiento_esperado": "Máscara real o validación de formato con mensaje; formato coherente con el resto de teléfonos (que no muestran ninguno).",
+    "impacto_usuario": "Formato prometido no exigido: datos heterogéneos y dudas sobre cómo escribir el número.",
+    "evidencia": [
+      "audit/screenshots/MC-10.png",
+      "audit/logs/evidence/MC-dependientes.json"
+    ],
+    "propuesta_preliminar": "Unificar el formato de teléfono en todo el portal y aplicarlo con máscara + validación.",
+    "info_tecnica": "PH-03: '8091234567' (len=10) y '123' (len=3) aceptados; PH-04: 60 dígitos aceptados. Patrón sugerido (a consolidar por el coordinador): MC-03.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "PH-03",
+      "PH-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-11",
+    "pantalla": "Mi Cuenta > Dependientes / Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "#cpBody_gvDependientes_DXEmptyRow, #cpBody_gvDireccion_DXEmptyRow (y #cpBody_gvTarjetas oculto)",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "Los grids vacíos muestran el texto por defecto de DevExpress 'No data to display' en inglés, sin guía ('Aún no tienes dependientes. Agrega uno con el formulario.').",
+    "pasos_para_reproducir": [
+      "1. Abrir pestaña Dependientes o Direccion con la cuenta de pruebas (sin registros).",
+      "2. Leer la fila vacía del listado."
+    ],
+    "comportamiento_actual": "'No data to display' bajo cabeceras rojas 'Editar | Borrar | Nombre | Cedula | Celular | Email'.",
+    "comportamiento_esperado": "Estado vacío en español con llamada a la acción.",
+    "impacto_usuario": "Mezcla de idiomas; el usuario no sabe si es un error o simplemente no hay datos.",
+    "evidencia": [
+      "audit/screenshots/MC-11.png"
+    ],
+    "propuesta_preliminar": "Configurar SettingsText.EmptyDataText del grid o un componente de estado vacío propio.",
+    "info_tecnica": "<tr id=\"cpBody_gvDependientes_DXEmptyRow\" class=\"dxgvEmptyDataRow_Moderno dxgvLVR\"><td class=\"dxgv\" colspan=\"6\"><div> No data to display </div></td>… Patrón sugerido (a consolidar por el coordinador): Estados vacíos DevExpress en Adjuntos/PreAlerta.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TB-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-12",
+    "pantalla": "Mi Cuenta > Dependientes / Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "#cpBody_gvDependientes, #cpBody_gvDireccion (ASPxGridView)",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "Los grids DevExpress no tienen semántica de tabla accesible: las cabeceras son <td class=dxgvHeader_Moderno> (0 <th>), cada cabecera anida otra <table> (8 tablas anidadas en Dependientes), sin caption, role ni scope.",
+    "pasos_para_reproducir": [
+      "1. Inspeccionar #cpBody_gvDependientes_col0: <td> con una <table> interna para el texto 'Editar'.",
+      "2. document.querySelectorAll('#cpBody_gvDependientes th').length → 0."
+    ],
+    "comportamiento_actual": "Un lector de pantalla anuncia tablas de maquetación anidadas sin asociación cabecera-celda.",
+    "comportamiento_esperado": "<th scope=col> reales o roles ARIA de grid; caption descriptiva.",
+    "impacto_usuario": "Listados de dependientes/direcciones incomprensibles con tecnología de asistencia.",
+    "evidencia": [
+      "audit/screenshots/MC-12.png",
+      "audit/logs/evidence/MC-dependientes.json"
+    ],
+    "propuesta_preliminar": "En el rediseño sustituir el grid por una tabla HTML semántica o activar la accesibilidad del control (AccessibilityCompliant).",
+    "info_tecnica": "facts.headers[0] = {id:'cpBody_gvDependientes_col0', tag:'TD', text:'Editar', cursor:'pointer'}; gridAttrs {role:null, caption:false, nestedTables:8}. Patrón sugerido (a consolidar por el coordinador): Grids DevExpress en Estado/Rastreo/Prueba de Exportación.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TB-08"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-13",
+    "pantalla": "Mi Cuenta > Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab4",
+    "componente": "#cpBody_cbPais, #cpBody_cbProvincia, #cpBody_cbCiudad, #cpBody_cbSector",
+    "categoria": "ux-ui",
+    "severidad": "mayor",
+    "descripcion": "Los cuatro selects se renderizan como cajas rojas sólidas (fondo rgb(234,53,55), texto blanco). Ciudad y Sector están habilitados pero vacíos (0 opciones) y sin placeholder: son bloques rojos sin texto que se pueden enfocar pero no operar. País y Provincia (deshabilitados, opacidad 0.7) quedan con contraste 2.11:1.",
+    "pasos_para_reproducir": [
+      "1. Abrir la pestaña Direccion.",
+      "2. Observar Ciudad: y Sector: — rectángulos rojos vacíos.",
+      "3. Enfocar Ciudad y pulsar flecha abajo: selectedIndex se mantiene en -1 (sin opciones)."
+    ],
+    "comportamiento_actual": "DS-01/DS-02: cbCiudad y cbSector enabled con options=0; DS-07 confirmado: bg rgb(234,53,55), color blanco, contraste 4.15:1 (habilitados) y 2.11:1 (deshabilitados).",
+    "comportamiento_esperado": "Selects con estilo estándar de formulario, deshabilitados y con placeholder ('Selecciona una provincia primero') hasta que el padre tenga valor.",
+    "impacto_usuario": "El usuario no entiende qué son esos bloques rojos ni por qué no puede elegir ciudad/sector.",
+    "evidencia": [
+      "audit/screenshots/DS-07.png",
+      "audit/screenshots/MC-13.png",
+      "audit/logs/evidence/MC-direccion.json"
+    ],
+    "propuesta_preliminar": "Quitar el estilo de botón primario de los <select>; gestionar la cascada con estados deshabilitado + placeholder.",
+    "info_tecnica": "selects (MC-direccion.json): cbCiudad {disabled:false, options:0, onchange:\"javascript:setTimeout('__doPostBack(\\'ctl00$cpBody$cbCiudad\\',\\'\\')', 0)\", color:'rgb(255, 255, 255)', bg:'rgb(234, 53, 55)'}; cbPais {disabled:true, options:1, opacity:'0.7', tabindex:'8'}. Patrón sugerido (a consolidar por el coordinador): Selects rojos en Nueva Cuenta (#lSucursal) y Datos Personales (#cpBody_lSucursal).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "DS-01",
+      "DS-02",
+      "DS-07",
+      "AX-05"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-14",
+    "pantalla": "Mi Cuenta > Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab4",
+    "componente": "Formulario 'Agregar / Editar Direcciones' (cascada País→Provincia→Ciudad→Sector + #cpBody_bDireccion)",
+    "categoria": "funcional",
+    "severidad": "mayor",
+    "descripcion": "Con esta cuenta el formulario de direcciones no se puede completar: País y Provincia cargan deshabilitados, por lo que Ciudad y Sector nunca se rellenan (dependen de un postback del padre) y no hay ningún mensaje que explique la situación. El botón 'Guardar Direccion' sigue activo y sin validación (podría enviarse una dirección sin provincia/ciudad).",
+    "pasos_para_reproducir": [
+      "1. Abrir MiCuenta.aspx > Direccion.",
+      "2. Provincia: disabled con 'SELECCIONAR PROVINCIA'; País: disabled 'Republica Dominicana'.",
+      "3. Ciudad/Sector vacíos; Direccion y Nota editables; Guardar Direccion habilitado (no se pulsó)."
+    ],
+    "comportamiento_actual": "Cascada bloqueada en el primer nivel editable. onchange de Provincia/Ciudad/Sector = __doPostBack completo (sin AJAX parcial). DS-03/04/05 no ejecutables con esta cuenta (habilitar los selects por DevTools provocaría postbacks reales).",
+    "comportamiento_esperado": "O bien la cascada es editable (Provincia habilitada) o el formulario se oculta/explica cuando la cuenta no puede añadir direcciones.",
+    "impacto_usuario": "Función 'Agregar dirección' inutilizable y confusa; posible registro de direcciones incompletas.",
+    "evidencia": [
+      "audit/screenshots/MC-14.png",
+      "audit/screenshots/DS-07.png",
+      "audit/logs/evidence/MC-direccion.json"
+    ],
+    "propuesta_preliminar": "Aclarar la regla de negocio (¿qué cuentas pueden editar dirección?) y validar Provincia/Ciudad como obligatorios; probar la cascada con una cuenta que la tenga habilitada.",
+    "info_tecnica": "DS-06: cbPais options=1 'Republica Dominicana' disabled; cbProvincia options=32 disabled; cbCiudad/cbSector options=0 enabled; #cpBody_bDireccion type=submit sin validadores (Page_Validators ausente). Patrón sugerido (a consolidar por el coordinador): MC-02 (campos bloqueados sin explicación).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "DS-06",
+      "DS-03",
+      "DS-04",
+      "DS-05",
+      "BT-03"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "MC-15",
+    "pantalla": "Mi Cuenta > Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab4",
+    "componente": "#cpBody_ckPrincipal (checkbox 'Principal')",
+    "categoria": "ux-ui",
+    "severidad": "menor",
+    "descripcion": "El checkbox lleva class=\"form-control\" (estilo de input de texto), por lo que ocupa 300×38 px y se dibuja como una caja cuadrada grande; la etiqueta 'Principal:' no está asociada, así que solo se marca pulsando dentro del recuadro. Funciona (toggle client-side correcto, sin handlers ni postback).",
+    "pasos_para_reproducir": [
+      "1. Pestaña Direccion, bajar hasta 'Principal:'.",
+      "2. Observar el recuadro; clic dentro → checked=true; clic en el texto 'Principal:' → sin cambio."
+    ],
+    "comportamiento_actual": "default checked=false; click → true; sin onchange/onclick; rendered 299.98×38 px.",
+    "comportamiento_esperado": "Checkbox estándar (form-check) con etiqueta clicable a la derecha ('Marcar como dirección principal').",
+    "impacto_usuario": "Aspecto extraño y objetivo de clic confuso.",
+    "evidencia": [
+      "audit/screenshots/MC-15.png",
+      "audit/logs/evidence/MC-direccion.json"
+    ],
+    "propuesta_preliminar": "Usar el patrón form-check de Bootstrap con label for.",
+    "info_tecnica": "<input name=\"ctl00$cpBody$ckPrincipal\" type=\"checkbox\" id=\"cpBody_ckPrincipal\" placeholder=\"Principal\" class=\"form-control\"> Patrón sugerido (a consolidar por el coordinador): Checkboxes sin etiqueta en Nueva Cuenta (#ckDomicilio, #ckRua).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "CB-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-16",
+    "pantalla": "Mi Cuenta (y chrome compartido)",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "Enlaces de pestaña inactivos, enlaces del footer, subtítulo de página, botones .btn-primary, cabeceras de grid, selects deshabilitados, enlaces del sidebar",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "Contraste de texto por debajo de WCAG AA en numerosos elementos: pestañas inactivas 2.82:1 (rosa #f76a94 sobre blanco), footer 2.72:1, subtítulo 'Actualiza tu Datos.' 2.98:1, email en cabecera 2.36:1, enlaces del sidebar y encabezado MENU 4.14:1 (rojo #ea3537), botones blanco sobre rojo 4.15:1 a 12.8 px, cabeceras de grid 3.92:1, selects deshabilitados 2.11:1. axe color-contrast: 14 nodos (Datos), 20 (Dependientes), 15 (Direccion).",
+    "pasos_para_reproducir": [
+      "1. Ejecutar axe-core en MiCuenta.aspx (audit/logs/axe/micuenta-*-1440.json).",
+      "2. Medir con herramienta de contraste: pestaña 'Dependientes' rgb(247,106,148) sobre blanco."
+    ],
+    "comportamiento_actual": "Ratios medidos: #cpBody_lSucursal=2.11, .app-footer a=2.72, a[data-toggle=tab]:not(.active)=2.82, .page-title-subheading=2.98, #llocalidad=2.36 (axe), sidebar=4.14 (axe), #cpBody_Button1=4.15 @12.8px, #cpBody_gvDireccion_col0=3.92.",
+    "comportamiento_esperado": "≥4.5:1 para texto normal, ≥3:1 para texto grande/negrita.",
+    "impacto_usuario": "Legibilidad reducida para baja visión y en exteriores/móvil.",
+    "evidencia": [
+      "audit/screenshots/MC-16.png",
+      "audit/logs/axe/micuenta-datos-1440.json",
+      "audit/logs/axe/micuenta-dependientes-1440.json",
+      "audit/logs/evidence/MC-responsive-axe.json",
+      "audit/logs/evidence/MC-direccion.json"
+    ],
+    "propuesta_preliminar": "Paleta de rediseño con rojo más oscuro para texto (p. ej. #c8102e) y gris de texto secundario ≥ #6c757d.",
+    "info_tecnica": "axe: 'Element has insufficient color contrast of 2.36 (foreground color: #a2a6aa, background color: #fafbfc, font size: 9.6pt (12.8px))' en #llocalidad; '4.14 (foreground #ea3537, background #ffffff, 10.6pt)' en #lRastreo, #lPreAlerta, a[href$=\"Estado.aspx\"]. Patrón sugerido (a consolidar por el coordinador): Paleta rojo/rosa del tema en todo el portal.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "AX-05",
+      "AX-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-17",
+    "pantalla": "Mi Cuenta (pestañas)",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab2",
+    "componente": "Pestañas Bootstrap #cpBody_ltab1/2/4 (data-toggle=tab)",
+    "categoria": "funcional",
+    "severidad": "menor",
+    "descripcion": "Las pestañas no sincronizan con la URL: un enlace profundo a #cpBody_lefticontab2 o #cpBody_lefticontab4 abre siempre Datos Personales, y al recargar (F5) estando en Direccion se vuelve a Datos Personales aunque el hash siga en la URL. Los clics en pestañas no crean entradas de historial.",
+    "pasos_para_reproducir": [
+      "1. Navegar a https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab2 → pestaña activa: Datos Personales.",
+      "2. Clic en Direccion, pulsar F5 → pestaña activa: Datos Personales (hash=#cpBody_lefticontab4)."
+    ],
+    "comportamiento_actual": "dl2.activePane=cpBody_lefticontab1 (hash #cpBody_lefticontab2); afterReload.activePane=cpBody_lefticontab1 (hash #cpBody_lefticontab4); history.length 8→8 tras dos cambios de pestaña.",
+    "comportamiento_esperado": "Restaurar la pestaña indicada por el hash al cargar, o documentar el reinicio; idealmente URLs enlazables por pestaña.",
+    "impacto_usuario": "Imposible enlazar/compartir 'Mi Cuenta > Direcciones'; tras recargar, el usuario pierde la pestaña en la que estaba (además de lo escrito, ver NV-03).",
+    "evidencia": [
+      "audit/screenshots/MC-17.png",
+      "audit/logs/evidence/MC-nav.json"
+    ],
+    "propuesta_preliminar": "Pequeño script que active la pestaña según location.hash y actualice el hash al cambiar (o rutas reales en el rediseño).",
+    "info_tecnica": "Tabs: <a href=\"#cpBody_lefticontab2\" id=\"cpBody_ltab2\" class=\"nav-link\" data-toggle=\"tab\">; Bootstrap hace preventDefault y no gestiona el hash. window.$('#x').tab no está disponible (jQuery global 3.7.1 sin el plugin; Bootstrap va empaquetado en main.js).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "NV-04",
+      "NV-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-18",
+    "pantalla": "Mi Cuenta > Datos Personales / Dependientes / Direccion",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "#cpBody_lSucursal (select), grids #cpBody_gvDependientes / #cpBody_gvDireccion, controles del header (hamburguesa, ⋮, disparador del menú de usuario)",
+    "categoria": "responsive",
+    "severidad": "mayor",
+    "descripcion": "A 375 px la página tiene desplazamiento horizontal en las tres pestañas (scrollWidth 398 / 609 / 534 px frente a 375): el select Sucursal sobresale del contenedor y los grids DevExpress (539 px y 464 px de ancho) no tienen contenedor con scroll propio y desbordan la tarjeta. A 768 px Dependientes sigue desbordando (823 px). Los controles del header miden 24×21 (hamburguesa), 22×21 (menú de usuario) y 23×29 px (⋮), por debajo de cualquier tamaño táctil recomendado.",
+    "pasos_para_reproducir": [
+      "1. Redimensionar a 375×812 y abrir MiCuenta.aspx: document.documentElement.scrollWidth → 398.",
+      "2. Pestaña Dependientes: scrollWidth → 609; el listado sale por la derecha de la tarjeta (ver captura).",
+      "3. A 768×1024, Dependientes: scrollWidth → 823."
+    ],
+    "comportamiento_actual": "Overflow horizontal del body en 4 de 9 combinaciones pestaña×viewport; grid parent overflowX='visible'.",
+    "comportamiento_esperado": "Sin scroll horizontal del body; grids en contenedor overflow-x:auto o con layout adaptativo; objetivos táctiles ≥ 44×44 px (o 24×24 mínimo).",
+    "impacto_usuario": "En móvil la página 'baila' lateralmente, el select de sucursal queda cortado y los listados se ven incompletos.",
+    "evidencia": [
+      "audit/screenshots/MC-18.png",
+      "audit/screenshots/rs-micuenta-datos-375.png",
+      "audit/screenshots/rs-micuenta-dependientes-375.png",
+      "audit/screenshots/rs-micuenta-direccion-375.png",
+      "audit/screenshots/rs-micuenta-dependientes-768.png",
+      "audit/logs/evidence/MC-responsive-axe.json"
+    ],
+    "propuesta_preliminar": "width:100% + max-width en los selects; envolver grids en .table-responsive; aumentar el área táctil de los botones del header.",
+    "info_tecnica": "375 datos {ov:{scrollWidth:398,clientWidth:375}}; 375 dependientes {scrollWidth:609, gridOverflow:{scrollW:539, parentOverflowX:'visible'}}; 375 direccion {scrollWidth:534, grid 464}; 768 dependientes {scrollWidth:823}. Tap targets: 'hamburger mobile-toggle-nav' 24x21, 'p-0 btn' 22x21, 'mobile-toggle-header-nav' 23x29. Patrón sugerido (a consolidar por el coordinador): Grids DevExpress sin contenedor responsive (Estado, Rastreo, Prueba de Exportación).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "RS-01",
+      "RS-02",
+      "RS-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "MC-19",
+    "pantalla": "Mi Cuenta (las tres pestañas)",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "Documento completo (master page + contenido)",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "axe-core reporta 7–9 reglas incumplidas por pestaña: button-name (hamburguesa sin nombre, critical), select-name (critical, 1–4 nodos), aria-allowed-attr (aria-expanded en un <a> sin rol, critical), color-contrast (serious, 14–20 nodos), tabindex>0 (serious, #cpBody_cbPais tabindex=8, Direccion), meta-viewport con user-scalable=no y maximum-scale=1 (zoom deshabilitado en móvil), sin landmark main, sin h1 y 23–26 nodos fuera de landmarks.",
+    "pasos_para_reproducir": [
+      "1. Ejecutar axe-core (@axe-core/playwright) sobre MiCuenta.aspx en cada pestaña a 1440 px y en Datos Personales a 375 px.",
+      "2. Revisar audit/logs/axe/micuenta-*.json."
+    ],
+    "comportamiento_actual": "Datos: 8 reglas (aria-allowed-attr, button-name, color-contrast×14, landmark-one-main, meta-viewport, page-has-heading-one, region×26, select-name); Dependientes: 7; Direccion: 9 (+select-name×4, tabindex); Datos@375: 7 (button-name×2).",
+    "comportamiento_esperado": "Sin violaciones critical/serious; landmarks y h1; zoom permitido.",
+    "impacto_usuario": "Barreras para lector de pantalla y usuarios con baja visión (no pueden hacer zoom en móvil).",
+    "evidencia": [
+      "audit/screenshots/MC-19.png",
+      "audit/logs/axe/micuenta-datos-1440.json",
+      "audit/logs/axe/micuenta-dependientes-1440.json",
+      "audit/logs/axe/micuenta-direccion-1440.json",
+      "audit/logs/axe/micuenta-datos-375.json"
+    ],
+    "propuesta_preliminar": "Corregir en la master page (viewport, landmarks, h1, nombres accesibles) — beneficia a todas las pantallas.",
+    "info_tecnica": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no\">; select tabindex=\"8\" en #cpBody_cbPais; <html lang=\"en\">; landmarks {main:0, nav:0, h1:[]}. Patrón sugerido (a consolidar por el coordinador): Master page compartida: aplica a todas las pantallas autenticadas.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "AX-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "SH-01",
+    "pantalla": "Chrome compartido (header)",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "button.close-sidebar-btn (hamburguesa escritorio), button.mobile-toggle-nav (hamburguesa móvil), button.mobile-toggle-header-nav (⋮ móvil)",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "Los tres botones de icono funcionan (colapsan/abren el sidebar y el header móvil) pero no tienen nombre accesible ni estado: sin aria-label, aria-expanded ni aria-controls, texto vacío. axe button-name [critical].",
+    "pasos_para_reproducir": [
+      "1. Inspeccionar .close-sidebar-btn: <button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\" data-class=\"closed-sidebar\"><span class=\"hamburger-box\">…</span></button>.",
+      "2. A 375 px pulsar .mobile-toggle-nav: el sidebar se muestra (container gana 'sidebar-mobile-open'); aria-expanded sigue ausente."
+    ],
+    "comportamiento_actual": "Nombre accesible '' (none) en los 3 controles ×2 (existen duplicados para escritorio/móvil). RS-05: toggle móvil operativo a 375 y 768; header ⋮ muestra el menú de usuario.",
+    "comportamiento_esperado": "aria-label ('Abrir menú'), aria-expanded sincronizado y aria-controls hacia el sidebar.",
+    "impacto_usuario": "Lector de pantalla anuncia 'botón' sin propósito.",
+    "evidencia": [
+      "audit/screenshots/SH-01.png",
+      "audit/screenshots/rs-micuenta-navopen-375.png",
+      "audit/logs/evidence/SH-chrome.json",
+      "audit/logs/evidence/MC-responsive-axe.json"
+    ],
+    "propuesta_preliminar": "Añadir atributos ARIA a los botones del tema en la master page.",
+    "info_tecnica": "names (SH-chrome.json): .close-sidebar-btn {tag:'BUTTON', role:null, focusable:true, name:'', source:'none'}; toggleInfo @375: ariaLabel null, ariaExpanded null en los 6 botones. Patrón sugerido (a consolidar por el coordinador): Botones de icono sin nombre (iconos por fila en grids).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-06",
+      "AX-03",
+      "RS-05"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "SH-02",
+    "pantalla": "Chrome compartido (header, menú de usuario)",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "<a data-toggle=\"dropdown\" class=\"p-0 btn\"> (disparador) + .dropdown-menu con botón 'Salir'",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "El disparador del menú de usuario es un <a> sin href: no es enfocable con teclado (Tab salta de la hamburguesa al sidebar; el.focus() no lo enfoca), no tiene nombre accesible (texto vacío, img alt=\"\") y su avatar no carga (naturalWidth 0), por lo que visualmente solo queda un caret de 22×21 px. El menú abierto no se cierra con Esc ni mueve el foco a 'Salir'. Consecuencia: la única salida ('Salir') no es alcanzable sin ratón.",
+    "pasos_para_reproducir": [
+      "1. En MiCuenta.aspx enfocar la hamburguesa y pulsar Tab → foco en 'Mi Cuenta' (sidebar), el menú de usuario se salta.",
+      "2. Con ratón: clic en el caret superior derecho → menú con 'Salir'; pulsar Esc → sigue abierto; flecha abajo → foco en body.",
+      "3. Inspeccionar la imagen del avatar: src googleusercontent.com/proxy/…, naturalWidth=0."
+    ],
+    "comportamiento_actual": "MD-10: open shown=true aria-expanded=true; click-outside cierra=true; Esc cierra=false; ArrowDown enfoca BODY; doble clic no duplica. Teclado: 'Tab from .close-sidebar-btn lands on A#lMicuenta' (trigger tabIndex=0, href=false, el.focus() works=false).",
+    "comportamiento_esperado": "Disparador <button> con nombre ('Menú de usuario: JOSE…'), aria-haspopup, cierre con Esc, foco al primer ítem, avatar con alt o icono local.",
+    "impacto_usuario": "Usuarios de teclado/lector de pantalla no pueden cerrar sesión; el disparador es casi invisible para todos.",
+    "evidencia": [
+      "audit/screenshots/SH-02.png",
+      "audit/screenshots/SH-usermenu-open.png",
+      "audit/logs/evidence/SH-chrome.json",
+      "audit/logs/evidence/MC-08-focus-styles.json",
+      "audit/logs/evidence/MC-extras.json"
+    ],
+    "propuesta_preliminar": "Sustituir por <button> con avatar/inicial local y comportamiento de menú accesible; exponer 'Salir' también como enlace visible.",
+    "info_tecnica": "<a data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" class=\"p-0 btn\"><img width=\"42\" class=\"rounded-circle\" src=\"https://lh3.googleusercontent.com/proxy/j6_9Gt0…\" alt=\"\"><i class=\"fa fa-angle-down ml-2 opacity-8\"></i></a>; axe aria-allowed-attr: 'ARIA attribute is not allowed: aria-expanded=\"false\"'. Salir: <button type=\"button\" class=\"dropdown-item\" onclick=\"window.location.href='/Login.aspx'\">Salir</button>. Patrón sugerido (a consolidar por el coordinador): Controles del tema sin semántica (SH-01).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "MD-10",
+      "BT-06",
+      "AX-03",
+      "AX-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "SH-03",
+    "pantalla": "Chrome compartido (footer)",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": ".app-footer: texto de copyright y enlaces 'Términos y Condiciones de Uso', 'Políticas de Privacidad', 'Políticas de Entrega'; imagen de tarjetas",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "El footer muestra '2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS.' (año desactualizado, hoy 2026) y tres enlaces legales con href=\"\": al pulsarlos se recarga la página actual (un usuario que esté rellenando Mi Cuenta pierde lo escrito). La imagen de logos de tarjetas se sirve desde un dominio de terceros (tainoexpress.com) y el copyright es un enlace a '#'. Contraste de los enlaces 2.72:1.",
+    "pasos_para_reproducir": [
+      "1. Bajar al footer de cualquier pantalla autenticada.",
+      "2. Clic en 'Políticas de Privacidad' → navegación a https://clientes.domipack.com/MiCuenta.aspx (recarga).",
+      "3. Inspeccionar <img src=\"https://tainoexpress.com//index_files/a.png\" alt=\"Merchant Equipment Store Credit Card Logos\">."
+    ],
+    "comportamiento_actual": "links [['2022 - DOMIPACK…','#'],['Términos y Condiciones de Uso',''],['Políticas de Privacidad',''],['Políticas de Entrega','']]; clic → 'navigated/reloaded to https://clientes.domipack.com/MiCuenta.aspx'.",
+    "comportamiento_esperado": "Año dinámico, enlaces a documentos legales reales (o eliminarlos), recursos servidos desde el propio dominio, alt en español.",
+    "impacto_usuario": "Pérdida de datos no guardados al pulsar un enlace 'muerto'; desconfianza (información legal inaccesible, marca de terceros).",
+    "evidencia": [
+      "audit/screenshots/SH-03.png",
+      "audit/logs/evidence/SH-chrome.json"
+    ],
+    "propuesta_preliminar": "Publicar las páginas legales y enlazarlas; año dinámico; alojar la imagen localmente.",
+    "info_tecnica": "<a href=\"\">Términos y Condiciones de Uso</a> resuelve a la URL actual (a.href === location.href). Mismo footer en Estado/Rastreo/PruebaExportacion/PreAlerta (footerYear '2022' en los 5). Patrón sugerido (a consolidar por el coordinador): Footer también presente en Login (BT-10).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "CC-04",
+      "BT-10"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "SH-04",
+    "pantalla": "Chrome compartido (sidebar)",
+    "url": "https://clientes.domipack.com/Estado.aspx",
+    "componente": ".vertical-nav-menu — clase mm-active",
+    "categoria": "ux-ui",
+    "severidad": "menor",
+    "descripcion": "El indicador de página activa del sidebar es incorrecto en 3 de 6 pantallas: en Estado.aspx ningún ítem aparece activo; en PruebaExportacion.aspx queda marcado 'Rastreo'; en PagoOnline.aspx ninguno (su ítem está oculto). Correcto en MiCuenta, Rastreo y PreAlerta. No se usa aria-current.",
+    "pasos_para_reproducir": [
+      "1. Iniciar sesión y pulsar 'Estados de Cuenta' en el sidebar → ningún ítem resaltado.",
+      "2. Pulsar 'Prueba de Exportacion' → 'Rastreo' queda resaltado."
+    ],
+    "comportamiento_actual": "NV-09: Estado.aspx mm-active=[] ; PruebaExportacion.aspx mm-active=['Rastreo']; PagoOnline.aspx mm-active=null.",
+    "comportamiento_esperado": "El ítem de la pantalla actual resaltado y con aria-current=\"page\".",
+    "impacto_usuario": "Desorientación: el usuario cree estar en Rastreo mientras ve Prueba de Exportación.",
+    "evidencia": [
+      "audit/screenshots/SH-04.png",
+      "audit/logs/evidence/SH-nv09.json"
+    ],
+    "propuesta_preliminar": "Calcular la clase activa en la master page a partir de la ruta actual.",
+    "info_tecnica": "Los ítems tienen ids lMicuenta, lRastreo, lPruebaExportacion, lPreAlerta; 'Estados de Cuenta' no tiene id, lo que sugiere que la asignación de mm-active se hace por id en cada página y Estado/Prueba no la aplican correctamente.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "NV-09"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "SH-05",
+    "pantalla": "Mi Cuenta > Tarjetas Registradas (oculta) / PagoOnline.aspx",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx#cpBody_lefticontab3",
+    "componente": "Pestaña #cpBody_ltab3 (li style=\"Display:none;\") con grid #cpBody_gvTarjetas, botón #cpBody_Button4 'Agregar Tarjeta' y popup #cpBody_ppDelCard; enlace de sidebar 'Pagos Online' (li display:none) → PagoOnline.aspx; botones ocultos #cpBody_Button2 'Agregar Dependiente', #cpBody_Button6 'Agregar Direccion', #cpBody_BVerificar 'Canjear Cupon' (+ campo Cupon), #cpBody_ckConsolidation, #cpBody_lIdentificacion; campos ocultos #cpBody_TokenID='GB123456789.101112131415', #lsClienteID/#SetCliente",
+    "categoria": "robustez",
+    "severidad": "menor",
+    "descripcion": "Varias funciones se 'ocultan' solo con CSS pero siguen renderizadas y operativas en el DOM: la pestaña Tarjetas Registradas se revela quitando display:none al <li> y pulsándola (sin ninguna petición al servidor) y muestra el grid de tarjetas, 'Agregar Tarjeta' y el popup de borrado; PagoOnline.aspx responde 200 con el listado de paquetes y 'Pagar Con' aunque su enlace esté oculto. Además hay botones de envío ocultos (Agregar Dependiente/Direccion, Canjear Cupon) y un campo oculto TokenID con un valor que parece de prueba.",
+    "pasos_para_reproducir": [
+      "1. En MiCuenta.aspx ejecutar document.querySelector('#cpBody_ltab3').closest('li').style.display='' y pulsar la pestaña → panel 'Borrar | Tarjeta Numero | Marca | Fecha EXP | No data to display' visible (requests: []).",
+      "2. Navegar a https://clientes.domipack.com/PagoOnline.aspx → 200, 'Pagos En Linea… PAQUETES DISPONIBLES… Pagar Con'.",
+      "3. Inspeccionar #cpBody_TokenID (input text display:none) → value 'GB123456789.101112131415'."
+    ],
+    "comportamiento_actual": "Ocultación por CSS únicamente; los controles ocultos son submits reales del mismo formulario. No se pulsó ningún botón oculto ni se procedió en PagoOnline (una sola GET).",
+    "comportamiento_esperado": "Las funciones no disponibles para la cuenta no deberían renderizarse (Visible=false en servidor) y su acceso por URL debería controlarse en servidor; sin valores de prueba en el DOM.",
+    "impacto_usuario": "Riesgo de exponer flujos no soportados (tarjetas/pagos) y de confundir a soporte; posible efecto no deseado si un usuario llega a ellos (p. ej. por Enter, ver MC-07).",
+    "evidencia": [
+      "audit/screenshots/SH-05.png",
+      "audit/screenshots/SH-nv06-tarjetas-tab.png",
+      "audit/screenshots/SH-nv06-pagoonline.png",
+      "audit/logs/evidence/MC-nav.json",
+      "audit/logs/evidence/MC-extras.json",
+      "audit/logs/evidence/micuenta-recon.json"
+    ],
+    "propuesta_preliminar": "Confirmar con negocio qué cuentas ven Tarjetas/Pagos; ocultar en servidor y validar autorización en PagoOnline.aspx.",
+    "info_tecnica": "<li style=\"Display:none;\"><a href=\"#cpBody_lefticontab3\" id=\"cpBody_ltab3\" data-toggle=\"tab\">Tarjetas Registradas</a></li>; pane #cpBody_lefticontab3 con ASPx.createControl(ASPxClientGridView,'cpBody_gvTarjetas'…) y ASPxClientPopupControl 'cpBody_ppDelCard'. PagoOnline GET: title 'DOMIPACK - Web Clientes.', sidebar li display=none, mm-active=null. Patrón sugerido (a consolidar por el coordinador): PagoOnline oculto por CSS (inventario Fase 1).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "NV-06"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "SH-06",
+    "pantalla": "Chrome compartido (sidebar)",
+    "url": "https://clientes.domipack.com/MiCuenta.aspx",
+    "componente": "button.close-sidebar-btn (colapso del sidebar en escritorio)",
+    "categoria": "ux-ui",
+    "severidad": "menor",
+    "descripcion": "El colapso del sidebar (280 px → 80 px, se re-expande al pasar el ratón) no persiste: al navegar a otra pantalla el sidebar vuelve a abrirse. Toda navegación es una carga completa de página, así que la preferencia se pierde en cada clic.",
+    "pasos_para_reproducir": [
+      "1. Pulsar la hamburguesa en MiCuenta.aspx → container 'closed-sidebar', sidebar 80 px.",
+      "2. Pulsar 'Estados de Cuenta' → container 'app-container app-theme-white', sidebar 280 px."
+    ],
+    "comportamiento_actual": "BT-07: 'state after navigating to Estado.aspx: app-container app-theme-white (280px) -> NOT persisted'.",
+    "comportamiento_esperado": "Persistir la preferencia (localStorage/cookie) o no ofrecer el control.",
+    "impacto_usuario": "El control parece no funcionar; frustración en pantallas pequeñas de escritorio.",
+    "evidencia": [
+      "audit/screenshots/SH-06.png",
+      "audit/screenshots/SH-sidebar-collapsed.png",
+      "audit/logs/evidence/SH-chrome.json"
+    ],
+    "propuesta_preliminar": "Guardar el estado en localStorage y aplicarlo antes del primer render.",
+    "info_tecnica": "sidebarToggle {before:{container:'app-container app-theme-white',sidebarW:280}, after:{container:'… closed-sidebar',sidebarW:80}, hovered:{sidebarW:280}}; sidebarPersist tras go('Estado.aspx'): sidebarW 280.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-07"
+    ],
+    "impacto_a_confirmar": false
+  }
+]

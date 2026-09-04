@@ -1,0 +1,58 @@
+[
+  {
+    "input": "abc",
+    "value": "abc",
+    "valid": false,
+    "typeMismatch": true,
+    "valueMissing": false,
+    "msg": "Please include an '@' in the email address. 'abc' is missing an '@'."
+  },
+  {
+    "input": "abc@",
+    "value": "abc@",
+    "valid": false,
+    "typeMismatch": true,
+    "valueMissing": false,
+    "msg": "Please enter a part following '@'. 'abc@' is incomplete."
+  },
+  {
+    "input": "@x.com",
+    "value": "@x.com",
+    "valid": false,
+    "typeMismatch": true,
+    "valueMissing": false,
+    "msg": "Please enter a part followed by '@'. '@x.com' is incomplete."
+  },
+  {
+    "input": "a b@x.com",
+    "value": "a b@x.com",
+    "valid": false,
+    "typeMismatch": true,
+    "valueMissing": false,
+    "msg": "A part followed by '@' should not contain the symbol ' '."
+  },
+  {
+    "input": "a@x",
+    "value": "a@x",
+    "valid": true,
+    "typeMismatch": false,
+    "valueMissing": false,
+    "msg": ""
+  },
+  {
+    "input": "a@@x.com",
+    "value": "a@@x.com",
+    "valid": false,
+    "typeMismatch": true,
+    "valueMissing": false,
+    "msg": "A part following '@' should not contain the symbol '@'."
+  },
+  {
+    "input": "a@x.com.",
+    "value": "a@x.com.",
+    "valid": false,
+    "typeMismatch": true,
+    "valueMissing": false,
+    "msg": "'.' is used at a wrong position in 'x.com.'."
+  }
+]

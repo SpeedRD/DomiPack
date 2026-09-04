@@ -1,0 +1,14 @@
+{
+  "inv": {
+    "afterSet": "",
+    "afterGarbage": "",
+    "validity": true,
+    "badInput": false
+  },
+  "typed": {
+    "value": "",
+    "badInput": true,
+    "valid": false
+  },
+  "rewrote": true
+}

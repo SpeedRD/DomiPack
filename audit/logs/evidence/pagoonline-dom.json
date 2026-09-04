@@ -1,0 +1,177 @@
+{
+  "title": "DOMIPACK - Web Clientes.",
+  "headers": [
+    "Guia",
+    "Fecha",
+    "Peso",
+    "FOB",
+    "Descripcion",
+    "Envianombre",
+    "Total A Pagar (DOP)",
+    ""
+  ],
+  "rows": [
+    {
+      "id": "cpBody_gvDatos_DXDataRow0",
+      "cls": "dxgvDataRow_Moderno dxgvSelectedRow_Moderno dxgvLVR",
+      "selected": true,
+      "cells": [
+        "DP01-00306834",
+        "9/2/2026",
+        "1.40",
+        "0.00",
+        "ART PERSONAL",
+        "AMAZON",
+        "0.00",
+        ""
+      ]
+    }
+  ],
+  "footer": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "DOP$: 0.000",
+    ""
+  ],
+  "ths": 0,
+  "role": null,
+  "bpagar": {
+    "text": "Pagar Con",
+    "attrs": [
+      "id=cpBody_bpagar",
+      "type=button",
+      "data-toggle=dropdown",
+      "aria-haspopup=true",
+      "aria-expanded=false",
+      "class=btn-shadow dropdown-toggle btn btn-info"
+    ],
+    "disabled": false,
+    "parentHtml": "<div class=\"d-inline-block dropdown\">\n                        <button id=\"cpBody_bpagar\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" class=\"btn-shadow dropdown-toggle btn btn-info\">\n                            <span class=\"btn-icon-wrapper pr-2 opacity-7\">\n                                <i class=\"pe-7s-cash fa-w-20\"></i>\n                            </span>\n                            Pagar Con\n                        </button>\n                        <div tabindex=\"-1\" role=\"menu\" aria-hidden=\"true\" class=\"dropdown-menu dropdown-menu-right\">\n                            <ul id=\"cpBody_ulFormaPagos\" class=\"nav flex-column\"></ul>\n                        </div>\n                    </div>"
+  },
+  "dropdownMenu": {
+    "html": "<div tabindex=\"-1\" role=\"menu\" aria-hidden=\"true\" class=\"dropdown-menu dropdown-menu-right\">\n                            <ul id=\"cpBody_ulFormaPagos\" class=\"nav flex-column\"></ul>\n                        </div>",
+    "children": 1,
+    "visible": false
+  },
+  "hidden": [
+    {
+      "sel": "#cpBody_ClienteID",
+      "present": true,
+      "visible": false,
+      "value": "DP-014003",
+      "disabled": false,
+      "onclick": null
+    },
+    {
+      "sel": "#cpBody_Guia",
+      "present": true,
+      "visible": false,
+      "value": "",
+      "disabled": false,
+      "onclick": null
+    },
+    {
+      "sel": "#cpBody_sRecoger",
+      "present": true,
+      "visible": false,
+      "value": "P",
+      "disabled": false,
+      "onclick": null,
+      "checked": true
+    },
+    {
+      "sel": "#cpBody_sdelivery",
+      "present": true,
+      "visible": false,
+      "value": "D",
+      "disabled": false,
+      "onclick": null,
+      "checked": false
+    },
+    {
+      "sel": "#cpBody_Direcciones",
+      "present": true,
+      "visible": false,
+      "value": "",
+      "disabled": false,
+      "onclick": null
+    },
+    {
+      "sel": "#cpBody_nota",
+      "present": true,
+      "visible": false,
+      "value": "\n                                ",
+      "disabled": false,
+      "onclick": null
+    },
+    {
+      "sel": "#cpBody_tbProvincia",
+      "present": true,
+      "visible": false,
+      "value": "",
+      "disabled": false,
+      "onclick": null
+    },
+    {
+      "sel": "#cpBody_tbSectores",
+      "present": true,
+      "visible": false,
+      "value": "",
+      "disabled": false,
+      "onclick": null
+    },
+    {
+      "sel": "#cpBody_TokenID",
+      "present": true,
+      "visible": false,
+      "value": "GB123456789.101112131415",
+      "disabled": false,
+      "onclick": null
+    },
+    {
+      "sel": "#cpBody_bCheckOut",
+      "present": true,
+      "visible": false,
+      "value": "",
+      "disabled": false,
+      "onclick": null
+    },
+    {
+      "sel": "#lsClienteID",
+      "present": true,
+      "visible": false,
+      "value": "",
+      "disabled": false,
+      "onclick": null
+    },
+    {
+      "sel": "#SetCliente",
+      "present": true,
+      "visible": false,
+      "value": "",
+      "disabled": false,
+      "onclick": null
+    }
+  ],
+  "scripts": [
+    "\n\n        function Confirmar(titulo, message, tipo, tituloPrint) {\n\n\n            swal({\n                title: titulo,\n                text: tituloPrint,\n                icon: tipo,\n                buttons: [\n                    'No!',\n                    'Yes!'\n                ],\n                dangerMode: true,\n            }).then(function (isConfirm) {\n                if (isConfirm) {\n                    swal({\n                        title: titulo,\n                        text: 'se esta Procesando la Informacion',\n                        icon: 'success'\n                    }).then(function () {\n                        Guardar();\n                    });\n                } else {\n                    swal(titulo, message, tipo);\n                }\n            });\n        }\n    ",
+    "\n        function grid_SelectionChanged() {\n            var num = gvDatos.GetSelectedRowCount();\n            if (num < 1) {\n                document.getElementById(\"cpBody_bpagar\").disabled = \"disabled\";\n                document.getElementById(\"OpcionesDelivery\").style.display = \"none\";\n\n            } else {\n                document.getElementById(\"cpBody_bpagar\").disabled = \"\";\n                document.getElementById(\"OpcionesDelivery\").style.display = \"\";\n\n            }\n        }\n        function FormaPago(e) {\n            document.getElementById(\"cpBody_Guia\").value = e;\n            document.getElementById(\"cpBody_bCheckOut\").click();\n        }\n\n\n\n\n        function GetLocation() {\n\n            if (\"geolocation\" in navigator) { //check geolocation available \n                //try to get user current location using getCurrentPosition() method\n                navigator.geolocation.getCurrentPosition(function (position) {\n                    console.log(position);\n                    $(\"#result\").html(\"Su ubicación <br />Lat : \" + position.coords.latitude + \" </br>Lang :\" + position.coords.longitude);\n                });\n            } else {\n                console.log(\"Browser doesn't support geolocation!\");\n            }\n        };\n\n        function getDataSectores(s) {\n\n            var TokenID = document.getElementById(\"cpBody_TokenID\").value;\n            $(\"#cpBody_Sectores\").empty();\n            $.ajax({\n                type: \"GET\",\n                url: \"WebService1.asmx/Sectores\",\n                async: false,\n                dataType: \"json\",\n                data: \"TokenID=\" + TokenID + \"&ProvinciaID=\" + s,\n                success: function (registro) {\n\n                    $.each(registro, function (key, registro) {\n                        $(\"#cpBody_Sectores\").append('<option value=' + registro.codigo + '>' + registro.Nombre + '</option>');\n                    });\n                },\n                error: function (data) {\n                    alert('error');\n                }\n            });\n\n        }\n\n    ",
+    "\n        \n\n        $(document).ready(function () {\n            console.log(\"ready!\");\n            grid_SelectionChanged();\n            if ($(\"#cpBody_sdelivery\")[0].checked) {\n                document.getElementById(\"divDomicilio\").style.display = \"\";\n\n            } else {\n                document.getElementById(\"divDomicilio\").style.display = \"none\";\n            }\n        });\n\n       \n\n    ",
+    "\n                                        $(\"#cpBody_sdelivery\").on(\"click\", function () {\n                                            if ($(\"#cpBody_sdelivery\")[0].checked) {\n                                                document.getElementById(\"divDomicilio\").style.display = \"\";\n                                                $(\"#cpBody_sRecoger\")[0].checked = false;\n                                                $(\"#cpBody_sdelivery\")[0].checked = true;\n\n                                                GetLocation()();\n                                            } else {\n                                                document.getElementById(\"divDomicilio\").style.display = \"none\";\n                                                $(\"#cpBody_sRecoger\")[0].checked = true;\n                                                $(\"#cpBody_sdelivery\")[0].checked = false;\n                                            }\n                                        });\n\n                                        $(\"#cpBody_sRecoger\").on(\"click\", function () {\n                                            if ($(\"#cpBody_sRecoger\")[0].checked) {\n                                                document.getElementById(\"divDomicilio\").style.display = \"none\";\n                                                $(\"#cpBody_sRecoger\")[0].checked = true;\n                                                $(\"#cpBody_sdelivery\")[0].checked = false;\n                                            } else {\n\n                                                GetLocation();\n                                                document.getElementById(\"divDomicilio\").style.display = \"\";\n                                                $(\"#cpBody_sRecoger\")[0].checked = false;\n                                                $(\"#cpBody_sdelivery\")[0].checked = true;\n                                            }\n                                        });\n\n\n\n                                    "
+  ],
+  "bodyText": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAlerta Pagos En Linea Pagas tu Paquetes y evitas filas. Pagar Con PAQUETES DISPONIBLES Guia Fecha Peso FOB Descripcion Envianombre Total A Pagar (DOP) DP01-00306834 9/2/2026 1.40 0.00 ART PERSONAL AMAZON 0.00 DOP$: 0.000 OPCIONES DE ENTREGA 2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS. - Términos y Condiciones de Uso - Políticas de Privacidad - Políticas de Entrega",
+  "allowSelectByItemClick": "false",
+  "selectionState": "T",
+  "selectedRowCount": "0",
+  "forms": [
+    {
+      "id": "frmBody",
+      "action": "./PagoOnline.aspx",
+      "onsubmit": null
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "label": "DR-05-sameday",
+  "desde": "2026-09-02",
+  "hasta": "2026-09-02",
+  "before": {
+    "rows": [
+      {
+        "id": "cpBody_gvDatos_DXGroupRowExp0",
+        "text": "Estatus: Embarcado"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow1",
+        "text": "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSONAL AMAZON"
+      }
+    ],
+    "modalShown": true,
+    "desde": "2026-09-02",
+    "hasta": "2026-09-02",
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "hidden",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "after": {
+    "rows": [
+      {
+        "id": "cpBody_gvDatos_DXGroupRowExp0",
+        "text": "Estatus: Embarcado"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow1",
+        "text": "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSONAL AMAZON"
+      }
+    ],
+    "modalShown": false,
+    "desde": "2026-09-02",
+    "hasta": "2026-09-02",
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "visible",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "ms": 827,
+  "navRes": "navigated",
+  "reqs": [
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "method": "POST",
+      "startedAt": 1788488381037,
+      "postFields": {
+        "__EVENTTARGET": "",
+        "__EVENTARGUMENT": "",
+        "__VIEWSTATE": "<3198 chars>",
+        "__VIEWSTATEGENERATOR": "<8 chars>",
+        "__EVENTVALIDATION": "<338 chars>",
+        "ctl00$lsClienteID": "",
+        "ctl00$cpBody$ClienteID": "DP-014003",
+        "ctl00$cpBody$Guia": "",
+        "ctl00$cpBody$bFiltro": "",
+        "ctl00$cpBody$TokenID": "GB123456789.101112131415",
+        "ctl00$cpBody$gvDatos": "{&quot;keys&quot;:[&quot;/^DXN&quot;,&quot;DP01-00306834&quot;],&quot;callbackState&quot;:&quot;JvXP9RmD7bRnZtkNRXCmWtmn2l2uwXJr5TwzN/T+4ai3LpnLCfman+PXfHLUCgAWyWJzssIAaYrFDAvhqJ2f+1+ziYZ2nsHXpvlSSTMy",
+        "ctl00$cpBody$ppCambioGuiaState": "{&quot;windowsState&quot;:&quot;0:0:-1:0:0:0:-10000:-10000:1:0:0:0&quot;}",
+        "ctl00$cpBody$ppCambioGuia$gvDetalles": "{&quot;keys&quot;:[],&quot;callbackState&quot;:&quot;hjg3gDa+buFfGUVCONR7Civ7dkbeC3mVEIn4YINp7aDrAsTN6W0Imxd4QJ0jphYSHUcQmZNquXpStGgycjRgyN++V0buGbUOmvcbyO80xZ79gXQDaDRoZOGTUIkIVv0MRV2ElUI5chFs3GF0si6",
+        "ctl00$cpBody$lDesde": "2026-09-02",
+        "ctl00$cpBody$lHasta": "2026-09-02",
+        "DXScript": "<241 chars>",
+        "DXCss": "<196 chars>"
+      },
+      "status": 200,
+      "ms": 297,
+      "size": 53267
+    }
+  ],
+  "serverError": null,
+  "onLogin": false,
+  "dialogs": [],
+  "textSample": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAlerta Rastreo de Paquetes Consulta el estatus de tu Paquetes. Menu Post-Alerta AD Guia Fecha Tracking Peso FOB Contenido Suplidor RT Estatus: Embarcado 0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSONAL AMAZON 2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS. - Términos y Condiciones de Uso - Políticas de Privacidad - Políticas de Entrega",
+  "status": [
+    200
+  ]
+}

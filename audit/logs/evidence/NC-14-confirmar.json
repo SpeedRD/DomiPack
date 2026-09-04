@@ -1,0 +1,39 @@
+{
+  "static": {
+    "onclick": null,
+    "disabledOnClickJS": false,
+    "bsendConfiHidden": true,
+    "hasConfirmar": "function",
+    "hasGuardar": "function",
+    "swalVersion": "9.17.2"
+  },
+  "dialog": {
+    "shown": true,
+    "text": "i Titulo Texto OK",
+    "buttons": [
+      "OK"
+    ],
+    "err": null
+  },
+  "afterEsc": {
+    "guardarCalls": 0,
+    "swalStill": false,
+    "swalText": "",
+    "err": null
+  },
+  "buttonsSecondRun": [
+    "OK"
+  ],
+  "afterOk": {
+    "guardarCalls": 0,
+    "swalText": "",
+    "err": null
+  },
+  "consoleWarnings": [
+    "SweetAlert2: Unknown parameter \"buttons\"",
+    "SweetAlert2: Unknown parameter \"dangerMode\"",
+    "SweetAlert2: Unknown parameter \"buttons\"",
+    "SweetAlert2: Unknown parameter \"dangerMode\""
+  ],
+  "blockedPosts": 0
+}

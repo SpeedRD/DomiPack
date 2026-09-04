@@ -1,0 +1,27 @@
+{
+  "screenId": "estado-cuenta",
+  "screenName": "Estados de Cuenta (Cuenta por Pagar)",
+  "url": "https://clientes.domipack.com/Estado.aspx",
+  "sharedChrome": "See _shared-chrome.json for header/sidebar controls present on this and every other authenticated screen.",
+  "components": [
+    {
+      "type": "table",
+      "name": "Invoices grid (#cpBody_gvDatos)",
+      "action": "DevExpress grid, columns: Factura, Fecha, TotalFacturado, Debito, Credito, Balance, Dias Vencidos, Monedas. Read-only listing for this test account; 3 data rows observed plus a totals footer row (6,684.75 / 0.00 / 0.00 / 6,684.75)."
+    },
+    {
+      "type": "button",
+      "name": "Print/PDF icon per row (e.g. #cpBody_gvDatos_cell0_0_iPrint_0)",
+      "action": "DevExpress icon-button (div-based, wraps a hidden input[type=submit]) per invoice row. Presumed to trigger a PDF download/print of that invoice. Not clicked — file-download side effect, out of scope for this phase per Phase 1 notes."
+    },
+    {
+      "type": "status message",
+      "name": "Footer totals row (#cpBody_gvDatos_DXFooterRow)",
+      "action": "Non-interactive DevExpress footer row summing Debito/Credito/Balance across all invoices."
+    }
+  ],
+  "notes": [
+    "No filter row, search box, or pagination controls were rendered — likely because the grid only has 3 rows for this account, under whatever page-size triggers a pager. Should be re-checked against an account with more invoices in a later phase if available.",
+    "No date-range or status filter UI found on this screen despite the screen's purpose (reviewing statements) — worth flagging as a potential UX gap for the redesign (no way to filter to a period or invoice status)."
+  ]
+}

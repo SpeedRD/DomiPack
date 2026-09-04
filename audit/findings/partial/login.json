@@ -1,0 +1,1017 @@
+[
+  {
+    "id": "LG-01",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "#lUser / #lPass",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "Los dos campos del formulario de acceso dependen únicamente del placeholder como etiqueta: no existe <label for>, aria-label ni aria-labelledby. Al escribir, el placeholder desaparece y el campo queda sin nombre visible; los lectores de pantalla no reciben un nombre accesible fiable.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx.",
+      "2. Inspeccionar #lUser y #lPass (labels.length = 0, sin aria-label).",
+      "3. Escribir en ambos campos: el único texto identificativo (placeholder) desaparece."
+    ],
+    "comportamiento_actual": "labels=[] y aria-label=null en ambos campos; solo placeholder 'Usuario' / 'Password'.",
+    "comportamiento_esperado": "Cada campo con <label for> visible (o al menos aria-label) que persista con valor y foco.",
+    "impacto_usuario": "Usuarios de lector de pantalla y usuarios que vuelven a un formulario a medio rellenar no pueden identificar el campo.",
+    "evidencia": [
+      "audit/screenshots/LG-01.png",
+      "audit/logs/evidence/login-baseline-attrs.json"
+    ],
+    "propuesta_preliminar": "Añadir etiquetas visibles asociadas (label for=lUser / lPass) y mantener el placeholder solo como ejemplo.",
+    "info_tecnica": "login-baseline-attrs.json: lUser {required:true, labels:[], ariaLabel:null, placeholder:'Usuario'}; lPass {required:false, labels:[], ariaLabel:null, placeholder:'Password'}.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TF-10",
+      "AX-02"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-02",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "#lPass",
+    "categoria": "ux-ui",
+    "severidad": "menor",
+    "descripcion": "El campo de contraseña no ofrece control de mostrar/ocultar y ninguno de los dos campos declara autocomplete (username / current-password), lo que degrada la integración con gestores de contraseñas y el autocompletado del navegador.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx.",
+      "2. Inspeccionar #lPass: sin botón/ícono de revelar, autocomplete=null.",
+      "3. Inspeccionar #lUser: autocomplete=null."
+    ],
+    "comportamiento_actual": "revealToggle=false; autocomplete(lPass)=null; autocomplete(lUser)=null.",
+    "comportamiento_esperado": "Toggle de visibilidad de contraseña y autocomplete='username' / 'current-password'.",
+    "impacto_usuario": "Errores de tecleo no detectables y peor experiencia con gestores de contraseñas, sobre todo en móvil.",
+    "evidencia": [
+      "audit/screenshots/LG-02.png",
+      "audit/logs/evidence/login-baseline-attrs.json"
+    ],
+    "propuesta_preliminar": "Añadir botón 'mostrar contraseña' accesible y atributos autocomplete.",
+    "info_tecnica": "Atributos leídos con getAttribute('autocomplete') sobre #lUser y #lPass; búsqueda de selectores de toggle ([class*=eye], [data-toggle=password]) sin resultados.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "PW-06"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-03",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "#lPass / #lUser + Entrar",
+    "categoria": "validacion",
+    "severidad": "mayor",
+    "descripcion": "La contraseña no es obligatoria en cliente (#lPass sin required): con usuario válido y contraseña vacía o compuesta solo por espacios se envía el POST y la página se recarga sin ningún mensaje (silencio total). Además, el required de #lUser se satisface con espacios en blanco.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx, escribir un usuario y dejar la contraseña vacía.",
+      "2. Pulsar Entrar: se envía POST (status 200) y la página vuelve igual, sin mensaje.",
+      "3. Repetir con contraseña '     ' (solo espacios): mismo resultado.",
+      "4. Escribir '   ' como usuario: pasa el required y se envía."
+    ],
+    "comportamiento_actual": "PW-01: posted=true, status=200, message='' , swal=''. PW-04 whitespace: posted=true, message=''. TF-02: posted=true con usuario '   '.",
+    "comportamiento_esperado": "Bloqueo en cliente con mensaje claro ('La contraseña es obligatoria') y, en servidor, respuesta con mensaje si llega vacía.",
+    "impacto_usuario": "El usuario pulsa Entrar y no ocurre nada visible: no sabe si el sistema falló o si debe hacer algo.",
+    "evidencia": [
+      "audit/screenshots/LG-03.png"
+    ],
+    "propuesta_preliminar": "Añadir required a #lPass, trim en cliente y mensaje de validación explícito; en servidor, responder siempre con un mensaje.",
+    "info_tecnica": "Formulario ctl00 action=./Login.aspx; login() hace document.getElementById('blogin').click(); #lUser required=true, #lPass required=false. POST con lPass='' -> 200 sin swal ni texto adicional (visibleText igual al baseline).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "PW-01",
+      "TF-02",
+      "PW-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-04",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "SweetAlert de credenciales incorrectas",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "El mensaje de credenciales incorrectas se muestra con el icono 'i' (información) de SweetAlert2 y el título 'Error!', una combinación incoherente. El texto es útil ('recuerde colocar el guion') y es idéntico para usuario inexistente y contraseña incorrecta (no revela existencia de usuarios, lo cual es correcto). Tras cerrar el diálogo, la contraseña se limpia y el usuario se conserva.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx.",
+      "2. Usuario válido + contraseña incorrecta -> diálogo 'Error!' con icono info.",
+      "3. Usuario inexistente + cualquier contraseña -> mismo diálogo."
+    ],
+    "comportamiento_actual": "swal: 'i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK' en ambos casos.",
+    "comportamiento_esperado": "Icono de error/advertencia coherente con el título; mantener el mensaje neutro.",
+    "impacto_usuario": "Señal visual contradictoria (icono informativo para un error); impacto bajo.",
+    "evidencia": [
+      "audit/screenshots/LG-04.png",
+      "audit/screenshots/login-PW-02-unknown-user.png",
+      "audit/logs/evidence/login-messages.json"
+    ],
+    "propuesta_preliminar": "Usar icon:'error' y revisar el copy junto con el resto de mensajes.",
+    "info_tecnica": "Diálogo .swal2-container; texto capturado en login-messages.json (messages[]).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "PW-02",
+      "CC-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-05",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "#lUser / #lPass (POST Login.aspx)",
+    "categoria": "servidor",
+    "severidad": "mayor",
+    "descripcion": "Introducir caracteres especiales en el usuario o en la contraseña (el conjunto `< > \" ' & % \\ / ; { } | # =` o la cadena `' OR 1=1 --`) provoca un HTTP 500 con la página genérica de ASP.NET 'Server Error in '/' Application – Runtime Error' (en inglés, sin navegación de vuelta). Otras entradas (<script>, {{7*7}}, ${x}, unicode, 5.000/100.000 caracteres) se manejan con el mensaje normal. Se documenta como fallo de robustez; no se profundizó en la causa (fuera del alcance).",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx.",
+      "2. Usuario: < > \" ' & % \\ / ; { } | # =  ; contraseña: x -> Entrar.",
+      "3. Se recibe HTTP 500 'Runtime Error'.",
+      "4. Repetir con usuario válido y contraseña con los mismos caracteres: mismo 500."
+    ],
+    "comportamiento_actual": "status=500, título 'Runtime Error', cuerpo 'Server Error in '/' Application'.",
+    "comportamiento_esperado": "Entrada tratada como texto literal y respuesta con el mensaje habitual de credenciales incorrectas.",
+    "impacto_usuario": "Un usuario con contraseña que contenga estos caracteres no puede iniciar sesión y ve una página de error técnica en inglés; el error queda sin manejar.",
+    "evidencia": [
+      "audit/screenshots/LG-05.png",
+      "audit/logs/evidence/p4-login-fields-http500-1.html",
+      "audit/logs/evidence/p4-login-fields-http500-2.html",
+      "audit/logs/evidence/p4-login-fields-http500-3.html"
+    ],
+    "propuesta_preliminar": "Revisar el manejo de la entrada en el proceso de autenticación (parametrización/escape) y configurar una página de error amigable (customErrors) en español.",
+    "info_tecnica": "POST ./Login.aspx con lUser=SPECIALS -> 500; lUser=' OR 1=1 -- -> 500; lPass=SPECIALS -> 500; lUser=<script>alert(1)</script> -> 200 con mensaje normal. Cuerpos guardados por attachErrorBodyCapture.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TF-05",
+      "TF-07",
+      "PW-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-06",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "#checkbox-signup (Remember me)",
+    "categoria": "funcional",
+    "severidad": "menor",
+    "descripcion": "La casilla 'Remember me' (marcada por defecto) no tiene atributo name, por lo que nunca viaja en el POST: marcada o desmarcada, el formulario envía exactamente los mismos campos (__VIEWSTATE, __VIEWSTATEGENERATOR, __EVENTVALIDATION, blogin, lUser, lPass). La cookie de sesión es de sesión (expires=-1) en ambos casos. La opción no tiene efecto alguno.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx y enviar con la casilla marcada; inspeccionar el cuerpo del POST.",
+      "2. Repetir con la casilla desmarcada.",
+      "3. Comparar: no aparece ningún campo de la casilla."
+    ],
+    "comportamiento_actual": "name=null; inPOST=false; keys del POST idénticas en ambos casos.",
+    "comportamiento_esperado": "La casilla debería controlar la persistencia de la sesión (cookie persistente) o eliminarse.",
+    "impacto_usuario": "Expectativa falsa de 'recordarme'; el usuario vuelve a autenticarse aunque la marque.",
+    "evidencia": [
+      "audit/screenshots/LG-06.png",
+      "audit/logs/evidence/LG-06-postdata-keys.json"
+    ],
+    "propuesta_preliminar": "Implementar la funcionalidad (name + cookie persistente) o retirar el control.",
+    "info_tecnica": "<input id=\"checkbox-signup\" type=\"checkbox\" checked=\"\"> sin name; POST keys: [\"__VIEWSTATE\",\"__VIEWSTATEGENERATOR\",\"__EVENTVALIDATION\",\"blogin\",\"lUser\",\"lPass\"]. La etiqueta <label for> intercepta el clic (Playwright necesitó clicar el label).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "CB-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-07",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "Entrar (<a href=\"#\" onclick=\"login()\">)",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "El botón principal es un enlace con href='#' y rol link, no un botón: se anuncia como enlace, la tecla Espacio no lo activa (solo Enter) y cada activación añade '#' a la URL. Enter dentro del campo contraseña sí envía el formulario (submit implícito vía #blogin oculto), lo que mitiga el problema para teclado.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx y tabular hasta 'Entrar'.",
+      "2. Pulsar Espacio: no ocurre nada.",
+      "3. Pulsar Enter: se ejecuta login() y la URL pasa a Login.aspx#."
+    ],
+    "comportamiento_actual": "role=link; Enter activa=true; Espacio activa=false; urlAfter=…/Login.aspx#.",
+    "comportamiento_esperado": "<button type=submit> nativo (Enter y Espacio, rol botón, sin cambio de URL).",
+    "impacto_usuario": "Usuarios de teclado/AT reciben semántica incorrecta; Espacio no funciona.",
+    "evidencia": [
+      "audit/screenshots/LG-07.png",
+      "audit/logs/evidence/LG-07-keyboard-entrar.json"
+    ],
+    "propuesta_preliminar": "Sustituir el <a> por <button type=submit> y eliminar los submit ocultos.",
+    "info_tecnica": "login() = document.getElementById('blogin').click(); #blogin es <input type=submit> con display:none. getByRole('button',{name:'Entrar'}).count()=0; getByRole('link').count()=1.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-05"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-08",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "Entrar (login correcto)",
+    "categoria": "ux-ui",
+    "severidad": "mayor",
+    "descripcion": "Con credenciales correctas el POST a Login.aspx tarda ~17–18 s en responder (302 a /Rastreo.aspx) y durante todo ese tiempo no hay ningún feedback: el botón sigue activo, sin spinner, sin bloqueo de UI ni cambio de texto. En el mismo lapso, el doble clic y un segundo clic solo generaron un POST (el navegador ya está navegando), y navegar a otra página pública durante la espera no rompe la sesión (queda autenticada).",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx, introducir credenciales válidas y pulsar Entrar.",
+      "2. Observar 17–18 s sin indicador; el título de la pestaña no cambia hasta la redirección."
+    ],
+    "comportamiento_actual": "loadingWindowMs=17959, visibleFeedback=false, POST -> 302 /Rastreo.aspx; doble clic -> loginPOSTs=1.",
+    "comportamiento_esperado": "Indicador de progreso inmediato y botón deshabilitado hasta la respuesta; idealmente reducir la latencia del servidor.",
+    "impacto_usuario": "El usuario cree que el clic no funcionó y puede reintentar o abandonar.",
+    "evidencia": [
+      "audit/screenshots/LG-08.png",
+      "audit/logs/evidence/LG-08-loading-samples.json",
+      "audit/logs/evidence/LG-15-dblclick.json",
+      "audit/logs/evidence/login-BT-04-interrupt-nav.json"
+    ],
+    "propuesta_preliminar": "Deshabilitar el botón y mostrar spinner al enviar; investigar la latencia del POST de autenticación.",
+    "info_tecnica": "Muestras cada 500 ms: entrarCls sin 'disabled', blockUI=false, preloader=false, swal=false; respuesta 302 location=/Rastreo.aspx a los ~17.4 s.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-07",
+      "BT-04",
+      "NV-08",
+      "BT-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-09",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "a.logo (href=\"index.html\")",
+    "categoria": "funcional",
+    "severidad": "menor",
+    "descripcion": "El logotipo de la pantalla de acceso enlaza a index.html, que responde 404 ('404 - File or directory not found.').",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx.",
+      "2. Clic en el logotipo Domipack.",
+      "3. Página 404 del servidor."
+    ],
+    "comportamiento_actual": "GET /index.html -> 404.",
+    "comportamiento_esperado": "El logo debería llevar al sitio corporativo o no ser un enlace.",
+    "impacto_usuario": "Enlace roto en la primera pantalla; imagen de descuido.",
+    "evidencia": [
+      "audit/screenshots/LG-09.png",
+      "audit/logs/evidence/LG-09-logo-link.json"
+    ],
+    "propuesta_preliminar": "Apuntar a https://domipack.com o eliminar el href.",
+    "info_tecnica": "<a href=\"index.html\" class=\"logo\"><img src=\"assets\\images\\logo_lightnew.png\" id=\"imaglogo\" alt=\"logo-img\"></a>; nótese el src con barras invertidas (resuelve bien en el servidor).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-10"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-10",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "Entrar / Recuperar / Crear Cuenta / campos",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "Tres controles no muestran ningún indicador de foco al navegar con teclado: la casilla 'Remember me' y los enlaces 'Recuperar mi Contraseña?' y 'Crear Cuenta Gratis' (outline none, sin box-shadow ni cambio de color). Medido tras esperar 600 ms a que terminen las transiciones de Bootstrap (corrección de la primera lectura, que marcaba también los inputs): #lUser/#lPass sí cambian de fondo/borde a #f2f7fd (indicador sutil, borde del mismo color que el fondo) y 'Entrar' recibe box-shadow azul. El orden de tabulación es lógico (logo > usuario > contraseña > casilla > Entrar > Recuperar > Crear).",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx y pulsar Tab hasta la casilla y los enlaces inferiores.",
+      "2. Observar que no se distingue cuándo tienen el foco."
+    ],
+    "comportamiento_actual": "Sin indicador: #checkbox-signup, a[onclick=Recuperar();], a[href=NuevaCuenta.aspx]. Con indicador: #lUser, #lPass (fondo #f2f7fd), Entrar (box-shadow rgba(0,123,255,.5) 3.2px).",
+    "comportamiento_esperado": "Anillo de foco visible (WCAG 2.4.7) en todos los controles interactivos; contraste del indicador de los inputs mejorable.",
+    "impacto_usuario": "Usuarios de teclado pierden el foco al llegar a la casilla y a los enlaces secundarios.",
+    "evidencia": [
+      "audit/screenshots/LG-10.png",
+      "audit/logs/evidence/focus-check-corrected.json",
+      "audit/logs/evidence/login-tab-order.json"
+    ],
+    "propuesta_preliminar": "Restaurar :focus-visible con outline contrastado para enlaces y casillas; reforzar el indicador de los inputs.",
+    "info_tecnica": "focus-check-corrected.json (login-focus-check.ts): estilos leídos 600 ms después de focus() y comparados con el estado sin foco. La primera lectura (login-tab-order.json, inmediata tras Tab) capturó valores en mitad de la transición.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-11",
+      "AX-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-11",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "página",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "axe-core (1440px) reporta 5 violaciones: html sin atributo lang (serious), contraste insuficiente del botón Entrar 4.14:1 (#fff sobre #ea3537, serious), sin landmark main, sin h1 y contenido fuera de landmarks. A 375px se añade 'empty-heading' (el h3 del logo queda vacío porque el logo se oculta).",
+    "pasos_para_reproducir": [
+      "1. Ejecutar axe sobre Login.aspx a 1440/768/375."
+    ],
+    "comportamiento_actual": "color-contrast(1), html-has-lang(1), landmark-one-main(1), page-has-heading-one(1), region(1); a 375: empty-heading.",
+    "comportamiento_esperado": "Sin violaciones serias: lang='es', contraste >= 4.5:1, estructura de landmarks/h1.",
+    "impacto_usuario": "Pronunciación incorrecta en lectores de pantalla; legibilidad del botón principal por debajo de AA.",
+    "evidencia": [
+      "audit/screenshots/LG-11.png",
+      "audit/logs/axe/login-1440.json",
+      "audit/logs/axe/login-375.json",
+      "audit/logs/axe/login-768.json"
+    ],
+    "propuesta_preliminar": "Añadir lang='es', oscurecer el rojo del botón o aumentar el peso/tamaño del texto, añadir <main> y un h1.",
+    "info_tecnica": "axe color-contrast: 'Element has insufficient color contrast of 4.14 (foreground #ffffff, background #ea3537, 16px normal)'.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "AX-01",
+      "AX-05"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-12",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "copy de la pantalla",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "Copy mixto español/inglés: 'Remember me' y placeholder 'Password' junto a 'Iniciar sesión', 'Entrar', 'Crear Cuenta Gratis'; 'Recuperar mi Contraseña?' lleva signo de interrogación de cierre sin apertura y no es una pregunta; el título de la pestaña es 'Domipack - Web Trans' (nombre interno) y el documento no declara idioma.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx y leer los textos visibles y el título de la pestaña."
+    ],
+    "comportamiento_actual": "Texto visible: 'Iniciar sesión Remember me Entrar Recuperar mi Contraseña? Crear Cuenta Gratis'; title='Domipack - Web Trans'; lang=''.",
+    "comportamiento_esperado": "Copy consistente en español ('Recordarme', 'Contraseña', 'Recuperar contraseña') y título orientado al cliente.",
+    "impacto_usuario": "Percepción de producto poco cuidado; confusión leve.",
+    "evidencia": [
+      "audit/screenshots/LG-12.png",
+      "audit/logs/evidence/login-messages.json"
+    ],
+    "propuesta_preliminar": "Unificar copy en español y renombrar el título ('Domipack – Portal de clientes').",
+    "info_tecnica": "document.title y body.innerText capturados en login-messages.json.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "CC-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-13",
+    "pantalla": "Login (acceso sin sesión a rutas protegidas)",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+    "componente": "dlg/Adjuntos.aspx",
+    "categoria": "servidor",
+    "severidad": "mayor",
+    "descripcion": "Sin sesión, todas las pantallas protegidas (MiCuenta, Estado, Rastreo, PruebaExportacion, PreAlerta, PagoOnline) responden 302 a /Login.aspx con un cuerpo mínimo ('Object moved', 128 bytes, sin fuga de contenido). En cambio, dlg/Adjuntos.aspx responde HTTP 500 'Server Error in '/' Application' en lugar de redirigir al login.",
+    "pasos_para_reproducir": [
+      "1. En un navegador sin sesión, abrir https://clientes.domipack.com/dlg/Adjuntos.aspx.",
+      "2. Se muestra la página de error 500 de ASP.NET."
+    ],
+    "comportamiento_actual": "GET dlg/Adjuntos.aspx -> 500 (3490 bytes, 'Runtime Error'); el resto -> 302 /Login.aspx.",
+    "comportamiento_esperado": "Redirección a Login.aspx (o 401/403 controlado) como en las demás rutas.",
+    "impacto_usuario": "Un enlace a adjuntos abierto con la sesión caducada muestra un error técnico en inglés.",
+    "evidencia": [
+      "audit/screenshots/LG-13.png",
+      "audit/logs/evidence/nv05-dlg_Adjuntos_aspx-500.html",
+      "audit/logs/evidence/login-nv05-unauth.json"
+    ],
+    "propuesta_preliminar": "Aplicar la misma comprobación de sesión/redirección que el resto de páginas al diálogo de adjuntos y manejar la ausencia de parámetros.",
+    "info_tecnica": "request.get con maxRedirects:0: MiCuenta/Estado/Rastreo/PruebaExportacion/PreAlerta/PagoOnline -> 302 location=/Login.aspx bodyLen=128; dlg/Adjuntos.aspx -> 500 sin location.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "NV-05"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-14",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "layout responsive (a.logo, .accountbg, enlaces secundarios)",
+    "categoria": "responsive",
+    "severidad": "menor",
+    "descripcion": "A 375px el logotipo desaparece por completo (a.logo pasa a display:none y la tarjeta queda con un hueco vacío arriba); los enlaces 'Recuperar mi Contraseña?' y 'Crear Cuenta Gratis' miden 17px de alto y la casilla 13px, por debajo del tamaño táctil recomendable. A 768 y 1440px el div .accountbg (position:absolute, ancho = viewport, desplazado a la izquierda de la tarjeta) sobresale del viewport (scrollWidth 942/768 y 1950/1440); el overflow-x:hidden del html evita la barra de scroll, pero el fondo queda recortado.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx a 375x812: sin logo.",
+      "2. A 768/1024 y 1440/900: documentElement.scrollWidth > clientWidth por .accountbg."
+    ],
+    "comportamiento_actual": "375: a.logo display:none, img 0x0; recuperar h=17, crear h=17, checkbox 13x13. 768: scrollWidth 942; 1440: scrollWidth 1950 (offender .accountbg).",
+    "comportamiento_esperado": "Logo visible en móvil (versión compacta), targets >= 44px, fondo contenido en el viewport.",
+    "impacto_usuario": "Identidad de marca ausente en móvil; enlaces pequeños difíciles de tocar.",
+    "evidencia": [
+      "audit/screenshots/LG-14.png",
+      "audit/screenshots/rs-login-768.png",
+      "audit/screenshots/rs-login-1440.png",
+      "audit/logs/evidence/LG-14-logo-375.json",
+      "audit/logs/evidence/LG-14-overflow-probe.json",
+      "audit/logs/evidence/login-responsive.json"
+    ],
+    "propuesta_preliminar": "Revisar la regla CSS que oculta .logo en móvil, aumentar el área táctil de los enlaces y corregir el posicionamiento de .accountbg.",
+    "info_tecnica": "LG-14-logo-375.json: {display:'inline', w:0, h:0, aDisplay:'none'}; LG-14-overflow-probe.json: offender DIV.accountbg right=1950 width=1440 left=510 position=absolute.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "RS-01",
+      "RS-02",
+      "RS-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-16",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "Login.aspx con sesión activa",
+    "categoria": "robustez",
+    "severidad": "mayor",
+    "descripcion": "Con una sesión autenticada, visitar Login.aspx (por URL, por el logo/marcadores o por el enlace 'Salir') invalida la sesión: el formulario de acceso se muestra como si no hubiera sesión y cualquier página protegida posterior redirige a Login.aspx. La cookie ASP.NET_SessionId se mantiene con el mismo nombre. No existe manejo de 'ya has iniciado sesión'.",
+    "pasos_para_reproducir": [
+      "1. Iniciar sesión (aterriza en Rastreo.aspx) y abrir MiCuenta.aspx (OK).",
+      "2. Navegar a Login.aspx: se muestra el formulario.",
+      "3. Navegar a Rastreo.aspx: redirige a Login.aspx (sesión muerta)."
+    ],
+    "comportamiento_actual": "Rastreo -> MiCuenta OK; Login.aspx -> formulario; Rastreo.aspx -> Login.aspx.",
+    "comportamiento_esperado": "Login.aspx con sesión activa debería redirigir a la página principal (o mostrar aviso) sin destruir la sesión.",
+    "impacto_usuario": "Cualquier retorno accidental al login (atrás, favoritos) expulsa al usuario; los tiempos de acceso (~18 s) agravan el coste.",
+    "evidencia": [
+      "audit/screenshots/LG-16.png",
+      "audit/logs/evidence/login-NV-10.json"
+    ],
+    "propuesta_preliminar": "En Page_Load de Login.aspx, si hay sesión válida redirigir a Rastreo.aspx en vez de abandonarla.",
+    "info_tecnica": "login-NV-10.json: afterLogin=Rastreo.aspx, miCuenta=MiCuenta.aspx, visitLogin=Login.aspx, rastreoAfter=Login.aspx, sessionDead=true, cookiesBefore/After=[ASP.NET_SessionId].",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "NV-10"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "LG-17",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "Recuperar mi Contraseña? (<a onclick=\"Recuperar();\">) [STATIC-ONLY, no ejecutado]",
+    "categoria": "ux-ui",
+    "severidad": "menor",
+    "descripcion": "Inspección estática: Recuperar() hace document.getElementById('bRecuperar').click(), es decir, envía el mismo formulario de login con el submit oculto #bRecuperar. No hay pantalla ni campo propio de recuperación, ni paso de confirmación, ni indicación de qué dato se usa ni a dónde se enviará la contraseña; el único requisito en cliente es el required de #lUser. No se ejecutó por enviar un correo real.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx y leer el script inline (login-inline-scripts.js).",
+      "2. Recuperar() -> #bRecuperar.click() -> POST Login.aspx con bRecuperar."
+    ],
+    "comportamiento_actual": "Enlace con href='#' que dispara un submit oculto sin confirmación ni feedback previo.",
+    "comportamiento_esperado": "Flujo de recuperación explícito: indicar el dato requerido (usuario/correo), confirmar la acción e informar del resultado sin revelar datos.",
+    "impacto_usuario": "Un clic accidental puede disparar el envío de correo sin aviso; el usuario no sabe qué esperar.",
+    "evidencia": [
+      "audit/screenshots/LG-17.png",
+      "audit/logs/evidence/login-inline-scripts.js"
+    ],
+    "propuesta_preliminar": "Diseñar una pantalla de recuperación con confirmación y mensaje de resultado.",
+    "info_tecnica": "Inline script: function Recuperar() { document.getElementById(\"bRecuperar\").click(); } ; <input type=submit id=bRecuperar> oculto. Resultado en servidor no observado (no ejecutado).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-10"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "LG-18",
+    "pantalla": "Login",
+    "url": "https://clientes.domipack.com/Login.aspx",
+    "componente": "<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\">",
+    "categoria": "robustez",
+    "severidad": "menor",
+    "descripcion": "La página carga jQuery 1.7.1 desde http:// (contenido mixto). El navegador bloquea el script en cada carga (error de consola 'Mixed Content … This request has been blocked'); la página sigue funcionando porque después carga assets/js/jquery.min.js (1.11.1). Además, el evento load de la ventana no llega a dispararse en Playwright (readyState se queda en 'interactive'), lo que afectaría a cualquier lógica ligada a window.onload.",
+    "pasos_para_reproducir": [
+      "1. Abrir Login.aspx con la consola abierta.",
+      "2. Ver el error 'Mixed Content' para jquery/1.7.1."
+    ],
+    "comportamiento_actual": "Petición bloqueada + error de consola en cada carga; jQuery final 1.11.1.",
+    "comportamiento_esperado": "Una sola copia de jQuery servida por https.",
+    "impacto_usuario": "Sin impacto visible hoy; riesgo de dependencia de una carga que siempre falla.",
+    "evidencia": [
+      "audit/screenshots/LG-18.png",
+      "audit/logs/console/p4-login-nav-axe.log",
+      "audit/logs/evidence/LG-14-overflow-probe.json"
+    ],
+    "propuesta_preliminar": "Eliminar la etiqueta script http:// (o cambiarla a https y unificar versión).",
+    "info_tecnica": "Consola: 'Mixed Content: The page at https://clientes.domipack.com/Login.aspx was loaded over HTTPS, but requested an insecure script http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js. This request has been blocked'. page.goto waitUntil:'load' agota 30 s; domcontentloaded funciona. [Coordinador: promovido como impacto a confirmar — hoy sin efecto visible; el riesgo es la dependencia de una carga que siempre falla y el evento load que no se dispara.]",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "AX-01"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "NC-01",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "todos los campos (#ddTipo, #Identificacion, #Nombre, #Password, #sSexo, #ltelefono, #lcelular, #Email, #Email1, #tbFecha, #lSucursal, #ckDomicilio, #cbMedioiD, #ckRua)",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "Ninguno de los 14 controles del formulario tiene etiqueta asociada programáticamente: las etiquetas visibles ('Tipo: *', 'Cedula: *', 'Nombre Completo: *'…) no usan for/id ni existe aria-label. axe marca 'select-name' crítico en los 4 selects y 'label' crítico en las dos casillas. El campo de fecha además tiene placeholder 'tbFecha' (id de control) y autofocus sobre un campo deshabilitado.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx.",
+      "2. Inspeccionar cualquier campo: labels.length=0; los <label> no tienen for."
+    ],
+    "comportamiento_actual": "AX-02: sin label/aria-label en 14 controles; labels sin for: ['', 'Fecha Nacimiento (opcional)', 'Oficina', 'Domicilio', 'Direccion', 'Referido', 'Rua Registrado'] y los de texto rojo.",
+    "comportamiento_esperado": "<label for> en todos los campos; nombres accesibles en selects y casillas.",
+    "impacto_usuario": "Formulario de registro inutilizable con lector de pantalla.",
+    "evidencia": [
+      "audit/screenshots/NC-01.png",
+      "audit/logs/evidence/nueva-cuenta-baseline.json",
+      "audit/logs/axe/nueva-cuenta-1440.json"
+    ],
+    "propuesta_preliminar": "Asociar cada label con su control y corregir el placeholder de #tbFecha.",
+    "info_tecnica": "axe: select-name critical (4 nodos: #ddTipo,#sSexo,#lSucursal,#cbMedioiD), label critical (2: #ckDomicilio,#ckRua). <input type=date id=tbFecha placeholder=\"tbFecha\" autofocus disabled>.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TF-10",
+      "AX-02",
+      "DR-09"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-02",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#ckDomicilio ('Domicilio') / #ckRua ('Rua Registrado')",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "Dos casillas sin etiqueta asociada ni texto explicativo. 'Domicilio' al marcarse solo muestra un campo de texto 'Direccion' (los selects cbPais/cbProvincias existen ocultos y Provincias no tiene opciones). 'Rua Registrado' la fija automáticamente el web service (VerificarRua) pero el usuario puede marcarla/desmarcarla libremente sin que nada explique qué es RUA ni qué implica.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx; marcar 'Domicilio': aparece solo 'Direccion'.",
+      "2. Marcar 'Rua Registrado': cambia el estado sin ningún efecto ni ayuda."
+    ],
+    "comportamiento_actual": "ckDomicilio default=false -> muestra #Ddireccion (Direccion, no required); cbPais oculto, cbProvincias 0 opciones. ckRua default=false, sin handler, editable.",
+    "comportamiento_esperado": "Etiquetas asociadas con texto claro ('¿Desea entrega a domicilio?', '¿Está registrado en RUA (Registro Único de Aduanas)?') y control de solo lectura si lo determina el sistema.",
+    "impacto_usuario": "El usuario no entiende qué está marcando.",
+    "evidencia": [
+      "audit/screenshots/NC-02.png",
+      "audit/logs/evidence/NC-02-checkboxes.json"
+    ],
+    "propuesta_preliminar": "Añadir label for + texto de ayuda; decidir si RUA es editable.",
+    "info_tecnica": "Script inline: $('#ckDomicilio').on('click', …) alterna #Ddireccion; VerificarRua() hace GET WebService1.asmx/RuaVerify y $('#ckRua').prop('checked', data).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "CB-01",
+      "CC-05"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-03",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#Identificacion / #Nombre / #Password / #lcelular / #bSend",
+    "categoria": "validacion",
+    "severidad": "mayor",
+    "descripcion": "La validación obligatoria en cliente es inconsistente: 'Cedula: *' (#Identificacion) no tiene required ni formato, 'Password:' no lleva asterisco pero es required, #Nombre acepta solo espacios y números, y #Password/#lcelular son required pero están deshabilitados al cargar, por lo que el navegador ni los valida ni los envía. Con Nombre + dos correos rellenos, form.checkValidity() es true aunque no haya cédula, contraseña ni celular. La validación existente se limita a burbujas nativas del navegador (en inglés en la sesión probada). No se envió el formulario (STATIC-ONLY), así que la validación de servidor no se observó.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx.",
+      "2. Rellenar solo Nombre, Correo y Confirmar correo (dejar Cédula vacía): el formulario es válido en cliente.",
+      "3. Nombre '   ' también es válido.",
+      "4. Pulsar Crear Cuenta con todo vacío: solo burbuja nativa en Nombre."
+    ],
+    "comportamiento_actual": "Identificacion required=false; Nombre whitespace -> valid; Password/lcelular required+disabled; bSend sin novalidate; mensajes 'Please fill out this field.'",
+    "comportamiento_esperado": "Requeridos coherentes con los asteriscos, trim, formato de cédula (11 dígitos) y mensajes en español.",
+    "impacto_usuario": "El usuario puede intentar registrarse con datos incompletos y descubrir el error tarde (o crear una cuenta incompleta si el servidor no valida).",
+    "evidencia": [
+      "audit/screenshots/NC-03.png",
+      "audit/logs/evidence/NC-03-required-vs-asterisk.json",
+      "audit/logs/evidence/nueva-cuenta-baseline.json"
+    ],
+    "propuesta_preliminar": "Definir reglas de validación unificadas cliente/servidor y mostrarlas con mensajes propios.",
+    "info_tecnica": "form.checkValidity() true con Identificacion='' y Nombre='   '; safeClickSend solo hizo clic cuando checkValidity()=false (0 POST); POST a NuevaCuenta.aspx bloqueados por route: 0.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TF-01",
+      "TF-02",
+      "TF-08",
+      "BT-03"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "NC-04",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#Identificacion onblur=GetDataCliente() -> WebService1.asmx (GetNombreCedula / GetNombreRNC / RuaVerify)",
+    "categoria": "funcional",
+    "severidad": "mayor",
+    "descripcion": "Al salir del campo Cédula se consulta un web service para autocompletar el nombre y habilitar Contraseña, Teléfono, Celular, Correo y Fecha. Con una cédula inválida ('abc' o '00000000000') el servicio responde '[]', la página escribe literalmente '[]' en 'Nombre Completo' y habilita todos los campos sin ningún aviso. Para tipo Personal se disparan a la vez GetNombreCedula y GetNombreRNC (dos respuestas compiten por #Nombre). Si la llamada falla (red, bloqueo), GetDataCliente no informa (error callback vacío) y los campos quedan deshabilitados sin explicación, mientras VerificarRua muestra alert('[object Object]'). La función valida_cedula() (algoritmo de dígito verificador) existe pero no está enlazada a ningún evento.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx, escribir 'abc' en Cédula y pulsar Tab.",
+      "2. 'Nombre Completo' pasa a '[]' y se habilitan los campos.",
+      "3. Con la red del web service bloqueada: alert '[object Object]' y campos deshabilitados sin mensaje."
+    ],
+    "comportamiento_actual": "GetNombreCedula -> 200 '[]'; Nombre='[]'; disabled=false en Password/ltelefono/lcelular/Email/tbFecha; RuaVerify -> 'false'; con fallo: alert [object Object].",
+    "comportamiento_esperado": "Validar formato/dígito verificador antes de consultar; si no hay coincidencia, mensaje claro y no escribir '[]'; manejar errores con texto útil.",
+    "impacto_usuario": "Datos basura en el nombre, campos que no se habilitan sin explicación y alertas crípticas.",
+    "evidencia": [
+      "audit/screenshots/NC-04.png",
+      "audit/logs/evidence/NC-04-id-lookup.json",
+      "audit/logs/evidence/nueva-cuenta-asmx-calls.json",
+      "audit/logs/evidence/nueva-cuenta-inline-scripts.js"
+    ],
+    "propuesta_preliminar": "Enlazar valida_cedula() al blur, tratar la respuesta vacía, unificar la llamada por tipo y reemplazar los alert() por mensajes en la página.",
+    "info_tecnica": "Inline JS: success: data.split('|'); Nombre.value=res[0]; error: function(){}. VerificarRua error: alert(err). Solo se usaron valores bogus ('abc', '00000000000'); los sondeos con caracteres especiales al servicio se bloquearon (18 llamadas abortadas).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "TF-08",
+      "PH-07",
+      "TF-12"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-05",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#Email / #Email1",
+    "categoria": "validacion",
+    "severidad": "mayor",
+    "descripcion": "El placeholder de ambos campos dice 'Para agregar otro correo electrónico debe separarlo con ;', pero son input type=email sin atributo multiple: cualquier valor con ';' es rechazado por el navegador ('A part following '@' should not contain the symbol ';'') y el formulario no se puede enviar. Además la validación nativa acepta 'a@x' (sin TLD) y el mensaje se muestra en el idioma del navegador.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx.",
+      "2. Escribir 'a@x.com;b@y.com' en Correo Electrónico y pulsar Crear Cuenta.",
+      "3. Burbuja nativa de error; el envío se bloquea."
+    ],
+    "comportamiento_actual": "'a@x.com;b@y.com' -> validity.valid=false (typeMismatch); 'a@x' -> valid=true.",
+    "comportamiento_esperado": "O bien soportar varios correos (multiple + validación) o bien retirar el texto del placeholder.",
+    "impacto_usuario": "El usuario sigue la instrucción del formulario y queda bloqueado.",
+    "evidencia": [
+      "audit/screenshots/NC-05.png",
+      "audit/logs/evidence/NC-05-email-list.json",
+      "audit/logs/evidence/nueva-cuenta-EM-02.json"
+    ],
+    "propuesta_preliminar": "Decidir si se admiten varios correos; si no, cambiar placeholder por 'correo@dominio.com'.",
+    "info_tecnica": "<input type=email id=Email required placeholder=\"Para agregar otro correo electrónico debe separarlo con ;  \"> sin multiple/pattern; EM-02: aceptados ['a@x'], rechazados ['abc','abc@','@x.com','a b@x.com','a@@x.com','a@x.com.'].",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "EM-02",
+      "EM-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-06",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#Email1 ('Confirma tu Correo Electrónico')",
+    "categoria": "validacion",
+    "severidad": "menor",
+    "descripcion": "El campo de confirmación de correo no se compara en cliente con el correo principal: con 'uno@example.com' y 'dos@example.com' el formulario es válido. Ningún script de la página referencia Email1. Ambos campos comparten el mismo placeholder de lista, lo que refuerza la confusión sobre su propósito. Comportamiento en servidor no observado (STATIC-ONLY).",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx.",
+      "2. Correo: uno@example.com; Confirmar: dos@example.com.",
+      "3. form.checkValidity() = true."
+    ],
+    "comportamiento_actual": "Sin comparación en cliente; JS referencia Email1=false.",
+    "comportamiento_esperado": "Validación de igualdad inmediata con mensaje.",
+    "impacto_usuario": "Errores de tecleo en el correo no se detectan antes de enviar.",
+    "evidencia": [
+      "audit/screenshots/NC-06.png"
+    ],
+    "propuesta_preliminar": "Comparar Email y Email1 en cliente (y servidor) y usar un placeholder distinto ('Repite tu correo').",
+    "info_tecnica": "EM-04: Email≠Email1 -> form válido en cliente=true.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "EM-04"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "NC-07",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#ltelefono / #lcelular",
+    "categoria": "validacion",
+    "severidad": "menor",
+    "descripcion": "Teléfono y Celular son input type=text sin pattern, inputmode, minlength ni maxlength: 'abc', '+++', '()', '1' y 60 dígitos se aceptan como válidos en cliente; espacios y guiones se envían tal cual. En móvil no aparece teclado numérico.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx y habilitar los campos (tras una cédula) o inspeccionar sus atributos.",
+      "2. Escribir 'abc' en Celular: válido."
+    ],
+    "comportamiento_actual": "type=text, inputmode=null, maxlength=-1; todos los valores probados valid=true.",
+    "comportamiento_esperado": "type=tel con pattern/longitud y normalización.",
+    "impacto_usuario": "Teléfonos inválidos en el registro; contacto imposible posteriormente.",
+    "evidencia": [
+      "audit/screenshots/NC-07.png",
+      "audit/logs/evidence/NC-07-phones.json"
+    ],
+    "propuesta_preliminar": "type=tel + inputmode=numeric + validación de formato dominicano/internacional.",
+    "info_tecnica": "NC-07-phones.json: 16 pruebas (lcelular/ltelefono) con validity.valid=true; lcelular required solo cuando está habilitado.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "PH-02",
+      "PH-04",
+      "PH-05",
+      "PH-06"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-08",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#Password",
+    "categoria": "ux-ui",
+    "severidad": "menor",
+    "descripcion": "El campo de contraseña del registro no tiene política visible ni técnica: sin minlength/pattern, sin indicador de fortaleza, sin campo de confirmación, sin mostrar/ocultar y sin autocomplete='new-password'. Acepta una contraseña de solo espacios y 10.000 caracteres en cliente (servidor no ejercido).",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx y habilitar #Password (tras cédula).",
+      "2. Escribir '     ': válido. Inspeccionar atributos."
+    ],
+    "comportamiento_actual": "minlength=-1, pattern=null, meter=false, hint='Password:', autocomplete=null, whitespace-only valid=true.",
+    "comportamiento_esperado": "Política mínima comunicada, confirmación y toggle de visibilidad.",
+    "impacto_usuario": "Contraseñas débiles o con errores de tecleo que impiden el primer acceso.",
+    "evidencia": [
+      "audit/screenshots/NC-08.png"
+    ],
+    "propuesta_preliminar": "Definir política (longitud mínima), añadir confirmación/visibilidad y autocomplete=new-password.",
+    "info_tecnica": "PW-03: len=10000 aceptado; PW-04: specials/unicode/whitespace/padded valid=true.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "PW-03",
+      "PW-04",
+      "PW-05",
+      "PW-06"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-09",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#tbFecha (Fecha Nacimiento)",
+    "categoria": "validacion",
+    "severidad": "menor",
+    "descripcion": "La fecha de nacimiento no tiene min/max ni validación de plausibilidad: 2035-01-01 (futuro), la fecha de hoy y 1900-01-01 se aceptan como válidas. El campo, además, se rellena automáticamente desde el web service (res[1]) y queda deshabilitado hasta entonces.",
+    "pasos_para_reproducir": [
+      "1. Habilitar #tbFecha y fijar 2035-01-01: validity.valid=true."
+    ],
+    "comportamiento_actual": "min='', max=''; 2035/hoy/1900 válidos; 2026-02-30 se descarta por el navegador.",
+    "comportamiento_esperado": "max = hoy − 18 años (el contrato exige mayoría de edad), min razonable.",
+    "impacto_usuario": "Registro con fechas imposibles; menores no detectados.",
+    "evidencia": [
+      "audit/screenshots/NC-09.png",
+      "audit/logs/evidence/NC-09-dob.json"
+    ],
+    "propuesta_preliminar": "Añadir min/max y validación de edad.",
+    "info_tecnica": "NC-09-dob.json.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "DR-08"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-10",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#sSexo / #cbMedioiD / #lSucursal / #ddTipo",
+    "categoria": "validacion",
+    "severidad": "menor",
+    "descripcion": "Ningún select es required: 'Sexo' puede enviarse con el placeholder 'Seleccionar' (value 'S'), 'Referido' arranca en una opción vacía y 'Oficina' viene preseleccionada en 'OFICINA PRINCIPAL NACO' sin que el usuario elija. Dos handlers de carga compiten por el valor de Referido (uno fija '04', el otro lo sobrescribe con el parámetro ?medio=, que sin parámetro deja vacío).",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx; rellenar Nombre y correos.",
+      "2. form.checkValidity() = true con Sexo='Seleccionar'."
+    ],
+    "comportamiento_actual": "sSexo required=false value='S'; cbMedioiD value=''; lSucursal='DO.SDQ' por defecto; ?medio=04 -> '04'.",
+    "comportamiento_esperado": "Selects obligatorios con placeholder no enviable o valores por defecto explícitos.",
+    "impacto_usuario": "Datos de registro incompletos o incorrectos (sucursal equivocada).",
+    "evidencia": [
+      "audit/screenshots/NC-10.png",
+      "audit/logs/evidence/nueva-cuenta-selects.json",
+      "audit/logs/evidence/nueva-cuenta-medio-param.json"
+    ],
+    "propuesta_preliminar": "required + option placeholder value='' en Sexo/Oficina; unificar el handler de Referido.",
+    "info_tecnica": "Inline #3: cbMedioiD.value='04'; inline #4: cbMedioiD.value = params.get('medio').",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "SL-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-11",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#ddTipo (Tipo de cliente) -> change()",
+    "categoria": "funcional",
+    "severidad": "menor",
+    "descripcion": "El cambio de tipo de cliente deja estados inconsistentes: Personal -> Empresa -> Extranjero oculta 'Fecha Nacimiento' para el extranjero (persona física) porque Extranjero no restaura la sección; y Extranjero -> Personal mantiene la etiqueta/placeholder 'Pasaporte' en el campo oculto de RNC. Los campos ocultos (iRNC, tbContacto) conservan su valor al cambiar de tipo.",
+    "pasos_para_reproducir": [
+      "1. Tipo: Empresa (Fecha Nacimiento se oculta).",
+      "2. Tipo: Extranjero: Fecha Nacimiento sigue oculta.",
+      "3. Tipo: Personal: etiqueta de RNC queda 'Pasaporte'."
+    ],
+    "comportamiento_actual": "Secuencia registrada en NC-11-ddTipo-sequence.json: Extranjero tras Corporativo -> DFechaNacimiento=false; Personal tras Extranjero -> lrnc='Pasaporte'.",
+    "comportamiento_esperado": "Cada tipo define explícitamente qué secciones se muestran, independientemente del estado anterior.",
+    "impacto_usuario": "Un extranjero puede no ver el campo de fecha; confusión de etiquetas.",
+    "evidencia": [
+      "audit/screenshots/NC-11.png",
+      "audit/screenshots/nueva-cuenta-SL-02-empresa.png",
+      "audit/logs/evidence/NC-11-ddTipo-sequence.json"
+    ],
+    "propuesta_preliminar": "Reescribir change() para fijar el estado completo por tipo y limpiar campos ocultos.",
+    "info_tecnica": "change(): rama 'else' (Extranjero) no toca DFechaNacimiento ni restaura lrnc al volver a Personal.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "SL-02"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-12",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#lSucursal (27 opciones) / #cbMedioiD 'Referido' (55 opciones)",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "Dos selects nativos largos sin búsqueda ni agrupación. El de 'Referido' mezcla canales (REDES SOCIALES, PAGINA WEBS), empresas y nombres propios de personas (posibles referidores/empleados) expuestos públicamente, con erratas y casing inconsistente ('JOSE LEONARDRO GRULLON', 'Promocion por Afiliación EM', 'Promoción de introduccion', '• INFACA.', 'DA THE OFFICE SRL.', 'BlackFriday2025', 'Paella Challenge 2024') y una opción vacía inicial. Sucursales en mayúsculas con acentos irregulares ('ENSANCHE PARAISO', 'SAN GERÓNIMO').",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx y desplegar 'Referido' y 'Oficina'."
+    ],
+    "comportamiento_actual": "Listas completas en nueva-cuenta-selects.json.",
+    "comportamiento_esperado": "Lista curada de canales, sin datos personales, con búsqueda si supera ~15 opciones.",
+    "impacto_usuario": "Selección lenta y confusa; exposición innecesaria de nombres.",
+    "evidencia": [
+      "audit/screenshots/NC-12.png",
+      "audit/logs/evidence/nueva-cuenta-selects.json"
+    ],
+    "propuesta_preliminar": "Depurar el catálogo de 'Referido' y usar un select con búsqueda o campo libre 'Código de referido'.",
+    "info_tecnica": "Inline #5 registra lSucursal.addEventListener('select', logSelection) — evento inexistente para <select> y #log ausente (código muerto).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "SL-03",
+      "SL-06"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-13",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "orden de tabulación (tabindex 1..10) y foco visible",
+    "categoria": "accesibilidad",
+    "severidad": "mayor",
+    "descripcion": "Los tabindex positivos (1,2,3,3,4,5,6,6,7,8,8,8,10) rompen el orden de tabulación: Sexo, Domicilio y Rua Registrado (sin tabindex) reciben el foco después del botón 'Crear Cuenta'; Cédula (2) e iRNC (2) comparten índice. Las dos casillas (Domicilio, Rua) no muestran ningún indicador de foco; inputs, selects y el botón sí lo tienen (fondo #f2f7fd / box-shadow azul, medido tras 600 ms de transición — corrección de la primera lectura). axe: 'tabindex' serious en 12 nodos.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx y pulsar Tab: ddTipo > Identificacion > Nombre > Email > Email1 > lSucursal > cbMedioiD > bSend > sSexo > ckDomicilio > ckRua."
+    ],
+    "comportamiento_actual": "Orden registrado en NC-13-tab-order.json; sin indicador de foco: #ckDomicilio, #ckRua (focus-check-corrected.json).",
+    "comportamiento_esperado": "Orden DOM natural (sin tabindex positivos) y foco visible en las casillas.",
+    "impacto_usuario": "Usuarios de teclado saltan al botón de envío antes de completar Sexo/Domicilio/RUA.",
+    "evidencia": [
+      "audit/screenshots/NC-13.png",
+      "audit/logs/evidence/NC-13-tab-order.json",
+      "audit/logs/evidence/focus-check-corrected.json",
+      "audit/logs/axe/nueva-cuenta-1440.json"
+    ],
+    "propuesta_preliminar": "Eliminar los tabindex positivos y añadir :focus-visible a las casillas.",
+    "info_tecnica": "Campos deshabilitados (Password, teléfonos, fecha) se saltan hasta que el web service los habilita. login-focus-check.ts re-midió los estilos 600 ms después de focus().",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "SL-05",
+      "BT-11",
+      "AX-04"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-14",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "#bSend / #bsendConfi / Confirmar() [STATIC-ONLY]",
+    "categoria": "robustez",
+    "severidad": "mayor",
+    "descripcion": "Inspección estática y prueba en cliente con Guardar() sustituido por un stub (sin envío): el botón 'Crear Cuenta' no tiene protección contra doble envío ni paso de confirmación previo. Existe un segundo submit oculto (#bsendConfi) que se dispara desde Confirmar() -> Guardar(); pero Confirmar() usa la API de SweetAlert v1 (buttons, dangerMode, swal(...)) sobre SweetAlert2 9.17.2: el diálogo muestra solo 'OK' (sin 'No/Yes') y ni 'OK' ni Esc llegan a llamar a Guardar() (0 llamadas), con avisos de consola 'Unknown parameter buttons/dangerMode'. Si el servidor invoca Confirmar() tras el primer envío (patrón visible en el código), el usuario no podría completar el registro. No se envió ningún formulario.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx; en consola: window.Guardar = () => window.__c++; Confirmar('T','M','info','X').",
+      "2. Diálogo con solo 'OK'; pulsar OK o Esc: __c sigue en 0."
+    ],
+    "comportamiento_actual": "botones visibles=['OK']; Esc -> Guardar=0; OK -> Guardar=0; warnings SweetAlert2 Unknown parameter.",
+    "comportamiento_esperado": "Confirmación con Sí/No funcional que conduzca al envío definitivo; botón deshabilitado durante el envío.",
+    "impacto_usuario": "Posible bloqueo del registro en el paso de confirmación (a confirmar con un envío real controlado por el equipo).",
+    "evidencia": [
+      "audit/screenshots/NC-14.png",
+      "audit/screenshots/NC-14-after-ok.png",
+      "audit/logs/evidence/NC-14-confirmar.json",
+      "audit/logs/evidence/nueva-cuenta-inline-scripts.js"
+    ],
+    "propuesta_preliminar": "Migrar Confirmar() a la API de SweetAlert2 (showCancelButton, result.isConfirmed) y añadir disable-on-submit.",
+    "info_tecnica": "swal.fire({buttons:['No!','Yes!'], dangerMode:true}).then(isConfirm => { if (isConfirm) swal({...}).then(Guardar) else swal(...) }); Swal.version=9.17.2. La misma Confirmar() está duplicada en Login.aspx sin uso.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "BT-02"
+    ],
+    "impacto_a_confirmar": true
+  },
+  {
+    "id": "NC-15",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "copy de la pantalla",
+    "categoria": "copy-contenido",
+    "severidad": "menor",
+    "descripcion": "Copy y textos alternativos descuidados: el logotipo lleva alt='Girl in a jacket' (texto de tutorial), 'Cedula' y 'Direccion' sin tilde, 'Password' en inglés, placeholder 'tbFecha', etiquetas con puntuación inconsistente ('Tipo: *', 'Correo Electrónico:*', 'Fecha Nacimiento (opcional)' sin dos puntos), 'Rua Registrado' sin explicación y documento sin lang. El título de pestaña sí es descriptivo ('Registro de nuevos clientes Domipack').",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx y revisar etiquetas, placeholders y alt del logo."
+    ],
+    "comportamiento_actual": "Ver NC-15-copy.json.",
+    "comportamiento_esperado": "Copy uniforme en español con tildes, alt descriptivo, sin ids de control como texto.",
+    "impacto_usuario": "Lectores de pantalla anuncian 'Girl in a jacket' como logo; imagen de descuido.",
+    "evidencia": [
+      "audit/screenshots/NC-15.png",
+      "audit/logs/evidence/NC-15-copy.json"
+    ],
+    "propuesta_preliminar": "Revisión editorial completa del formulario.",
+    "info_tecnica": "<img src=\"https://domipack.com/wp-content/uploads/2022/05/Logo250.png\" alt=\"Girl in a jacket\" width=\"300\">.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "CC-01"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-16",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "layout responsive",
+    "categoria": "responsive",
+    "severidad": "menor",
+    "descripcion": "Sin desbordamiento horizontal a 375/768/1440, pero las casillas 'Domicilio' y 'Rua Registrado' son de 13×13 px dentro de un contenedor .form-control de ancho completo (objetivo táctil pequeño y visualmente extraño) y el placeholder largo de los correos se corta a 375px. A 1440px el formulario ocupa una única columna de 690px con 1600px de alto.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx a 375x812 y 1440x900."
+    ],
+    "comportamiento_actual": "overflow=false en los tres anchos; ckDomicilio/ckRua 13x13; placeholder de Email truncado a 375.",
+    "comportamiento_esperado": "Casillas con etiqueta clicable y área >= 44px; placeholder corto; aprovechar el ancho en escritorio.",
+    "impacto_usuario": "Dificultad para marcar casillas en móvil; instrucción del correo ilegible en móvil.",
+    "evidencia": [
+      "audit/screenshots/NC-16.png",
+      "audit/screenshots/rs-nueva-cuenta-768.png",
+      "audit/screenshots/rs-nueva-cuenta-1440.png",
+      "audit/logs/evidence/nueva-cuenta-responsive.json"
+    ],
+    "propuesta_preliminar": "Reestructurar las casillas como <label><input> texto</label> y acortar placeholders.",
+    "info_tecnica": "nueva-cuenta-responsive.json (scrollWidth/clientWidth, medidas de controles).",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "RS-01",
+      "RS-02",
+      "RS-03"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-17",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "página (axe-core)",
+    "categoria": "accesibilidad",
+    "severidad": "menor",
+    "descripcion": "axe-core reporta 10 tipos de violación (idénticos en los tres anchos): contraste 2.51:1 en las etiquetas grises (#98a4b9 sobre blanco: Fecha Nacimiento, Oficina, Domicilio, Referido, Rua Registrado) y 4.14:1 en el botón, html sin lang, imagen sin alt (img[width='98%'], el banner inferior), sin h1/main, 17 bloques fuera de landmarks, además de los select-name/label/tabindex ya recogidos en NC-01 y NC-13.",
+    "pasos_para_reproducir": [
+      "1. Ejecutar axe sobre NuevaCuenta.aspx."
+    ],
+    "comportamiento_actual": "color-contrast(6), empty-heading(1), html-has-lang(1), image-alt(1), label(2), landmark-one-main(2), page-has-heading-one(2), region(17), select-name(4), tabindex(12).",
+    "comportamiento_esperado": "Sin violaciones críticas/serias.",
+    "impacto_usuario": "Etiquetas opcionales casi ilegibles; estructura pobre para AT.",
+    "evidencia": [
+      "audit/screenshots/NC-17.png",
+      "audit/logs/axe/nueva-cuenta-1440.json",
+      "audit/logs/axe/nueva-cuenta-375.json",
+      "audit/logs/axe/nueva-cuenta-768.json"
+    ],
+    "propuesta_preliminar": "Oscurecer el gris de etiquetas, añadir lang/alt/landmarks.",
+    "info_tecnica": "axe: 'insufficient color contrast of 2.51 (foreground #98a4b9, background #ffffff, 14px)'.",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "AX-01",
+      "AX-05"
+    ],
+    "impacto_a_confirmar": false
+  },
+  {
+    "id": "NC-18",
+    "pantalla": "Nueva Cuenta",
+    "url": "https://clientes.domipack.com/NuevaCuenta.aspx",
+    "componente": "banner inferior <img src=\"https://i.postimg.cc/XvKNRMW3/BANNER-ANDROID.png\" width=\"98%\">",
+    "categoria": "ux-ui",
+    "severidad": "mayor",
+    "descripcion": "Al pie del formulario se renderiza una imagen alojada en un servicio externo de terceros (i.postimg.cc), de 1024×500 px naturales, mostrada a 319×1135 px: aparece deformada verticalmente (logo Domipack, 'Miami – Santo Domingo – Te llega de un brinco' estirados) sobre una franja gris, sin alt y visible en todos los anchos. Un usuario que baje hasta el botón 'Crear Cuenta' ve un gráfico roto.",
+    "pasos_para_reproducir": [
+      "1. Abrir NuevaCuenta.aspx y desplazarse al final de la página."
+    ],
+    "comportamiento_actual": "IMG natural 1024x500 renderizada 319x1135 (top=1437 en 1440x900).",
+    "comportamiento_esperado": "Imagen con proporción correcta (o eliminada), alojada en el propio dominio, con alt.",
+    "impacto_usuario": "Apariencia rota en la pantalla de captación de clientes; dependencia de un host externo.",
+    "evidencia": [
+      "audit/screenshots/NC-18.png",
+      "audit/screenshots/rs-nueva-cuenta-1440.png",
+      "audit/logs/evidence/NC-18-footer-probe.json"
+    ],
+    "propuesta_preliminar": "Corregir CSS (height:auto), servir la imagen desde el sitio y añadir alt; valorar si el banner aporta valor.",
+    "info_tecnica": "NC-18-footer-probe.json: {tag:'IMG', src:'https://i.postimg.cc/XvKNRMW3/BANNER-ANDROID.png', natural:'1024x500', w:319, h:1135}. axe image-alt: img[width='98%'].",
+    "patron_relacionado": null,
+    "caso_matriz": [
+      "RS-03",
+      "AX-01"
+    ],
+    "impacto_a_confirmar": false
+  }
+]

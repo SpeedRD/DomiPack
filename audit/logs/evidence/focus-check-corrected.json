@@ -1,0 +1,278 @@
+{
+  "login": [
+    {
+      "sel": "#lUser",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(206, 212, 218)",
+        "bg": "rgb(255, 255, 255)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(242, 247, 253)",
+        "bg": "rgb(242, 247, 253)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "#lPass",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(206, 212, 218)",
+        "bg": "rgb(255, 255, 255)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(242, 247, 253)",
+        "bg": "rgb(242, 247, 253)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "#checkbox-signup",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "indicator": false
+    },
+    {
+      "sel": "a[onclick=\"login()\"]",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(255, 255, 255)",
+        "boxShadow": "none",
+        "border": "rgb(234, 53, 55)",
+        "bg": "rgb(234, 53, 55)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(255, 255, 255)",
+        "boxShadow": "rgba(0, 123, 255, 0.5) 0px 0px 0px 3.2px",
+        "border": "rgb(247, 111, 152)",
+        "bg": "rgb(247, 111, 152)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "a[onclick=\"Recuperar();\"]",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(152, 164, 185)",
+        "boxShadow": "none",
+        "border": "rgb(152, 164, 185)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(152, 164, 185)",
+        "boxShadow": "none",
+        "border": "rgb(152, 164, 185)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "indicator": false
+    },
+    {
+      "sel": "a[href=\"NuevaCuenta.aspx\"]",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(152, 164, 185)",
+        "boxShadow": "none",
+        "border": "rgb(152, 164, 185)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(152, 164, 185)",
+        "boxShadow": "none",
+        "border": "rgb(152, 164, 185)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "indicator": false
+    }
+  ],
+  "nuevaCuenta": [
+    {
+      "sel": "#ddTipo",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(206, 212, 218)",
+        "bg": "rgb(255, 255, 255)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(242, 247, 253)",
+        "bg": "rgb(242, 247, 253)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "#Identificacion",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(206, 212, 218)",
+        "bg": "rgb(255, 255, 255)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(242, 247, 253)",
+        "bg": "rgb(242, 247, 253)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "#Nombre",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(206, 212, 218)",
+        "bg": "rgb(255, 255, 255)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(242, 247, 253)",
+        "bg": "rgb(242, 247, 253)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "#sSexo",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(206, 212, 218)",
+        "bg": "rgb(255, 255, 255)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(242, 247, 253)",
+        "bg": "rgb(242, 247, 253)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "#Email",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(206, 212, 218)",
+        "bg": "rgb(255, 255, 255)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(242, 247, 253)",
+        "bg": "rgb(242, 247, 253)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "#lSucursal",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(206, 212, 218)",
+        "bg": "rgb(255, 255, 255)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(242, 247, 253)",
+        "bg": "rgb(242, 247, 253)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "#ckDomicilio",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "indicator": false
+    },
+    {
+      "sel": "#cbMedioiD",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(206, 212, 218)",
+        "bg": "rgb(255, 255, 255)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(242, 247, 253)",
+        "bg": "rgb(242, 247, 253)"
+      },
+      "indicator": true
+    },
+    {
+      "sel": "#ckRua",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "bg": "rgba(0, 0, 0, 0)"
+      },
+      "indicator": false
+    },
+    {
+      "sel": "#bSend",
+      "focusable": true,
+      "blur": {
+        "outline": "none 3px rgb(255, 255, 255)",
+        "boxShadow": "none",
+        "border": "rgb(234, 53, 55)",
+        "bg": "rgb(234, 53, 55)"
+      },
+      "foc": {
+        "outline": "none 3px rgb(255, 255, 255)",
+        "boxShadow": "rgba(0, 123, 255, 0.5) 0px 0px 0px 3.2px",
+        "border": "rgb(247, 111, 152)",
+        "bg": "rgb(247, 111, 152)"
+      },
+      "indicator": true
+    }
+  ]
+}

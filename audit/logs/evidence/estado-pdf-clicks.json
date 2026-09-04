@@ -1,0 +1,179 @@
+[
+  {
+    "row": 0,
+    "factura": "FT33-006983",
+    "button": "cpBody_gvDatos_cell0_0_iPrint_0",
+    "responses": [
+      {
+        "status": 200,
+        "method": "POST",
+        "url": "https://clientes.domipack.com/Estado.aspx",
+        "ct": "text/html; charset=utf-8",
+        "cd": null,
+        "ts": "2026-09-04T02:19:52.094Z"
+      }
+    ],
+    "download": {
+      "suggested": "a7f01673-fab6-4eb7-bd8e-0e5586214949.pdf",
+      "url": "https://clientes.domipack.com//rep/Export/a7f01673-fab6-4eb7-bd8e-0e5586214949.pdf",
+      "dest": "audit/logs/evidence/estado-row0.pdf",
+      "size": 71346,
+      "magic": "%PDF-",
+      "isPdf": true,
+      "failure": null,
+      "head": "%PDF-1.7 \n%âãÏÓ \n1 0 obj \n<< \n/Type /Catalog \n/Pages 2 0 R \n/PageMode /UseNone \n/ViewerPreferences << \n/FitWindow true \n/PageLayout /SinglePage \n/NonFullScreenPageMode /UseNone \n>> \n>> \nendobj \n5 0 ob"
+    },
+    "popup": {
+      "url": "",
+      "title": "",
+      "isPdfViewer": false,
+      "serverError": null,
+      "htmlLen": 39,
+      "shot": "audit/screenshots/estado-row0-popup.png"
+    },
+    "navigation": {
+      "before": "https://clientes.domipack.com/Estado.aspx",
+      "after": "https://clientes.domipack.com/Estado.aspx",
+      "title": "DOMIPACK - Web Clientes."
+    },
+    "feedback": {
+      "cls": "dxbButton_Office365 dxbButtonSys dxbTSys",
+      "disabled": false,
+      "loadingPanel": true,
+      "title": "DOMIPACK - Web Clientes."
+    },
+    "elapsedMs": 4087,
+    "sameTab": {
+      "serverError": null,
+      "title": "DOMIPACK - Web Clientes.",
+      "isPdfEmbed": false,
+      "bodyStart": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAlerta Cuenta por Pagar Consulta Estados de Cuenta. Factura Fecha TotalFacturado Debito Credito Balance Dias Vencidos Monedas FT33-006983 08-31-2026 3,677.19 0.00 0.00 3,677.19 -5 DOP"
+    },
+    "mainPost": {
+      "status": 200,
+      "method": "POST",
+      "url": "https://clientes.domipack.com/Estado.aspx",
+      "ct": "text/html; charset=utf-8",
+      "cd": null,
+      "ts": "2026-09-04T02:19:52.094Z"
+    }
+  },
+  {
+    "row": 1,
+    "factura": "FT33-006951",
+    "button": "cpBody_gvDatos_cell1_0_iPrint_1",
+    "responses": [
+      {
+        "status": 200,
+        "method": "POST",
+        "url": "https://clientes.domipack.com/Estado.aspx",
+        "ct": "text/html; charset=utf-8",
+        "cd": null,
+        "ts": "2026-09-04T02:21:00.042Z"
+      }
+    ],
+    "download": {
+      "suggested": "a23d05b8-0a7f-4573-b0dd-f3cbd036ada0.pdf",
+      "url": "https://clientes.domipack.com//rep/Export/a23d05b8-0a7f-4573-b0dd-f3cbd036ada0.pdf",
+      "dest": "audit/logs/evidence/estado-row1.pdf",
+      "size": 69124,
+      "magic": "%PDF-",
+      "isPdf": true,
+      "failure": null,
+      "head": "%PDF-1.7 \n%âãÏÓ \n1 0 obj \n<< \n/Type /Catalog \n/Pages 2 0 R \n/PageMode /UseNone \n/ViewerPreferences << \n/FitWindow true \n/PageLayout /SinglePage \n/NonFullScreenPageMode /UseNone \n>> \n>> \nendobj \n5 0 ob"
+    },
+    "popup": {
+      "url": "",
+      "title": "",
+      "isPdfViewer": false,
+      "serverError": null,
+      "htmlLen": 39,
+      "shot": "audit/screenshots/estado-row1-popup.png"
+    },
+    "navigation": {
+      "before": "https://clientes.domipack.com/Estado.aspx",
+      "after": "https://clientes.domipack.com/Estado.aspx",
+      "title": "DOMIPACK - Web Clientes."
+    },
+    "feedback": {
+      "cls": "dxbButton_Office365 dxbButtonSys dxbTSys",
+      "disabled": false,
+      "loadingPanel": true,
+      "title": "DOMIPACK - Web Clientes."
+    },
+    "elapsedMs": 3748,
+    "sameTab": {
+      "serverError": null,
+      "title": "DOMIPACK - Web Clientes.",
+      "isPdfEmbed": false,
+      "bodyStart": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAlerta Cuenta por Pagar Consulta Estados de Cuenta. Factura Fecha TotalFacturado Debito Credito Balance Dias Vencidos Monedas FT33-006983 08-31-2026 3,677.19 0.00 0.00 3,677.19 -5 DOP"
+    },
+    "mainPost": {
+      "status": 200,
+      "method": "POST",
+      "url": "https://clientes.domipack.com/Estado.aspx",
+      "ct": "text/html; charset=utf-8",
+      "cd": null,
+      "ts": "2026-09-04T02:21:00.042Z"
+    }
+  },
+  {
+    "row": 2,
+    "factura": "FT33-006833",
+    "button": "cpBody_gvDatos_cell2_0_iPrint_2",
+    "responses": [
+      {
+        "status": 200,
+        "method": "POST",
+        "url": "https://clientes.domipack.com/Estado.aspx",
+        "ct": "text/html; charset=utf-8",
+        "cd": null,
+        "ts": "2026-09-04T02:22:06.809Z"
+      }
+    ],
+    "download": {
+      "suggested": "136d75ea-198a-4fe8-a0c3-f1c5c516c887.pdf",
+      "url": "https://clientes.domipack.com//rep/Export/136d75ea-198a-4fe8-a0c3-f1c5c516c887.pdf",
+      "dest": "audit/logs/evidence/estado-row2.pdf",
+      "size": 69079,
+      "magic": "%PDF-",
+      "isPdf": true,
+      "failure": null,
+      "head": "%PDF-1.7 \n%âãÏÓ \n1 0 obj \n<< \n/Type /Catalog \n/Pages 2 0 R \n/PageMode /UseNone \n/ViewerPreferences << \n/FitWindow true \n/PageLayout /SinglePage \n/NonFullScreenPageMode /UseNone \n>> \n>> \nendobj \n5 0 ob"
+    },
+    "popup": {
+      "url": "",
+      "title": "",
+      "isPdfViewer": false,
+      "serverError": null,
+      "htmlLen": 39,
+      "shot": "audit/screenshots/estado-row2-popup.png"
+    },
+    "navigation": {
+      "before": "https://clientes.domipack.com/Estado.aspx",
+      "after": "https://clientes.domipack.com/Estado.aspx",
+      "title": "DOMIPACK - Web Clientes."
+    },
+    "feedback": {
+      "cls": "dxbButton_Office365 dxbButtonSys dxbTSys",
+      "disabled": false,
+      "loadingPanel": true,
+      "title": "DOMIPACK - Web Clientes."
+    },
+    "elapsedMs": 3948,
+    "sameTab": {
+      "serverError": null,
+      "title": "DOMIPACK - Web Clientes.",
+      "isPdfEmbed": false,
+      "bodyStart": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAlerta Cuenta por Pagar Consulta Estados de Cuenta. Factura Fecha TotalFacturado Debito Credito Balance Dias Vencidos Monedas FT33-006983 08-31-2026 3,677.19 0.00 0.00 3,677.19 -5 DOP"
+    },
+    "mainPost": {
+      "status": 200,
+      "method": "POST",
+      "url": "https://clientes.domipack.com/Estado.aspx",
+      "ct": "text/html; charset=utf-8",
+      "cd": null,
+      "ts": "2026-09-04T02:22:06.809Z"
+    }
+  }
+]

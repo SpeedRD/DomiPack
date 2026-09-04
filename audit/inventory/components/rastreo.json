@@ -1,0 +1,130 @@
+{
+  "screenId": "rastreo",
+  "screenName": "Rastreo de Paquetes",
+  "url": "https://clientes.domipack.com/Rastreo.aspx",
+  "sharedChrome": "See _shared-chrome.json for header/sidebar controls present on this and every other authenticated screen. Default landing screen immediately after login.",
+  "components": [
+    {
+      "type": "button",
+      "name": "Menu (#cpBody_bpagar)",
+      "action": "Dropdown toggle button labeled 'Menu' in the page-title-actions area. Opens a dropdown containing at least the 'Histórico' link (see below)."
+    },
+    {
+      "type": "dropdown",
+      "name": "Histórico (nav-link, inside the Menu dropdown)",
+      "action": "href=\"#\", opens the 'Historial Guías' filter modal in place (#modal_Historial) — see rastreo-historico-modal sub-view below."
+    },
+    {
+      "type": "table",
+      "name": "Packages grid (#cpBody_gvDatos)",
+      "action": "DevExpress grid grouped by status (e.g. 'Estatus: Embarcado'). Columns: Post-Alerta, AD, Guia, Fecha, Tracking, Peso, FOB, Contenido, Suplidor, RT, Servicio, Total. Rows are grouped/collapsible (group header row has an expand/collapse toggle, ASPx.GVCollapseRow)."
+    },
+    {
+      "type": "button",
+      "name": "Adjuntos count icon (per row, e.g. text '0' linking to dlg/Adjuntos.aspx)",
+      "action": "Real link, href pattern 'dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=<guia>&c=<code>'. Opens the Adjuntos attachments dialog as a browser popup — see rastreo-adjuntos sub-view below."
+    },
+    {
+      "type": "button",
+      "name": "Tracking number link (e.g. 'DP01-00306834')",
+      "action": "href=\"#\", onclick=\"VerGuia('<tracking>')\". Opens the 'Movimientos del Paquete' modal in place — see rastreo-movimientos-modal sub-view below."
+    },
+    {
+      "type": "button",
+      "name": "Row '...' / additional-actions icon (e.g. #cpBody_gvDatos_DXCBtn1, class dxgvADSB)",
+      "action": "DevExpress command-column button, href=\"javascript:;\". Per Phase 1 testing, expands an inline master-detail row panel showing Suplidor, RT, Servicio, Total — no navigation, no distinct URL (DevExpress grid feature, not a separate screen)."
+    },
+    {
+      "type": "status message",
+      "name": "Group header row (e.g. 'Estatus: Embarcado')",
+      "action": "Non-interactive group-by-status label with an expand/collapse image control (ASPx.GVCollapseRow)."
+    }
+  ],
+  "subViews": [
+    {
+      "id": "rastreo-movimientos-modal",
+      "name": "Movimientos del Paquete (VerGuia modal)",
+      "components": [
+        {
+          "type": "table",
+          "name": "Guia detail grid (#cpBody_ppCambioGuia_gvDetalles)",
+          "action": "DevExpress grid grouped by 'Guia: <tracking>'. Columns: Tracking, Estatus, Fecha. For the test record, 1 row: TBA334226770293 / Embarcado / 9/2/2026 4:43:55 PM."
+        },
+        {
+          "type": "modal",
+          "name": "Movimientos modal container",
+          "action": "In-page modal/popup with no distinct URL; dismissed with Escape in this audit (no explicit close button captured in the DOM dump — worth checking for a visible close (X) affordance in the UX review)."
+        }
+      ]
+    },
+    {
+      "id": "rastreo-historico-modal",
+      "name": "Historial Guías filter modal",
+      "components": [
+        {
+          "type": "modal",
+          "name": "Historial Guias dialog (#modal_Historial)",
+          "action": "Bootstrap modal, class 'modal-full'. Has a header with title 'Historial Guias' and a close (×) button."
+        },
+        {
+          "type": "button",
+          "name": "Close (×)",
+          "action": "class 'close', dismisses the modal."
+        },
+        {
+          "type": "date field",
+          "name": "Fecha Desde (#cpBody_lDesde)",
+          "action": "type=date, start of the date range filter."
+        },
+        {
+          "type": "date field",
+          "name": "Fecha Hasta (#cpBody_lHasta)",
+          "action": "type=date, end of the date range filter."
+        },
+        {
+          "type": "button",
+          "name": "Buscar",
+          "action": "onclick=\"Filtro()\". Presumed to query historical guias within the selected date range; not exercised further (no results grid captured in this dump)."
+        },
+        {
+          "type": "status message",
+          "name": "Stray 'gv' text near Buscar button",
+          "action": "Rendering glitch already flagged in Phase 1: literal text 'gv' appears between the Fecha Hasta field and the Buscar button — looks like a leaked DevExpress grid element ID/placeholder rendered as visible text. Confirmed again in this dump (modal body text reads '...Fecha Hasta: gv Buscar')."
+        }
+      ],
+      "notes": [
+        "Also confirmed in this dump: the modal partially overlaps the top nav bar (visual/z-index issue), consistent with the Phase 1 screenshot."
+      ]
+    },
+    {
+      "id": "rastreo-adjuntos",
+      "name": "Adjuntos (attachments) dialog",
+      "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=<guia>&c=<code>",
+      "components": [
+        {
+          "type": "table",
+          "name": "Attachments grid (#gvDatos)",
+          "action": "DevExpress grid, columns: Codigo, Nombre, Fecha, Objeto, Adjunto. Empty for the test record ('No data to display')."
+        },
+        {
+          "type": "status message",
+          "name": "'No data to display'",
+          "action": "DevExpress empty-state row."
+        }
+      ],
+      "notes": [
+        "No upload/attach control was found in the DOM for this record — either attachments are add-only from the PreAlerta flow, or an upload affordance only appears once at least one row context exists / a different permission applies. Worth a follow-up in Phase 3 if attaching a file becomes in-scope (would be a real, hard-to-reverse action, so treat cautiously)."
+      ]
+    },
+    {
+      "id": "rastreo-row-detail-expander",
+      "name": "Grid row detail expander (inline, not a distinct screen)",
+      "notes": [
+        "Not re-captured with a DOM dump in this phase (best-effort selector attempt failed/timed out); documented from Phase 1 evidence: clicking the row's '...' icon expands an inline panel showing Suplidor, RT, Servicio, Total. Confirmed as the same command-column button pattern seen at #cpBody_gvDatos_DXCBtn1 above."
+      ]
+    }
+  ],
+  "notes": [
+    "The header area also displays the logged-in user's name and email (e.g. 'JOSE ALEXANDER CABREJA AYBAR' / 'jacabreja@hotmail.com') near the 'Salir' dropdown — present as static text, not individually selectored in this dump; treat as a status/display element in the shared header chrome."
+  ]
+}

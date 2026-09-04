@@ -1,0 +1,17 @@
+{
+  "totalMs": 32531,
+  "landed": "https://clientes.domipack.com/Rastreo.aspx",
+  "posts": [
+    {
+      "dt": 25
+    }
+  ],
+  "responses": [
+    {
+      "dt": 98,
+      "status": 302,
+      "location": "/Rastreo.aspx",
+      "bodyLen": 0
+    }
+  ]
+}

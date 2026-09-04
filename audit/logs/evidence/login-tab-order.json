@@ -1,0 +1,92 @@
+[
+  {
+    "i": 1,
+    "id": "",
+    "tag": "A",
+    "text": "",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(133, 134, 135)",
+    "boxShadow": "none"
+  },
+  {
+    "i": 2,
+    "id": "lUser",
+    "tag": "INPUT",
+    "text": "Usuario",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(0, 0, 0)",
+    "boxShadow": "none"
+  },
+  {
+    "i": 3,
+    "id": "lPass",
+    "tag": "INPUT",
+    "text": "Password",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(0, 0, 0)",
+    "boxShadow": "none"
+  },
+  {
+    "i": 4,
+    "id": "checkbox-signup",
+    "tag": "INPUT",
+    "text": "",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(0, 0, 0)",
+    "boxShadow": "none"
+  },
+  {
+    "i": 5,
+    "id": "",
+    "tag": "A",
+    "text": "Entrar",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(255, 255, 255)",
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+  },
+  {
+    "i": 6,
+    "id": "",
+    "tag": "A",
+    "text": "Recuperar mi Contraseña?",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(152, 164, 185)",
+    "boxShadow": "none"
+  },
+  {
+    "i": 7,
+    "id": "",
+    "tag": "A",
+    "text": "Crear Cuenta Gratis",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(152, 164, 185)",
+    "boxShadow": "none"
+  },
+  {
+    "i": 8,
+    "id": "",
+    "tag": "BODY",
+    "text": "Iniciar sesión\n\n              ",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(152, 164, 185)",
+    "boxShadow": "none"
+  },
+  {
+    "i": 9,
+    "id": "",
+    "tag": "A",
+    "text": "",
+    "outlineStyle": "none",
+    "outlineWidth": "3px",
+    "outlineColor": "rgb(133, 134, 135)",
+    "boxShadow": "none"
+  }
+]

@@ -1,0 +1,102 @@
+{
+  "label": "DR-04-onlyDesde",
+  "desde": "2026-01-01",
+  "hasta": "",
+  "before": {
+    "rows": [
+      {
+        "id": "cpBody_gvDatos_DXGroupRowExp0",
+        "text": "Estatus: Embarcado"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow1",
+        "text": "0 DP01-00306834 9/2/2026 TBA334226770293 1.40 0.00 ART PERSONAL AMAZON"
+      },
+      {
+        "id": "cpBody_gvDatos_DXGroupRowExp2",
+        "text": "Estatus: Entregado"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow3",
+        "text": "0 DP01-00298714 8/17/2026 TBA333722866266 0.50 0.00 ART PERSONAL AMAZON"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow4",
+        "text": "0 DP01-00298777 8/17/2026 TBA333712230266 11.50 0.00 ACCESORIO SUPLIDOR GENERICO"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow5",
+        "text": "0 DP01-00302058 8/24/2026 TBA333991591262 1.25 0.00 ART PERSONAL SUPLIDOR GENERICO"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow6",
+        "text": "0 DP01-00303692 8/26/2026 TBA333908870710 0.50 0.00 ARTICULOS ... AMAZON"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow7",
+        "text": "0 DP01-00303746 8/26/2026 TBA333977356002 1.45 0.00 ARTÍCULOS ... SUPLIDOR GENERICO"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow8",
+        "text": "0 DP01-00304156 8/26/2026 TBA333978097076 7.15 0.00 ART. PERSONAL SUPLIDOR GENERICO"
+      },
+      {
+        "id": "cpBody_gvDatos_DXDataRow9",
+        "text": "0 DP01-00304172 8/26/2026 TBA333978110538 7.10 0.00 ARTICULOS ... SUPLIDOR GENERICO"
+      }
+    ],
+    "modalShown": true,
+    "desde": "2026-01-01",
+    "hasta": "",
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "hidden",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "after": {
+    "rows": [],
+    "modalShown": false,
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "ms": 1440,
+  "navRes": "navigated",
+  "reqs": [
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "method": "POST",
+      "startedAt": 1788488394733,
+      "postFields": {
+        "__EVENTTARGET": "",
+        "__EVENTARGUMENT": "",
+        "__VIEWSTATE": "<6224 chars>",
+        "__VIEWSTATEGENERATOR": "<8 chars>",
+        "__EVENTVALIDATION": "<350 chars>",
+        "ctl00$lsClienteID": "",
+        "ctl00$cpBody$ClienteID": "DP-014003",
+        "ctl00$cpBody$Guia": "",
+        "ctl00$cpBody$bFiltro": "",
+        "ctl00$cpBody$TokenID": "GB123456789.101112131415",
+        "ctl00$cpBody$gvDatos": "{&quot;keys&quot;:[&quot;/^DXN&quot;,&quot;DP01-00306834&quot;,&quot;/^DXN&quot;,&quot;DP01-00298714&quot;,&quot;DP01-00298777&quot;,&quot;DP01-00302058&quot;,&quot;DP01-00303692&quot;,&quot;DP01-0030",
+        "ctl00$cpBody$ppCambioGuiaState": "{&quot;windowsState&quot;:&quot;0:0:-1:0:0:0:-10000:-10000:1:0:0:0&quot;}",
+        "ctl00$cpBody$ppCambioGuia$gvDetalles": "{&quot;keys&quot;:[],&quot;callbackState&quot;:&quot;1X38sHtnLoWBDDfhDLEhxa4lD2r1BXODnw9reSzv8dq3oVJOtQbwUb+MyYqxnu/AKKyYk5s59cJCwM+zrwlfTypjzTS/JKjrYPs3KtsMwAyp/rFyYaC0+07A/tqFRe6Xx/LlXG/2lO757lmgoaQ",
+        "ctl00$cpBody$lDesde": "2026-01-01",
+        "ctl00$cpBody$lHasta": "",
+        "DXScript": "<241 chars>",
+        "DXCss": "<196 chars>"
+      },
+      "status": 500,
+      "ms": 92,
+      "size": 3490
+    }
+  ],
+  "serverError": "Server Error in '/' Application",
+  "onLogin": false,
+  "dialogs": [],
+  "textSample": "Server Error in '/' Application. Runtime Error Description: An application error occurred on the server. The current custom error settings for this application prevent the details of the application error from being viewed remotely (for security reasons). It could, however, be viewed by browsers running on the local server machine. Details: To enable the details of this specific error message to be viewable on remote machines, please create a <customErrors> tag within a \"web.config\" configuration file located in the root directory of the current web application. This <customErrors> tag should ",
+  "status": [
+    500
+  ]
+}

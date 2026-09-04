@@ -1,0 +1,66 @@
+{
+  "label": "DR-07-impossible-server",
+  "desde": "2026-02-01",
+  "hasta": "2026-02-02",
+  "before": {
+    "rows": [
+      {
+        "id": "cpBody_gvDatos_DXEmptyRow",
+        "text": "No data to display"
+      }
+    ],
+    "modalShown": true,
+    "desde": "2026-02-01",
+    "hasta": "2026-02-02",
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "hidden",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "after": {
+    "rows": [],
+    "modalShown": false,
+    "swalText": null,
+    "alertLike": [],
+    "bodyOverflow": "",
+    "url": "https://clientes.domipack.com/Rastreo.aspx"
+  },
+  "ms": 817,
+  "navRes": "navigated",
+  "reqs": [
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "method": "POST",
+      "startedAt": 1788488434080,
+      "postFields": {
+        "__EVENTTARGET": "",
+        "__EVENTARGUMENT": "",
+        "__VIEWSTATE": "<4184 chars>",
+        "__VIEWSTATEGENERATOR": "<8 chars>",
+        "__EVENTVALIDATION": "<334 chars>",
+        "ctl00$lsClienteID": "",
+        "ctl00$cpBody$ClienteID": "DP-014003",
+        "ctl00$cpBody$Guia": "",
+        "ctl00$cpBody$bFiltro": "",
+        "ctl00$cpBody$TokenID": "GB123456789.101112131415",
+        "ctl00$cpBody$gvDatos": "{&quot;keys&quot;:[],&quot;callbackState&quot;:&quot;073DS5NQ0jwVpGTISGSJQ8y8eaTcXyPGFqQ5P6pdlsbiqlEp4G413EX3S+v++3H0t7Bi9iz3Nk69aP7WGGoK+2ATA3eu03YrK5ov5DJGYdvk3KxcUDoO99z8FnuEoTO4WzZQqBUkP5SlBWIB3QS",
+        "ctl00$cpBody$ppCambioGuiaState": "{&quot;windowsState&quot;:&quot;0:0:-1:0:0:0:-10000:-10000:1:0:0:0&quot;}",
+        "ctl00$cpBody$ppCambioGuia$gvDetalles": "{&quot;keys&quot;:[],&quot;callbackState&quot;:&quot;8Vy9nIJKeuq+Zt8VPCtCO4ymFXM6B7PjMNL3muHloxE6EEDjh+c5c1W8h0nNMQUY64b2gnNqcyZMer2tjGCMZ69l5kj2n4CmPqIOR/MN9VEiPSwxe2m2ZVrH5yH5tGVAAvtnaXd3Ak5pfBC9TSE",
+        "ctl00$cpBody$lDesde": "2026-02-01",
+        "ctl00$cpBody$lHasta": "2026-02-02",
+        "DXScript": "<233 chars>",
+        "DXCss": "<196 chars>"
+      },
+      "status": 500,
+      "ms": 91,
+      "size": 3490
+    }
+  ],
+  "serverError": "Server Error in '/' Application",
+  "onLogin": false,
+  "dialogs": [],
+  "textSample": "Server Error in '/' Application. Runtime Error Description: An application error occurred on the server. The current custom error settings for this application prevent the details of the application error from being viewed remotely (for security reasons). It could, however, be viewed by browsers running on the local server machine. Details: To enable the details of this specific error message to be viewable on remote machines, please create a <customErrors> tag within a \"web.config\" configuration file located in the root directory of the current web application. This <customErrors> tag should ",
+  "status": [
+    500
+  ]
+}

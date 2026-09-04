@@ -1,0 +1,178 @@
+[
+  {
+    "id": "lcelular",
+    "input": "abc",
+    "value": "abc",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "ltelefono",
+    "input": "abc",
+    "value": "abc",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "lcelular",
+    "input": "+++",
+    "value": "+++",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "ltelefono",
+    "input": "+++",
+    "value": "+++",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "lcelular",
+    "input": "()",
+    "value": "()",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "ltelefono",
+    "input": "()",
+    "value": "()",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "lcelular",
+    "input": "1",
+    "value": "1",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "ltelefono",
+    "input": "1",
+    "value": "1",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "lcelular",
+    "input": "111111111111111111111111111111111111111111111111111111111111",
+    "value": "111111111111111111111111111111111111111111111111111111111111",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "ltelefono",
+    "input": "111111111111111111111111111111111111111111111111111111111111",
+    "value": "111111111111111111111111111111111111111111111111111111111111",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "lcelular",
+    "input": "809 123 4567",
+    "value": "809 123 4567",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "ltelefono",
+    "input": "809 123 4567",
+    "value": "809 123 4567",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "lcelular",
+    "input": "809-123-4567",
+    "value": "809-123-4567",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "ltelefono",
+    "input": "809-123-4567",
+    "value": "809-123-4567",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "lcelular",
+    "input": "   ",
+    "value": "   ",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  },
+  {
+    "id": "ltelefono",
+    "input": "   ",
+    "value": "   ",
+    "valid": true,
+    "valueMissing": false,
+    "type": "text",
+    "inputmode": null,
+    "pattern": null,
+    "maxlength": -1
+  }
+]

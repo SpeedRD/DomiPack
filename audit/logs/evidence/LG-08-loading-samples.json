@@ -1,0 +1,49 @@
+{
+  "totalMs": 17959,
+  "landed": "https://clientes.domipack.com/Rastreo.aspx",
+  "posts": [
+    {
+      "dt": 24
+    }
+  ],
+  "responses": [
+    {
+      "dt": 102,
+      "status": 302,
+      "location": "/Rastreo.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "bodyLen": 0,
+      "bodyHead": ""
+    }
+  ],
+  "samples": [
+    {
+      "t": 1,
+      "title": "Domipack - Web Trans",
+      "url": "https://clientes.domipack.com/Login.aspx#",
+      "hasEntrar": true,
+      "entrarCls": "btn btn-primary btn-block btn-lg waves-effect waves-light",
+      "blockUI": false,
+      "preloader": false,
+      "swal": false,
+      "spinner": false,
+      "readyState": "complete"
+    },
+    {
+      "t": 17433,
+      "err": "Error: page.evaluate: Execution context was destroyed, most likely because of a "
+    },
+    {
+      "t": 17937,
+      "title": "DOMIPACK - Web Clientes.",
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "hasEntrar": false,
+      "entrarCls": null,
+      "blockUI": false,
+      "preloader": false,
+      "swal": false,
+      "spinner": false,
+      "readyState": "complete"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "screenId": "prueba-exportacion",
+  "screenName": "Prueba de Exportación",
+  "url": "https://clientes.domipack.com/PruebaExportacion.aspx",
+  "sharedChrome": "See _shared-chrome.json for header/sidebar controls present on this and every other authenticated screen.",
+  "components": [
+    {
+      "type": "table",
+      "name": "Packages grid (#cpBody_gvDatos)",
+      "action": "DevExpress grid, columns: Imprimir, Guia, Fecha, Tracking, Peso, FOB, Estatus, Contenido, Suplidor, Categoria. Several data rows for this test account (e.g. DP01-00298714)."
+    },
+    {
+      "type": "button",
+      "name": "Imprimir (PDF print icon, per row, e.g. #cpBody_gvDatos_DXCBtn0)",
+      "action": "DevExpress icon-button. Observed DISABLED for the sampled rows (sprite class '...disabled'), i.e. printing is conditionally unavailable per-row (reason not confirmed — possibly tied to package status). Not clicked in any case — file-download side effect."
+    },
+    {
+      "type": "button",
+      "name": "Row '...' / additional-actions icon (e.g. #cpBody_gvDatos_DXCBtn1, class dxgvADSB)",
+      "action": "Same DevExpress master-detail expand pattern as Rastreo — expands an inline detail panel in place, not a distinct screen."
+    }
+  ],
+  "notes": [
+    "Same grid/interaction pattern as Rastreo.aspx (grouped grid, per-row expand, per-row print icon) — reuses the same DevExpress control family, just a different dataset/columns.",
+    "No filter row or pagination controls observed in the DOM for this account's row count.",
+    "Multiple command-column buttons across rows (DXCBtn0, DXCBtn1, DXCBtn3, DXCBtn4, DXCBtn6, DXCBtn7, DXCBtn9, DXCBtn10) follow a repeating pair pattern per row: one 'Imprimir' print button + one '...' expand button — consistent with the Rastreo grid's per-row actions."
+  ]
+}

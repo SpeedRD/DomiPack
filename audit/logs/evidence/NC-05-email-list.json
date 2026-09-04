@@ -1,0 +1,38 @@
+{
+  "placeholder": "Para agregar otro correo electrónico debe separarlo con ;  ",
+  "multiple": false,
+  "results": [
+    {
+      "input": "a@x.com;b@y.com",
+      "value": "a@x.com;b@y.com",
+      "valid": false,
+      "typeMismatch": true,
+      "valueMissing": false,
+      "msg": "A part following '@' should not contain the symbol ';'."
+    },
+    {
+      "input": "a@x.com;;",
+      "value": "a@x.com;;",
+      "valid": false,
+      "typeMismatch": true,
+      "valueMissing": false,
+      "msg": "A part following '@' should not contain the symbol ';'."
+    },
+    {
+      "input": "a@x.com; ",
+      "value": "a@x.com;",
+      "valid": false,
+      "typeMismatch": true,
+      "valueMissing": false,
+      "msg": "A part following '@' should not contain the symbol ';'."
+    },
+    {
+      "input": "a@x.com; b@y.com",
+      "value": "a@x.com; b@y.com",
+      "valid": false,
+      "typeMismatch": true,
+      "valueMissing": false,
+      "msg": "A part following '@' should not contain the symbol ';'."
+    }
+  ]
+}

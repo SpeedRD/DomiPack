@@ -1,0 +1,68 @@
+{
+  "sortResults": [
+    {
+      "step": "fresh",
+      "rows": 1,
+      "groups": 1
+    },
+    {
+      "step": "click header AD",
+      "callbacksFired": 1,
+      "sortImgAfter": true,
+      "rowsAfter": 0,
+      "groupsAfter": 0,
+      "emptyRowText": " \t\nNo data to display\n\t ",
+      "serverErr": null,
+      "dialogs": []
+    },
+    {
+      "step": "click header AD again",
+      "rowsAfter": 0,
+      "groupsAfter": 0,
+      "sortImg": true
+    },
+    {
+      "step": "click header Guia",
+      "callbacksFired": 1,
+      "sortImgAfter": true,
+      "rowsAfter": 0,
+      "groupsAfter": 0,
+      "emptyRowText": " \t\nNo data to display\n\t ",
+      "serverErr": null,
+      "dialogs": []
+    },
+    {
+      "step": "after reload Rastreo.aspx",
+      "rows": 1,
+      "groups": 1,
+      "sortImgs": []
+    },
+    {
+      "step": "new page same context",
+      "rows": 1
+    }
+  ],
+  "cbBodies": [
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "status": 200,
+      "param": "c0:KV|25;[\"/^DXN\",\"DP01-00306834\"];GB|20;4|SORT2|160|0|4|true;",
+      "bodyHead": "320|52n5Z3nMo50XE2pTgi3R0C/S6OAZF2lTbGDbxME2orOArbQsjOjzz04qim/imKbmEIicpxA6m0X2u33EfJuay6b6ZRgFpdimrL9xS6clcqI09SDhCa89iB/BfjKGQOoPyWUbQWLWcsb4PK/7SNTKj3YWEjHfHPKq5bgOSUyAo7PALm1AoNGFSwYkgOJldawpJx/mi0/uGC4StfzJZoYGDI58QE6szNY8O7t/7dk740ipez5vm+Ro5emXJsWS3189phUS3k+R+7Wj4dm62PVT6g9dR/810L76wK2Z4Ho5JXPuMIsoO9m9nKUpALae7Cyw/*DX*/({'id':0,'result':{'stateObject':{'keys':[],'callbackState':'72LLl94Mceo08nPcw3q/18uY3vL0az8Rm9Xft2/a1ZUX1A9TzvWiDy7mqH1mTQquzayv0wRrq/pylt78siChO047ecMEbgNsEy2zCSHZ021j12PuElsSg82MrQT3cj4D5PgNy/8uKYJYXTyPgulBmzywHXXT9BKoft37/SKx16rsznNWrn/oPwF91I1GaBsai/ovNSE9Z9+N/4GKH",
+      "size": 11953
+    },
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "status": 200,
+      "param": "c0:KV|2;[];GB|20;4|SORT2|160|0|4|true;",
+      "bodyHead": "320|Ca1BMoDdtBG58wGeEWk5OA8iz2QSvoHpLub2KyMphVtzUzBCnqoLeINf2xFURzyYobu6evU6RABEkbf76WTO6MMsymtwQSUdQSyN+cBT1CLGUxXp1cns5GS0rq2p6jMAEK9VDTPGrOEQiGA3/stDAAT7TBvRMLVjZe1NamNb44YRdZa/pe2q2XbZSnaahY9rZNJnczWDxto3lOnmJ/3IcSm6T9GvealYRb/10OdoTH9R3TT3IhLo/In1h6+HteG1f8wsrfNO5fpmGAJg08CqROKpqX2KOloCu6SRgQ4jfbhiwMh8UiFQW47gG/7COL7s/*DX*/({'id':0,'result':{'stateObject':{'keys':[],'callbackState':'47lywv0ZmNF2PCbA5wIJN/uT1/zDYV8ApMWrUNB0IDFFphQMIkiF9ALR80nZ0a8f6dgChEC3eSPloykEjRTdCB1Js1uU9YCWOp0ihFHAqihW+kPdE1GDu9GVBLCUldMgINVu0mSUliDcISa8m62jdnh3rUhpqpTILGMCtsCDlsqdEEQq89UYccCsADDMSnsEewcZgOc8W3rFZZchT",
+      "size": 11956
+    },
+    {
+      "url": "https://clientes.domipack.com/Rastreo.aspx",
+      "status": 200,
+      "param": "c0:KV|2;[];GB|19;4|SORT1|10|0|4|true;",
+      "bodyHead": "320|PBiw8tp2rSRDOvFGI5mXYXEj+aPkYHwq7py0sqKakzcfDdK8kYvr8K60k0+UPbCtqv4fHeXcQSFOEgaxpL8+VhkJWjnstuldbxT1nMFFqAKjyt3MxWZSXI6mUos/7furd/j/TKZTZZUexvInp+0Vrg9G9OHi+fpLrVN/aXEG6B07cvaLntf1yhJdK6xUgn2yn3oR+Yz3ZL33+B/GNumD6fYQYv+LNLWVuXO5jgFjb/pI7924OYD9F1Sgf+Hc9tzNvKRqapqF3rDO0aa3Z36nJ4/i9BisNIbXGE31G4eEwC+POJ7Fu08yH9na2YsXUHPp/*DX*/({'id':0,'result':{'stateObject':{'keys':[],'callbackState':'kuUX42ZJpDTD4gzqF5gYAZnNR+Lgo6nigRxBwoMFXs3sJj9EPL1Dlgl7n5PY1658hcfE15n98+A0Qw6vlskuMYvq+LI8OwAl2OZDTG0/4jYO5ip8drNmyNbw1W3aBwGY7HDnryH98TcJf/r6q3SPsya+7f9+09PHUH6922jqJwG5ifO3jka4zTtRXIXlwcO8bDjhiNcsDldxluXaP",
+      "size": 11954
+    }
+  ]
+}

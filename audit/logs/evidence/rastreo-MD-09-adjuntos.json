@@ -1,0 +1,101 @@
+{
+  "link": {
+    "href": "dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=DP01-00306834&c=01",
+    "abs": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=DP01-00306834&c=01",
+    "target": "_blank",
+    "onclick": null,
+    "rel": null,
+    "text": "0",
+    "title": "",
+    "ariaLabel": null
+  },
+  "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+  "title": "",
+  "serverErr": null,
+  "info": {
+    "vw": 1440,
+    "vh": 900,
+    "outerW": 1440,
+    "outerH": 900,
+    "bodyText": "Codigo Nombre Fecha Objeto Adjunto No data to display",
+    "hasFileInput": 0,
+    "buttons": [],
+    "gridEmpty": "No data to display",
+    "th": 0,
+    "tdHeaders": 6,
+    "hasChrome": false,
+    "closeControl": [],
+    "lang": "",
+    "titleTag": "",
+    "scripts": [
+      "https://clientes.domipack.com/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZIKOmFXsoZILxbg7Ky4SNN6q73i3N-Yv0hZvlgDEDhpmTYuOCJH4Fq_rScjDKYuFiQ2&t=639190689332169432",
+      "https://clientes.domipack.com/DXR.axd?r=1_11,1_252,1_12,1_23,1_64,1_13,1_14,1_15,1_19,1_213,1_224,1_225,1_211,1_227,1_236,1_238,1_239,1_229,1_230,1_234,1_240,1_183,1_184,1_21,1_22,1_190,1_192,1_17,1_41,1_194-4oArn"
+    ],
+    "loadingText": [
+      "Loading…"
+    ]
+  },
+  "shot": "audit/screenshots/rastreo-adjuntos-popup.png",
+  "axe": {
+    "file": "audit/logs/axe/rastreo-adjuntos.json",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "nodes": 1,
+        "sample": [
+          ".dxgv[colspan=\"5\"] > div"
+        ]
+      },
+      {
+        "id": "document-title",
+        "impact": "serious",
+        "help": "Documents must have <title> element to aid in navigation",
+        "nodes": 1,
+        "sample": [
+          "html"
+        ]
+      },
+      {
+        "id": "html-has-lang",
+        "impact": "serious",
+        "help": "<html> element must have a lang attribute",
+        "nodes": 1,
+        "sample": [
+          "html"
+        ]
+      },
+      {
+        "id": "landmark-one-main",
+        "impact": "moderate",
+        "help": "Document should have one main landmark",
+        "nodes": 1,
+        "sample": [
+          "html"
+        ]
+      },
+      {
+        "id": "page-has-heading-one",
+        "impact": "moderate",
+        "help": "Page should contain a level-one heading",
+        "nodes": 1,
+        "sample": [
+          "html"
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "help": "All page content should be contained by landmarks",
+        "nodes": 6,
+        "sample": [
+          "#gvDatos_col0",
+          "#gvDatos_col1",
+          "#gvDatos_col5"
+        ]
+      }
+    ],
+    "count": 6
+  }
+}

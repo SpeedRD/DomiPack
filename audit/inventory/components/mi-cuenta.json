@@ -1,0 +1,164 @@
+{
+  "screenId": "mi-cuenta",
+  "screenName": "Mi Cuenta",
+  "url": "https://clientes.domipack.com/MiCuenta.aspx",
+  "sharedChrome": "See _shared-chrome.json for header/sidebar controls present on this and every other authenticated screen.",
+  "components": [
+    {
+      "type": "breadcrumb/tabs",
+      "name": "In-page tab strip: Datos Personales / Dependientes / Direccion (+ hidden Tarjetas Registradas)",
+      "action": "Bootstrap-style anchor tabs (#cpBody_lefticontab1/2/4/3), hash-based, no distinct URL navigation, no page reload. 'Tarjetas Registradas' (#cpBody_lefticontab3) exists in the DOM but its parent tab-list item is display:none — not reachable via the UI for this test account."
+    },
+    {
+      "type": "text field",
+      "name": "Codigo (#cpBody_lCodigo) [Datos Personales]",
+      "action": "Free-text, placeholder 'Codigo'. Presumed the read-only-looking client code field (not verified read-only)."
+    },
+    {
+      "type": "text field",
+      "name": "Nombre (#cpBody_lNombre) [Datos Personales]",
+      "action": "Free-text full name."
+    },
+    {
+      "type": "text field",
+      "name": "Identificacion / RNC (#cpBody_lRNC) [Datos Personales]",
+      "action": "Free-text ID/RNC, placeholder 'Identificacion'."
+    },
+    {
+      "type": "text field",
+      "name": "Email (#cpBody_lEmail) [Datos Personales]",
+      "action": "Free-text email (plain text input, not type=email)."
+    },
+    {
+      "type": "password field",
+      "name": "Nueva Contraseña (#cpBody_lContrasena) [Datos Personales]",
+      "action": "Optional password-change field."
+    },
+    {
+      "type": "text field",
+      "name": "Direccion 1 (#cpBody_lDireccion1) [Datos Personales]",
+      "action": "Free-text address line."
+    },
+    {
+      "type": "text field",
+      "name": "Direccion 2 (#cpBody_lDireccion2) [Datos Personales]",
+      "action": "Free-text address line 2."
+    },
+    {
+      "type": "select",
+      "name": "Sucursal (#cpBody_lSucursal) [Datos Personales]",
+      "action": "Branch picker, same long branch list as Nueva Cuenta. Loads disabled (class aspNetDisabled) for this account — cannot be changed here."
+    },
+    {
+      "type": "text field",
+      "name": "Telefono (#cpBody_lTelefono) [Datos Personales]",
+      "action": "Free-text phone (plain text, not type=tel)."
+    },
+    {
+      "type": "text field",
+      "name": "Telefono2 (#cpBody_lTelefono2) [Datos Personales]",
+      "action": "Free-text secondary phone."
+    },
+    {
+      "type": "text field",
+      "name": "Celular (#cpBody_lCelular) [Datos Personales]",
+      "action": "Free-text mobile number."
+    },
+    {
+      "type": "button",
+      "name": "Guardar (#cpBody_Button1) [Datos Personales]",
+      "action": "input[type=submit], no visible text captured — saves account profile changes. Not submitted (would alter real account data)."
+    },
+    {
+      "type": "text field",
+      "name": "Nombre (#cpBody_lNombreDependiente) [Dependientes]",
+      "action": "Free-text name for a new dependent/authorized-pickup person."
+    },
+    {
+      "type": "text field",
+      "name": "Cedula (#cpBody_lIdentificacionDependiente) [Dependientes]",
+      "action": "Free-text ID for the dependent."
+    },
+    {
+      "type": "text field",
+      "name": "Email (#cpBody_lEmailDependiente) [Dependientes]",
+      "action": "Free-text email for the dependent."
+    },
+    {
+      "type": "phone field",
+      "name": "Celular (#cpBody_lCelularDependiente) [Dependientes]",
+      "action": "Free-text mobile, placeholder shows expected format '+99-99-9999-9999' (plain text input, no input mask/pattern enforced client-side that was observed)."
+    },
+    {
+      "type": "button",
+      "name": "Agregar (#cpBody_Button3) [Dependientes]",
+      "action": "input[type=submit], no visible text — would create a real dependent record tied to the account. Not submitted."
+    },
+    {
+      "type": "table",
+      "name": "Dependientes grid (#cpBody_gvDependientes) [Dependientes]",
+      "action": "DevExpress grid, columns: Editar, Borrar, Nombre, Cedula, Celular, Email. Currently empty for this test account."
+    },
+    {
+      "type": "status message",
+      "name": "'No data to display' [Dependientes grid]",
+      "action": "DevExpress empty-state row (#..._DXEmptyRow), shown when the Dependientes grid has no rows."
+    },
+    {
+      "type": "select",
+      "name": "Pais (#cpBody_cbPais) [Direccion]",
+      "action": "Loads disabled, preset to 'Republica Dominicana' — effectively fixed/read-only for this account."
+    },
+    {
+      "type": "select",
+      "name": "Provincia (#cpBody_cbProvincia) [Direccion]",
+      "action": "Loads disabled. Same province list as elsewhere in the app (Azua, Barahona, Dajabon, Distrito Nacional, ...)."
+    },
+    {
+      "type": "select",
+      "name": "Ciudad (#cpBody_cbCiudad) [Direccion]",
+      "action": "Empty/enabled — likely populated dynamically once Provincia is enabled/changed; not exercised since Provincia is disabled for this account."
+    },
+    {
+      "type": "select",
+      "name": "Sector (#cpBody_cbSector) [Direccion]",
+      "action": "Empty/enabled — same cascading-dropdown pattern as Ciudad, dependent on Provincia/Ciudad."
+    },
+    {
+      "type": "text field",
+      "name": "Direccion (#cpBody_tbDireccion) [Direccion]",
+      "action": "Free-text street address."
+    },
+    {
+      "type": "text field",
+      "name": "Nota (#cpBody_tbNota) [Direccion]",
+      "action": "Free-text delivery note."
+    },
+    {
+      "type": "checkbox",
+      "name": "Principal (#cpBody_ckPrincipal) [Direccion]",
+      "action": "Marks this address as the default/primary delivery address."
+    },
+    {
+      "type": "button",
+      "name": "Agregar Direccion (#cpBody_bDireccion) [Direccion]",
+      "action": "input[type=submit], no visible text — would create a real saved address. Not submitted."
+    },
+    {
+      "type": "table",
+      "name": "Direcciones grid (#cpBody_gvDireccion) [Direccion]",
+      "action": "DevExpress grid, columns: Editar, Borrar, Direccion, Nota, Principal. Currently empty for this test account."
+    },
+    {
+      "type": "status message",
+      "name": "'No data to display' [Direccion grid]",
+      "action": "DevExpress empty-state row (#cpBody_gvDireccion_DXEmptyRow)."
+    }
+  ],
+  "notes": [
+    "Per Phase 1's sitemap.json, the visible tab list is Datos Personales / Dependientes / Direccion; a 4th tab, 'Tarjetas Registradas' (#cpBody_lefticontab3), exists in the DOM but is hidden and not reachable.",
+    "Multiple disabled selects (Sucursal on Datos Personales tab; Pais and Provincia on Direccion tab) suggest fields the account cannot currently self-edit — worth flagging for the redesign: unclear to the user WHY these are locked (no visible explanation/tooltip).",
+    "UX/accessibility issue carried from Phase 1: the Provincia/Ciudad/Sector dropdowns on the Direccion tab render as solid-color boxes with truncated/invisible label text (see screenshot mi-cuenta-direccion.png).",
+    "None of the three forms (Datos Personales save, Dependientes add, Direccion add) were submitted — each would write real, persisted account data."
+  ]
+}

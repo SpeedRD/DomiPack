@@ -1,0 +1,188 @@
+{
+  "rows": [
+    {
+      "id": "cpBody_gvDatos_DXDataRow0",
+      "cells": [
+        "",
+        "FT33-006983",
+        "08-31-2026",
+        "3,677.19",
+        "0.00",
+        "0.00",
+        "3,677.19",
+        "-5",
+        "DOP"
+      ]
+    },
+    {
+      "id": "cpBody_gvDatos_DXDataRow1",
+      "cells": [
+        "",
+        "FT33-006951",
+        "08-27-2026",
+        "283.73",
+        "0.00",
+        "0.00",
+        "283.73",
+        "-1",
+        "DOP"
+      ]
+    },
+    {
+      "id": "cpBody_gvDatos_DXDataRow2",
+      "cells": [
+        "",
+        "FT33-006833",
+        "08-20-2026",
+        "2,723.83",
+        "0.00",
+        "0.00",
+        "2,723.83",
+        "6",
+        "DOP"
+      ]
+    }
+  ],
+  "footer": [
+    "",
+    "",
+    "",
+    "6,684.75",
+    "0.00",
+    "0.00",
+    "6,684.75",
+    "",
+    ""
+  ],
+  "headers": [
+    {
+      "id": "cpBody_gvDatos_col0",
+      "text": "",
+      "sortImg": false,
+      "cursor": "pointer",
+      "role": null,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col3",
+      "text": "Factura",
+      "sortImg": false,
+      "cursor": "pointer",
+      "role": null,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col10",
+      "text": "Fecha",
+      "sortImg": false,
+      "cursor": "pointer",
+      "role": null,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col4",
+      "text": "TotalFacturado",
+      "sortImg": false,
+      "cursor": "pointer",
+      "role": null,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col5",
+      "text": "Debito",
+      "sortImg": false,
+      "cursor": "pointer",
+      "role": null,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col6",
+      "text": "Credito",
+      "sortImg": false,
+      "cursor": "pointer",
+      "role": null,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col7",
+      "text": "Balance",
+      "sortImg": false,
+      "cursor": "pointer",
+      "role": null,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col8",
+      "text": "Dias Vencidos",
+      "sortImg": false,
+      "cursor": "pointer",
+      "role": null,
+      "ariaSort": null
+    },
+    {
+      "id": "cpBody_gvDatos_col9",
+      "text": "Monedas",
+      "sortImg": true,
+      "cursor": "pointer",
+      "role": null,
+      "ariaSort": null
+    }
+  ],
+  "ths": 0,
+  "caption": false,
+  "role": null,
+  "summary": null,
+  "pager": 0,
+  "filterRow": 0,
+  "searchPanel": 0,
+  "emptyRow": 0,
+  "pageTitle": "Cuenta por Pagar Consulta Estados de Cuenta.",
+  "printButtons": [
+    {
+      "id": "cpBody_gvDatos_cell0_0_iPrint_0",
+      "role": null,
+      "ariaLabel": null,
+      "title": null,
+      "tabindex": null,
+      "text": "",
+      "imgAlt": "",
+      "imgTitle": null,
+      "imgClass": "dxIcon_print_printviapdf_16x16 dx-vam",
+      "inputType": "submit",
+      "inputValue": "submit",
+      "inputSize": "0x0",
+      "size": "46x30"
+    },
+    {
+      "id": "cpBody_gvDatos_cell1_0_iPrint_1",
+      "role": null,
+      "ariaLabel": null,
+      "title": null,
+      "tabindex": null,
+      "text": "",
+      "imgAlt": "",
+      "imgTitle": null,
+      "imgClass": "dxIcon_print_printviapdf_16x16 dx-vam",
+      "inputType": "submit",
+      "inputValue": "submit",
+      "inputSize": "0x0",
+      "size": "46x30"
+    },
+    {
+      "id": "cpBody_gvDatos_cell2_0_iPrint_2",
+      "role": null,
+      "ariaLabel": null,
+      "title": null,
+      "tabindex": null,
+      "text": "",
+      "imgAlt": "",
+      "imgTitle": null,
+      "imgClass": "dxIcon_print_printviapdf_16x16 dx-vam",
+      "inputType": "submit",
+      "inputValue": "submit",
+      "inputSize": "0x0",
+      "size": "46x30"
+    }
+  ],
+  "bodyText": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAlerta Cuenta por Pagar Consulta Estados de Cuenta. Factura Fecha TotalFacturado Debito Credito Balance Dias Vencidos Monedas FT33-006983 08-31-2026 3,677.19 0.00 0.00 3,677.19 -5 DOP FT33-006951 08-27-2026 283.73 0.00 0.00 283.73 -1 DOP FT33-006833 08-20-2026 2,723.83 0.00 0.00 2,723.83 6 DOP 6,684.75 0.00 0.00 6,684.75 2022 - DOMIPACK, TODOS LOS DERECHOS RESERVADOS. - Términos y Condiciones de Uso - Políticas de Privacidad - Políticas de Entrega"
+}

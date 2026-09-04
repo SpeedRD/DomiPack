@@ -1,0 +1,23 @@
+{
+  "docHeight": 2572,
+  "viewportH": 900,
+  "items": [
+    {
+      "tag": "IMG",
+      "id": "",
+      "cls": "",
+      "top": 1437,
+      "h": 1135,
+      "w": 319,
+      "left": 37,
+      "display": "block",
+      "position": "static",
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "none",
+      "src": "https://i.postimg.cc/XvKNRMW3/BANNER-ANDROID.png",
+      "natural": "1024x500",
+      "opacity": "1",
+      "visibility": "visible"
+    }
+  ]
+}

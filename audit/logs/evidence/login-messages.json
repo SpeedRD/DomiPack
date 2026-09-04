@@ -1,0 +1,167 @@
+{
+  "title": "Domipack - Web Trans",
+  "lang": "",
+  "bodyText": "Iniciar sesión Remember me Entrar Recuperar mi Contraseña? Crear Cuenta Gratis",
+  "messages": [
+    {
+      "label": "TF-01 empty user",
+      "message": "",
+      "swal": "",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "PW-01 empty pass",
+      "status": 200,
+      "message": "",
+      "swal": "",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "PW-02 wrong pass valid user",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "PW-02 unknown user",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "TF-02 whitespace user",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "TF-03 padded valid user + correct pass",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "TF-03 padded password",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "TF-04 5k user",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "TF-04 100k user",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "TF-05 specials",
+      "status": 500,
+      "message": "Server Error in '/' Application. Runtime Error Description: An application error occurred on the server. The current custom error settings for this application prevent the details of the application e",
+      "swal": "",
+      "title": "Runtime Error"
+    },
+    {
+      "label": "TF-05 script probe",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "TF-06 unicode",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "TF-07 ' OR 1=1 --",
+      "status": 500,
+      "message": "Server Error in '/' Application. Runtime Error Description: An application error occurred on the server. The current custom error settings for this application prevent the details of the application e",
+      "swal": "",
+      "title": "Runtime Error"
+    },
+    {
+      "label": "TF-07 {{7*7}}",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "TF-07 ${x}",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "PW-03 10k pass",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "PW-04 specials",
+      "status": 500,
+      "message": "Server Error in '/' Application. Runtime Error Description: An application error occurred on the server. The current custom error settings for this application prevent the details of the application e",
+      "swal": "",
+      "title": "Runtime Error"
+    },
+    {
+      "label": "PW-04 unicode",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "PW-04 whitespace",
+      "status": 200,
+      "message": "",
+      "swal": "",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "PW-04 script",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "CB-01 checked",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "CB-01 unchecked",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    },
+    {
+      "label": "Enter in lPass",
+      "status": 200,
+      "message": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "swal": "i Error! Usuario y/o contraseña incorrecta, intente de nuevo y recuerde colocar el guion. OK",
+      "title": "Domipack - Web Trans"
+    }
+  ]
+}

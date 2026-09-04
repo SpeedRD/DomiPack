@@ -1,0 +1,128 @@
+[
+  {
+    "phase": "A-fresh-tab-no-prior-valid-visit",
+    "label": "missing-c",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=DP01-00306834",
+    "status": 500,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=DP01-00306834",
+    "sig": "Server Error in '/' Application",
+    "empty": false
+  },
+  {
+    "phase": "A-fresh-tab-no-prior-valid-visit",
+    "label": "missing-o",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?cl=DP01-00306834&c=01",
+    "status": 500,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx?cl=DP01-00306834&c=01",
+    "sig": "Server Error in '/' Application",
+    "empty": false
+  },
+  {
+    "phase": "A-fresh-tab-no-prior-valid-visit",
+    "label": "no-params",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+    "status": 500,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+    "sig": "Server Error in '/' Application",
+    "empty": false
+  },
+  {
+    "phase": "A-fresh-tab-no-prior-valid-visit",
+    "label": "specials",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=%3Cscript%3Ealert(1)%3C%2Fscript%3E&c=%27",
+    "status": 500,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=%3Cscript%3Ealert(1)%3C%2Fscript%3E&c=%27",
+    "sig": "Server Error in '/' Application",
+    "empty": false
+  },
+  {
+    "phase": "A-fresh-tab-no-prior-valid-visit",
+    "label": "garbage",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=zzz&c=zzz",
+    "status": 200,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+    "sig": null,
+    "empty": true
+  },
+  {
+    "phase": "B-request-api",
+    "label": "missing-c",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=DP01-00306834",
+    "status": 500,
+    "sig": "Server Error in '/' Application"
+  },
+  {
+    "phase": "B-request-api",
+    "label": "missing-o",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?cl=DP01-00306834&c=01",
+    "status": 500,
+    "sig": "Server Error in '/' Application"
+  },
+  {
+    "phase": "B-request-api",
+    "label": "no-params",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+    "status": 500,
+    "sig": "Server Error in '/' Application"
+  },
+  {
+    "phase": "B-request-api",
+    "label": "specials",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=%3Cscript%3Ealert(1)%3C%2Fscript%3E&c=%27",
+    "status": 500,
+    "sig": "Server Error in '/' Application"
+  },
+  {
+    "phase": "B-request-api",
+    "label": "garbage",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=zzz&c=zzz",
+    "status": 302,
+    "location": "/dlg/Adjuntos.aspx",
+    "sig": null
+  },
+  {
+    "phase": "C-tab-after-valid-visit",
+    "label": "missing-c",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=DP01-00306834",
+    "status": 500,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=DP01-00306834",
+    "sig": "Server Error in '/' Application",
+    "empty": false
+  },
+  {
+    "phase": "C-tab-after-valid-visit",
+    "label": "missing-o",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?cl=DP01-00306834&c=01",
+    "status": 500,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx?cl=DP01-00306834&c=01",
+    "sig": "Server Error in '/' Application",
+    "empty": false
+  },
+  {
+    "phase": "C-tab-after-valid-visit",
+    "label": "no-params",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+    "status": 500,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+    "sig": "Server Error in '/' Application",
+    "empty": false
+  },
+  {
+    "phase": "C-tab-after-valid-visit",
+    "label": "specials",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=%3Cscript%3Ealert(1)%3C%2Fscript%3E&c=%27",
+    "status": 500,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=%3Cscript%3Ealert(1)%3C%2Fscript%3E&c=%27",
+    "sig": "Server Error in '/' Application",
+    "empty": false
+  },
+  {
+    "phase": "C-tab-after-valid-visit",
+    "label": "garbage",
+    "url": "https://clientes.domipack.com/dlg/Adjuntos.aspx?o=Rastreo.aspx&cl=zzz&c=zzz",
+    "status": 200,
+    "finalUrl": "https://clientes.domipack.com/dlg/Adjuntos.aspx",
+    "sig": null,
+    "empty": true
+  }
+]

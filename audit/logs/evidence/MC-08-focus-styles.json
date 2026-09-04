@@ -1,0 +1,149 @@
+[
+  {
+    "t": "#cpBody_lNombre",
+    "settled": {
+      "outline": "none 0px rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px",
+      "borderColor": "rgb(169, 188, 238)",
+      "bg": "rgb(255, 255, 255)",
+      "matchesFocus": true,
+      "matchesFocusVisible": true
+    },
+    "blurred": {
+      "boxShadow": "none",
+      "borderColor": "rgb(206, 212, 218)",
+      "bg": "rgb(255, 255, 255)"
+    },
+    "file": "audit/screenshots/focus-cpBodylNombre.png",
+    "quick": {
+      "indicator": true,
+      "shadow": "rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px"
+    }
+  },
+  {
+    "t": "#cpBody_lContrasena",
+    "settled": {
+      "outline": "none 0px rgb(73, 80, 87)",
+      "boxShadow": "rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px",
+      "borderColor": "rgb(169, 188, 238)",
+      "bg": "rgb(255, 255, 255)",
+      "matchesFocus": true,
+      "matchesFocusVisible": true
+    },
+    "blurred": {
+      "boxShadow": "none",
+      "borderColor": "rgb(206, 212, 218)",
+      "bg": "rgb(255, 255, 255)"
+    },
+    "file": "audit/screenshots/focus-cpBodylContrasena.png",
+    "quick": {
+      "indicator": true,
+      "shadow": "rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px"
+    }
+  },
+  {
+    "t": "#cpBody_Button1",
+    "settled": {
+      "outline": "none 3px rgb(255, 255, 255)",
+      "boxShadow": "rgba(92, 128, 222, 0.5) 0px 0px 0px 0px",
+      "borderColor": "rgb(234, 53, 55)",
+      "bg": "rgb(234, 53, 55)",
+      "matchesFocus": true,
+      "matchesFocusVisible": true
+    },
+    "blurred": {
+      "boxShadow": "none",
+      "borderColor": "rgb(234, 53, 55)",
+      "bg": "rgb(234, 53, 55)"
+    },
+    "file": "audit/screenshots/focus-cpBodyButton1.png",
+    "quick": {
+      "indicator": false,
+      "shadow": "rgba(92, 128, 222, 0.5) 0px 0px 0px 0px"
+    }
+  },
+  {
+    "t": "#cpBody_ltab2",
+    "settled": {
+      "outline": "none 3px rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "borderColor": "rgb(233, 236, 239) rgb(233, 236, 239) rgb(222, 226, 230)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "matchesFocus": true,
+      "matchesFocusVisible": true
+    },
+    "blurred": {
+      "boxShadow": "none",
+      "borderColor": "rgba(0, 0, 0, 0)",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "file": "audit/screenshots/focus-cpBodyltab2.png",
+    "quick": {
+      "indicator": true,
+      "shadow": "none"
+    }
+  },
+  {
+    "t": "#lRastreo",
+    "settled": {
+      "outline": "none 3px rgb(234, 53, 55)",
+      "boxShadow": "none",
+      "borderColor": "rgb(234, 53, 55)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "matchesFocus": true,
+      "matchesFocusVisible": true
+    },
+    "blurred": {
+      "boxShadow": "none",
+      "borderColor": "rgb(234, 53, 55)",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "file": "audit/screenshots/focus-lRastreo.png",
+    "quick": {
+      "indicator": false,
+      "shadow": "none"
+    }
+  },
+  {
+    "t": ".close-sidebar-btn",
+    "settled": {
+      "outline": "none 3px rgb(73, 80, 87)",
+      "boxShadow": "none",
+      "borderColor": "rgb(73, 80, 87)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "matchesFocus": true,
+      "matchesFocusVisible": true
+    },
+    "blurred": {
+      "boxShadow": "none",
+      "borderColor": "rgb(73, 80, 87)",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "file": "audit/screenshots/focus-closesidebarbtn.png",
+    "quick": {
+      "indicator": false,
+      "shadow": "none"
+    }
+  },
+  {
+    "t": ".app-footer a:nth-child(2)",
+    "settled": {
+      "outline": "none 3px rgb(247, 106, 148)",
+      "boxShadow": "none",
+      "borderColor": "rgb(247, 106, 148)",
+      "bg": "rgba(0, 0, 0, 0)",
+      "matchesFocus": true,
+      "matchesFocusVisible": true
+    },
+    "blurred": {
+      "boxShadow": "none",
+      "borderColor": "rgb(247, 106, 148)",
+      "bg": "rgba(0, 0, 0, 0)"
+    },
+    "file": "audit/screenshots/focus-appfooteranthchild2.png",
+    "quick": {
+      "indicator": false,
+      "shadow": "none"
+    }
+  }
+]

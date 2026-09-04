@@ -1,0 +1,40 @@
+{
+  "nv06tarjetas": {
+    "t3hash": {
+      "hash": "#cpBody_lefticontab3",
+      "activeLink": "cpBody_ltab1",
+      "activePane": "cpBody_lefticontab1",
+      "paneDisplay": "cpBody_lefticontab1:block,cpBody_lefticontab2:none,cpBody_lefticontab4:none,cpBody_lefticontab3:none"
+    },
+    "t3": {
+      "liDisplay": "none",
+      "liStyle": "Display:none;",
+      "paneExists": true,
+      "paneDisplay": "none",
+      "paneText": "Borrar Tarjeta Numero Marca Fecha EXP No data to display Loading… <!-- ASPx.createControl(ASPxClientGridView,'cpBody_gvTarjetas','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$cpBody$gvTarje",
+      "gridExists": true,
+      "button": "Agregar Tarjeta",
+      "popup": true
+    },
+    "t3shown": {
+      "hash": "#cpBody_lefticontab3",
+      "activeLink": "cpBody_ltab3",
+      "activePane": "cpBody_lefticontab3",
+      "paneDisplay": "cpBody_lefticontab1:none,cpBody_lefticontab2:none,cpBody_lefticontab4:none,cpBody_lefticontab3:block"
+    },
+    "t3visible": {
+      "display": "block",
+      "w": 1030,
+      "h": 185.5625,
+      "text": "Borrar Tarjeta Numero Marca Fecha EXP No data to display"
+    }
+  },
+  "nv06pago": {
+    "url": "https://clientes.domipack.com/PagoOnline.aspx",
+    "title": "DOMIPACK - Web Clientes.",
+    "err": null,
+    "text": "JOSE ALEXANDER CABREJA AYBAR jacabreja@hotmail.com MENU Mi Cuenta Estados de Cuenta Rastreo Prueba de Exportacion PreAlerta Pagos En Linea Pagas tu Paquetes y evitas filas. Pagar Con PAQUETES DISPONIBLES Guia Fecha Peso FOB Descripcion Envianombre Total A Pagar (DOP) DP01-00306834 9/2/2026 1.40 0.00",
+    "sidebarActive": null,
+    "pagoLiDisplay": "none"
+  }
+}
